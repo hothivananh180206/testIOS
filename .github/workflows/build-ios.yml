@@ -1,0 +1,43 @@
+name: Build iOS Simulator App for Appetize
+
+on:
+  push:
+    branches: [ "**" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build iOS App (.app)
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check Xcode Version
+        run: xcodebuild -version
+
+      - name: Build for iOS Simulator
+        run: |
+          xcodebuild build \
+            -project AppHocTiengNhat.xcodeproj \
+            -scheme AppHocTiengNhat \
+            -sdk iphonesimulator \
+            -configuration Debug \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY=""
+
+      - name: Zip .app Bundle for Appetize.io
+        run: |
+          cd build/Build/Products/Debug-iphonesimulator
+          zip -r AppHocTiengNhat.zip AppHocTiengNhat.app
+          ls -lh AppHocTiengNhat.zip
+
+      - name: Upload Built App Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AppHocTiengNhat-iOS-Simulator
+          path: build/Build/Products/Debug-iphonesimulator/AppHocTiengNhat.zip
+          retention-days: 7
