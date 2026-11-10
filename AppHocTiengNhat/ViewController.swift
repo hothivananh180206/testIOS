@@ -562,7 +562,7 @@ class ViewController: UIViewController {
     }
     
     private func createTestOptionRow(title: String, detail: String, icon: String, color: UIColor, onTap: @escaping () -> Void) -> UIView {
-        let view = UIView()
+        let view = UIControl()
         view.backgroundColor = .secondarySystemGroupedBackground
         view.layer.cornerRadius = 14
         view.layer.borderWidth = 1
@@ -570,23 +570,27 @@ class ViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         let iconView = UIImageView(image: UIImage(systemName: icon))
+        iconView.isUserInteractionEnabled = false
         iconView.tintColor = color
         iconView.contentMode = .scaleAspectFit
         iconView.translatesAutoresizingMaskIntoConstraints = false
         
         let titleLabel = UILabel()
+        titleLabel.isUserInteractionEnabled = false
         titleLabel.text = title
         titleLabel.font = .systemFont(ofSize: 15, weight: .bold)
         titleLabel.textColor = .label
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         let detailLabel = UILabel()
+        detailLabel.isUserInteractionEnabled = false
         detailLabel.text = detail
         detailLabel.font = .systemFont(ofSize: 12, weight: .regular)
         detailLabel.textColor = .secondaryLabel
         detailLabel.translatesAutoresizingMaskIntoConstraints = false
         
         let arrowView = UIImageView(image: UIImage(systemName: "chevron.right"))
+        arrowView.isUserInteractionEnabled = false
         arrowView.tintColor = .systemGray3
         arrowView.contentMode = .scaleAspectFit
         arrowView.translatesAutoresizingMaskIntoConstraints = false
@@ -618,11 +622,9 @@ class ViewController: UIViewController {
             arrowView.heightAnchor.constraint(equalToConstant: 14)
         ])
         
-        let tap = UITapGestureRecognizer(target: nil, action: nil)
-        view.addGestureRecognizer(tap)
-        tap.addAction(UIAction(handler: { _ in
+        view.addAction(UIAction(handler: { _ in
             onTap()
-        }))
+        }), for: .touchUpInside)
         
         return view
     }
