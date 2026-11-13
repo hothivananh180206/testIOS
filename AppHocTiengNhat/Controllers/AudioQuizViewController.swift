@@ -278,6 +278,8 @@ public class AudioQuizViewController: UIViewController {
     }
     
     private func showFinalResults() {
+        ProgressService.shared.recordQuizResult(correct: score, total: quizList.count)
+
         let percentage = Int((Double(score) / Double(quizList.count)) * 100)
         let message: String
         if percentage >= 90 {

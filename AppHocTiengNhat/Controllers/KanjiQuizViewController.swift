@@ -280,6 +280,8 @@ public class KanjiQuizViewController: UIViewController {
     }
     
     private func showFinalResults() {
+        ProgressService.shared.recordQuizResult(correct: score, total: currentQuizList.count)
+
         let percentage = Int((Double(score) / Double(currentQuizList.count)) * 100)
         let message = percentage >= 80 ?
             "Thần kỳ! Bạn nhận diện âm Kanji N5 rất tốt (\(score)/\(currentQuizList.count))." :

@@ -8,7 +8,7 @@ import Foundation
 public final class ProgressService {
     public static let shared = ProgressService()
     
-    private let defaults = UserDefaults.standard
+    private let defaults: UserDefaults
     private let masteredKey = "AppHocTiengNhat_MasteredIds"
     private let needReviewKey = "AppHocTiengNhat_NeedReviewWordIds"
     private let lastStudyDateKey = "AppHocTiengNhat_LastStudyDate"
@@ -17,8 +17,14 @@ public final class ProgressService {
     private let quizTotalAnsweredKey = "AppHocTiengNhat_QuizTotalAnswered"
     private let lastGrammarScoreKey = "AppHocTiengNhat_LastGrammarScore"
     private let lastVocabScoreKey = "AppHocTiengNhat_LastVocabScore"
-    
-    private init() {
+
+    private let calendar: Calendar
+    private let now: () -> Date
+
+    init(defaults: UserDefaults = .standard, calendar: Calendar = .current, now: @escaping () -> Date = Date.init) {
+        self.defaults = defaults
+        self.calendar = calendar
+        self.now = now
         checkAndUpdateStreak()
     }
     
@@ -138,12 +144,21 @@ public final class ProgressService {
     
     // MARK: - Chuỗi ngày học liên tục (Streak)
     public func getStreak() -> Int {
-        return max(1, defaults.integer(forKey: streakKey))
+        if let lastDate = defaults.object(forKey: lastStudyDateKey) as? Date {
+            let lastDay = calendar.startOfDay(for: lastDate)
+            let today = calendar.startOfDay(for: now())
+            let diff = calendar.dateComponents([.day], from: lastDay, to: today).day ?? 0
+            if diff > 1 {
+                defaults.set(0, forKey: streakKey)
+                return 0
+            }
+        }
+        return max(0, defaults.integer(forKey: streakKey))
     }
     
     private func recordStudyActivity() {
-        let calendar = Calendar.current
-        let today = calendar.startOfDay(for: Date())
+        let currentDate = now()
+        let today = calendar.startOfDay(for: currentDate)
         
         if let lastDate = defaults.object(forKey: lastStudyDateKey) as? Date {
             let lastDay = calendar.startOfDay(for: lastDate)
@@ -158,17 +173,16 @@ public final class ProgressService {
         } else {
             defaults.set(1, forKey: streakKey)
         }
-        defaults.set(Date(), forKey: lastStudyDateKey)
+        defaults.set(currentDate, forKey: lastStudyDateKey)
     }
     
     private func checkAndUpdateStreak() {
         if let lastDate = defaults.object(forKey: lastStudyDateKey) as? Date {
-            let calendar = Calendar.current
             let lastDay = calendar.startOfDay(for: lastDate)
-            let today = calendar.startOfDay(for: Date())
+            let today = calendar.startOfDay(for: now())
             let diff = calendar.dateComponents([.day], from: lastDay, to: today).day ?? 0
             if diff > 1 {
-                defaults.set(1, forKey: streakKey)
+                defaults.set(0, forKey: streakKey)
             }
         }
     }

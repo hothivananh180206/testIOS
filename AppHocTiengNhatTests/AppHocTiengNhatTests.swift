@@ -65,4 +65,44 @@ final class AppHocTiengNhatTests: XCTestCase {
         ProgressService.shared.recordVocabTestScore(score: 100)
         XCTAssertEqual(ProgressService.shared.getLastVocabScore(), 100)
     }
+
+    func testStreakStartsAtZeroAndResetsAfterMissedDay() throws {
+        let suiteName = "ProgressServiceTests-\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        let calendar = Calendar(identifier: .gregorian)
+        var currentDate = try XCTUnwrap(calendar.date(from: DateComponents(year: 2026, month: 1, day: 1)))
+        let progress = ProgressService(defaults: defaults, calendar: calendar, now: { currentDate })
+
+        XCTAssertEqual(progress.getStreak(), 0)
+
+        progress.recordQuizResult(correct: 1, total: 1)
+        XCTAssertEqual(progress.getStreak(), 1)
+
+        progress.recordQuizResult(correct: 0, total: 1)
+        XCTAssertEqual(progress.getStreak(), 1)
+
+        currentDate = try XCTUnwrap(calendar.date(byAdding: .day, value: 1, to: currentDate))
+        progress.recordQuizResult(correct: 1, total: 1)
+        XCTAssertEqual(progress.getStreak(), 2)
+
+        currentDate = try XCTUnwrap(calendar.date(byAdding: .day, value: 2, to: currentDate))
+        let restartedProgress = ProgressService(defaults: defaults, calendar: calendar, now: { currentDate })
+        XCTAssertEqual(restartedProgress.getStreak(), 0)
+
+        restartedProgress.recordQuizResult(correct: 0, total: 1)
+        XCTAssertEqual(restartedProgress.getStreak(), 1)
+    }
+
+    func testQuizAccuracyUsesCorrectAndAnsweredTotals() throws {
+        let suiteName = "ProgressServiceAccuracyTests-\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        let progress = ProgressService(defaults: defaults)
+        progress.recordQuizResult(correct: 3, total: 4)
+
+        XCTAssertEqual(progress.getQuizAccuracyPercentage(), 75)
+    }
 }
