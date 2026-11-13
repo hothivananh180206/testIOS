@@ -34,23 +34,11 @@ public class StatsHeaderView: UIView {
         layer.shadowOffset = CGSize(width: 0, height: 3)
         layer.shadowRadius = 6
         
-        let firstRow = UIStackView()
-        firstRow.axis = .horizontal
-        firstRow.distribution = .fillEqually
-        firstRow.alignment = .center
-        firstRow.spacing = 12
-
-        let secondRow = UIStackView()
-        secondRow.axis = .horizontal
-        secondRow.distribution = .fillEqually
-        secondRow.alignment = .center
-        secondRow.spacing = 12
-
-        let stack = UIStackView(arrangedSubviews: [firstRow, secondRow])
-        stack.axis = .vertical
+        let stack = UIStackView()
+        stack.axis = .horizontal
         stack.distribution = .fillEqually
-        stack.alignment = .fill
-        stack.spacing = 12
+        stack.alignment = .center
+        stack.spacing = 4
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
         
@@ -83,16 +71,16 @@ public class StatsHeaderView: UIView {
         item4.addGestureRecognizer(tap)
         item4.isUserInteractionEnabled = true
         
-        firstRow.addArrangedSubview(item1)
-        firstRow.addArrangedSubview(item2)
-        secondRow.addArrangedSubview(item3)
-        secondRow.addArrangedSubview(item4)
+        stack.addArrangedSubview(item1)
+        stack.addArrangedSubview(item2)
+        stack.addArrangedSubview(item3)
+        stack.addArrangedSubview(item4)
         
         NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: topAnchor, constant: 14),
-            stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14)
+            stack.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
         
         refresh()
@@ -113,6 +101,8 @@ public class StatsHeaderView: UIView {
         valueLabel.font = .systemFont(ofSize: 16, weight: .bold)
         valueLabel.textColor = .label
         valueLabel.textAlignment = .center
+        valueLabel.adjustsFontSizeToFitWidth = true
+        valueLabel.minimumScaleFactor = 0.75
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         
         let titleLabel = UILabel()
@@ -120,7 +110,9 @@ public class StatsHeaderView: UIView {
         titleLabel.font = .systemFont(ofSize: 11, weight: .medium)
         titleLabel.textColor = .secondaryLabel
         titleLabel.textAlignment = .center
-        titleLabel.numberOfLines = 0
+        titleLabel.numberOfLines = 1
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.minimumScaleFactor = 0.75
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         container.addSubview(iconView)
@@ -135,11 +127,13 @@ public class StatsHeaderView: UIView {
             
             valueLabel.topAnchor.constraint(equalTo: iconView.bottomAnchor, constant: 6),
             valueLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-            valueLabel.leadingAnchor.constraint(greaterThanOrEqualTo: container.leadingAnchor),
-            valueLabel.trailingAnchor.constraint(lessThanOrEqualTo: container.trailingAnchor),
+            valueLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 2),
+            valueLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -2),
             
             titleLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 2),
             titleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 1),
+            titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -1),
             titleLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor)
         ])
         

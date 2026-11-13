@@ -104,10 +104,10 @@ public class KanjiFlashcardViewController: UIViewController {
             counterLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             flashcard.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            flashcard.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
+            flashcard.topAnchor.constraint(equalTo: counterLabel.bottomAnchor, constant: 24),
+            flashcard.bottomAnchor.constraint(lessThanOrEqualTo: buttonStack.topAnchor, constant: -20),
             flashcard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
             flashcard.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
-            flashcard.heightAnchor.constraint(equalToConstant: 410),
             
             speakButton.widthAnchor.constraint(equalToConstant: 50),
             speakButton.heightAnchor.constraint(equalToConstant: 50),
@@ -118,6 +118,10 @@ public class KanjiFlashcardViewController: UIViewController {
             buttonStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             buttonStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24)
         ])
+
+        let cardHeight = flashcard.heightAnchor.constraint(equalToConstant: 410)
+        cardHeight.priority = .defaultHigh
+        cardHeight.isActive = true
     }
     
     private func setupGestures() {

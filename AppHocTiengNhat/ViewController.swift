@@ -16,10 +16,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Tiếng Nhật N5"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.titleView = makeBrandTitleView()
         view.backgroundColor = .systemGroupedBackground
         
         setupViews()
+    }
+
+    private func makeBrandTitleView() -> UIView {
+        let logoView = UIImageView(image: UIImage(named: "AppLogo"))
+        logoView.contentMode = .scaleAspectFit
+        logoView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            logoView.widthAnchor.constraint(equalToConstant: 32),
+            logoView.heightAnchor.constraint(equalToConstant: 32)
+        ])
+
+        let titleLabel = UILabel()
+        titleLabel.text = "Tiếng Nhật N5"
+        titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        titleLabel.textColor = .label
+
+        let brandView = UIStackView(arrangedSubviews: [logoView, titleLabel])
+        brandView.axis = .horizontal
+        brandView.alignment = .center
+        brandView.spacing = 8
+        brandView.isAccessibilityElement = true
+        brandView.accessibilityLabel = "Tiếng Nhật N5"
+        logoView.isAccessibilityElement = false
+        titleLabel.isAccessibilityElement = false
+        return brandView
     }
     
     override func viewWillAppear(_ animated: Bool) {
