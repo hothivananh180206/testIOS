@@ -40,7 +40,7 @@ public struct VocabWord: Identifiable, Codable {
         exampleJp: String? = nil,
         exampleVi: String? = nil
     ) {
-        self.id = "vocab_\(topicId)_\(kana)"
+        self.id = "vocab_\(topicId)_\(lessonNumber ?? 0)_\(kana)_\(kanji ?? "")"
         self.kanji = kanji
         self.kana = kana
         self.romaji = romaji
