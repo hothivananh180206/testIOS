@@ -373,6 +373,37 @@ public final class AuthService {
         request.httpBody = try? JSONSerialization.data(withJSONObject: payload)
 
         session.dataTask(with: request).resume()
+
+        // Đồng thời đồng bộ cả Firebase Realtime Database
+        uploadToRealtimeDatabase(uid: uid, payload: [
+            "displayName": user.displayName,
+            "email": user.email,
+            "masteredIds": masteredIds,
+            "reviewIds": reviewIds,
+            "streakDays": streak,
+            "quizTotalCorrect": totalCorrect,
+            "quizTotalAnswered": totalAnswered,
+            "lastUpdated": ISO8601DateFormatter().string(from: Date())
+        ])
+    }
+
+    private func uploadToRealtimeDatabase(uid: String, payload: [String: Any]) {
+        let projectId = FirebaseConfig.shared.projectId
+        let endpoints = [
+            "https://\(projectId)-default-rtdb.asia-southeast1.firebasedatabase.app/users/\(uid).json",
+            "https://\(projectId)-default-rtdb.firebaseio.com/users/\(uid).json"
+        ]
+
+        guard let bodyData = try? JSONSerialization.data(withJSONObject: payload) else { return }
+
+        for ep in endpoints {
+            guard let url = URL(string: ep) else { continue }
+            var req = URLRequest(url: url)
+            req.httpMethod = "PATCH"
+            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            req.httpBody = bodyData
+            session.dataTask(with: req).resume()
+        }
     }
 
     // MARK: - Đồng bộ Firestore: Tải tiến độ từ Cloud về

@@ -290,7 +290,22 @@ public class LoginViewController: UIViewController {
                     self?.setLoading(false)
                     switch result {
                     case .success:
-                        self?.proceedToApp()
+                        // Đăng ký thành công -> Yêu cầu đăng nhập lại (quy trình chặt chẽ)
+                        AuthService.shared.logout()
+                        self?.passwordField.text = ""
+                        self?.confirmPasswordField.text = ""
+                        self?.tabSegment.selectedSegmentIndex = 0
+                        self?.tabChanged()
+
+                        let alert = UIAlertController(
+                            title: "🎉 Đăng ký thành công!",
+                            message: "Tài khoản \(email) đã được tạo trên hệ thống. Vui lòng nhập mật khẩu để đăng nhập.",
+                            preferredStyle: .alert
+                        )
+                        alert.addAction(UIAlertAction(title: "Đăng nhập ngay", style: .default, handler: { _ in
+                            self?.passwordField.becomeFirstResponder()
+                        }))
+                        self?.present(alert, animated: true)
                     case .failure(let err):
                         self?.showAlert(title: "Đăng ký thất bại", message: err.localizedDescription)
                     }
