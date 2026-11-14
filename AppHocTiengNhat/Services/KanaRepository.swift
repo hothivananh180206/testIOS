@@ -148,12 +148,176 @@ public final class KanaRepository {
         KanaCharacter(character: "ン", romaji: "n", type: .katakana, rowGroup: "Wa", exampleWord: "パン (pan)", exampleMeaning: "Bánh mì")
     ]
     
-    public func getCharacters(for type: KanaType) -> [KanaCharacter] {
+    // MARK: - 25 Ký tự Âm đục (Dakuon) & Bán đục (Handakuon) Hiragana
+    public let dakuonHiraganaList: [KanaCharacter] = [
+        // Hàng Ga
+        KanaCharacter(character: "が", romaji: "ga", type: .hiragana, category: .dakuon, rowGroup: "Ga", exampleWord: "がっこう (gakkou)", exampleMeaning: "Trường học"),
+        KanaCharacter(character: "ぎ", romaji: "gi", type: .hiragana, category: .dakuon, rowGroup: "Ga", exampleWord: "ぎんこう (ginkou)", exampleMeaning: "Ngân hàng"),
+        KanaCharacter(character: "ぐ", romaji: "gu", type: .hiragana, category: .dakuon, rowGroup: "Ga", exampleWord: "ぐらい (gurai)", exampleMeaning: "Khoảng chừng"),
+        KanaCharacter(character: "げ", romaji: "ge", type: .hiragana, category: .dakuon, rowGroup: "Ga", exampleWord: "げんき (genki)", exampleMeaning: "Khỏe mạnh"),
+        KanaCharacter(character: "ご", romaji: "go", type: .hiragana, category: .dakuon, rowGroup: "Ga", exampleWord: "ごはん (gohan)", exampleMeaning: "Cơm / Bữa ăn"),
+        
+        // Hàng Za
+        KanaCharacter(character: "ざ", romaji: "za", type: .hiragana, category: .dakuon, rowGroup: "Za", exampleWord: "ざっし (zasshi)", exampleMeaning: "Tạp chí"),
+        KanaCharacter(character: "じ", romaji: "ji", type: .hiragana, category: .dakuon, rowGroup: "Za", exampleWord: "じかん (jikan)", exampleMeaning: "Thời gian"),
+        KanaCharacter(character: "ず", romaji: "zu", type: .hiragana, category: .dakuon, rowGroup: "Za", exampleWord: "ちず (chizu)", exampleMeaning: "Bản đồ"),
+        KanaCharacter(character: "ぜ", romaji: "ze", type: .hiragana, category: .dakuon, rowGroup: "Za", exampleWord: "ぜんぶ (zenbu)", exampleMeaning: "Tất cả"),
+        KanaCharacter(character: "ぞ", romaji: "zo", type: .hiragana, category: .dakuon, rowGroup: "Za", exampleWord: "ぞう (zou)", exampleMeaning: "Con voi"),
+        
+        // Hàng Da
+        KanaCharacter(character: "だ", romaji: "da", type: .hiragana, category: .dakuon, rowGroup: "Da", exampleWord: "だいがく (daigaku)", exampleMeaning: "Trường đại học"),
+        KanaCharacter(character: "ぢ", romaji: "ji", type: .hiragana, category: .dakuon, rowGroup: "Da", exampleWord: "はなぢ (hanaji)", exampleMeaning: "Chảy máu cam"),
+        KanaCharacter(character: "づ", romaji: "zu", type: .hiragana, category: .dakuon, rowGroup: "Da", exampleWord: "つづく (tsuzuku)", exampleMeaning: "Tiếp tục"),
+        KanaCharacter(character: "で", romaji: "de", type: .hiragana, category: .dakuon, rowGroup: "Da", exampleWord: "でんしゃ (densha)", exampleMeaning: "Tàu điện"),
+        KanaCharacter(character: "ど", romaji: "do", type: .hiragana, category: .dakuon, rowGroup: "Da", exampleWord: "どこ (doko)", exampleMeaning: "Ở đâu"),
+        
+        // Hàng Ba
+        KanaCharacter(character: "ば", romaji: "ba", type: .hiragana, category: .dakuon, rowGroup: "Ba", exampleWord: "ばんごう (bangou)", exampleMeaning: "Số thứ tự"),
+        KanaCharacter(character: "び", romaji: "bi", type: .hiragana, category: .dakuon, rowGroup: "Ba", exampleWord: "びょういん (byouin)", exampleMeaning: "Bệnh viện"),
+        KanaCharacter(character: "ぶ", romaji: "bu", type: .hiragana, category: .dakuon, rowGroup: "Ba", exampleWord: "ぶたにく (butaniku)", exampleMeaning: "Thịt heo"),
+        KanaCharacter(character: "べ", romaji: "be", type: .hiragana, category: .dakuon, rowGroup: "Ba", exampleWord: "べんきょう (benkyou)", exampleMeaning: "Học tập"),
+        KanaCharacter(character: "ぼ", romaji: "bo", type: .hiragana, category: .dakuon, rowGroup: "Ba", exampleWord: "ぼうし (boushi)", exampleMeaning: "Cái mũ/nón"),
+        
+        // Hàng Pa
+        KanaCharacter(character: "ぱ", romaji: "pa", type: .hiragana, category: .dakuon, rowGroup: "Pa", exampleWord: "ぱん (pan)", exampleMeaning: "Bánh mì"),
+        KanaCharacter(character: "ぴ", romaji: "pi", type: .hiragana, category: .dakuon, rowGroup: "Pa", exampleWord: "ぴかぴか (pikapika)", exampleMeaning: "Lấp lánh"),
+        KanaCharacter(character: "ぷ", romaji: "pu", type: .hiragana, category: .dakuon, rowGroup: "Pa", exampleWord: "きっぷ (kippu)", exampleMeaning: "Vé tàu"),
+        KanaCharacter(character: "ぺ", romaji: "pe", type: .hiragana, category: .dakuon, rowGroup: "Pa", exampleWord: "ぺん (pen)", exampleMeaning: "Cây bút"),
+        KanaCharacter(character: "ぽ", romaji: "po", type: .hiragana, category: .dakuon, rowGroup: "Pa", exampleWord: "ぽけっと (poketto)", exampleMeaning: "Túi áo")
+    ]
+    
+    // MARK: - 33 Ký tự Âm ghép (Yoon) Hiragana
+    public let yoonHiraganaList: [KanaCharacter] = [
+        KanaCharacter(character: "きゃ", romaji: "kya", type: .hiragana, category: .yoon, rowGroup: "Kya", exampleWord: "きゃく (kyaku)", exampleMeaning: "Khách hàng"),
+        KanaCharacter(character: "きゅ", romaji: "kyu", type: .hiragana, category: .yoon, rowGroup: "Kya", exampleWord: "きゅう (kyuu)", exampleMeaning: "Số chín (9)"),
+        KanaCharacter(character: "きょ", romaji: "kyo", type: .hiragana, category: .yoon, rowGroup: "Kya", exampleWord: "きょう (kyou)", exampleMeaning: "Hôm nay"),
+        
+        KanaCharacter(character: "しゃ", romaji: "sha", type: .hiragana, category: .yoon, rowGroup: "Sha", exampleWord: "しゃしん (shashin)", exampleMeaning: "Bức ảnh"),
+        KanaCharacter(character: "しゅ", romaji: "shu", type: .hiragana, category: .yoon, rowGroup: "Sha", exampleWord: "しゅくだい (shukudai)", exampleMeaning: "Bài tập về nhà"),
+        KanaCharacter(character: "しょ", romaji: "sho", type: .hiragana, category: .yoon, rowGroup: "Sha", exampleWord: "しょくどう (shokudou)", exampleMeaning: "Nhà ăn"),
+        
+        KanaCharacter(character: "ちゃ", romaji: "cha", type: .hiragana, category: .yoon, rowGroup: "Cha", exampleWord: "おちゃ (ocha)", exampleMeaning: "Trà xanh"),
+        KanaCharacter(character: "ちゅ", romaji: "chu", type: .hiragana, category: .yoon, rowGroup: "Cha", exampleWord: "ちゅうしゃ (chuusha)", exampleMeaning: "Tiêm thuốc"),
+        KanaCharacter(character: "ちょ", romaji: "cho", type: .hiragana, category: .yoon, rowGroup: "Cha", exampleWord: "ちょっと (chotto)", exampleMeaning: "Một chút"),
+        
+        KanaCharacter(character: "にゃ", romaji: "nya", type: .hiragana, category: .yoon, rowGroup: "Nya", exampleWord: "こねこ (nyaa)", exampleMeaning: "Tiếng mèo kêu"),
+        KanaCharacter(character: "にゅ", romaji: "nyu", type: .hiragana, category: .yoon, rowGroup: "Nya", exampleWord: "にゅうがく (nyuugaku)", exampleMeaning: "Nhập học"),
+        KanaCharacter(character: "にょ", romaji: "nyo", type: .hiragana, category: .yoon, rowGroup: "Nya", exampleWord: "にょうぼう (nyoubou)", exampleMeaning: "Vợ"),
+        
+        KanaCharacter(character: "ひゃ", romaji: "hya", type: .hiragana, category: .yoon, rowGroup: "Hya", exampleWord: "ひゃく (hyaku)", exampleMeaning: "Một trăm (100)"),
+        KanaCharacter(character: "ひゅ", romaji: "hyu", type: .hiragana, category: .yoon, rowGroup: "Hya", exampleWord: "ひゅうひゅう", exampleMeaning: "Tiếng gió rít"),
+        KanaCharacter(character: "ひょ", romaji: "hyo", type: .hiragana, category: .yoon, rowGroup: "Hya", exampleWord: "ひょうき (hyouki)", exampleMeaning: "Cách viết"),
+        
+        KanaCharacter(character: "みゃ", romaji: "mya", type: .hiragana, category: .yoon, rowGroup: "Mya", exampleWord: "みゃく (myaku)", exampleMeaning: "Mạch đập"),
+        KanaCharacter(character: "みゅ", romaji: "myu", type: .hiragana, category: .yoon, rowGroup: "Mya", exampleWord: "みゅーじかる", exampleMeaning: "Nhạc kịch"),
+        KanaCharacter(character: "みょ", romaji: "myo", type: .hiragana, category: .yoon, rowGroup: "Mya", exampleWord: "みょうじ (myouji)", exampleMeaning: "Tên họ"),
+        
+        KanaCharacter(character: "りゃ", romaji: "rya", type: .hiragana, category: .yoon, rowGroup: "Rya", exampleWord: "りゃくご (ryakugo)", exampleMeaning: "Từ viết tắt"),
+        KanaCharacter(character: "りゅ", romaji: "ryu", type: .hiragana, category: .yoon, rowGroup: "Rya", exampleWord: "りゅうがく (ryuugaku)", exampleMeaning: "Du học"),
+        KanaCharacter(character: "りょ", romaji: "ryo", type: .hiragana, category: .yoon, rowGroup: "Rya", exampleWord: "りょこう (ryokou)", exampleMeaning: "Du lịch"),
+        
+        KanaCharacter(character: "ぎゃ", romaji: "gya", type: .hiragana, category: .yoon, rowGroup: "Gya", exampleWord: "ぎゃく (gyaku)", exampleMeaning: "Ngược lại"),
+        KanaCharacter(character: "ぎゅ", romaji: "gyu", type: .hiragana, category: .yoon, rowGroup: "Gya", exampleWord: "ぎゅうにく (gyuuniku)", exampleMeaning: "Thịt bò"),
+        KanaCharacter(character: "ぎょ", romaji: "gyo", type: .hiragana, category: .yoon, rowGroup: "Gya", exampleWord: "ぎょうざ (gyouza)", exampleMeaning: "Bánh sủi cảo"),
+        
+        KanaCharacter(character: "じゃ", romaji: "ja", type: .hiragana, category: .yoon, rowGroup: "Ja", exampleWord: "じゃま (jama)", exampleMeaning: "Làm phiền"),
+        KanaCharacter(character: "じゅ", romaji: "ju", type: .hiragana, category: .yoon, rowGroup: "Ja", exampleWord: "じゅぎょう (jugyou)", exampleMeaning: "Tiết học"),
+        KanaCharacter(character: "じょ", romaji: "jo", type: .hiragana, category: .yoon, rowGroup: "Ja", exampleWord: "じょせい (josei)", exampleMeaning: "Phụ nữ"),
+        
+        KanaCharacter(character: "びゃ", romaji: "bya", type: .hiragana, category: .yoon, rowGroup: "Bya", exampleWord: "さんびゃく (sanbyaku)", exampleMeaning: "Ba trăm (300)"),
+        KanaCharacter(character: "びゅ", romaji: "byu", type: .hiragana, category: .yoon, rowGroup: "Bya", exampleWord: "びゅー (byuu)", exampleMeaning: "Khung cảnh"),
+        KanaCharacter(character: "びょ", romaji: "byo", type: .hiragana, category: .yoon, rowGroup: "Bya", exampleWord: "びょうき (byouki)", exampleMeaning: "Bị ốm/bệnh"),
+        
+        KanaCharacter(character: "ぴゃ", romaji: "pya", type: .hiragana, category: .yoon, rowGroup: "Pya", exampleWord: "ろっぴゃく (roppyaku)", exampleMeaning: "Sáu trăm (600)"),
+        KanaCharacter(character: "ぴゅ", romaji: "pyu", type: .hiragana, category: .yoon, rowGroup: "Pya", exampleWord: "ぴゅあ (pure)", exampleMeaning: "Trong sáng"),
+        KanaCharacter(character: "ぴょ", romaji: "pyo", type: .hiragana, category: .yoon, rowGroup: "Pya", exampleWord: "はっぴょう (happyou)", exampleMeaning: "Phát biểu")
+    ]
+    
+    // MARK: - 25 Ký tự Âm đục (Dakuon) Katakana
+    public let dakuonKatakanaList: [KanaCharacter] = [
+        KanaCharacter(character: "ガ", romaji: "ga", type: .katakana, category: .dakuon, rowGroup: "Ga", exampleWord: "ガス (gasu)", exampleMeaning: "Khí gas"),
+        KanaCharacter(character: "ギ", romaji: "gi", type: .katakana, category: .dakuon, rowGroup: "Ga", exampleWord: "ギター (gitaa)", exampleMeaning: "Đàn guitar"),
+        KanaCharacter(character: "グ", romaji: "gu", type: .katakana, category: .dakuon, rowGroup: "Ga", exampleWord: "グラス (gurasu)", exampleMeaning: "Cái ly thuỷ tinh"),
+        KanaCharacter(character: "ゲ", romaji: "ge", type: .katakana, category: .dakuon, rowGroup: "Ga", exampleWord: "ゲーム (geemu)", exampleMeaning: "Trò chơi điện tử"),
+        KanaCharacter(character: "ゴ", romaji: "go", type: .katakana, category: .dakuon, rowGroup: "Ga", exampleWord: "ゴルフ (gorufu)", exampleMeaning: "Môn gôn"),
+        
+        KanaCharacter(character: "ザ", romaji: "za", type: .katakana, category: .dakuon, rowGroup: "Za", exampleWord: "サラダ (sarada)", exampleMeaning: "Món salad"),
+        KanaCharacter(character: "ジ", romaji: "ji", type: .katakana, category: .dakuon, rowGroup: "Za", exampleWord: "ジュース (juusu)", exampleMeaning: "Nước ép trái cây"),
+        KanaCharacter(character: "ズ", romaji: "zu", type: .katakana, category: .dakuon, rowGroup: "Za", exampleWord: "ズボン (zubon)", exampleMeaning: "Quần dài"),
+        KanaCharacter(character: "ゼ", romaji: "ze", type: .katakana, category: .dakuon, rowGroup: "Za", exampleWord: "ゼロ (zero)", exampleMeaning: "Số không (0)"),
+        KanaCharacter(character: "ゾ", romaji: "zo", type: .katakana, category: .dakuon, rowGroup: "Za", exampleWord: "ゾーン (zoon)", exampleMeaning: "Khu vực (zone)"),
+        
+        KanaCharacter(character: "ダ", romaji: "da", type: .katakana, category: .dakuon, rowGroup: "Da", exampleWord: "ダンス (dansu)", exampleMeaning: "Khiêu vũ"),
+        KanaCharacter(character: "ヂ", romaji: "ji", type: .katakana, category: .dakuon, rowGroup: "Da", exampleWord: "ラジオ", exampleMeaning: "Đài phát thanh"),
+        KanaCharacter(character: "ヅ", romaji: "zu", type: .katakana, category: .dakuon, rowGroup: "Da", exampleWord: "つづく", exampleMeaning: "Tiếp tục"),
+        KanaCharacter(character: "デ", romaji: "de", type: .katakana, category: .dakuon, rowGroup: "Da", exampleWord: "ドア (doa)", exampleMeaning: "Cánh cửa"),
+        KanaCharacter(character: "ド", romaji: "do", type: .katakana, category: .dakuon, rowGroup: "Da", exampleWord: "ドラマ (dorama)", exampleMeaning: "Phim truyền hình"),
+        
+        KanaCharacter(character: "バ", romaji: "ba", type: .katakana, category: .dakuon, rowGroup: "Ba", exampleWord: "バス (basu)", exampleMeaning: "Xe buýt"),
+        KanaCharacter(character: "ビ", romaji: "bi", type: .katakana, category: .dakuon, rowGroup: "Ba", exampleWord: "ビール (biiru)", exampleMeaning: "Bia"),
+        KanaCharacter(character: "ブ", romaji: "bu", type: .katakana, category: .dakuon, rowGroup: "Ba", exampleWord: "ベッド (beddo)", exampleMeaning: "Giường ngủ"),
+        KanaCharacter(character: "ベ", romaji: "be", type: .katakana, category: .dakuon, rowGroup: "Ba", exampleWord: "ベルト (beruto)", exampleMeaning: "Thắt lưng"),
+        KanaCharacter(character: "ボ", romaji: "bo", type: .katakana, category: .dakuon, rowGroup: "Ba", exampleWord: "ボタン (botan)", exampleMeaning: "Nút bấm / Cúc áo"),
+        
+        KanaCharacter(character: "パ", romaji: "pa", type: .katakana, category: .dakuon, rowGroup: "Pa", exampleWord: "パン (pan)", exampleMeaning: "Bánh mì"),
+        KanaCharacter(character: "ピ", romaji: "pi", type: .katakana, category: .dakuon, rowGroup: "Pa", exampleWord: "ピアノ (piano)", exampleMeaning: "Đàn dương cầm"),
+        KanaCharacter(character: "プ", romaji: "pu", type: .katakana, category: .dakuon, rowGroup: "Pa", exampleWord: "プール (puuru)", exampleMeaning: "Hồ bơi"),
+        KanaCharacter(character: "ペ", romaji: "pe", type: .katakana, category: .dakuon, rowGroup: "Pa", exampleWord: "ペン (pen)", exampleMeaning: "Cây bút"),
+        KanaCharacter(character: "ポ", romaji: "po", type: .katakana, category: .dakuon, rowGroup: "Pa", exampleWord: "ポスト (posuto)", exampleMeaning: "Hộp thư")
+    ]
+    
+    // MARK: - 33 Ký tự Âm ghép (Yoon) Katakana
+    public let yoonKatakanaList: [KanaCharacter] = [
+        KanaCharacter(character: "キャ", romaji: "kya", type: .katakana, category: .yoon, rowGroup: "Kya", exampleWord: "キャンプ (kyanpu)", exampleMeaning: "Cắm trại"),
+        KanaCharacter(character: "キュ", romaji: "kyu", type: .katakana, category: .yoon, rowGroup: "Kya", exampleWord: "キューバ (kyuuba)", exampleMeaning: "Nước Cuba"),
+        KanaCharacter(character: "キョ", romaji: "kyo", type: .katakana, category: .yoon, rowGroup: "Kya", exampleWord: "キョート (kyooto)", exampleMeaning: "Kyoto"),
+        
+        KanaCharacter(character: "シャ", romaji: "sha", type: .katakana, category: .yoon, rowGroup: "Sha", exampleWord: "シャツ (shatsu)", exampleMeaning: "Áo sơ mi"),
+        KanaCharacter(character: "シュ", romaji: "shu", type: .katakana, category: .yoon, rowGroup: "Sha", exampleWord: "シュークリーム", exampleMeaning: "Bánh su kem"),
+        KanaCharacter(character: "ショ", romaji: "sho", type: .katakana, category: .yoon, rowGroup: "Sha", exampleWord: "ショップ (shoppu)", exampleMeaning: "Cửa hàng"),
+        
+        KanaCharacter(character: "チャ", romaji: "cha", type: .katakana, category: .yoon, rowGroup: "Cha", exampleWord: "チャンス (chansu)", exampleMeaning: "Cơ hội"),
+        KanaCharacter(character: "チュ", romaji: "chu", type: .katakana, category: .yoon, rowGroup: "Cha", exampleWord: "チューブ (chuubu)", exampleMeaning: "Ống tuýp"),
+        KanaCharacter(character: "チョ", romaji: "cho", type: .katakana, category: .yoon, rowGroup: "Cha", exampleWord: "チョコ (choko)", exampleMeaning: "Sô cô la"),
+        
+        KanaCharacter(character: "ヒャ", romaji: "hya", type: .katakana, category: .yoon, rowGroup: "Hya", exampleWord: "ヒャク (100)", exampleMeaning: "Một trăm"),
+        KanaCharacter(character: "ヒュ", romaji: "hyu", type: .katakana, category: .yoon, rowGroup: "Hya", exampleWord: "ヒューズ (hyuuzu)", exampleMeaning: "Cầu chì"),
+        KanaCharacter(character: "ヒョ", romaji: "hyo", type: .katakana, category: .yoon, rowGroup: "Hya", exampleWord: "ヒョウ", exampleMeaning: "Báo đốm"),
+        
+        KanaCharacter(character: "ジャ", romaji: "ja", type: .katakana, category: .yoon, rowGroup: "Ja", exampleWord: "シャツ (ja)", exampleMeaning: "Áo"),
+        KanaCharacter(character: "ジュ", romaji: "ju", type: .katakana, category: .yoon, rowGroup: "Ja", exampleWord: "ジュース (juusu)", exampleMeaning: "Nước ép"),
+        KanaCharacter(character: "ジョ", romaji: "jo", type: .katakana, category: .yoon, rowGroup: "Ja", exampleWord: "ジョギング (jogingu)", exampleMeaning: "Chạy bộ"),
+        
+        KanaCharacter(character: "ニュ", romaji: "nyu", type: .katakana, category: .yoon, rowGroup: "Nya", exampleWord: "ニュース (nyuusu)", exampleMeaning: "Tin tức (News)"),
+        KanaCharacter(character: "ミョ", romaji: "myo", type: .katakana, category: .yoon, rowGroup: "Mya", exampleWord: "ミャンマー (myanmaa)", exampleMeaning: "Myanmar"),
+        KanaCharacter(character: "リュ", romaji: "ryu", type: .katakana, category: .yoon, rowGroup: "Rya", exampleWord: "リュック (ryukku)", exampleMeaning: "Ba lô")
+    ]
+    
+    public func getCharacters(for type: KanaType, category: KanaCategory? = nil) -> [KanaCharacter] {
         switch type {
         case .hiragana:
-            return hiraganaList
+            guard let category = category else { return hiraganaList }
+            switch category {
+            case .basic: return hiraganaList
+            case .dakuon: return dakuonHiraganaList
+            case .yoon: return yoonHiraganaList
+            }
         case .katakana:
-            return katakanaList
+            guard let category = category else { return katakanaList }
+            switch category {
+            case .basic: return katakanaList
+            case .dakuon: return dakuonKatakanaList
+            case .yoon: return yoonKatakanaList
+            }
+        }
+    }
+    
+    public func getAllCharacters(for type: KanaType) -> [KanaCharacter] {
+        switch type {
+        case .hiragana:
+            return hiraganaList + dakuonHiraganaList + yoonHiraganaList
+        case .katakana:
+            return katakanaList + dakuonKatakanaList + yoonKatakanaList
         }
     }
 }

@@ -4,30 +4,35 @@
 
 ## 🌟 Tính năng chính
 
-### 1. Bảng chữ cái cơ bản (Hiragana & Katakana)
-- Đầy đủ 46 ký tự Hiragana và 46 ký tự Katakana.
+### 1. Bảng chữ cái toàn diện (Hiragana & Katakana 104 ký tự)
+- Đầy đủ 46 ký tự cơ bản, 25 ký tự **Âm đục & Bán đục (Dakuon/Handakuon)**, và 33 ký tự **Âm ghép (Yoon)**.
 - Kèm theo phiên âm Romaji, từ vựng ví dụ thực tế và giải nghĩa tiếng Việt.
-- Chế độ **Flashcard 3D**: Lật thẻ xem nghĩa, tự động phát âm khi chuyển thẻ, vuốt trái/phải.
+- Chế độ **Flashcard 3D**: Lật thẻ xem nghĩa, tự động phát âm khi chuyển thẻ, tùy chọn học theo từng nhóm ký tự.
 - Chế độ **Luyện nghe (Audio Quiz)**: Nghe phát âm và chọn 1 trong 4 đáp án đúng, phản hồi trực quan xanh/đỏ và rung xúc giác (Haptic Feedback).
 
-### 2. Hán tự Kanji N5 (漢字)
+### 2. Tra cứu Từ vựng & Hán tự N5 (Smart Search) 🔍
+- Thanh tìm kiếm tức thời trên màn hình chính và thanh công cụ.
+- Tra cứu đa năng: Tìm theo chữ Kanji, Romaji, Hiragana hoặc nghĩa tiếng Việt.
+- Tích hợp nút loa phát âm trực tiếp ngay trên từng kết quả tìm kiếm.
+
+### 3. Nhắc nhở học tập hàng ngày (Push Notification) 🔔
+- Tự động lên lịch thông báo lúc **20:00 mỗi ngày** để duy trì chuỗi ngày học (Streak 🔥).
+- Cho phép bắn thông báo thử nghiệm trực tiếp từ thanh công cụ.
+
+### 4. Hán tự Kanji N5 (漢字)
 - Tuyển chọn các chữ Hán căn bản nhất trong cấp độ JLPT N5.
 - Cung cấp: **Âm Hán Việt** (dễ nhớ cho người Việt), Âm On, Âm Kun, Số nét, và các từ ghép thông dụng.
 - Luyện nghe từ vựng Kanji và chọn chữ Hán tương ứng.
 
-### 3. Từ vựng N5 theo Chủ đề
-- Phân loại theo 5 chủ đề giao tiếp:
-  - 💬 Chào hỏi & Giao tiếp (Aisatsu)
-  - 👨‍👩‍👧 Gia đình & Bản thân (Kazoku)
-  - ⏰ Thời gian & Lịch trình (Jikan)
-  - 🍜 Ẩm thực & Nhà hàng (Tabemono)
-  - 🚆 Đi lại & Phương tiện (Norimono)
+### 5. Từ vựng & Ngữ pháp N5 theo Chủ đề và Bài học Minna
+- Phân loại theo 5 chủ đề giao tiếp và 18 bài học chuẩn Minna no Nihongo.
 - Kèm câu ví dụ mẫu trong ngữ cảnh và audio phát âm câu ví dụ.
 
-### 4. Quản lý Tiến độ học tập
+### 6. Quản lý Tiến độ học tập
 - Đánh dấu từ đã thuộc (nút sao ⭐).
 - Theo dõi chuỗi ngày học liên tục (Streak 🔥).
 - Thống kê tỷ lệ phần trăm chính xác khi luyện nghe (🎯 Accuracy).
+- Sổ tay tổng hợp từ vựng chưa thuộc / cần ôn tập.
 
 ## 🛠 Yêu cầu kỹ thuật
 - **Ngôn ngữ**: Swift 5+

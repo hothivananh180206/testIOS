@@ -19,7 +19,38 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemGroupedBackground
         
+        setupNavButtons()
         setupViews()
+    }
+    
+    private func setupNavButtons() {
+        let searchBtn = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(handleSearchTap))
+        let bellBtn = UIBarButtonItem(image: UIImage(systemName: "bell.badge.fill"), style: .plain, target: self, action: #selector(handleNotificationTap))
+        bellBtn.tintColor = .systemOrange
+        navigationItem.rightBarButtonItems = [searchBtn, bellBtn]
+    }
+    
+    @objc private func handleSearchTap() {
+        let vc = SearchViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func handleNotificationTap() {
+        let alert = UIAlertController(title: "Nhắc nhở học tập 🔥", message: "Hệ thống sẽ gửi thông báo mỗi tối để bạn duy trì chuỗi ngày học Streak!", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "⏰ Hẹn giờ học 20:00 mỗi ngày", style: .default, handler: { [weak self] _ in
+            NotificationService.shared.scheduleDailyReminder(hour: 20, minute: 0)
+            let notice = UIAlertController(title: "Đã kích hoạt!", message: "Đã cài đặt chuông nhắc học tiếng Nhật lúc 20:00 hàng ngày.", preferredStyle: .alert)
+            notice.addAction(UIAlertAction(title: "Tuyệt vời", style: .default))
+            self?.present(notice, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "🔔 Bắn thông báo thử nghiệm ngay (3 giây)", style: .default, handler: { [weak self] _ in
+            NotificationService.shared.sendTestNotification()
+            let notice = UIAlertController(title: "Đã hẹn thông báo", message: "Bạn hãy nhấn phím Home hoặc khóa màn hình để thấy thông báo xuất hiện sau 3 giây nhé!", preferredStyle: .alert)
+            notice.addAction(UIAlertAction(title: "OK", style: .default))
+            self?.present(notice, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Đóng", style: .cancel))
+        present(alert, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +85,10 @@ class ViewController: UIViewController {
             self?.navigationController?.pushViewController(vc, animated: true)
         }
         contentView.addSubview(statsHeader)
+        
+        // 0.1 Search Bar Quick Access
+        let searchBarCard = createSearchQuickBar()
+        contentView.addSubview(searchBarCard)
         
         // 1. Hiragana Section Card
         let hiraganaCard = createKanaSectionCard(
@@ -98,7 +133,11 @@ class ViewController: UIViewController {
             statsHeader.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             statsHeader.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             
-            hiraganaCard.topAnchor.constraint(equalTo: statsHeader.bottomAnchor, constant: 20),
+            searchBarCard.topAnchor.constraint(equalTo: statsHeader.bottomAnchor, constant: 14),
+            searchBarCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            searchBarCard.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            
+            hiraganaCard.topAnchor.constraint(equalTo: searchBarCard.bottomAnchor, constant: 16),
             hiraganaCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             hiraganaCard.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             
@@ -123,6 +162,50 @@ class ViewController: UIViewController {
             vocabCard.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             vocabCard.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -30)
         ])
+    }
+    
+    private func createSearchQuickBar() -> UIView {
+        let control = UIControl()
+        control.backgroundColor = .secondarySystemGroupedBackground
+        control.layer.cornerRadius = 14
+        control.layer.borderWidth = 1
+        control.layer.borderColor = UIColor.systemGray4.cgColor
+        control.translatesAutoresizingMaskIntoConstraints = false
+        
+        let icon = UIImageView(image: UIImage(systemName: "magnifyingglass"))
+        icon.tintColor = .systemGray
+        icon.contentMode = .scaleAspectFit
+        icon.isUserInteractionEnabled = false
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        
+        let label = UILabel()
+        label.text = "🔍 Tra cứu Từ vựng, Kanji, Ngữ pháp N5..."
+        label.font = .systemFont(ofSize: 14, weight: .medium)
+        label.textColor = .secondaryLabel
+        label.isUserInteractionEnabled = false
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        control.addSubview(icon)
+        control.addSubview(label)
+        
+        NSLayoutConstraint.activate([
+            control.heightAnchor.constraint(equalToConstant: 46),
+            icon.leadingAnchor.constraint(equalTo: control.leadingAnchor, constant: 14),
+            icon.centerYAnchor.constraint(equalTo: control.centerYAnchor),
+            icon.widthAnchor.constraint(equalToConstant: 18),
+            icon.heightAnchor.constraint(equalToConstant: 18),
+            
+            label.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 10),
+            label.centerYAnchor.constraint(equalTo: control.centerYAnchor),
+            label.trailingAnchor.constraint(equalTo: control.trailingAnchor, constant: -14)
+        ])
+        
+        control.addAction(UIAction(handler: { [weak self] _ in
+            let vc = SearchViewController()
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }), for: .touchUpInside)
+        
+        return control
     }
     
     private func createKanaSectionCard(title: String, subtitle: String, accentColor: UIColor, kanaType: KanaType) -> UIView {
@@ -153,8 +236,25 @@ class ViewController: UIViewController {
         flashcardBtn.layer.cornerRadius = 12
         flashcardBtn.clipsToBounds = true
         flashcardBtn.addAction(UIAction(handler: { [weak self] _ in
-            let vc = FlashcardViewController(kanaType: kanaType)
-            self?.navigationController?.pushViewController(vc, animated: true)
+            let alert = UIAlertController(title: "Học Flashcard \(kanaType.rawValue)", message: "Chọn nhóm ký tự bạn muốn học:", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "1. Ký tự cơ bản (46 chữ)", style: .default, handler: { _ in
+                let vc = FlashcardViewController(kanaType: kanaType, category: .basic)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "2. Âm đục & Bán đục (25 chữ)", style: .default, handler: { _ in
+                let vc = FlashcardViewController(kanaType: kanaType, category: .dakuon)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "3. Âm ghép Yoon (33 chữ)", style: .default, handler: { _ in
+                let vc = FlashcardViewController(kanaType: kanaType, category: .yoon)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "⭐ Học toàn bộ (104 chữ)", style: .default, handler: { _ in
+                let vc = FlashcardViewController(kanaType: kanaType, category: nil)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "Đóng", style: .cancel))
+            self?.present(alert, animated: true)
         }), for: .touchUpInside)
         
         let quizBtn = UIButton(type: .system)
@@ -169,8 +269,25 @@ class ViewController: UIViewController {
         quizBtn.layer.cornerRadius = 12
         quizBtn.clipsToBounds = true
         quizBtn.addAction(UIAction(handler: { [weak self] _ in
-            let vc = AudioQuizViewController(kanaType: kanaType)
-            self?.navigationController?.pushViewController(vc, animated: true)
+            let alert = UIAlertController(title: "Luyện nghe \(kanaType.rawValue)", message: "Chọn nhóm ký tự bạn muốn kiểm tra nghe:", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "1. Ký tự cơ bản (46 chữ)", style: .default, handler: { _ in
+                let vc = AudioQuizViewController(kanaType: kanaType, category: .basic)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "2. Âm đục & Bán đục (25 chữ)", style: .default, handler: { _ in
+                let vc = AudioQuizViewController(kanaType: kanaType, category: .dakuon)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "3. Âm ghép Yoon (33 chữ)", style: .default, handler: { _ in
+                let vc = AudioQuizViewController(kanaType: kanaType, category: .yoon)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "⭐ Luyện nghe Toàn bộ (104 chữ)", style: .default, handler: { _ in
+                let vc = AudioQuizViewController(kanaType: kanaType, category: nil)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "Đóng", style: .cancel))
+            self?.present(alert, animated: true)
         }), for: .touchUpInside)
         
         let btnStack = UIStackView(arrangedSubviews: [flashcardBtn, quizBtn])

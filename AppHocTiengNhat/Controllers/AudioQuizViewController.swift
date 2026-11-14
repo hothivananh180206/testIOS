@@ -8,6 +8,7 @@ import UIKit
 public class AudioQuizViewController: UIViewController {
     
     private let kanaType: KanaType
+    private let category: KanaCategory?
     private var allCharacters: [KanaCharacter] = []
     private var quizList: [KanaCharacter] = []
     private var currentIndex: Int = 0
@@ -29,22 +30,28 @@ public class AudioQuizViewController: UIViewController {
     
     private let optionsStackView = UIStackView()
     
-    public init(kanaType: KanaType) {
+    public init(kanaType: KanaType, category: KanaCategory? = nil) {
         self.kanaType = kanaType
+        self.category = category
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         self.kanaType = .hiragana
+        self.category = nil
         super.init(coder: coder)
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Luyện nghe \(kanaType.rawValue)"
+        if let cat = category {
+            title = "Nghe \(kanaType.rawValue): \(cat.rawValue)"
+            allCharacters = KanaRepository.shared.getCharacters(for: kanaType, category: cat)
+        } else {
+            title = "Luyện nghe \(kanaType.rawValue)"
+            allCharacters = KanaRepository.shared.getAllCharacters(for: kanaType)
+        }
         view.backgroundColor = .systemGroupedBackground
-        
-        allCharacters = KanaRepository.shared.getCharacters(for: kanaType)
         setupUI()
         startNewQuizSession()
     }

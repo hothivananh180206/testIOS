@@ -8,6 +8,7 @@ import UIKit
 public class FlashcardViewController: UIViewController, FlashcardViewDelegate {
     
     private let kanaType: KanaType
+    private let category: KanaCategory?
     private var characters: [KanaCharacter] = []
     private var currentIndex: Int = 0
     
@@ -19,22 +20,28 @@ public class FlashcardViewController: UIViewController, FlashcardViewDelegate {
     private let nextButton = UIButton(type: .system)
     private let speakButton = UIButton(type: .system)
     
-    public init(kanaType: KanaType) {
+    public init(kanaType: KanaType, category: KanaCategory? = nil) {
         self.kanaType = kanaType
+        self.category = category
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         self.kanaType = .hiragana
+        self.category = nil
         super.init(coder: coder)
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Flashcard \(kanaType.rawValue)"
+        if let cat = category {
+            title = "\(kanaType.rawValue) - \(cat.rawValue)"
+            characters = KanaRepository.shared.getCharacters(for: kanaType, category: cat)
+        } else {
+            title = "Flashcard \(kanaType.rawValue)"
+            characters = KanaRepository.shared.getAllCharacters(for: kanaType)
+        }
         view.backgroundColor = .systemGroupedBackground
-        
-        characters = KanaRepository.shared.getCharacters(for: kanaType)
         setupUI()
         setupGestures()
         updateCard()
