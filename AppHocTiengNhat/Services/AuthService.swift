@@ -177,6 +177,7 @@ public final class AuthService {
             let refreshToken = json["refreshToken"] as? String
             let user = FirebaseUser(uid: uid, email: email, displayName: savedName, idToken: idToken, refreshToken: refreshToken)
             self?.saveUser(user)
+            self?.uploadProgressToCloud()
 
             // Đồng bộ tiến độ từ Firestore về
             self?.syncProgressFromCloud {
@@ -389,10 +390,14 @@ public final class AuthService {
 
     private func uploadToRealtimeDatabase(uid: String, payload: [String: Any]) {
         let projectId = FirebaseConfig.shared.projectId
-        let endpoints = [
+        var endpoints = [
             "https://\(projectId)-default-rtdb.asia-southeast1.firebasedatabase.app/users/\(uid).json",
             "https://\(projectId)-default-rtdb.firebaseio.com/users/\(uid).json"
         ]
+
+        if let token = currentUser?.idToken, !token.isEmpty {
+            endpoints.insert("https://\(projectId)-default-rtdb.asia-southeast1.firebasedatabase.app/users/\(uid).json?auth=\(token)", at: 0)
+        }
 
         guard let bodyData = try? JSONSerialization.data(withJSONObject: payload) else { return }
 
