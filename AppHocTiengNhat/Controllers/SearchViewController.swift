@@ -13,21 +13,576 @@ public struct SearchResultItem {
     public let audioText: String
 }
 
-public class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+// MARK: - Keyboard Delegate Protocol
+public protocol DualLanguageKeyboardDelegate: AnyObject {
+    func keyboardDidInsertText(_ text: String)
+    func keyboardDidReplaceLastText(with text: String)
+    func keyboardDidDeleteBackward()
+    func keyboardDidClearAll()
+    func keyboardDidTapSearch()
+    func keyboardDidToggleDakuon()
+    var currentInputText: String { get }
+}
+
+// MARK: - Custom In-App Dual Language Keyboard (Japanese 12-Key & Vietnamese)
+public class DualLanguageKeyboardView: UIView, UIInputViewAudioFeedback {
+    
+    public weak var delegate: DualLanguageKeyboardDelegate?
+    public var enableInputClicksWhenVisible: Bool { return true }
+    
+    public enum KeyboardMode {
+        case japanese12Key
+        case vietnamese
+    }
+    
+    private var currentMode: KeyboardMode = .japanese12Key
+    private var isRomajiIn12Key: Bool = false
+    private var isShiftedVN: Bool = false
+    
+    // Top Bar
+    private let topBar = UIView()
+    private let modeButton = UIButton(type: .system)
+    private let statusLabel = UILabel()
+    private let dismissButton = UIButton(type: .system)
+    
+    // Candidate Strip for Japanese 12-Key
+    private let candidateScrollView = UIScrollView()
+    private let candidateStackView = UIStackView()
+    
+    // Container for dynamic keyboard layout
+    private let contentContainer = UIView()
+    private var currentLayoutView: UIView?
+    
+    // Multi-tap tracking for Japanese 12-key
+    private var lastKeyIndex: Int?
+    private var lastCycleStep: Int = 0
+    private var lastKeyTime: TimeInterval = 0
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupBase()
+    }
+    
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupBase()
+    }
+    
+    private func setupBase() {
+        backgroundColor = UIColor.systemGroupedBackground
+        autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        setupTopBar()
+        setupCandidateStrip()
+        
+        contentContainer.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(contentContainer)
+        
+        NSLayoutConstraint.activate([
+            topBar.topAnchor.constraint(equalTo: topAnchor),
+            topBar.leadingAnchor.constraint(equalTo: leadingAnchor),
+            topBar.trailingAnchor.constraint(equalTo: trailingAnchor),
+            topBar.heightAnchor.constraint(equalToConstant: 40),
+            
+            candidateScrollView.topAnchor.constraint(equalTo: topBar.bottomAnchor),
+            candidateScrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            candidateScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            candidateScrollView.heightAnchor.constraint(equalToConstant: 34),
+            
+            contentContainer.topAnchor.constraint(equalTo: candidateScrollView.bottomAnchor, constant: 4),
+            contentContainer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
+            contentContainer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
+            contentContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -4)
+        ])
+        
+        renderCurrentMode()
+    }
+    
+    private func setupTopBar() {
+        topBar.backgroundColor = UIColor.secondarySystemGroupedBackground
+        topBar.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(topBar)
+        
+        var modeConfig = UIButton.Configuration.filled()
+        modeConfig.title = "🌐 Đổi sang Tiếng Việt"
+        modeConfig.image = UIImage(systemName: "globe")
+        modeConfig.imagePlacement = .leading
+        modeConfig.imagePadding = 4
+        modeConfig.baseBackgroundColor = .systemPurple
+        modeConfig.baseForegroundColor = .white
+        modeConfig.cornerStyle = .capsule
+        modeButton.configuration = modeConfig
+        modeButton.titleLabel?.font = .systemFont(ofSize: 12, weight: .bold)
+        modeButton.translatesAutoresizingMaskIntoConstraints = false
+        modeButton.addTarget(self, action: #selector(didTapToggleLanguage), for: .touchUpInside)
+        topBar.addSubview(modeButton)
+        
+        statusLabel.font = .systemFont(ofSize: 12, weight: .semibold)
+        statusLabel.textColor = .secondaryLabel
+        statusLabel.textAlignment = .center
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        topBar.addSubview(statusLabel)
+        
+        var dismissConfig = UIButton.Configuration.plain()
+        dismissConfig.image = UIImage(systemName: "keyboard.chevron.compact.down")
+        dismissConfig.baseForegroundColor = .systemPurple
+        dismissButton.configuration = dismissConfig
+        dismissButton.translatesAutoresizingMaskIntoConstraints = false
+        dismissButton.addTarget(self, action: #selector(didTapDismiss), for: .touchUpInside)
+        topBar.addSubview(dismissButton)
+        
+        NSLayoutConstraint.activate([
+            modeButton.leadingAnchor.constraint(equalTo: topBar.leadingAnchor, constant: 8),
+            modeButton.centerYAnchor.constraint(equalTo: topBar.centerYAnchor),
+            modeButton.heightAnchor.constraint(equalToConstant: 28),
+            
+            statusLabel.leadingAnchor.constraint(equalTo: modeButton.trailingAnchor, constant: 6),
+            statusLabel.trailingAnchor.constraint(equalTo: dismissButton.leadingAnchor, constant: -6),
+            statusLabel.centerYAnchor.constraint(equalTo: topBar.centerYAnchor),
+            
+            dismissButton.trailingAnchor.constraint(equalTo: topBar.trailingAnchor, constant: -8),
+            dismissButton.centerYAnchor.constraint(equalTo: topBar.centerYAnchor),
+            dismissButton.widthAnchor.constraint(equalToConstant: 34),
+            dismissButton.heightAnchor.constraint(equalToConstant: 34)
+        ])
+    }
+    
+    private func setupCandidateStrip() {
+        candidateScrollView.backgroundColor = UIColor.tertiarySystemGroupedBackground
+        candidateScrollView.showsHorizontalScrollIndicator = false
+        candidateScrollView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(candidateScrollView)
+        
+        candidateStackView.axis = .horizontal
+        candidateStackView.spacing = 8
+        candidateStackView.alignment = .center
+        candidateStackView.translatesAutoresizingMaskIntoConstraints = false
+        candidateScrollView.addSubview(candidateStackView)
+        
+        NSLayoutConstraint.activate([
+            candidateStackView.leadingAnchor.constraint(equalTo: candidateScrollView.leadingAnchor, constant: 8),
+            candidateStackView.trailingAnchor.constraint(equalTo: candidateScrollView.trailingAnchor, constant: -8),
+            candidateStackView.topAnchor.constraint(equalTo: candidateScrollView.topAnchor),
+            candidateStackView.bottomAnchor.constraint(equalTo: candidateScrollView.bottomAnchor),
+            candidateStackView.heightAnchor.constraint(equalTo: candidateScrollView.heightAnchor)
+        ])
+    }
+    
+    @objc private func didTapToggleLanguage() {
+        if currentMode == .japanese12Key {
+            currentMode = .vietnamese
+        } else {
+            currentMode = .japanese12Key
+        }
+        renderCurrentMode()
+    }
+    
+    @objc private func didTapDismiss() {
+        delegate?.keyboardDidTapSearch()
+    }
+    
+    private func renderCurrentMode() {
+        currentLayoutView?.removeFromSuperview()
+        
+        if currentMode == .japanese12Key {
+            modeButton.setTitle("🌐 Chuyển sang Tiếng Việt (Telex)", for: .normal)
+            statusLabel.text = isRomajiIn12Key ? "🇯🇵 Romaji (12 phím)" : "🇯🇵 Kana (12 phím)"
+            candidateScrollView.isHidden = false
+            currentLayoutView = makeJapanese12KeyLayout()
+            showDefaultCandidates()
+        } else {
+            modeButton.setTitle("🌐 Chuyển sang Tiếng Nhật (12 phím)", for: .normal)
+            statusLabel.text = "🇻🇳 Tiếng Việt có dấu (Telex)"
+            candidateScrollView.isHidden = false
+            currentLayoutView = makeVietnameseLayout()
+            showVietnameseShortcuts()
+        }
+        
+        if let layout = currentLayoutView {
+            layout.translatesAutoresizingMaskIntoConstraints = false
+            contentContainer.addSubview(layout)
+            NSLayoutConstraint.activate([
+                layout.topAnchor.constraint(equalTo: contentContainer.topAnchor),
+                layout.leadingAnchor.constraint(equalTo: contentContainer.leadingAnchor),
+                layout.trailingAnchor.constraint(equalTo: contentContainer.trailingAnchor),
+                layout.bottomAnchor.constraint(equalTo: contentContainer.bottomAnchor)
+            ])
+        }
+    }
+    
+    // MARK: - Japanese 12-Key (Tenkey) Layout (Exact match with user image!)
+    private func makeJapanese12KeyLayout() -> UIView {
+        let rootStack = UIStackView()
+        rootStack.axis = .vertical
+        rootStack.distribution = .fillEqually
+        rootStack.spacing = 6
+        
+        // 5 Columns:
+        // Col 0 (left):   [ ⟳ ]        [ < ]      [ あa1 ]   [ 🌐 VN ]
+        // Col 1:          [ あ @/: ]   [ た GHI ] [ ま PQR ] [ ゛゜小 ]
+        // Col 2:          [ か ABC ]   [ な JKL ] [ や STUV] [ わ 0'" ]
+        // Col 3:          [ さ DEF ]   [ は MN ]  [ ら WXYZ] [ 、。?! ]
+        // Col 4 (right):  [ ⌫ Xóa ]    [ > ]      [ ␣ Cách ] [ 🔍 Tìm ]
+        
+        // Row 1
+        let r1 = makeRowStack([
+            makeFuncButton(title: "⟳", action: { [weak self] in self?.delegate?.keyboardDidClearAll() }),
+            makeTenkeyButton(main: "あ", sub: "@ / :", keyIndex: 1),
+            makeTenkeyButton(main: "か", sub: "A B C", keyIndex: 2),
+            makeTenkeyButton(main: "さ", sub: "D E F", keyIndex: 3),
+            makeFuncButton(title: "⌫", action: { [weak self] in self?.delegate?.keyboardDidDeleteBackward() })
+        ])
+        
+        // Row 2
+        let r2 = makeRowStack([
+            makeFuncButton(title: "◀", action: { [weak self] in self?.cycleCurrentKey(stepForward: false) }),
+            makeTenkeyButton(main: "た", sub: "G H I", keyIndex: 4),
+            makeTenkeyButton(main: "な", sub: "J K L", keyIndex: 5),
+            makeTenkeyButton(main: "は", sub: "M N", keyIndex: 6),
+            makeFuncButton(title: "▶", action: { [weak self] in self?.cycleCurrentKey(stepForward: true) })
+        ])
+        
+        // Row 3
+        let r3 = makeRowStack([
+            makeFuncButton(title: isRomajiIn12Key ? "あ" : "a1", action: { [weak self] in
+                guard let self = self else { return }
+                self.isRomajiIn12Key.toggle()
+                self.renderCurrentMode()
+            }),
+            makeTenkeyButton(main: "ま", sub: "P Q R", keyIndex: 7),
+            makeTenkeyButton(main: "や", sub: "S T U", keyIndex: 8),
+            makeTenkeyButton(main: "ら", sub: "W X Y", keyIndex: 9),
+            makeFuncButton(title: "␣", action: { [weak self] in self?.commitChar(" ") })
+        ])
+        
+        // Row 4
+        let r4 = makeRowStack([
+            makeFuncButton(title: "🌐 VN", action: { [weak self] in self?.didTapToggleLanguage() }),
+            makeTenkeyButton(main: "゛゜小", sub: "Biến âm", keyIndex: 10),
+            makeTenkeyButton(main: "わ", sub: "0 ' \"", keyIndex: 11),
+            makeTenkeyButton(main: "、。?!", sub: "Dấu câu", keyIndex: 12),
+            makeSearchButton()
+        ])
+        
+        rootStack.addArrangedSubview(r1)
+        rootStack.addArrangedSubview(r2)
+        rootStack.addArrangedSubview(r3)
+        rootStack.addArrangedSubview(r4)
+        return rootStack
+    }
+    
+    // MARK: - Vietnamese Layout
+    private func makeVietnameseLayout() -> UIView {
+        let rootStack = UIStackView()
+        rootStack.axis = .vertical
+        rootStack.distribution = .fillEqually
+        rootStack.spacing = 5
+        
+        // Row 1: Vowels with marks
+        let vowels = ["ă", "â", "đ", "ê", "ô", "ơ", "ư", "á", "à", "ả", "ã", "ạ"]
+        let r0 = makeRowStack(vowels.map { char in
+            makeCharButton(title: isShiftedVN ? char.uppercased() : char)
+        })
+        
+        // Row 2: QWERTY Row 1
+        let q1 = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"]
+        let r1 = makeRowStack(q1.map { char in
+            makeCharButton(title: isShiftedVN ? char.uppercased() : char)
+        })
+        
+        // Row 3: QWERTY Row 2
+        let q2 = ["a", "s", "d", "f", "g", "h", "j", "k", "l"]
+        let r2 = makeRowStack(q2.map { char in
+            makeCharButton(title: isShiftedVN ? char.uppercased() : char)
+        })
+        
+        // Row 4: QWERTY Row 3
+        var r3Buttons: [UIButton] = []
+        let shiftBtn = makeFuncButton(title: isShiftedVN ? "⬆" : "⇧", action: { [weak self] in
+            guard let self = self else { return }
+            self.isShiftedVN.toggle()
+            self.renderCurrentMode()
+        })
+        r3Buttons.append(shiftBtn)
+        let q3 = ["z", "x", "c", "v", "b", "n", "m"]
+        for char in q3 {
+            r3Buttons.append(makeCharButton(title: isShiftedVN ? char.uppercased() : char))
+        }
+        let delBtn = makeFuncButton(title: "⌫", action: { [weak self] in self?.delegate?.keyboardDidDeleteBackward() })
+        r3Buttons.append(delBtn)
+        let r3 = makeRowStack(r3Buttons)
+        
+        // Row 5: Function row
+        let r4 = makeRowStack([
+            makeFuncButton(title: "🌐 JP", action: { [weak self] in self?.didTapToggleLanguage() }),
+            makeCharButton(title: "␣ Dấu cách", customAction: { [weak self] in self?.delegate?.keyboardDidInsertText(" ") }),
+            makeSearchButton()
+        ])
+        
+        rootStack.addArrangedSubview(r0)
+        rootStack.addArrangedSubview(r1)
+        rootStack.addArrangedSubview(r2)
+        rootStack.addArrangedSubview(r3)
+        rootStack.addArrangedSubview(r4)
+        return rootStack
+    }
+    
+    // MARK: - Button Builders
+    private func makeRowStack(_ views: [UIView]) -> UIStackView {
+        let stack = UIStackView(arrangedSubviews: views)
+        stack.axis = .horizontal
+        stack.distribution = .fillEqually
+        stack.spacing = 6
+        return stack
+    }
+    
+    private func makeTenkeyButton(main: String, sub: String, keyIndex: Int) -> UIButton {
+        let btn = UIButton(type: .system)
+        btn.backgroundColor = UIColor.secondarySystemGroupedBackground
+        btn.layer.cornerRadius = 8
+        btn.layer.shadowColor = UIColor.black.cgColor
+        btn.layer.shadowOpacity = 0.08
+        btn.layer.shadowOffset = CGSize(width: 0, height: 1.5)
+        btn.layer.shadowRadius = 2
+        btn.layer.borderWidth = 0.5
+        btn.layer.borderColor = UIColor.systemGray4.cgColor
+        
+        let container = UIStackView()
+        container.axis = .vertical
+        container.alignment = .center
+        container.spacing = 1
+        container.isUserInteractionEnabled = false
+        container.translatesAutoresizingMaskIntoConstraints = false
+        
+        let mainLabel = UILabel()
+        mainLabel.text = main
+        mainLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        mainLabel.textColor = .label
+        
+        let subLabel = UILabel()
+        subLabel.text = sub
+        subLabel.font = .systemFont(ofSize: 9, weight: .regular)
+        subLabel.textColor = .secondaryLabel
+        
+        container.addArrangedSubview(mainLabel)
+        container.addArrangedSubview(subLabel)
+        btn.addSubview(container)
+        
+        NSLayoutConstraint.activate([
+            container.centerXAnchor.constraint(equalTo: btn.centerXAnchor),
+            container.centerYAnchor.constraint(equalTo: btn.centerYAnchor)
+        ])
+        
+        btn.addAction(UIAction(handler: { [weak self] _ in
+            self?.handleTenkeyPress(keyIndex: keyIndex)
+        }), for: .touchUpInside)
+        return btn
+    }
+    
+    private func makeFuncButton(title: String, action: @escaping () -> Void) -> UIButton {
+        let btn = UIButton(type: .system)
+        btn.setTitle(title, for: .normal)
+        btn.titleLabel?.font = .systemFont(ofSize: 15, weight: .bold)
+        btn.backgroundColor = UIColor.tertiarySystemGroupedBackground
+        btn.tintColor = title.contains("⌫") ? .systemRed : .label
+        btn.layer.cornerRadius = 8
+        btn.layer.borderWidth = 0.5
+        btn.layer.borderColor = UIColor.systemGray4.cgColor
+        btn.addAction(UIAction(handler: { _ in
+            UIDevice.current.playInputClick()
+            action()
+        }), for: .touchUpInside)
+        return btn
+    }
+    
+    private func makeCharButton(title: String, customAction: (() -> Void)? = nil) -> UIButton {
+        let btn = UIButton(type: .system)
+        btn.setTitle(title, for: .normal)
+        btn.titleLabel?.font = .systemFont(ofSize: title.count > 2 ? 13 : 16, weight: .semibold)
+        btn.backgroundColor = UIColor.secondarySystemGroupedBackground
+        btn.tintColor = .label
+        btn.layer.cornerRadius = 8
+        btn.layer.borderWidth = 0.5
+        btn.layer.borderColor = UIColor.systemGray4.cgColor
+        btn.addAction(UIAction(handler: { [weak self] _ in
+            UIDevice.current.playInputClick()
+            if let custom = customAction {
+                custom()
+            } else {
+                self?.commitChar(title)
+            }
+        }), for: .touchUpInside)
+        return btn
+    }
+    
+    private func makeSearchButton() -> UIButton {
+        let btn = UIButton(type: .system)
+        btn.setTitle("🔍 Tìm", for: .normal)
+        btn.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
+        btn.backgroundColor = .systemPurple
+        btn.tintColor = .white
+        btn.layer.cornerRadius = 8
+        btn.layer.shadowColor = UIColor.systemPurple.cgColor
+        btn.layer.shadowOpacity = 0.25
+        btn.layer.shadowOffset = CGSize(width: 0, height: 2)
+        btn.layer.shadowRadius = 3
+        btn.addAction(UIAction(handler: { [weak self] _ in
+            UIDevice.current.playInputClick()
+            self?.delegate?.keyboardDidTapSearch()
+        }), for: .touchUpInside)
+        return btn
+    }
+    
+    // MARK: - Japanese 12-Key Logic (Multi-tap & Dakuon)
+    private func getCandidates(for keyIndex: Int) -> [String] {
+        if isRomajiIn12Key {
+            switch keyIndex {
+            case 1: return ["@", "/", ":", ";", "."]
+            case 2: return ["a", "b", "c"]
+            case 3: return ["d", "e", "f"]
+            case 4: return ["g", "h", "i"]
+            case 5: return ["j", "k", "l"]
+            case 6: return ["m", "n", "o"]
+            case 7: return ["p", "q", "r", "s"]
+            case 8: return ["t", "u", "v"]
+            case 9: return ["w", "x", "y", "z"]
+            case 11: return ["0", "'", "\""]
+            case 12: return [",", ".", "?", "!", "..."]
+            default: return []
+            }
+        } else {
+            switch keyIndex {
+            case 1: return ["あ", "い", "う", "え", "お"]
+            case 2: return ["か", "き", "く", "け", "こ"]
+            case 3: return ["さ", "し", "す", "せ", "そ"]
+            case 4: return ["た", "ち", "つ", "て", "と"]
+            case 5: return ["な", "に", "ぬ", "ね", "の"]
+            case 6: return ["は", "ひ", "ふ", "へ", "ほ"]
+            case 7: return ["ま", "み", "む", "め", "も"]
+            case 8: return ["や", "（", "ゆ", "）", "よ"]
+            case 9: return ["ら", "り", "る", "れ", "ろ"]
+            case 10: return [] // Dakuon toggle
+            case 11: return ["わ", "を", "ん", "ー"]
+            case 12: return ["、", "。", "？", "！", "…"]
+            default: return []
+            }
+        }
+    }
+    
+    private func handleTenkeyPress(keyIndex: Int) {
+        UIDevice.current.playInputClick()
+        
+        if keyIndex == 10 {
+            // Dakuon / Small kana toggle
+            delegate?.keyboardDidToggleDakuon()
+            lastKeyIndex = nil
+            return
+        }
+        
+        let candidates = getCandidates(for: keyIndex)
+        guard !candidates.isEmpty else { return }
+        
+        let now = Date().timeIntervalSince1970
+        let isSameKeyRecent = (lastKeyIndex == keyIndex) && (now - lastKeyTime < 1.4)
+        
+        if isSameKeyRecent {
+            // Cycle to next character
+            lastCycleStep = (lastCycleStep + 1) % candidates.count
+            let char = candidates[lastCycleStep]
+            delegate?.keyboardDidReplaceLastText(with: char)
+        } else {
+            // New character
+            lastKeyIndex = keyIndex
+            lastCycleStep = 0
+            let char = candidates[0]
+            delegate?.keyboardDidInsertText(char)
+        }
+        
+        lastKeyTime = now
+        updateCandidateStrip(candidates: candidates, selectedIndex: lastCycleStep)
+    }
+    
+    private func cycleCurrentKey(stepForward: Bool) {
+        guard let keyIndex = lastKeyIndex else { return }
+        let candidates = getCandidates(for: keyIndex)
+        guard !candidates.isEmpty else { return }
+        
+        if stepForward {
+            lastCycleStep = (lastCycleStep + 1) % candidates.count
+        } else {
+            lastCycleStep = (lastCycleStep - 1 + candidates.count) % candidates.count
+        }
+        let char = candidates[lastCycleStep]
+        delegate?.keyboardDidReplaceLastText(with: char)
+        updateCandidateStrip(candidates: candidates, selectedIndex: lastCycleStep)
+    }
+    
+    private func updateCandidateStrip(candidates: [String], selectedIndex: Int) {
+        candidateStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        for (i, c) in candidates.enumerated() {
+            let pill = UIButton(type: .system)
+            pill.setTitle(c, for: .normal)
+            pill.titleLabel?.font = .systemFont(ofSize: 14, weight: i == selectedIndex ? .bold : .medium)
+            pill.backgroundColor = (i == selectedIndex) ? UIColor.systemPurple : UIColor.secondarySystemGroupedBackground
+            pill.tintColor = (i == selectedIndex) ? .white : .label
+            pill.layer.cornerRadius = 6
+            pill.contentEdgeInsets = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10)
+            pill.addAction(UIAction(handler: { [weak self] _ in
+                self?.delegate?.keyboardDidReplaceLastText(with: c)
+                self?.lastCycleStep = i
+                self?.updateCandidateStrip(candidates: candidates, selectedIndex: i)
+            }), for: .touchUpInside)
+            candidateStackView.addArrangedSubview(pill)
+        }
+    }
+    
+    private func showDefaultCandidates() {
+        let defaults = ["あ", "か", "さ", "た", "な", "は", "ま", "や", "ら", "わ", "が", "ざ", "だ", "ば", "ぱ", "っ"]
+        candidateStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        for c in defaults {
+            let pill = UIButton(type: .system)
+            pill.setTitle(c, for: .normal)
+            pill.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
+            pill.backgroundColor = UIColor.secondarySystemGroupedBackground
+            pill.tintColor = .label
+            pill.layer.cornerRadius = 6
+            pill.contentEdgeInsets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
+            pill.addAction(UIAction(handler: { [weak self] _ in
+                self?.commitChar(c)
+            }), for: .touchUpInside)
+            candidateStackView.addArrangedSubview(pill)
+        }
+    }
+    
+    private func showVietnameseShortcuts() {
+        let words = ["ăn", "uống", "đi", "đến", "về", "ngủ", "dậy", "học", "mua", "xem", "nghe", "nói", "gặp", "sách", "nhà", "ga", "xe"]
+        candidateStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        for w in words {
+            let pill = UIButton(type: .system)
+            pill.setTitle(w, for: .normal)
+            pill.titleLabel?.font = .systemFont(ofSize: 13, weight: .medium)
+            pill.backgroundColor = UIColor.secondarySystemGroupedBackground
+            pill.tintColor = .systemPurple
+            pill.layer.cornerRadius = 6
+            pill.contentEdgeInsets = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10)
+            pill.addAction(UIAction(handler: { [weak self] _ in
+                self?.delegate?.keyboardDidInsertText(w)
+            }), for: .touchUpInside)
+            candidateStackView.addArrangedSubview(pill)
+        }
+    }
+    
+    private func commitChar(_ char: String) {
+        lastKeyIndex = nil
+        delegate?.keyboardDidInsertText(char)
+    }
+}
+
+// MARK: - Search View Controller
+public class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, DualLanguageKeyboardDelegate {
     
     private let searchBar = UISearchBar()
-    
-    // Bàn phím chính: Tiếng Việt vs Tiếng Nhật
-    private let langSegment = UISegmentedControl(items: ["🇻🇳 Tiếng Việt có dấu", "🇯🇵 Tiếng Nhật (Kana)"])
-    // Nhóm phụ: Các biến thể
-    private let subSegment = UISegmentedControl()
-    
-    private let keyboardScrollView = UIScrollView()
-    private let keyboardStackView = UIStackView()
-    
-    // Accessory Toolbar trên bàn phím mềm
-    private let accessoryScrollView = UIScrollView()
-    private let accessoryStackView = UIStackView()
+    private var customKeyboard: DualLanguageKeyboardView!
     
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
     private let emptyLabel = UILabel()
@@ -42,14 +597,12 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
         
         setupData()
         setupViews()
-        updateSubSegment()
-        renderKeyboardKeys()
     }
     
     private func setupData() {
         var items: [SearchResultItem] = []
         
-        // 1. Từ vựng N5
+        // 1. Từ vựng N5 (toàn bộ 25 bài)
         for word in VocabRepository.shared.vocabList {
             let kanjiStr = word.kanji ?? ""
             let main = kanjiStr.isEmpty ? word.kana : kanjiStr
@@ -79,42 +632,17 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     private func setupViews() {
-        searchBar.placeholder = "Gõ phím hoặc chọn ký tự/từ mẫu bên dưới (ví dụ: ăn, が)..."
+        searchBar.placeholder = "Chạm để mở bàn phím Nhật 12-phím / Tiếng Việt..."
         searchBar.delegate = self
         searchBar.searchBarStyle = .minimal
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(searchBar)
         
-        // 1. Phân loại ngôn ngữ chính: Tiếng Việt vs Tiếng Nhật
-        langSegment.selectedSegmentIndex = 0
-        langSegment.selectedSegmentTintColor = .systemPurple
-        langSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-        langSegment.setTitleTextAttributes([.foregroundColor: UIColor.label], for: .normal)
-        langSegment.translatesAutoresizingMaskIntoConstraints = false
-        langSegment.addTarget(self, action: #selector(handleLangChanged), for: .valueChanged)
-        view.addSubview(langSegment)
-        
-        // 2. Nhóm ký tự con
-        subSegment.selectedSegmentTintColor = .systemPurple.withAlphaComponent(0.85)
-        subSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-        subSegment.setTitleTextAttributes([.foregroundColor: UIColor.label], for: .normal)
-        subSegment.translatesAutoresizingMaskIntoConstraints = false
-        subSegment.addTarget(self, action: #selector(handleSubChanged), for: .valueChanged)
-        view.addSubview(subSegment)
-        
-        // Khay phím cuộn ngang trên màn hình
-        keyboardScrollView.showsHorizontalScrollIndicator = false
-        keyboardScrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(keyboardScrollView)
-        
-        keyboardStackView.axis = .horizontal
-        keyboardStackView.spacing = 8
-        keyboardStackView.alignment = .center
-        keyboardStackView.translatesAutoresizingMaskIntoConstraints = false
-        keyboardScrollView.addSubview(keyboardStackView)
-        
-        // Gắn thanh phụ trợ Accessory View lên bàn phím hệ thống
-        setupKeyboardAccessoryView()
+        // Khởi tạo bàn phím ảo tùy chỉnh (Japanese 12-Key & Vietnamese)
+        let screenWidth = UIScreen.main.bounds.width
+        customKeyboard = DualLanguageKeyboardView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 290))
+        customKeyboard.delegate = self
+        searchBar.searchTextField.inputView = customKeyboard
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -135,28 +663,7 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             
-            langSegment.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 4),
-            langSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
-            langSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-            langSegment.heightAnchor.constraint(equalToConstant: 32),
-            
-            subSegment.topAnchor.constraint(equalTo: langSegment.bottomAnchor, constant: 6),
-            subSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
-            subSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-            subSegment.heightAnchor.constraint(equalToConstant: 28),
-            
-            keyboardScrollView.topAnchor.constraint(equalTo: subSegment.bottomAnchor, constant: 8),
-            keyboardScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
-            keyboardScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-            keyboardScrollView.heightAnchor.constraint(equalToConstant: 44),
-            
-            keyboardStackView.topAnchor.constraint(equalTo: keyboardScrollView.topAnchor),
-            keyboardStackView.leadingAnchor.constraint(equalTo: keyboardScrollView.leadingAnchor),
-            keyboardStackView.trailingAnchor.constraint(equalTo: keyboardScrollView.trailingAnchor),
-            keyboardStackView.bottomAnchor.constraint(equalTo: keyboardScrollView.bottomAnchor),
-            keyboardStackView.heightAnchor.constraint(equalTo: keyboardScrollView.heightAnchor),
-            
-            tableView.topAnchor.constraint(equalTo: keyboardScrollView.bottomAnchor, constant: 8),
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 4),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -166,238 +673,94 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
         ])
     }
     
-    // MARK: - Input Accessory View
-    private func setupKeyboardAccessoryView() {
-        let accessoryContainer = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 48))
-        accessoryContainer.backgroundColor = .secondarySystemBackground
-        
-        let toggleBtn = UIButton(type: .system)
-        toggleBtn.setTitle("🌐 Đổi phím", for: .normal)
-        toggleBtn.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
-        toggleBtn.backgroundColor = UIColor.systemPurple.withAlphaComponent(0.15)
-        toggleBtn.tintColor = .systemPurple
-        toggleBtn.layer.cornerRadius = 8
-        toggleBtn.contentEdgeInsets = UIEdgeInsets(top: 6, left: 10, bottom: 6, right: 10)
-        toggleBtn.translatesAutoresizingMaskIntoConstraints = false
-        toggleBtn.addAction(UIAction(handler: { [weak self] _ in
-            guard let self = self else { return }
-            self.langSegment.selectedSegmentIndex = self.langSegment.selectedSegmentIndex == 0 ? 1 : 0
-            self.handleLangChanged()
-        }), for: .touchUpInside)
-        accessoryContainer.addSubview(toggleBtn)
-        
-        accessoryScrollView.showsHorizontalScrollIndicator = false
-        accessoryScrollView.translatesAutoresizingMaskIntoConstraints = false
-        accessoryContainer.addSubview(accessoryScrollView)
-        
-        accessoryStackView.axis = .horizontal
-        accessoryStackView.spacing = 8
-        accessoryStackView.alignment = .center
-        accessoryStackView.translatesAutoresizingMaskIntoConstraints = false
-        accessoryScrollView.addSubview(accessoryStackView)
-        
-        NSLayoutConstraint.activate([
-            toggleBtn.leadingAnchor.constraint(equalTo: accessoryContainer.leadingAnchor, constant: 8),
-            toggleBtn.centerYAnchor.constraint(equalTo: accessoryContainer.centerYAnchor),
-            toggleBtn.heightAnchor.constraint(equalToConstant: 34),
-            
-            accessoryScrollView.leadingAnchor.constraint(equalTo: toggleBtn.trailingAnchor, constant: 8),
-            accessoryScrollView.trailingAnchor.constraint(equalTo: accessoryContainer.trailingAnchor, constant: -8),
-            accessoryScrollView.topAnchor.constraint(equalTo: accessoryContainer.topAnchor),
-            accessoryScrollView.bottomAnchor.constraint(equalTo: accessoryContainer.bottomAnchor),
-            
-            accessoryStackView.leadingAnchor.constraint(equalTo: accessoryScrollView.leadingAnchor),
-            accessoryStackView.trailingAnchor.constraint(equalTo: accessoryScrollView.trailingAnchor),
-            accessoryStackView.topAnchor.constraint(equalTo: accessoryScrollView.topAnchor),
-            accessoryStackView.bottomAnchor.constraint(equalTo: accessoryScrollView.bottomAnchor),
-            accessoryStackView.heightAnchor.constraint(equalTo: accessoryScrollView.heightAnchor)
-        ])
-        
-        searchBar.searchTextField.inputAccessoryView = accessoryContainer
+    // MARK: - DualLanguageKeyboardDelegate
+    public var currentInputText: String {
+        return searchBar.text ?? ""
     }
     
-    // MARK: - Virtual Keyboard Render
-    @objc private func handleLangChanged() {
-        updateSubSegment()
-        renderKeyboardKeys()
+    public func keyboardDidInsertText(_ text: String) {
+        var current = searchBar.text ?? ""
+        current += text
+        // Tự động chuyển đổi Telex sang tiếng Việt có dấu
+        let telexConverted = convertTelex(current)
+        searchBar.text = telexConverted
+        filterResults(searchText: telexConverted)
     }
     
-    @objc private func handleSubChanged() {
-        renderKeyboardKeys()
-    }
-    
-    private func updateSubSegment() {
-        subSegment.removeAllSegments()
-        if langSegment.selectedSegmentIndex == 0 {
-            // Tiếng Việt
-            subSegment.insertSegment(withTitle: "Ký tự có dấu (ă, â, đ, ê...)", at: 0, animated: false)
-            subSegment.insertSegment(withTitle: "Từ khóa mẫu (ăn, uống, đi...)", at: 1, animated: false)
-        } else {
-            // Tiếng Nhật
-            subSegment.insertSegment(withTitle: "Hiragana", at: 0, animated: false)
-            subSegment.insertSegment(withTitle: "Âm đục (が/ざ...)", at: 1, animated: false)
-            subSegment.insertSegment(withTitle: "Âm ghép (きゃ...)", at: 2, animated: false)
-            subSegment.insertSegment(withTitle: "Katakana", at: 3, animated: false)
+    public func keyboardDidReplaceLastText(with text: String) {
+        var current = searchBar.text ?? ""
+        if !current.isEmpty {
+            current.removeLast()
         }
-        subSegment.selectedSegmentIndex = 0
+        current += text
+        searchBar.text = current
+        filterResults(searchText: current)
     }
     
-    private func renderKeyboardKeys() {
-        keyboardStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        accessoryStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        
-        let keys = getKeysForCurrentMode()
-        
-        for key in keys {
-            let btn1 = makeKeyButton(title: key)
-            keyboardStackView.addArrangedSubview(btn1)
-            
-            let btn2 = makeKeyButton(title: key)
-            accessoryStackView.addArrangedSubview(btn2)
-        }
-        
-        keyboardScrollView.setContentOffset(.zero, animated: false)
-        accessoryScrollView.setContentOffset(.zero, animated: false)
-    }
-    
-    private func makeKeyButton(title: String) -> UIButton {
-        let btn = UIButton(type: .system)
-        btn.setTitle(title, for: .normal)
-        btn.titleLabel?.font = .systemFont(ofSize: title.count > 2 ? 13 : 16, weight: .bold)
-        
-        if title.contains("Xóa") {
-            btn.backgroundColor = UIColor.systemRed.withAlphaComponent(0.12)
-            btn.tintColor = .systemRed
-        } else if title.contains("Cách") {
-            btn.backgroundColor = UIColor.systemPurple.withAlphaComponent(0.12)
-            btn.tintColor = .systemPurple
-        } else {
-            btn.backgroundColor = UIColor.secondarySystemGroupedBackground
-            btn.tintColor = .label
-        }
-        
-        btn.layer.cornerRadius = 10
-        btn.layer.borderWidth = 1
-        btn.layer.borderColor = UIColor.systemGray4.cgColor
-        btn.contentEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
-        
-        btn.addAction(UIAction(handler: { [weak self] _ in
-            self?.handleKeyPress(key: title)
-        }), for: .touchUpInside)
-        return btn
-    }
-    
-    private func getKeysForCurrentMode() -> [String] {
-        if langSegment.selectedSegmentIndex == 0 {
-            // 🇻🇳 TIẾNG VIỆT
-            if subSegment.selectedSegmentIndex == 0 {
-                // Ký tự có dấu
-                return [
-                    "ă", "â", "đ", "ê", "ô", "ơ", "ư",
-                    "á", "à", "ả", "ã", "ạ",
-                    "ắ", "ằ", "ẳ", "ẵ", "ặ",
-                    "ấ", "ầ", "ẩ", "ẫ", "ậ",
-                    "é", "è", "ẻ", "ẽ", "ẹ",
-                    "ế", "ề", "ể", "ễ", "ệ",
-                    "í", "ì", "ỉ", "ĩ", "ị",
-                    "ó", "ò", "ỏ", "õ", "ọ",
-                    "ố", "ồ", "ổ", "ỗ", "ộ",
-                    "ớ", "ờ", "ở", "ỡ", "ợ",
-                    "ú", "ù", "ủ", "ũ", "ụ",
-                    "ứ", "ừ", "ử", "ữ", "ự",
-                    "ý", "ỳ", "ỷ", "ỹ", "ỵ",
-                    "␣ Cách", "⌫ Xóa", "Xóa hết"
-                ]
-            } else {
-                // Từ khóa mẫu thường gặp
-                return [
-                    "ăn", "uống", "đi", "đến", "về",
-                    "thức dậy", "đi ngủ", "làm việc", "nghỉ ngơi", "học tập",
-                    "mua", "xem", "nghe", "đọc", "nói", "viết", "gặp",
-                    "chơi", "bơi", "cắt", "gửi", "cho", "nhận", "dạy",
-                    "␣ Cách", "⌫ Xóa", "Xóa hết"
-                ]
-            }
-        } else {
-            // 🇯🇵 TIẾNG NHẬT
-            switch subSegment.selectedSegmentIndex {
-            case 0:
-                // Hiragana gốc
-                return [
-                    "あ", "い", "う", "え", "お",
-                    "か", "き", "く", "け", "こ",
-                    "さ", "し", "す", "せ", "そ",
-                    "た", "ち", "つ", "て", "と",
-                    "な", "に", "ぬ", "ね", "の",
-                    "は", "ひ", "ふ", "へ", "ほ",
-                    "ま", "み", "む", "め", "も",
-                    "や", "ゆ", "よ",
-                    "ら", "り", "る", "れ", "ろ",
-                    "わ", "を", "ん",
-                    "␣ Cách", "⌫ Xóa", "Xóa hết"
-                ]
-            case 1:
-                // Âm đục (Dakuon ゛ ゜)
-                return [
-                    "が", "ぎ", "ぐ", "げ", "ご",
-                    "ざ", "じ", "ず", "ぜ", "ぞ",
-                    "だ", "ぢ", "づ", "で", "ど",
-                    "ば", "び", "ぶ", "べ", "ぼ",
-                    "ぱ", "ぴ", "ぷ", "ぺ", "ぽ",
-                    "゛", "゜",
-                    "␣ Cách", "⌫ Xóa", "Xóa hết"
-                ]
-            case 2:
-                // Âm ghép nhỏ
-                return [
-                    "きゃ", "きゅ", "きょ",
-                    "しゃ", "しゅ", "しょ",
-                    "ちゃ", "ちゅ", "ちょ",
-                    "にゃ", "にゅ", "にょ",
-                    "ひゃ", "ひゅ", "ひょ",
-                    "みゃ", "みゅ", "みょ",
-                    "りゃ", "りゅ", "りょ",
-                    "ぎゃ", "ぎゅ", "ぎょ",
-                    "じゃ", "じゅ", "じょ",
-                    "びゃ", "びゅ", "びょ",
-                    "ぴゃ", "ぴゅ", "ぴょ",
-                    "っ",
-                    "␣ Cách", "⌫ Xóa", "Xóa hết"
-                ]
-            default:
-                // Katakana
-                return [
-                    "ア", "イ", "ウ", "エ", "オ",
-                    "カ", "キ", "ク", "ケ", "コ",
-                    "サ", "シ", "ス", "セ", "ソ",
-                    "タ", "チ", "ツ", "テ", "ト",
-                    "ナ", "ニ", "ヌ", "ネ", "ノ",
-                    "ハ", "ヒ", "フ", "ヘ", "ホ",
-                    "マ", "ミ", "ム", "メ", "モ",
-                    "ヤ", "ユ", "ヨ",
-                    "ラ", "リ", "ル", "レ", "ロ",
-                    "ワ", "ヲ", "ン",
-                    "␣ Cách", "⌫ Xóa", "Xóa hết"
-                ]
-            }
+    public func keyboardDidDeleteBackward() {
+        var current = searchBar.text ?? ""
+        if !current.isEmpty {
+            current.removeLast()
+            searchBar.text = current
+            filterResults(searchText: current)
         }
     }
     
-    private func handleKeyPress(key: String) {
-        var currentText = searchBar.text ?? ""
-        if key == "Xóa hết" {
-            currentText = ""
-        } else if key == "⌫ Xóa" {
-            if !currentText.isEmpty {
-                currentText.removeLast()
-            }
-        } else if key == "␣ Cách" {
-            currentText += " "
-        } else {
-            currentText += key
-        }
-        searchBar.text = currentText
-        filterResults(searchText: currentText)
+    public func keyboardDidClearAll() {
+        searchBar.text = ""
+        filterResults(searchText: "")
+    }
+    
+    public func keyboardDidTapSearch() {
+        searchBar.resignFirstResponder()
+    }
+    
+    public func keyboardDidToggleDakuon() {
+        var current = searchBar.text ?? ""
+        guard let lastChar = current.last else { return }
+        let transformed = toggleDakuonChar(lastChar)
+        current.removeLast()
+        current.append(transformed)
+        searchBar.text = current
+        filterResults(searchText: current)
+    }
+    
+    private func toggleDakuonChar(_ char: Character) -> Character {
+        let map: [Character: Character] = [
+            // Dakuon
+            "か": "が", "が": "か",
+            "き": "ぎ", "ぎ": "き",
+            "く": "ぐ", "ぐ": "く",
+            "け": "げ", "げ": "け",
+            "こ": "ご", "ご": "こ",
+            "さ": "ざ", "ざ": "さ",
+            "し": "じ", "じ": "し",
+            "す": "ず", "ず": "す",
+            "せ": "ぜ", "ぜ": "せ",
+            "そ": "ぞ", "ぞ": "そ",
+            "た": "だ", "だ": "た",
+            "ち": "ぢ", "ぢ": "ち",
+            "つ": "づ", "づ": "っ", "っ": "つ",
+            "て": "で", "で": "て",
+            "と": "ど", "ど": "と",
+            // Handakuon: は -> ば -> ぱ -> は
+            "は": "ば", "ば": "ぱ", "ぱ": "は",
+            "ひ": "び", "び": "ぴ", "ぴ": "ひ",
+            "ふ": "ぶ", "ぶ": "ぷ", "ぷ": "ふ",
+            "へ": "べ", "べ": "ぺ", "ぺ": "へ",
+            "ほ": "ぼ", "ぼ": "ぽ", "ぽ": "ほ",
+            // Small kana
+            "あ": "ぁ", "ぁ": "あ",
+            "い": "ぃ", "ぃ": "い",
+            "う": "ぅ", "ぅ": "う",
+            "え": "ぇ", "ぇ": "え",
+            "お": "ぉ", "ぉ": "お",
+            "や": "ゃ", "ゃ": "や",
+            "ゆ": "ゅ", "ゅ": "ゆ",
+            "よ": "ょ", "ょ": "よ",
+            "わ": "ゎ", "ゎ": "わ"
+        ]
+        return map[char] ?? char
     }
     
     // MARK: - Search Logic & Auto-Telex
@@ -412,15 +775,41 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
     private func convertTelex(_ text: String) -> String {
         var result = text
         let replacements: [(String, String)] = [
-            ("awn", "ăn"), ("anw", "ăn"),
+            // Cụm từ và vần ghép Telex phổ biến
+            ("uowng", "ương"), ("Uowng", "Ương"),
+            ("uong", "uông"), ("uow", "ươ"), ("Uow", "Ươ"),
+            ("tieeng", "tiếng"), ("vieet", "việt"), ("vieetj", "việt"),
+            ("awn", "ăn"), ("anw", "ăn"), ("awm", "ăm"), ("amw", "ăm"),
+            ("awc", "ắc"), ("acw", "ắc"), ("awt", "ắt"), ("atw", "ắt"),
+            ("awp", "ắp"), ("apw", "ắp"),
+            
+            // Nguyên âm mũ & móc Telex cơ bản
             ("aw", "ă"), ("aa", "â"), ("dd", "đ"), ("ee", "ê"), ("oo", "ô"), ("ow", "ơ"), ("uw", "ư"),
             ("AW", "Ă"), ("AA", "Â"), ("DD", "Đ"), ("EE", "Ê"), ("OO", "Ô"), ("OW", "Ơ"), ("UW", "Ư"),
+            
+            // Dấu thanh trên nguyên âm có mũ / móc (ă, â, ê, ô, ơ, ư)
+            ("ăs", "ắ"), ("ăf", "ằ"), ("ăr", "ẳ"), ("ăx", "ẵ"), ("ăj", "ặ"),
+            ("âs", "ấ"), ("âf", "ầ"), ("âr", "ẩ"), ("âx", "ẫ"), ("âj", "ậ"),
+            ("ês", "ế"), ("êf", "ề"), ("êr", "ể"), ("êx", "ễ"), ("êj", "ệ"),
+            ("ôs", "ố"), ("ôf", "ồ"), ("ôr", "ổ"), ("ôx", "ỗ"), ("ôj", "ộ"),
+            ("ơs", "ớ"), ("ơf", "ờ"), ("ơr", "ở"), ("ơx", "ỡ"), ("ơj", "ợ"),
+            ("ưs", "ứ"), ("ưf", "ừ"), ("ưr", "ử"), ("ưx", "ữ"), ("ưj", "ự"),
+            
+            // Dấu thanh trên nguyên âm đơn (a, e, i, o, u, y)
             ("as", "á"), ("af", "à"), ("ar", "ả"), ("ax", "ã"), ("aj", "ạ"),
             ("es", "é"), ("ef", "è"), ("er", "ẻ"), ("ex", "ẽ"), ("ej", "ẹ"),
             ("is", "í"), ("if", "ì"), ("ir", "ỉ"), ("ix", "ĩ"), ("ij", "ị"),
             ("os", "ó"), ("of", "ò"), ("or", "ỏ"), ("ox", "õ"), ("oj", "ọ"),
             ("us", "ú"), ("uf", "ù"), ("ur", "ủ"), ("ux", "ũ"), ("uj", "ụ"),
-            ("ys", "ý"), ("yf", "ỳ"), ("yr", "ỷ"), ("yx", "ỹ"), ("yj", "ỵ")
+            ("ys", "ý"), ("yf", "ỳ"), ("yr", "ỷ"), ("yx", "ỹ"), ("yj", "ỵ"),
+            
+            // Hỗ trợ gõ dấu thanh sau phụ âm cuối (như hocj -> học, ngur -> ngủ, di -> đi)
+            ("ans", "án"), ("anf", "àn"), ("anr", "ản"), ("anx", "ãn"), ("anj", "ạn"),
+            ("ăns", "ắn"), ("ănf", "ằn"), ("ănr", "ẳn"), ("ănx", "ẵn"), ("ănj", "ặn"),
+            ("uongs", "uống"), ("uongf", "uồng"), ("uongr", "uổng"), ("uongj", "uộng"),
+            ("hocj", "học"), ("hocs", "hóc"),
+            ("ngur", "ngủ"), ("nguf", "ngù"), ("ngus", "ngú"),
+            ("dij", "đị"), ("dif", "đì"), ("dis", "đí")
         ]
         for (pattern, replacement) in replacements {
             result = result.replacingOccurrences(of: pattern, with: replacement)
