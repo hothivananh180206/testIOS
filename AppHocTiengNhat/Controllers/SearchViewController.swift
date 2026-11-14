@@ -36,9 +36,11 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
         
         // 1. Từ vựng N5
         for word in VocabRepository.shared.vocabList {
-            let main = word.kanji.isEmpty ? word.kana : word.kanji
-            let sub = word.kanji.isEmpty ? word.romaji : "\(word.kana) (\(word.romaji))"
-            let tag = word.lessonNumber > 0 ? "Bài \(word.lessonNumber)" : "Từ vựng"
+            let kanjiStr = word.kanji ?? ""
+            let main = kanjiStr.isEmpty ? word.kana : kanjiStr
+            let sub = kanjiStr.isEmpty ? word.romaji : "\(word.kana) (\(word.romaji))"
+            let lesson = word.lessonNumber ?? 0
+            let tag = lesson > 0 ? "Bài \(lesson)" : "Từ vựng"
             items.append(SearchResultItem(mainText: main, subText: sub, meaning: word.meaningVi, tag: tag, audioText: main))
         }
         
