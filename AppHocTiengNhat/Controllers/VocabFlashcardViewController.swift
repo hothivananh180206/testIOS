@@ -15,6 +15,13 @@ public class VocabFlashcardViewController: UIViewController {
     private let progressView = UIProgressView(progressViewStyle: .default)
     private let counterLabel = UILabel()
     private let flashcard = VocabFlashcardView()
+    private let buttonStack = UIStackView()
+    
+    // Empty State Views
+    private let emptyView = UIView()
+    private let emptyIconImageView = UIImageView()
+    private let emptyTitleLabel = UILabel()
+    private let emptySubtitleLabel = UILabel()
     
     private let prevButton = UIButton(type: .system)
     private let nextButton = UIButton(type: .system)
@@ -113,13 +120,41 @@ public class VocabFlashcardViewController: UIViewController {
         speakButton.translatesAutoresizingMaskIntoConstraints = false
         speakButton.addTarget(self, action: #selector(didTapSpeak), for: .touchUpInside)
         
-        let buttonStack = UIStackView(arrangedSubviews: [prevButton, speakButton, nextButton])
         buttonStack.axis = .horizontal
         buttonStack.distribution = .fillProportionally
         buttonStack.alignment = .center
         buttonStack.spacing = 16
         buttonStack.translatesAutoresizingMaskIntoConstraints = false
+        buttonStack.addArrangedSubview(prevButton)
+        buttonStack.addArrangedSubview(speakButton)
+        buttonStack.addArrangedSubview(nextButton)
         view.addSubview(buttonStack)
+        
+        // Empty State Setup
+        emptyView.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.isHidden = true
+        view.addSubview(emptyView)
+        
+        emptyIconImageView.image = UIImage(systemName: "book.closed.fill")
+        emptyIconImageView.tintColor = .systemGray3
+        emptyIconImageView.contentMode = .scaleAspectFit
+        emptyIconImageView.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.addSubview(emptyIconImageView)
+        
+        emptyTitleLabel.text = "Chưa có từ vựng"
+        emptyTitleLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        emptyTitleLabel.textColor = .label
+        emptyTitleLabel.textAlignment = .center
+        emptyTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.addSubview(emptyTitleLabel)
+        
+        emptySubtitleLabel.text = "Danh sách từ vựng của bài học này đang được chuẩn bị."
+        emptySubtitleLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        emptySubtitleLabel.textColor = .secondaryLabel
+        emptySubtitleLabel.textAlignment = .center
+        emptySubtitleLabel.numberOfLines = 0
+        emptySubtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.addSubview(emptySubtitleLabel)
         
         NSLayoutConstraint.activate([
             progressView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
@@ -143,7 +178,27 @@ public class VocabFlashcardViewController: UIViewController {
             
             buttonStack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
             buttonStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            buttonStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24)
+            buttonStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            
+            // Empty view constraints
+            emptyView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            emptyView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            emptyView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
+            emptyView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
+            
+            emptyIconImageView.topAnchor.constraint(equalTo: emptyView.topAnchor),
+            emptyIconImageView.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
+            emptyIconImageView.widthAnchor.constraint(equalToConstant: 60),
+            emptyIconImageView.heightAnchor.constraint(equalToConstant: 60),
+            
+            emptyTitleLabel.topAnchor.constraint(equalTo: emptyIconImageView.bottomAnchor, constant: 16),
+            emptyTitleLabel.leadingAnchor.constraint(equalTo: emptyView.leadingAnchor),
+            emptyTitleLabel.trailingAnchor.constraint(equalTo: emptyView.trailingAnchor),
+            
+            emptySubtitleLabel.topAnchor.constraint(equalTo: emptyTitleLabel.bottomAnchor, constant: 8),
+            emptySubtitleLabel.leadingAnchor.constraint(equalTo: emptyView.leadingAnchor),
+            emptySubtitleLabel.trailingAnchor.constraint(equalTo: emptyView.trailingAnchor),
+            emptySubtitleLabel.bottomAnchor.constraint(equalTo: emptyView.bottomAnchor)
         ])
 
         let cardHeight = flashcard.heightAnchor.constraint(equalToConstant: 410)
@@ -162,7 +217,20 @@ public class VocabFlashcardViewController: UIViewController {
     }
     
     private func updateCard() {
-        guard !words.isEmpty, currentIndex < words.count else { return }
+        guard !words.isEmpty, currentIndex < words.count else {
+            flashcard.isHidden = true
+            buttonStack.isHidden = true
+            progressView.isHidden = true
+            counterLabel.isHidden = true
+            emptyView.isHidden = false
+            return
+        }
+        
+        flashcard.isHidden = false
+        buttonStack.isHidden = false
+        progressView.isHidden = false
+        counterLabel.isHidden = false
+        emptyView.isHidden = true
         
         let item = words[currentIndex]
         flashcard.configure(with: item)

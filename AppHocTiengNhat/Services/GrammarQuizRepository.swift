@@ -229,6 +229,70 @@ public final class GrammarQuizRepository {
         ),
 
         // ==========================================
+        // BÀI 10: Vị trí không gian
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 10,
+            question: "机の ___ に 猫が います。(Dưới gầm bàn)",
+            translationVi: "Dưới gầm bàn có một con mèo.",
+            options: ["下", "上", "前", "中"],
+            correctIndex: 0,
+            explanation: "Vị trí dưới là 下 (した - shita). Cấu trúc: N1 の [vị trí] に N2 が います."
+        ),
+
+        // ==========================================
+        // BÀI 11: Số lượng & Tần suất
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 11,
+            question: "りんごを ___ 買いました。(4 quả)",
+            translationVi: "Tôi đã mua 4 quả táo.",
+            options: ["4つ", "4人", "4回", "4枚"],
+            correctIndex: 0,
+            explanation: "Đếm đồ vật chung: 1つ (hitotsu), 2つ (futatsu), 3つ (mittsu), 4つ (yottsu)."
+        ),
+        GrammarQuizQuestion(
+            lessonNumber: 11,
+            question: "1か月に 2回 映画を ___。(xem phim)",
+            translationVi: "Một tháng tôi xem phim 2 lần.",
+            options: ["見ます", "見ました", "見て", "見る"],
+            correctIndex: 0,
+            explanation: "Diễn tả tần suất thói quen: [Khoảng thời gian] に [Số lần] Vます."
+        ),
+
+        // ==========================================
+        // BÀI 12: So sánh & Thì quá khứ Tính từ
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 12,
+            question: "昨日は とても ___。(lạnh)",
+            translationVi: "Hôm qua trời rất lạnh.",
+            options: ["寒かったです", "寒いでした", "寒いです", "寒くないでした"],
+            correctIndex: 0,
+            explanation: "Quá khứ của tính từ đuôi い: Bỏ い thêm かったです."
+        ),
+        GrammarQuizQuestion(
+            lessonNumber: 12,
+            question: "新幹線は 電車___ 速いです。(hơn)",
+            translationVi: "Tàu Shinkansen nhanh hơn tàu điện thông thường.",
+            options: ["より", "ほど", "から", "まで"],
+            correctIndex: 0,
+            explanation: "Cấu trúc so sánh hơn: N1 は N2 より A です (N1 hơn N2)."
+        ),
+
+        // ==========================================
+        // BÀI 13: Mong muốn & Mục đích
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 13,
+            question: "日本へ 桜を ___ 行きたいです。(見ます)",
+            translationVi: "Tôi muốn đi Nhật Bản ngắm hoa anh đào.",
+            options: ["見に", "見て", "見るに", "見"],
+            correctIndex: 0,
+            explanation: "Cấu trúc mục đích di chuyển: [Địa điểm] へ V (bỏ ます) に 行きます/来ます."
+        ),
+
+        // ==========================================
         // BÀI 14: Thể て (Te) & Yêu cầu lịch sự
         // ==========================================
         GrammarQuizQuestion(
@@ -258,6 +322,18 @@ public final class GrammarQuizRepository {
             options: ["いい", "よく", "だめ", "いく"],
             correctIndex: 0,
             explanation: "Mẫu câu xin phép: V (thể て) + もいいですか (Được phép làm gì không?)."
+        ),
+
+        // ==========================================
+        // BÀI 16: Trình tự hành động
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 16,
+            question: "手を ___ から、ご飯を 食べます。(洗います)",
+            translationVi: "Sau khi rửa tay sạch sẽ, tôi mới ăn cơm.",
+            options: ["洗って", "洗った", "洗う", "洗い"],
+            correctIndex: 0,
+            explanation: "Cấu trúc 'Sau khi làm V1 thì làm V2': V1 (thể て) + から、V2."
         ),
 
         // ==========================================
@@ -297,7 +373,67 @@ public final class GrammarQuizRepository {
         ),
 
         // ==========================================
-        // BÀI 25: Điều kiện たら
+        // BÀI 20: Thể Thông thường (Thể ngắn)
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 20,
+            question: "明日 行く？…うん、___。(thể ngắn của 行きます)",
+            translationVi: "Ngày mai cậu đi không? ...Ừ, tớ đi.",
+            options: ["行く", "行くよ", "行った", "行かない"],
+            correctIndex: 0,
+            explanation: "Trong thể ngắn thân mật, động từ dạng khẳng định hiện tại dùng thể từ điển (Vる)."
+        ),
+
+        // ==========================================
+        // BÀI 21: Bày tỏ ý kiến
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 21,
+            question: "明日は 雨が 降る___ 思います。",
+            translationVi: "Tôi nghĩ ngày mai trời sẽ mưa.",
+            options: ["と", "を", "に", "で"],
+            correctIndex: 0,
+            explanation: "Cấu trúc bày tỏ suy nghĩ, ý kiến: [Thể thông thường] + と 思います."
+        ),
+
+        // ==========================================
+        // BÀI 22: Mệnh đề bổ nghĩa cho danh từ
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 22,
+            question: "あそこで 本を ___ 人は 誰ですか。(読む)",
+            translationVi: "Người đang đọc sách đằng kia là ai vậy?",
+            options: ["読んでいる", "読みます", "読んだら", "読んで"],
+            correctIndex: 0,
+            explanation: "Định ngữ bổ nghĩa danh từ: Mệnh đề dùng thể thông thường đứng trước danh từ chính (人)."
+        ),
+
+        // ==========================================
+        // BÀI 23: Thời điểm & Điều kiện tự nhiên
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 23,
+            question: "このボタンを ___ と、切符が 出ます。(押します)",
+            translationVi: "Hễ ấn nút này là vé sẽ tự động nhả ra.",
+            options: ["押す", "押して", "押した", "押し"],
+            correctIndex: 0,
+            explanation: "Điều kiện tất yếu / tự nhiên: V (thể từ điển) + と、～."
+        ),
+
+        // ==========================================
+        // BÀI 24: Cho và nhận hành động
+        // ==========================================
+        GrammarQuizQuestion(
+            lessonNumber: 24,
+            question: "山田さんは 私に 写真を 撮って ___。(chụp ảnh giúp tôi)",
+            translationVi: "Anh Yamada đã chụp ảnh giúp cho tôi.",
+            options: ["くれました", "あげました", "もらいました", "やりました"],
+            correctIndex: 0,
+            explanation: "Người khác làm giúp cho tôi điều gì với lòng biết ơn: [Người khác] が 私に Vて くれました."
+        ),
+
+        // ==========================================
+        // BÀI 25: Điều kiện たら & ても
         // ==========================================
         GrammarQuizQuestion(
             lessonNumber: 25,
@@ -306,6 +442,14 @@ public final class GrammarQuizRepository {
             options: ["あったら", "あれば", "あって", "ある"],
             correctIndex: 0,
             explanation: "Cấu trúc điều kiện giả định phổ biến trong N5: V (thể た) + ら (Nếu... thì...)."
+        ),
+        GrammarQuizQuestion(
+            lessonNumber: 25,
+            question: "雨が ___ も、サッカーを します。(降ります)",
+            translationVi: "Dù trời có mưa, chúng tôi vẫn chơi bóng đá.",
+            options: ["降って", "降った", "降る", "降り"],
+            correctIndex: 0,
+            explanation: "Cấu trúc nhượng bộ / điều kiện ngược: V (thể て) + も (Dù... thì vẫn...)."
         )
     ]
     

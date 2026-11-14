@@ -764,15 +764,15 @@ public final class GrammarRepository {
         ),
         
         // ==========================================
-        // MARK: - BÀI 10
+        // MARK: - BÀI 10: Sự tồn tại & Vị trí nơi chốn
         // ==========================================
         GrammarPoint(
             lessonNumber: 10,
             order: 1,
             title: "1. Sự tồn tại: N が あります / います",
-            structure: "Đồ vật / Thực vật: N が あります\nNgười / Động vật: N が います",
-            meaningVi: "Có cái gì / Có con gì, ai",
-            explanation: "Dùng 「あります」 cho đồ vật vô tri vô giác và cây cối. Dùng 「います」 cho sinh vật sống có thể tự cử động (người, động vật).",
+            structure: "Đồ vật / Cây cối: N が あります\nNgười / Động vật: N が います",
+            meaningVi: "Có cái gì / Có con gì, ai đó",
+            explanation: "Dùng 「あります」 cho đồ vật vô tri vô giác và thực vật. Dùng 「います」 cho sinh vật sống có thể tự cử động (người, động vật).",
             examples: [
                 GrammarExample(
                     japanese: "机の上に 本が あります。",
@@ -787,64 +787,218 @@ public final class GrammarRepository {
             ],
             usageNotes: "Vị trí tồn tại luôn đi với trợ từ に: [Địa điểm] に N が あります/います."
         ),
-        
+        GrammarPoint(
+            lessonNumber: 10,
+            order: 2,
+            title: "2. Vị trí không gian: N1 の [Vị trí] に N2 が あります/います",
+            structure: "N1 の [上 / 下 / 前 / 後ろ / 右 / 左 / 中 / 外 / 隣] に N2 が あります/います",
+            meaningVi: "Ở [vị trí] của N1 có N2",
+            explanation: "Dùng để xác định vị trí tương đối giữa hai vật thể hoặc nơi chốn.",
+            examples: [
+                GrammarExample(
+                    japanese: "ベッドの 下に 猫が います。",
+                    romaji: "Beddo no shita ni neko ga imasu.",
+                    vietnamese: "Dưới gầm giường có một con mèo."
+                ),
+                GrammarExample(
+                    japanese: "銀行の 隣に 郵便局が あります。",
+                    romaji: "Ginkou no tonari ni yuubinkyoku ga arimasu.",
+                    vietnamese: "Bên cạnh ngân hàng có bưu điện."
+                )
+            ],
+            usageNotes: "Có thể đảo chủ ngữ lên đầu câu: N2 は N1 の [Vị trí] に あります/います."
+        ),
+
         // ==========================================
-        // MARK: - BÀI 14 (TRỌNG TÂM THỂ TE)
+        // MARK: - BÀI 11: Số lượng, Lượng từ & Thời lượng
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 11,
+            order: 1,
+            title: "1. Vị trí lượng từ trong câu: N を [Lượng từ] + V",
+            structure: "Danh từ + を + [Số lượng / Lượng từ] + Động từ",
+            meaningVi: "Làm hành động với số lượng bao nhiêu",
+            explanation: "Trong tiếng Nhật, số từ và lượng từ thường được đặt ngay trước động từ mà nó bổ nghĩa, không đặt trước danh từ.",
+            examples: [
+                GrammarExample(
+                    japanese: "りんごを 4つ 買いました。",
+                    romaji: "Ringo o yottsu kaimashita.",
+                    vietnamese: "Tôi đã mua 4 quả táo."
+                ),
+                GrammarExample(
+                    japanese: "教室に 学生が 10人 います。",
+                    romaji: "Kyoushitsu ni gakusei ga juunin imasu.",
+                    vietnamese: "Trong lớp học có 10 học sinh."
+                )
+            ],
+            usageNotes: "Hỏi số lượng chung dùng 「いくつ」, hỏi người dùng 「何人」(nannin)."
+        ),
+        GrammarPoint(
+            lessonNumber: 11,
+            order: 2,
+            title: "2. Tần suất hành động: [Khoảng thời gian] に [Số lần] V",
+            structure: "[Khoảng thời gian] に [Số lần / Lượng từ] + Động từ",
+            meaningVi: "Làm V bao nhiêu lần trong một khoảng thời gian",
+            explanation: "Biểu thị tần suất thực hiện một hành động đều đặn theo chu kỳ.",
+            examples: [
+                GrammarExample(
+                    japanese: "1か月に 2回 映画を 見ます。",
+                    romaji: "Ikkagetsu ni nikai eiga o mimasu.",
+                    vietnamese: "Một tháng tôi xem phim 2 lần."
+                ),
+                GrammarExample(
+                    japanese: "1日に 3回 薬を 飲みます。",
+                    romaji: "Ichinichi ni sankai kusuri o nomimasu.",
+                    vietnamese: "Mỗi ngày tôi uống thuốc 3 lần."
+                )
+            ],
+            usageNotes: "Hỏi mất bao lâu thời gian dùng 「どのくらい」(Dono kurai)."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 12: So sánh & Thì quá khứ Tính từ
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 12,
+            order: 1,
+            title: "1. Thì quá khứ của Danh từ và Tính từ",
+            structure: "Tính từ đuôi な / Danh từ: でした (khẳng định) / ではありませんでした (phủ định)\nTính từ đuôi い: ～かったです (khẳng định) / ～くありませんでした (phủ định)",
+            meaningVi: "Đã từng như thế nào trong quá khứ",
+            explanation: "Tính từ đuôi い bỏ [い] thêm [かったです] hoặc [くありませんでした]. Tính từ đuôi な và Danh từ chia giống nhau với [でした].",
+            examples: [
+                GrammarExample(
+                    japanese: "昨日は とても 寒かったです。",
+                    romaji: "Kinou wa totemo samukatta desu.",
+                    vietnamese: "Hôm qua trời rất lạnh."
+                ),
+                GrammarExample(
+                    japanese: "先週の 試験は 簡単ではありませんでした。",
+                    romaji: "Senshuu no shiken wa kantan dewa arimasen deshita.",
+                    vietnamese: "Kỳ thi tuần trước không hề đơn giản."
+                )
+            ],
+            usageNotes: "Ngoại lệ: いい (tốt) chia quá khứ là 「よかったです」."
+        ),
+        GrammarPoint(
+            lessonNumber: 12,
+            order: 2,
+            title: "2. So sánh hơn & So sánh nhất",
+            structure: "So sánh hơn: N1 は N2 より A です\nSo sánh nhất: [Phạm vi] の中で N が いちばん A です",
+            meaningVi: "N1... hơn N2 / N là... nhất trong phạm vi",
+            explanation: "Dùng để so sánh tính chất giữa hai sự vật hoặc tìm ra đối tượng nổi trội nhất trong một tập hợp.",
+            examples: [
+                GrammarExample(
+                    japanese: "新幹線は 飛行機より 安いです。",
+                    romaji: "Shinkansen wa hikouki yori yasui desu.",
+                    vietnamese: "Tàu Shinkansen rẻ hơn máy bay."
+                ),
+                GrammarExample(
+                    japanese: "1年の中で 春が いちばん 好きです。",
+                    romaji: "Ichinen no naka de haru ga ichiban suki desu.",
+                    vietnamese: "Trong 1 năm, tôi thích mùa xuân nhất."
+                )
+            ],
+            usageNotes: "Khi hỏi lựa chọn giữa 2 vật dùng: 「N1 と N2 と どちらが A ですか」."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 13: Mong muốn & Mục đích di chuyển
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 13,
+            order: 1,
+            title: "1. Mong muốn: N が 欲しい / Vたい",
+            structure: "Muốn có đồ vật: N が 欲しいです\nMuốn làm hành động: V (bỏ ます) + たいです",
+            meaningVi: "Muốn có N / Muốn làm V",
+            explanation: "Diễn tả nguyện vọng, mong muốn của bản thân người nói (ngôi thứ nhất). Phủ định chia thành 「欲しくない」 hoặc 「Vたくない」.",
+            examples: [
+                GrammarExample(
+                    japanese: "今、新しい パソコンが 欲しいです。",
+                    romaji: "Ima, atarashii pasokon ga hoshii desu.",
+                    vietnamese: "Bây giờ tôi muốn có một chiếc máy tính mới."
+                ),
+                GrammarExample(
+                    japanese: "日本へ 桜を 見に行きたいです。",
+                    romaji: "Nihon e sakura o mi ni ikitai desu.",
+                    vietnamese: "Tôi muốn đi Nhật Bản ngắm hoa anh đào."
+                )
+            ],
+            usageNotes: "Không dùng để hỏi trực tiếp mong muốn của người lớn tuổi/cấp trên vì thiếu tế nhị."
+        ),
+        GrammarPoint(
+            lessonNumber: 13,
+            order: 2,
+            title: "2. Đi / Đến để làm gì: [Địa điểm] へ V (bỏ ます) に 行きます/来ます",
+            structure: "[Địa điểm] へ + V (bỏ ます) / N + に + 行きます / 来ます / 帰ります",
+            meaningVi: "Đi đến đâu để làm gì",
+            explanation: "Trợ từ に ở đây biểu thị mục đích của hành động di chuyển.",
+            examples: [
+                GrammarExample(
+                    japanese: "スーパーへ 買い物に 行きます。",
+                    romaji: "Suupaa e kaimono ni ikimasu.",
+                    vietnamese: "Tôi đi siêu thị để mua sắm."
+                ),
+                GrammarExample(
+                    japanese: "駅へ 友達を 迎えに 行きます。",
+                    romaji: "Eki e tomodachi o mukae ni ikimasu.",
+                    vietnamese: "Tôi ra ga để đón bạn."
+                )
+            ],
+            usageNotes: "Động từ bỏ ます hoặc dùng trực tiếp danh động từ (買い物, 散歩...)."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 14: THỂ て (TE-FORM) & YÊU CẦU LỊCH SỰ
         // ==========================================
         GrammarPoint(
             lessonNumber: 14,
             order: 1,
             title: "1. Quy tắc chia Động từ Thể て (Te-form)",
-            structure: "Nhóm 1: い/ち/り → って | み/び/に → んで | き → いて | ぎ → いで | し → して\nNhóm 2: Bỏ ます thêm て (食べる → 食べて)\nNhóm 3: します → して | きます → きて",
-            meaningVi: "Chia động từ sang thể Te",
-            explanation: "Thể て là thể biến đổi quan trọng bậc nhất của N5, dùng làm nền tảng cho hàng chục mẫu ngữ pháp cao hơn.",
+            structure: "• Nhóm 1: い/ち/り → って | み/び/に → んで | き → いて | ぎ → いで | し → して\n• Nhóm 2: Bỏ ます thêm て (食べる → 食べて, 見る → 見て)\n• Nhóm 3: します → して | きます → きて\n★ Ngoại lệ: 行きます (ikimasu) → 行って (itte)",
+            meaningVi: "Quy tắc biến đổi động từ sang thể Te",
+            explanation: "Thể て là thể ngữ pháp nền tảng quan trọng nhất sơ cấp, dùng để nối câu, nhờ vả, xin phép, cấm đoán và diễn đạt hành động tiếp diễn.",
             examples: [
                 GrammarExample(
-                    japanese: "書きます → 書いて (kaite)",
-                    romaji: "kakimasu -> kaite",
-                    vietnamese: "Viết -> Thể Te"
+                    japanese: "書きます → 書いて | 飲みます → 飲んで | 待ちます → 待って",
+                    romaji: "kakimasu -> kaite | nomimasu -> nonde | machimasu -> matte",
+                    vietnamese: "Viết -> kaite | Uống -> nonde | Chờ -> matte"
                 ),
                 GrammarExample(
-                    japanese: "飲みます → 飲んで (nonde)",
-                    romaji: "nomimasu -> nonde",
-                    vietnamese: "Uống -> Thể Te"
-                ),
-                GrammarExample(
-                    japanese: "行きます → 行って (itte - ngoại lệ)",
+                    japanese: "行きます → 行って (ngoại lệ nhóm 1)",
                     romaji: "ikimasu -> itte",
-                    vietnamese: "Đi -> itte (ngoại lệ nhóm 1)"
+                    vietnamese: "Đi -> itte (không chia thành iite)"
                 )
             ],
-            usageNotes: "Lưu ý ngoại lệ kinh điển: 行きます (ikimasu) chia thành 行って (itte), không phải iite."
+            usageNotes: "Hãy ghi nhớ bài vè chia thể Te theo từng đuôi để phản xạ nhanh."
         ),
         GrammarPoint(
             lessonNumber: 14,
             order: 2,
             title: "2. Yêu cầu lịch sự: Vてください",
             structure: "V (thể て) + ください",
-            meaningVi: "Xin hãy làm V / Vui lòng làm V",
-            explanation: "Mẫu câu dùng để nhờ vả, khuyên nhủ hoặc yêu cầu người nghe thực hiện một hành động một cách lịch sự.",
+            meaningVi: "Xin vui lòng làm V / Hãy làm V",
+            explanation: "Dùng để yêu cầu, nhờ vả đối phương làm việc gì đó một cách lịch sự, nhã nhặn.",
             examples: [
                 GrammarExample(
-                    japanese: "ここに お名前を 書いてください。",
-                    romaji: "Koko ni onamae o kaite kudasai.",
-                    vietnamese: "Xin vui lòng viết tên bạn vào đây."
+                    japanese: "ここに お名前と 住所を 書いてください。",
+                    romaji: "Koko ni onamae to juusho o kaite kudasai.",
+                    vietnamese: "Xin vui lòng viết tên và địa chỉ vào đây."
                 ),
                 GrammarExample(
-                    japanese: "ちょっと 待ってください。",
-                    romaji: "Chotto matte kudasai.",
-                    vietnamese: "Xin hãy đợi một chút."
+                    japanese: "日本語で ゆっくり 話してください。",
+                    romaji: "Nihongo de yukkuri hanashite kudasai.",
+                    vietnamese: "Xin hãy nói chậm bằng tiếng Nhật."
                 )
             ],
-            usageNotes: "Không nên dùng với cấp trên để ra lệnh, chỉ dùng nhờ vả hoặc chỉ dẫn."
+            usageNotes: "Tránh dùng mẫu này để ra lệnh cho cấp trên hoặc người lớn tuổi."
         ),
         GrammarPoint(
             lessonNumber: 14,
             order: 3,
             title: "3. Đang diễn ra: Vています",
             structure: "V (thể て) + います",
-            meaningVi: "Đang làm gì...",
-            explanation: "Biểu thị một hành động đang thực sự xảy ra tại thời điểm nói.",
+            meaningVi: "Đang làm V...",
+            explanation: "Biểu thị một hành động đang thực sự tiếp diễn tại thời điểm nói.",
             examples: [
                 GrammarExample(
                     japanese: "今、雨が 降っています。",
@@ -852,32 +1006,53 @@ public final class GrammarRepository {
                     vietnamese: "Bây giờ trời đang mưa."
                 ),
                 GrammarExample(
-                    japanese: "田中さんは テレビを 見ています。",
-                    romaji: "Tanaka-san wa terebi o mite imasu.",
-                    vietnamese: "Anh Tanaka đang xem tivi."
+                    japanese: "田中さんは 部屋で 本を 読んでいます。",
+                    romaji: "Tanaka-san wa heya de hon o yonde imasu.",
+                    vietnamese: "Anh Tanaka đang đọc sách trong phòng."
                 )
             ],
-            usageNotes: "Mẫu câu này còn dùng để chỉ trạng thái kéo dài (kết hôn, sinh sống, có con...)."
+            usageNotes: "Phủ định là 「Vていません」(Vẫn chưa làm / Hiện tại không làm)."
         ),
-        
+        GrammarPoint(
+            lessonNumber: 14,
+            order: 4,
+            title: "4. Đề nghị giúp đỡ: Vましょうか",
+            structure: "V (bỏ ます) + ましょうか",
+            meaningVi: "Tôi làm giúp bạn nhé? / Để tôi làm nhé?",
+            explanation: "Người nói chủ động ngỏ ý muốn làm điều gì đó giúp đỡ người nghe.",
+            examples: [
+                GrammarExample(
+                    japanese: "荷物を 持ちましょうか。…すみません、お願いします。",
+                    romaji: "Nimotsu o mochimashou ka. ...Sumimasen, onegaishimasu.",
+                    vietnamese: "Để tôi xách hành lý giúp bạn nhé? ...Cảm ơn, nhờ bạn nhé."
+                ),
+                GrammarExample(
+                    japanese: "窓を 閉めましょうか。…いいえ、結構です。",
+                    romaji: "Mado o shimemashou ka. ...Iie, kekkou desu.",
+                    vietnamese: "Tôi đóng cửa sổ giúp nhé? ...Không, tôi ổn rồi ạ."
+                )
+            ],
+            usageNotes: "Nếu đồng ý: 「お願いします」. Nếu từ chối khéo: 「いいえ、結構です」."
+        ),
+
         // ==========================================
-        // MARK: - BÀI 15
+        // MARK: - BÀI 15: Cho phép, Cấm đoán & Trạng thái
         // ==========================================
         GrammarPoint(
             lessonNumber: 15,
             order: 1,
             title: "1. Cho phép: Vてもいいです",
             structure: "V (thể て) + もいいです (か)",
-            meaningVi: "Làm V được không? / Được phép làm V",
-            explanation: "Dùng để xin phép đối phương làm điều gì đó hoặc cấp quyền cho phép.",
+            meaningVi: "Được phép làm V / Làm V có được không?",
+            explanation: "Dùng để xin phép đối phương thực hiện hành động hoặc cho phép người khác làm gì.",
             examples: [
                 GrammarExample(
                     japanese: "ここで 写真を 撮ってもいいですか。…ええ、いいですよ。",
                     romaji: "Koko de shashin o totte mo ii desu ka. ...Ee, ii desu yo.",
-                    vietnamese: "Tôi chụp ảnh ở đây có được không? ...Vâng, được chứ."
+                    vietnamese: "Tôi chụp ảnh ở đây có được không? ...Vâng, được chứ ạ."
                 )
             ],
-            usageNotes: "Khi cấm đoán, câu trả lời sẽ là: いいえ、いけません。"
+            usageNotes: "Nếu từ chối xin phép, người Nhật thường dùng 「すみません、ちょっと…」 thay vì nói thẳng cấm."
         ),
         GrammarPoint(
             lessonNumber: 15,
@@ -885,78 +1060,234 @@ public final class GrammarRepository {
             title: "2. Cấm đoán: Vてはいけません",
             structure: "V (thể て) + はいけません",
             meaningVi: "Không được phép làm V",
-            explanation: "Dùng để thông báo quy định, điều cấm hoặc người lớn nhắc nhở người nhỏ tuổi.",
+            explanation: "Biểu thị lệnh cấm nghiêm ngặt, nội quy cơ quan, trường học hoặc quy định pháp luật.",
             examples: [
                 GrammarExample(
                     japanese: "ここで たばこを 吸ってはいけません。",
                     romaji: "Koko de tabako o sutte wa ikemasen.",
                     vietnamese: "Không được hút thuốc ở đây."
+                ),
+                GrammarExample(
+                    japanese: "美術館の中で 触ってはいけません。",
+                    romaji: "Bijutsukan no naka de sawatte wa ikemasen.",
+                    vietnamese: "Không được chạm vào hiện vật trong bảo tàng."
                 )
             ],
-            usageNotes: "Thường thấy nhiều ở các biển báo quy tắc công cộng tại Nhật Bản."
+            usageNotes: "Dùng nhiều trong các biển báo cảnh báo công cộng."
         ),
-        
+        GrammarPoint(
+            lessonNumber: 15,
+            order: 3,
+            title: "3. Trạng thái kết quả kéo dài: Vています",
+            structure: "V (thể て) + います",
+            meaningVi: "Đang sống tại, đang kết hôn, đang sở hữu...",
+            explanation: "Dùng với các động từ chỉ sự thay đổi trạng thái để diễn tả kết quả của hành động vẫn đang duy trì.",
+            examples: [
+                GrammarExample(
+                    japanese: "私は ハノイに 住んでいます。",
+                    romaji: "Watashi wa Hanoi ni sunde imasu.",
+                    vietnamese: "Tôi đang sinh sống ở Hà Nội."
+                ),
+                GrammarExample(
+                    japanese: "田中先生の 電話番号を 知っています。",
+                    romaji: "Tanaka-sensei no denwabangou o shitte imasu.",
+                    vietnamese: "Tôi biết số điện thoại của thầy Tanaka."
+                )
+            ],
+            usageNotes: "Lưu ý đặc biệt: Phủ định của 「知っています」 là 「知りません」(không phải shitte imasen)."
+        ),
+
         // ==========================================
-        // MARK: - BÀI 17 (THỂ NAI)
+        // MARK: - BÀI 16: Nối câu & Trình tự hành động
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 16,
+            order: 1,
+            title: "1. Nối chuỗi hành động: V1て、V2て、V3ます",
+            structure: "V1 (thể て)、V2 (thể て)、... V cuối cùng (chia theo thì)",
+            meaningVi: "Làm V1, rồi làm V2, rồi làm V3",
+            explanation: "Dùng để liệt kê các hành động xảy ra liên tiếp theo đúng trình tự thời gian. Thì của cả câu do động từ cuối cùng quyết định.",
+            examples: [
+                GrammarExample(
+                    japanese: "朝起きて、シャワーを浴びて、朝ご飯を食べます。",
+                    romaji: "Asa okite, shawaa o abite, asagohan o tabemasu.",
+                    vietnamese: "Buổi sáng tôi thức dậy, tắm vòi sen rồi ăn sáng."
+                ),
+                GrammarExample(
+                    japanese: "神戸へ 行って、映画を 見て、お茶を 飲みました。",
+                    romaji: "Koube e itte, eiga o mite, ocha o nomimashita.",
+                    vietnamese: "Tôi đã đến Kobe, xem phim rồi uống trà."
+                )
+            ],
+            usageNotes: "Tính từ đuôi い nối bằng 「～くて」, Tính từ đuôi な và Danh từ nối bằng 「～で」."
+        ),
+        GrammarPoint(
+            lessonNumber: 16,
+            order: 2,
+            title: "2. Sau khi làm gì: V1てから、V2",
+            structure: "V1 (thể て) + から、V2",
+            meaningVi: "Sau khi làm V1 thì làm V2",
+            explanation: "Nhấn mạnh hành động V2 chỉ được tiến hành sau khi hành động V1 đã hoàn thành trọn vẹn.",
+            examples: [
+                GrammarExample(
+                    japanese: "仕事が 終わってから、飲みに行きます。",
+                    romaji: "Shigoto ga owatte kara, nomi ni ikimasu.",
+                    vietnamese: "Sau khi công việc kết thúc, tôi sẽ đi uống nước."
+                ),
+                GrammarExample(
+                    japanese: "手を 洗ってから、ご飯を 食べます。",
+                    romaji: "Te o aratte kara, gohan o tabemasu.",
+                    vietnamese: "Sau khi rửa tay sạch sẽ, tôi mới ăn cơm."
+                )
+            ],
+            usageNotes: "Khác với V1て、V2, mẫu 「V1てから」 nhấn mạnh rõ ràng tính thứ tự tiên quyết của V1."
+        ),
+        GrammarPoint(
+            lessonNumber: 16,
+            order: 3,
+            title: "3. Miêu tả đặc điểm: N1 は N2 が A です",
+            structure: "N1 は + N2 が + Tính từ",
+            meaningVi: "N1 có N2 mang tính chất A",
+            explanation: "Dùng để miêu tả đặc điểm ngoại hình, bộ phận cơ thể hoặc tính chất đặc trưng của chủ thể N1.",
+            examples: [
+                GrammarExample(
+                    japanese: "マリアさんは 髪が 長いです。",
+                    romaji: "Maria-san wa kami ga nagai desu.",
+                    vietnamese: "Bạn Maria có mái tóc dài."
+                ),
+                GrammarExample(
+                    japanese: "大阪は 食べ物が おいしいです。",
+                    romaji: "Oosaka wa tabemono ga oishii desu.",
+                    vietnamese: "Osaka có đồ ăn rất ngon."
+                )
+            ],
+            usageNotes: "Chủ thể lớn đi với は, bộ phận hay thuộc tính trực tiếp đi với が."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 17: THỂ NAI (NAI-FORM) & NGHĨA VỤ
         // ==========================================
         GrammarPoint(
             lessonNumber: 17,
             order: 1,
             title: "1. Quy tắc chia Thể ない (Nai-form)",
-            structure: "Nhóm 1: Cột い chuyển sang cột あ + ない (書きます → 書かない)\nNhóm 2: Bỏ ます thêm ない (食べます → 食べない)\nNhóm 3: します → しない | きます → こない (ngoại lệ)",
-            meaningVi: "Thể phủ định ngắn của động từ",
-            explanation: "Dùng làm cơ sở cho các mẫu câu cấm chỉ, nghĩa vụ và nói chuyện thường ngày.",
+            structure: "• Nhóm 1: Chuyển âm đuôi hàng [い] sang hàng [あ] + ない\n  (書きます → 書かない, 飲みます → 飲まない)\n  ★ Đuôi [い] đứng trước ます chuyển thành [わ]: 会います → 会わない\n• Nhóm 2: Bỏ ます thêm ない (食べます → 食べない, 見ます → 見ない)\n• Nhóm 3: します → しない | きます → こない (ngoại lệ)\n★ Ngoại lệ đặc biệt: あります → ない",
+            meaningVi: "Quy tắc chia động từ sang thể phủ định ngắn (Nai)",
+            explanation: "Thể ない là thể phủ định ngắn của động từ, dùng để cấm chỉ lịch sự, nói về điều bắt buộc và giao tiếp thân mật.",
             examples: [
                 GrammarExample(
-                    japanese: "話します → 話さない (hanasanai)",
-                    romaji: "hanashimasu -> hanasanai",
-                    vietnamese: "Nói -> Không nói"
+                    japanese: "読みます → 読まない | 買います → 買わない",
+                    romaji: "yomimasu -> yomanai | kaimasu -> kawanai",
+                    vietnamese: "Đọc -> yomanai | Mua -> kawanai"
                 ),
                 GrammarExample(
-                    japanese: "あります → ない (ngoại lệ đặc biệt)",
-                    romaji: "arimasu -> nai",
-                    vietnamese: "Có -> Không có"
+                    japanese: "来ます (kimasu) → 来ない (konai - đổi cách đọc Kanji)",
+                    romaji: "kimasu -> konai",
+                    vietnamese: "Đến -> konai (đổi âm đọc kanji)"
                 )
             ],
-            usageNotes: "Động từ kết thúc bằng đuôi 'i' (như 会います) chuyển thành 'わ' (会わない - awanai)."
+            usageNotes: "Nhớ kỹ: [あります] đổi thành [ない], không có arinai."
         ),
         GrammarPoint(
             lessonNumber: 17,
             order: 2,
-            title: "2. Bắt buộc / Phải làm: Vなければなりません",
-            structure: "V (thể ない bỏ い) + ければなりません",
-            meaningVi: "Phải làm V",
-            explanation: "Biểu thị một nghĩa vụ, trách nhiệm hoặc việc bắt buộc phải làm dù muốn hay không.",
+            title: "2. Xin đừng làm gì: Vないでください",
+            structure: "V (thể ない) + でください",
+            meaningVi: "Xin đừng làm V / Vui lòng không làm V",
+            explanation: "Dùng để yêu cầu hoặc khuyên nhủ ai đó không làm hành động nào đó một cách lịch thiệp.",
             examples: [
                 GrammarExample(
-                    japanese: "薬を 飲まなければなりません。",
-                    romaji: "Kusuri o nomanakereba narimasen.",
-                    vietnamese: "Tôi phải uống thuốc."
+                    japanese: "ここで 写真を 撮らないでください。",
+                    romaji: "Koko de shashin o toranaide kudasai.",
+                    vietnamese: "Xin vui lòng đừng chụp ảnh ở đây."
                 ),
                 GrammarExample(
-                    japanese: "毎日 漢字を 覚えなければなりません。",
-                    romaji: "Mainichi kanji o oboenakereba narimasen.",
-                    vietnamese: "Mỗi ngày tôi đều phải nhớ chữ Hán."
+                    japanese: "パスポートを なくさないでください。",
+                    romaji: "Pasupooto o nakusanaide kudasai.",
+                    vietnamese: "Xin đừng làm mất hộ chiếu của bạn."
                 )
             ],
-            usageNotes: "Mẫu câu tương phản 'Không cần phải làm': Vなくてもいいです。"
+            usageNotes: "Là dạng phủ định tương ứng của 「Vてください」."
         ),
-        
+        GrammarPoint(
+            lessonNumber: 17,
+            order: 3,
+            title: "3. Bắt buộc / Phải làm: Vなければなりません",
+            structure: "V (thể ない bỏ い) + ければなりません",
+            meaningVi: "Phải làm V / Bắt buộc làm V",
+            explanation: "Diễn tả hành động mang tính bổn phận, trách nhiệm bắt buộc phải thực hiện dù muốn hay không.",
+            examples: [
+                GrammarExample(
+                    japanese: "熱がありますから、薬を 飲まなければなりません。",
+                    romaji: "Netsu ga arimasu kara, kusuri o nomanakereba narimasen.",
+                    vietnamese: "Vì bị sốt nên tôi phải uống thuốc."
+                ),
+                GrammarExample(
+                    japanese: "明日 レポートを 出さなければなりません。",
+                    romaji: "Ashita repooto o dasanakereba narimasen.",
+                    vietnamese: "Ngày mai tôi phải nộp báo cáo."
+                )
+            ],
+            usageNotes: "Đọc trôi chảy: bỏ [い] thêm [ければなりません]."
+        ),
+        GrammarPoint(
+            lessonNumber: 17,
+            order: 4,
+            title: "4. Không cần làm cũng được: Vなくてもいいです",
+            structure: "V (thể ない bỏ い) + くてもいいです",
+            meaningVi: "Không cần làm V cũng được",
+            explanation: "Diễn đạt việc không bắt buộc làm hành động nào đó, làm hay không làm tùy ý.",
+            examples: [
+                GrammarExample(
+                    japanese: "明日は 日曜日ですから、早く 起きなくてもいいです。",
+                    romaji: "Ashita wa nichiyoubi desu kara, hayaku okinakute mo ii desu.",
+                    vietnamese: "Ngày mai là Chủ nhật nên không cần dậy sớm cũng được."
+                ),
+                GrammarExample(
+                    japanese: "靴を 脱がなくてもいいですよ。",
+                    romaji: "Kutsu o nuganakute mo ii desu yo.",
+                    vietnamese: "Không cần cởi giày đâu ạ."
+                )
+            ],
+            usageNotes: "Mẫu câu đối lập trực tiếp với 「Vなければなりません」."
+        ),
+
         // ==========================================
-        // MARK: - BÀI 18 (THỂ TỪ ĐIỂN)
+        // MARK: - BÀI 18: THỂ TỪ ĐIỂN (THỂ RU / 辞書形) & NĂNG LỰC
         // ==========================================
         GrammarPoint(
             lessonNumber: 18,
             order: 1,
-            title: "1. Khả năng: Vることができます",
-            structure: "V (thể từ điển / 辞書形) + ことが できます",
-            meaningVi: "Có thể làm V / Biết làm V",
-            explanation: "Diễn đạt năng lực, khả năng của bản thân hoặc điều kiện cho phép thực hiện hành động.",
+            title: "1. Quy tắc chia Thể Từ Điển (Thể る - Jishokei)",
+            structure: "• Nhóm 1: Chuyển âm đuôi hàng [い] sang hàng [う]\n  (書きます → 書く, 飲みます → 飲む, 行きます → 行く)\n• Nhóm 2: Bỏ ます thêm [る]\n  (食べます → 食べる, 見ます → 見る, 寝ます → 寝る)\n• Nhóm 3: します → する | きます → くる",
+            meaningVi: "Thể nguyên mẫu tra từ điển của động từ",
+            explanation: "Thể từ điển (辞書形) là dạng cơ bản nhất của động từ, xuất hiện trong từ điển và là gốc của thể thông thường.",
             examples: [
                 GrammarExample(
-                    japanese: "わたしは ピアノを 弾くことができます。",
-                    romaji: "Watashi wa piano o hiku koto ga dekimasu.",
-                    vietnamese: "Tôi có thể chơi đàn piano."
+                    japanese: "話します → 話す | 待ちます → 待つ | 買います → 買う",
+                    romaji: "hanashimasu -> hanasu | machimasu -> matsu | kaimasu -> kau",
+                    vietnamese: "Nói -> hanasu | Chờ -> matsu | Mua -> kau"
+                ),
+                GrammarExample(
+                    japanese: "勉強します → 勉強する | 来ます → 来る (kuru)",
+                    romaji: "benkyoushimasu -> benkyousuru | kimasu -> kuru",
+                    vietnamese: "Học tập -> benkyousuru | Đến -> kuru"
+                )
+            ],
+            usageNotes: "Mọi động từ tiếng Nhật dạng nguyên mẫu đều kết thúc bằng nguyên âm hàng [u]."
+        ),
+        GrammarPoint(
+            lessonNumber: 18,
+            order: 2,
+            title: "2. Khả năng & Năng lực: Vることができます",
+            structure: "V (thể từ điển) + ことが できます",
+            meaningVi: "Có thể làm V / Biết làm V",
+            explanation: "Dùng để biểu thị khả năng, năng khiếu của bản thân hoặc điều kiện hoàn cảnh cho phép làm điều gì đó.",
+            examples: [
+                GrammarExample(
+                    japanese: "ミラーさんは 漢字を 読むことができます。",
+                    romaji: "Miraa-san wa kanji o yomu koto ga dekimasu.",
+                    vietnamese: "Anh Miller có thể đọc được chữ Hán."
                 ),
                 GrammarExample(
                     japanese: "このホテルで 日本円を 両替することができます。",
@@ -964,52 +1295,403 @@ public final class GrammarRepository {
                     vietnamese: "Tại khách sạn này có thể đổi tiền Yên Nhật."
                 )
             ],
-            usageNotes: "Vる + こと biến động từ thành một cụm danh từ tương đương."
+            usageNotes: "Cụm 「Vる + こと」 danh từ hóa động từ."
         ),
-        
+        GrammarPoint(
+            lessonNumber: 18,
+            order: 3,
+            title: "3. Sở thích: 私の趣味は Vることです",
+            structure: "私の趣味は + V (thể từ điển) + ことです",
+            meaningVi: "Sở thích của tôi là làm V",
+            explanation: "Dùng thể từ điển + こと để biến hành động thành một danh từ sở thích cụ thể.",
+            examples: [
+                GrammarExample(
+                    japanese: "私の 趣味は 音楽を 聞くことです。",
+                    romaji: "Watashi no shumi wa ongaku o kiku koto desu.",
+                    vietnamese: "Sở thích của tôi là nghe âm nhạc."
+                ),
+                GrammarExample(
+                    japanese: "趣味は 写真を 撮ることです。",
+                    romaji: "Shumi wa shashin o toru koto desu.",
+                    vietnamese: "Sở thích của tôi là chụp ảnh."
+                )
+            ],
+            usageNotes: "Nếu sở thích là danh từ đơn thuần: 私の趣味は [N] です (ví dụ: スポーツ, 読書)."
+        ),
+        GrammarPoint(
+            lessonNumber: 18,
+            order: 4,
+            title: "4. Trước khi làm gì: Vる / Nの + まえに",
+            structure: "V (thể từ điển) / Danh từ + の + まえに、～",
+            meaningVi: "Trước khi làm V / Trước sự kiện N...",
+            explanation: "Chỉ một hành động xảy ra trước một hành động hay mốc thời gian khác.",
+            examples: [
+                GrammarExample(
+                    japanese: "寝る まえに、日記を 書きます。",
+                    romaji: "Neru mae ni, nikki o kakimasu.",
+                    vietnamese: "Trước khi đi ngủ, tôi viết nhật ký."
+                ),
+                GrammarExample(
+                    japanese: "食事の まえに、手を 洗ってください。",
+                    romaji: "Shokuji no mae ni, te o aratte kudasai.",
+                    vietnamese: "Trước bữa ăn, xin hãy rửa tay."
+                )
+            ],
+            usageNotes: "Lưu ý động từ trước まえに luôn ở thể từ điển, không chia theo thì của câu."
+        ),
+
         // ==========================================
-        // MARK: - BÀI 19 (THỂ TA)
+        // MARK: - BÀI 19: THỂ た (TA-FORM) & TRẢI NGHIỆM
         // ==========================================
         GrammarPoint(
             lessonNumber: 19,
             order: 1,
-            title: "1. Từng trải nghiệm: Vたことがあります",
+            title: "1. Quy tắc chia Thể た (Ta-form)",
+            structure: "Chia y hệt thể て (Te-form), chỉ cần thay [て → た] và [で → だ]:\n• Nhóm 1: い/ち/り → った | み/び/に → んだ | き → いた | ぎ → いだ | し → した\n• Nhóm 2: Bỏ ます thêm た (食べた, 見た)\n• Nhóm 3: します → した | きます → きた\n★ Ngoại lệ: 行きます → 行った (itta)",
+            meaningVi: "Quy tắc chia thể quá khứ ngắn (Ta-form)",
+            explanation: "Thể た là thể quá khứ của thể thông thường, dùng làm nền tảng diễn tả kinh nghiệm và liệt kê hành động.",
+            examples: [
+                GrammarExample(
+                    japanese: "飲みました → 飲んだ | 書きました → 書いた",
+                    romaji: "nomimashita -> nonda | kakimashita -> kaita",
+                    vietnamese: "Đã uống -> nonda | Đã viết -> kaita"
+                ),
+                GrammarExample(
+                    japanese: "行きました → 行った (itta)",
+                    romaji: "ikimashita -> itta",
+                    vietnamese: "Đã đi -> itta"
+                )
+            ],
+            usageNotes: "Nếu đã thuộc quy tắc thể て thì thể た tương tự 100%."
+        ),
+        GrammarPoint(
+            lessonNumber: 19,
+            order: 2,
+            title: "2. Từng có trải nghiệm: Vたことがあります",
             structure: "V (thể た) + ことが あります (か)",
             meaningVi: "Đã từng làm V / Chưa từng làm V",
-            explanation: "Quy tắc chia thể た giống hệt thể て (chỉ thay te bằng ta, de bằng da). Dùng để nói về trải nghiệm trong đời.",
+            explanation: "Dùng để nói về trải nghiệm hoặc sự kiện đã từng xảy ra trong cuộc đời của một người.",
             examples: [
                 GrammarExample(
                     japanese: "日本へ 行ったことがありますか。…はい、一度あります。",
                     romaji: "Nihon e itta koto ga arimasu ka. ...Hai, ichido arimasu.",
                     vietnamese: "Bạn đã từng đi Nhật Bản chưa? ...Vâng, tôi đã đi một lần."
+                ),
+                GrammarExample(
+                    japanese: "富士山に 登ったことがあります。",
+                    romaji: "Fujisan ni nobotta koto ga arimasu.",
+                    vietnamese: "Tôi đã từng leo núi Phú Sĩ."
                 )
             ],
-            usageNotes: "Nếu chưa từng làm, trả lời: 「一度も ありません」(Chưa một lần nào)."
+            usageNotes: "Nếu chưa từng làm bao giờ: 「一度も ありません」(Chưa từng làm một lần nào)."
         ),
-        
+        GrammarPoint(
+            lessonNumber: 19,
+            order: 3,
+            title: "3. Liệt kê hành động tiêu biểu: V1たり、V2たり します",
+            structure: "V1 (thể た) り、V2 (thể た) り + します / しました",
+            meaningVi: "Lúc thì làm V1, lúc thì làm V2...",
+            explanation: "Dùng để chọn ra vài hành động tiêu biểu trong số nhiều việc đã hoặc sẽ làm, không cần theo thứ tự thời gian.",
+            examples: [
+                GrammarExample(
+                    japanese: "日曜日は 部屋を掃除したり、洗濯したりします。",
+                    romaji: "Nichiyoubi wa heya o souji shitari, sentaku shitari shimasu.",
+                    vietnamese: "Chủ nhật tôi lúc thì dọn dẹp phòng, lúc thì giặt giũ."
+                ),
+                GrammarExample(
+                    japanese: "昨日は 買い物をしたり、映画を見たりしました。",
+                    romaji: "Kinou wa kaimono o shitari, eiga o mitari shimashita.",
+                    vietnamese: "Hôm qua tôi đã lúc thì đi mua sắm, lúc thì đi xem phim."
+                )
+            ],
+            usageNotes: "Khác với Vて、Vて (bắt buộc theo trình tự), Vたり Vたり không theo trình tự và ngụ ý còn các việc khác."
+        ),
+        GrammarPoint(
+            lessonNumber: 19,
+            order: 4,
+            title: "4. Trở nên / Trở thành: ～くなります / ～になります",
+            structure: "Tính từ đuôi い: Bỏ い + くなります\nTính từ đuôi な / Danh từ: + になります",
+            meaningVi: "Trở nên..., trở thành...",
+            explanation: "Diễn tả sự thay đổi về trạng thái, tính chất hoặc vai trò của đối tượng theo thời gian.",
+            examples: [
+                GrammarExample(
+                    japanese: "春になると、暖かくなります。",
+                    romaji: "Haru ni naru to, atatakaku narimasu.",
+                    vietnamese: "Sang mùa xuân trời trở nên ấm áp."
+                ),
+                GrammarExample(
+                    japanese: "将来 医者に なりたいです。",
+                    romaji: "Shourai isha ni naritai desu.",
+                    vietnamese: "Tương lai tôi muốn trở thành bác sĩ."
+                )
+            ],
+            usageNotes: "Tính từ đuôi な và Danh từ đều đi với trợ từ 「に」."
+        ),
+
         // ==========================================
-        // MARK: - BÀI 25 (ĐIỀU KIỆN TARA)
+        // MARK: - BÀI 20: THỂ THÔNG THƯỜNG (THỂ NGẮN - 普通形)
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 20,
+            order: 1,
+            title: "1. Bảng chuyển đổi Thể Lịch sự (丁寧形) sang Thể Thông thường (普通形)",
+            structure: "• Động từ: ます → Vる | ません → Vない | ました → Vた | ませんでした → Vなかった\n• Tính từ đuôi い: Bỏ です (おいしいです → おいしい, おいしくないです → おいしくない)\n• Tính từ đuôi な & Danh từ: です → だ | ではありません → ではない (じゃない) | でした → だった | ではありませんでした → ではなかった (じゃなかった)",
+            meaningVi: "Hệ thống quy đổi Thể thông thường (thể ngắn)",
+            explanation: "Thể thông thường (普通形) được dùng khi trò chuyện thân mật với bạn bè, người thân gia đình, hoặc làm thành phần trong các câu ghép ngữ pháp nâng cao.",
+            examples: [
+                GrammarExample(
+                    japanese: "明日 行く？…うん、行く。/ ううん、行かない。",
+                    romaji: "Ashita iku? ...Un, iku. / Uun, ikanai.",
+                    vietnamese: "Ngày mai đi không? ...Ừ, đi chứ. / Không, không đi."
+                ),
+                GrammarExample(
+                    japanese: "昨日 暇だった？…ううん、忙しかった。",
+                    romaji: "Kinou hima datta? ...Uun, isogashikatta.",
+                    vietnamese: "Hôm qua rảnh không? ...Không, bận lắm."
+                )
+            ],
+            usageNotes: "Trong câu hỏi thể ngắn thường bỏ trợ từ か và lên giọng ở cuối câu."
+        ),
+        GrammarPoint(
+            lessonNumber: 20,
+            order: 2,
+            title: "2. Giao tiếp thân mật bằng Thể ngắn",
+            structure: "Lược bỏ trợ từ (が, を, へ) và dùng trợ từ ngữ khí: ね, よ, わ",
+            meaningVi: "Văn phong hội thoại hàng ngày",
+            explanation: "Khi nói chuyện thân mật, người Nhật thường giản lược các trợ từ và dùng câu cụt ngắn gọn.",
+            examples: [
+                GrammarExample(
+                    japanese: "ご飯[を] 食べた？…うん、もう 食べたよ。",
+                    romaji: "Gohan [o] tabeta? ...Un, mou tabeta yo.",
+                    vietnamese: "Ăn cơm chưa? ...Ừ, tớ ăn rồi nè."
+                ),
+                GrammarExample(
+                    japanese: "コーヒー[を] 飲む？…ううん、飲まない。",
+                    romaji: "Koohii [o] nomu? ...Uun, nomanai.",
+                    vietnamese: "Uống cà phê không? ...Không, tớ không uống."
+                )
+            ],
+            usageNotes: "Không bao giờ dùng thể ngắn với cấp trên, người lớn tuổi hoặc người lạ."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 21: Bày tỏ ý kiến cá nhân & Trích dẫn
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 21,
+            order: 1,
+            title: "1. Bày tỏ suy nghĩ / ý kiến: [Thể thông thường] + と思います",
+            structure: "[Câu thể thông thường] + と 思います",
+            meaningVi: "Tôi nghĩ rằng... / Tôi cho là...",
+            explanation: "Dùng để bày tỏ quan điểm, phán đoán hoặc ý kiến chủ quan của bản thân người nói.",
+            examples: [
+                GrammarExample(
+                    japanese: "明日は 雨が 降ると思います。",
+                    romaji: "Ashita wa ame ga furu to omoimasu.",
+                    vietnamese: "Tôi nghĩ ngày mai trời sẽ mưa."
+                ),
+                GrammarExample(
+                    japanese: "日本は 物価が 高いと思います。",
+                    romaji: "Nihon wa bukka ga takai to omoimasu.",
+                    vietnamese: "Tôi cho rằng vật giá ở Nhật Bản đắt đỏ."
+                )
+            ],
+            usageNotes: "Mệnh đề trước と luôn ở thể thông thường (普通形)."
+        ),
+        GrammarPoint(
+            lessonNumber: 21,
+            order: 2,
+            title: "2. Trích dẫn lời nói: 「Câu」/ [Thể thông thường] + と言いました",
+            structure: "Trích dẫn trực tiếp: 「...」と 言いました\nTrích dẫn gián tiếp: [Thể thông thường] + と 言いました",
+            meaningVi: "Ai đó đã nói rằng...",
+            explanation: "Dùng để thuật lại lời nói của một người khác.",
+            examples: [
+                GrammarExample(
+                    japanese: "田中さんは 「明日 休みます」と 言いました。",
+                    romaji: "Tanaka-san wa \"Ashita yasumimasu\" to iimashita.",
+                    vietnamese: "Anh Tanaka đã nói: \"Ngày mai tôi xin nghỉ\"."
+                ),
+                GrammarExample(
+                    japanese: "田中さんは 来週 出張すると 言いました。",
+                    romaji: "Tanaka-san wa raishuu shucchou suru to iimashita.",
+                    vietnamese: "Anh Tanaka nói rằng tuần sau anh ấy sẽ đi công tác."
+                )
+            ],
+            usageNotes: "Trợ từ と đóng vai trò là dấu ngoặc kép trích dẫn nội dung."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 22: Mệnh đề Định ngữ (Bổ nghĩa Danh từ)
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 22,
+            order: 1,
+            title: "1. Mệnh đề bổ nghĩa cho danh từ: [Mệnh đề thể thông thường] + N",
+            structure: "[Chủ ngữ が + Động từ thể thông thường] + Danh từ chính",
+            meaningVi: "Cái N mà làm hành động...",
+            explanation: "Trong tiếng Nhật, mệnh đề bổ nghĩa luôn đặt TRƯỚC danh từ cần bổ nghĩa. Chủ ngữ trong mệnh đề phụ đi với trợ từ が thay vì は.",
+            examples: [
+                GrammarExample(
+                    japanese: "あそこで 本を 読んでいる 人は 誰ですか。",
+                    romaji: "Asoko de hon o yonde iru hito wa dare desu ka.",
+                    vietnamese: "Người đang đọc sách đằng kia là ai vậy?"
+                ),
+                GrammarExample(
+                    japanese: "これは 母が 作った 料理です。",
+                    romaji: "Kore wa haha ga tsukutta ryouri desu.",
+                    vietnamese: "Đây là món ăn mà mẹ tôi đã nấu."
+                )
+            ],
+            usageNotes: "Động từ trong mệnh đề bổ nghĩa bắt buộc phải chia ở thể thông thường (Vる, Vない, Vた)."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 23: Thời điểm (とき) & Điều kiện tự nhiên (と)
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 23,
+            order: 1,
+            title: "1. Khi / Lúc làm gì: [Thể thông thường / Aい / Aな / Nの] + とき",
+            structure: "Vる / Vた / Vない + とき\nTính từ đuôi い + とき | Tính từ đuôi な + な + とき | Danh từ + の + とき",
+            meaningVi: "Khi..., lúc...",
+            explanation: "Diễn tả thời điểm xảy ra trạng thái hay hành động được nhắc tới ở vế chính.",
+            examples: [
+                GrammarExample(
+                    japanese: "道が 分からないとき、交番で 聞きます。",
+                    romaji: "Michi ga wakaranai toki, kouban de kikimasu.",
+                    vietnamese: "Khi không biết đường, tôi hỏi ở đồn cảnh sát."
+                ),
+                GrammarExample(
+                    japanese: "暇なとき、音楽を 聞きます。",
+                    romaji: "Hima na toki, ongaku o kikimasu.",
+                    vietnamese: "Lúc rảnh rỗi, tôi thường nghe nhạc."
+                )
+            ],
+            usageNotes: "Phân biệt Vるとき (chưa làm thì...) và Vたとき (đã làm xong rồi mới...)."
+        ),
+        GrammarPoint(
+            lessonNumber: 23,
+            order: 2,
+            title: "2. Hễ mà... thì...: V (thể từ điển) + と、～",
+            structure: "V (thể từ điển) + と、[kết quả tất yếu]",
+            meaningVi: "Hễ... thì... / Cứ hễ làm V là tự động...",
+            explanation: "Diễn tả kết quả tự nhiên tất yếu của máy móc, quy luật tự nhiên hoặc chỉ dẫn đường đi.",
+            examples: [
+                GrammarExample(
+                    japanese: "このボタンを 押すと、切符が 出ます。",
+                    romaji: "Kono botan o osu to, kippu ga demasu.",
+                    vietnamese: "Hễ ấn nút này là vé sẽ tự động nhả ra."
+                ),
+                GrammarExample(
+                    japanese: "あの角を 右へ 曲がると、銀行が あります。",
+                    romaji: "Ano kado o migi e magaru to, ginkou ga arimasu.",
+                    vietnamese: "Hễ rẽ phải ở góc đằng kia thì sẽ thấy ngân hàng."
+                )
+            ],
+            usageNotes: "Vế sau không bao giờ dùng câu mệnh lệnh, rủ rê hay nguyện vọng."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 24: Cho và Nhận hành động
+        // ==========================================
+        GrammarPoint(
+            lessonNumber: 24,
+            order: 1,
+            title: "1. Làm giúp ai việc gì: Vてあげます",
+            structure: "Tôi / N1 は N2 に V (thể て) + あげます",
+            meaningVi: "Làm giúp N2 việc gì",
+            explanation: "Người nói thực hiện một hành động mang lại lợi ích cho người khác.",
+            examples: [
+                GrammarExample(
+                    japanese: "私は 妹に 宿題を 教えてあげました。",
+                    romaji: "Watashi wa imouto ni shukudai o oshiete agemashita.",
+                    vietnamese: "Tôi đã dạy em gái làm bài tập về nhà."
+                )
+            ],
+            usageNotes: "Hạn chế dùng trực tiếp với người lớn vì có thể mang sắc thái kể công."
+        ),
+        GrammarPoint(
+            lessonNumber: 24,
+            order: 2,
+            title: "2. Ai đó làm giúp tôi: N が 私に Vてくれます",
+            structure: "[Người khác] が 私に V (thể て) + くれます / くれました",
+            meaningVi: "Ai đó làm giúp tôi một việc với lòng biết ơn",
+            explanation: "Nhấn mạnh sự hàm ơn của người nói khi được đối phương giúp đỡ.",
+            examples: [
+                GrammarExample(
+                    japanese: "山田さんは 私に 写真を 撮ってくれました。",
+                    romaji: "Yamada-san wa watashi ni shashin o totte kuremashita.",
+                    vietnamese: "Anh Yamada đã chụp ảnh giúp cho tôi."
+                ),
+                GrammarExample(
+                    japanese: "母が 荷物を 送ってくれました。",
+                    romaji: "Haha ga nimotsu o okutte kuremashita.",
+                    vietnamese: "Mẹ đã gửi hành lý lên cho tôi."
+                )
+            ],
+            usageNotes: "Chủ ngữ là người làm giúp, người thụ hưởng là tôi (私)."
+        ),
+        GrammarPoint(
+            lessonNumber: 24,
+            order: 3,
+            title: "3. Nhận sự giúp đỡ từ ai: Vてもらいます",
+            structure: "私 は [Người khác] に V (thể て) + もらいます / もらいました",
+            meaningVi: "Tôi được ai đó làm giúp việc gì",
+            explanation: "Chủ ngữ là người nhận hành động trợ giúp từ người khác.",
+            examples: [
+                GrammarExample(
+                    japanese: "私は 先生に 日本語を 直してもらいました。",
+                    romaji: "Watashi wa sensei ni nihongo o naoshite moraimashita.",
+                    vietnamese: "Tôi đã được thầy giáo sửa lỗi tiếng Nhật giúp."
+                )
+            ],
+            usageNotes: "Ý nghĩa tương đương Vてくれます nhưng góc nhìn chủ ngữ đảo ngược."
+        ),
+
+        // ==========================================
+        // MARK: - BÀI 25: Điều kiện Giả định (たら) & Nhượng bộ (ても)
         // ==========================================
         GrammarPoint(
             lessonNumber: 25,
             order: 1,
-            title: "1. Điều kiện giả định: Vたら / Aかったら",
-            structure: "V (thể た) + ら、～",
+            title: "1. Điều kiện giả định: Vたら / Aかったら / Na・Nだったら",
+            structure: "Động từ thể た + ら\nTính từ đuôi い: かった + ら\nTính từ đuôi な / Danh từ: だった + ら",
             meaningVi: "Nếu... thì / Sau khi... thì...",
-            explanation: "Cấu trúc điều kiện phổ biến và tự nhiên nhất trong tiếng Nhật. Có thể dùng cho giả định hoặc hành động kế tiếp.",
+            explanation: "Mẫu câu điều kiện phổ biến và tự nhiên nhất trong tiếng Nhật, dùng cho cả giả định lẫn hành động tiếp nối.",
             examples: [
                 GrammarExample(
-                    japanese: "お金が あったら、旅行します。",
-                    romaji: "Okane ga attara, ryokou shimasu.",
-                    vietnamese: "Nếu có tiền, tôi sẽ đi du lịch."
+                    japanese: "お金が あったら、世界旅行を したいです。",
+                    romaji: "Okane ga attara, sekai ryokou o shitai desu.",
+                    vietnamese: "Nếu có nhiều tiền, tôi muốn đi du lịch vòng quanh thế giới."
                 ),
                 GrammarExample(
                     japanese: "駅に 着いたら、電話してください。",
                     romaji: "Eki ni tsuitara, denwa shite kudasai.",
-                    vietnamese: "Khi nào đến ga thì hãy gọi điện thoại cho tôi nhé."
+                    vietnamese: "Sau khi đến ga thì hãy gọi điện thoại cho tôi nhé."
                 )
             ],
-            usageNotes: "Khác với と (hễ mà), たら có thể dùng cho mệnh lệnh, rủ rê và nhờ vả ở vế sau."
+            usageNotes: "Khác với と, たら có thể thoải mái dùng mệnh lệnh, nhờ vả và rủ rê ở vế sau."
+        ),
+        GrammarPoint(
+            lessonNumber: 25,
+            order: 2,
+            title: "2. Điều kiện ngược / Nhượng bộ: Vても / Aくても / Na・Nでも",
+            structure: "Động từ thể て + も\nTính từ đuôi い: くても\nTính từ đuôi な / Danh từ: でも",
+            meaningVi: "Dù cho... thì vẫn...",
+            explanation: "Biểu thị sự việc ở vế sau diễn ra trái ngược với dự đoán thông thường từ vế trước.",
+            examples: [
+                GrammarExample(
+                    japanese: "雨が 降っても、サッカーを します。",
+                    romaji: "Ame ga futte mo, sakkaa o shimasu.",
+                    vietnamese: "Dù trời có mưa, chúng tôi vẫn chơi bóng đá."
+                ),
+                GrammarExample(
+                    japanese: "いくら 高くても、この時計を 買いたいです。",
+                    romaji: "Ikura takakute mo, kono tokei o kaitai desu.",
+                    vietnamese: "Cho dù có đắt cỡ nào đi nữa, tôi vẫn muốn mua chiếc đồng hồ này."
+                )
+            ],
+            usageNotes: "Thường đi kèm phó từ 「いくら」(cho dù bao nhiêu) hoặc 「たとえ」(cho dẫu)."
         )
     ]
     
