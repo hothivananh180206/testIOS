@@ -62,17 +62,11 @@ class ViewController: UIViewController {
     }
     
     @objc private func handleNotificationTap() {
-        let alert = UIAlertController(title: "Nhắc nhở học tập 🔥", message: "Hệ thống sẽ gửi thông báo mỗi tối để bạn duy trì chuỗi ngày học Streak!", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "⏰ Hẹn giờ học 20:00 mỗi ngày", style: .default, handler: { [weak self] _ in
+        let alert = UIAlertController(title: "Nhắc nhở học tập 🔥", message: "Hệ thống sẽ gửi thông báo lúc 20:00 mỗi tối để bạn duy trì chuỗi ngày học Streak!", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "⏰ Bật nhắc nhở học 20:00 hàng ngày", style: .default, handler: { [weak self] _ in
             NotificationService.shared.scheduleDailyReminder(hour: 20, minute: 0)
             let notice = UIAlertController(title: "Đã kích hoạt!", message: "Đã cài đặt chuông nhắc học tiếng Nhật lúc 20:00 hàng ngày.", preferredStyle: .alert)
             notice.addAction(UIAlertAction(title: "Tuyệt vời", style: .default))
-            self?.present(notice, animated: true)
-        }))
-        alert.addAction(UIAlertAction(title: "🔔 Bắn thông báo thử nghiệm ngay (3 giây)", style: .default, handler: { [weak self] _ in
-            NotificationService.shared.sendTestNotification()
-            let notice = UIAlertController(title: "Đã hẹn thông báo", message: "Bạn hãy nhấn phím Home hoặc khóa màn hình để thấy thông báo xuất hiện sau 3 giây nhé!", preferredStyle: .alert)
-            notice.addAction(UIAlertAction(title: "OK", style: .default))
             self?.present(notice, animated: true)
         }))
         alert.addAction(UIAlertAction(title: "Đóng", style: .cancel))
