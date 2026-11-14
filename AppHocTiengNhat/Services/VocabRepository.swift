@@ -90,11 +90,16 @@ public final class VocabRepository {
         // ==========================================
         // MARK: - BÀI 6: Ẩm thực & Mua sắm
         // ==========================================
+        VocabWord(kanji: "会います", kana: "あいます", romaji: "aimasu", meaningVi: "Gặp gỡ, gặp (ai đó)", topicId: "family", lessonNumber: 6, exampleJp: "駅で友達に会います。", exampleVi: "Tôi gặp bạn ở nhà ga."),
         VocabWord(kanji: "食べます", kana: "たべます", romaji: "tabemasu", meaningVi: "Ăn", topicId: "food", lessonNumber: 6, exampleJp: "朝ご飯を食べます。", exampleVi: "Tôi ăn bữa sáng."),
         VocabWord(kanji: "飲みます", kana: "のみます", romaji: "nomimasu", meaningVi: "Uống", topicId: "food", lessonNumber: 6, exampleJp: "温かいお茶を飲みます。", exampleVi: "Tôi uống trà ấm."),
         VocabWord(kanji: "買います", kana: "かいます", romaji: "kaimasu", meaningVi: "Mua hàng", topicId: "food", lessonNumber: 6, exampleJp: "デパートで服を買いました。", exampleVi: "Tôi đã mua quần áo ở trung tâm thương mại."),
         VocabWord(kanji: "見ます", kana: "みます", romaji: "mimasu", meaningVi: "Xem, nhìn", topicId: "time", lessonNumber: 6, exampleJp: "週末に映画を見ます。", exampleVi: "Cuối tuần tôi xem phim."),
         VocabWord(kanji: "聞きます", kana: "ききます", romaji: "kikimasu", meaningVi: "Nghe, hỏi", topicId: "time", lessonNumber: 6, exampleJp: "日本の音楽を聞きます。", exampleVi: "Tôi nghe âm nhạc Nhật Bản."),
+        VocabWord(kanji: "書きます", kana: "かきます", romaji: "kakimasu", meaningVi: "Viết, vẽ", topicId: "greeting", lessonNumber: 6, exampleJp: "手紙を書きます。", exampleVi: "Tôi viết thư."),
+        VocabWord(kanji: "読みます", kana: "よみます", romaji: "yomimasu", meaningVi: "Đọc (sách, báo)", topicId: "greeting", lessonNumber: 6, exampleJp: "日本語の本を読みます。", exampleVi: "Tôi đọc sách tiếng Nhật."),
+        VocabWord(kanji: "吸います", kana: "すいます", romaji: "suimasu", meaningVi: "Hút (thuốc)", topicId: "greeting", lessonNumber: 6, exampleJp: "たばこを吸います。", exampleVi: "Hút thuốc lá."),
+        VocabWord(kanji: "撮ります", kana: "とります", romaji: "torimasu", meaningVi: "Chụp (ảnh)", topicId: "travel", lessonNumber: 6, exampleJp: "富士山の写真を撮ります。", exampleVi: "Chụp ảnh núi Phú Sĩ."),
         VocabWord(kanji: "手紙", kana: "てがみ", romaji: "tegami", meaningVi: "Bức thư", topicId: "greeting", lessonNumber: 6, exampleJp: "両親に手紙を書きます。", exampleVi: "Tôi viết thư cho bố mẹ."),
         VocabWord(kanji: "写真", kana: "しゃしん", romaji: "shashin", meaningVi: "Bức ảnh", topicId: "travel", lessonNumber: 6, exampleJp: "富士山の写真を撮りました。", exampleVi: "Tôi đã chụp ảnh núi Phú Sĩ."),
 

@@ -11,6 +11,19 @@ public final class KanjiRepository {
     private init() {}
     
     public let n5KanjiList: [KanjiCharacter] = [
+        KanjiCharacter(
+            kanji: "会",
+            hanViet: "HỘI",
+            onyomi: "カイ, エ",
+            kunyomi: "あ・う",
+            meaningVi: "Gặp gỡ, tụ họp",
+            strokeCount: 6,
+            examples: [
+                KanjiExample(word: "会います", reading: "あいます (aimasu)", meaning: "Gặp gỡ, gặp"),
+                KanjiExample(word: "会社", reading: "かいしゃ (kaisha)", meaning: "Công ty"),
+                KanjiExample(word: "会話", reading: "かいわ (kaiwa)", meaning: "Hội thoại")
+            ]
+        ),
         // MARK: - Thiên nhiên & Thứ trong tuần
         KanjiCharacter(
             kanji: "日",

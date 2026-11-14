@@ -822,13 +822,93 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
         if text.isEmpty {
             filteredItems = allItems
         } else {
-            // Hỗ trợ tìm kiếm cả có dấu lẫn không dấu (ví dụ: gõ 'an' vẫn tìm ra 'ăn')
             let textNormalized = text.folding(options: .diacriticInsensitive, locale: .current)
-            filteredItems = allItems.filter { item in
-                let combined = "\(item.mainText) \(item.subText) \(item.meaning) \(item.tag)".lowercased()
-                let combinedNormalized = combined.folding(options: .diacriticInsensitive, locale: .current)
-                return combined.contains(text) || combinedNormalized.contains(textNormalized)
+            let hasDiacritics = text != textNormalized
+            let isSingleWord = !text.contains(" ")
+            
+            var scoredItems: [(item: SearchResultItem, score: Int)] = []
+            
+            for item in allItems {
+                let mainLower = item.mainText.lowercased()
+                let subLower = item.subText.lowercased()
+                let meaningLower = item.meaning.lowercased()
+                let tagLower = item.tag.lowercased()
+                
+                let subNorm = subLower.folding(options: .diacriticInsensitive, locale: .current)
+                let meaningNorm = meaningLower.folding(options: .diacriticInsensitive, locale: .current)
+                
+                var score = 0
+                
+                // 1. Khớp Kanji / Hiragana / Katakana (mainText)
+                if mainLower == text {
+                    score += 10000 // Khớp chính xác (ví dụ gõ '会います' hoặc '水')
+                } else if mainLower.hasPrefix(text) {
+                    score += 6000
+                } else if mainLower.contains(text) {
+                    score += 3000
+                }
+                
+                // 2. Khớp Furigana / SubText (ví dụ gõ 'あいます' thì subText bắt đầu bằng 'あいます')
+                if subLower.hasPrefix(text) {
+                    score += 8000
+                } else if subLower.contains(text) {
+                    score += 2500
+                }
+                
+                // 3. Khớp Romaji trong subText (ví dụ 'aimasu', 'nomimasu', 'mizu')
+                let subTokens = subNorm.components(separatedBy: CharacterSet.alphanumerics.inverted).filter { !$0.isEmpty }
+                if subTokens.contains(textNormalized) {
+                    score += 5000
+                } else if subTokens.contains(where: { $0.hasPrefix(textNormalized) }) {
+                    score += 2500
+                }
+                
+                // 4. Khớp nghĩa tiếng Việt (meaning)
+                let meaningWords = meaningLower.components(separatedBy: CharacterSet.alphanumerics.inverted).filter { !$0.isEmpty }
+                let meaningWordsNorm = meaningWords.map { $0.folding(options: .diacriticInsensitive, locale: .current) }
+                
+                // A. Khớp chính xác toàn bộ nghĩa
+                if meaningLower == text {
+                    score += 10000
+                } else if !hasDiacritics && meaningNorm == textNormalized {
+                    score += 8000
+                }
+                
+                // B. Khớp từng từ đơn tiếng Việt (Ví dụ gõ 'uống' thì khớp từ 'uống' trong 'Uống' hoặc 'Nước uống')
+                if isSingleWord {
+                    if meaningWords.contains(text) {
+                        score += 9000 // Khớp đúng từ có dấu!
+                    } else if meaningWords.contains(where: { $0.hasPrefix(text) }) {
+                        score += 4000 // Bắt đầu bằng tiền tố có dấu (ví dụ 'uố' -> 'uống')
+                    } else if !hasDiacritics {
+                        if meaningWordsNorm.contains(textNormalized) {
+                            score += 7000 // Khớp đúng từ không dấu (ví dụ gõ 'uong' ra 'uống')
+                        } else if meaningWordsNorm.contains(where: { $0.hasPrefix(textNormalized) }) {
+                            score += 3000 // Bắt đầu bằng tiền tố không dấu
+                        }
+                    }
+                } else {
+                    // Cụm nhiều từ (ví dụ 'nước uống', 'trường học')
+                    if meaningLower.contains(text) {
+                        score += 7000
+                    } else if !hasDiacritics && meaningNorm.contains(textNormalized) {
+                        score += 5000
+                    }
+                }
+                
+                // 5. Khớp tag / bài học (ví dụ 'Bài 6', 'Kanji')
+                if tagLower.contains(text) || tagLower.folding(options: .diacriticInsensitive, locale: .current).contains(textNormalized) {
+                    score += 100
+                }
+                
+                if score > 0 {
+                    scoredItems.append((item: item, score: score))
+                }
             }
+            
+            // Sắp xếp giảm dần theo độ liên quan cao nhất
+            scoredItems.sort { $0.score > $1.score }
+            filteredItems = scoredItems.map { $0.item }
         }
         emptyLabel.isHidden = !filteredItems.isEmpty
         tableView.reloadData()
