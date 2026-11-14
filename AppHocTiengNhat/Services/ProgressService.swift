@@ -59,6 +59,19 @@ public final class ProgressService {
         return list.count
     }
     
+    public func getMasteredWords() -> [VocabWord] {
+        let ids = Set(defaults.stringArray(forKey: masteredKey) ?? [])
+        guard !ids.isEmpty else { return [] }
+        return VocabRepository.shared.vocabList.filter { ids.contains($0.id) }
+    }
+    
+    public func unmarkMastered(id: String) {
+        var set = Set(defaults.stringArray(forKey: masteredKey) ?? [])
+        set.remove(id)
+        defaults.set(Array(set), forKey: masteredKey)
+        recordStudyActivity()
+    }
+    
     // MARK: - Danh sách từ chưa nhớ, chưa thuộc (Need Review)
     public func isWordInReview(id: String) -> Bool {
         let set = Set(defaults.stringArray(forKey: needReviewKey) ?? [])

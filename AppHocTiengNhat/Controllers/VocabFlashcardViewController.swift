@@ -52,6 +52,8 @@ public class VocabFlashcardViewController: UIViewController {
         
         if topic.id == "review_topic" {
             words = ProgressService.shared.getNeedReviewWords()
+        } else if topic.id == "mastered_topic" {
+            words = ProgressService.shared.getMasteredWords()
         } else if topic.id.hasPrefix("lesson_"), let numStr = topic.id.components(separatedBy: "_").last, let lessonNum = Int(numStr) {
             words = VocabRepository.shared.getWords(forLesson: lessonNum)
         } else {

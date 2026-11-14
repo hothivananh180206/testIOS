@@ -50,7 +50,8 @@ public class N5LessonsViewController: UIViewController, UISearchResultsUpdating 
             self?.navigationController?.pushViewController(vc, animated: true)
         }))
         let reviewCount = ProgressService.shared.getNeedReviewCount()
-        alert.addAction(UIAlertAction(title: "⚠️ Sổ tay từ chưa nhớ (\(reviewCount) từ)", style: .default, handler: { [weak self] _ in
+        let masteredCount = ProgressService.shared.getMasteredWords().count
+        alert.addAction(UIAlertAction(title: "📖 Sổ tay từ vựng (⚠️ \(reviewCount) chưa nhớ • ⭐ \(masteredCount) đã thuộc)", style: .default, handler: { [weak self] _ in
             let vc = NeedReviewWordsViewController()
             self?.navigationController?.pushViewController(vc, animated: true)
         }))

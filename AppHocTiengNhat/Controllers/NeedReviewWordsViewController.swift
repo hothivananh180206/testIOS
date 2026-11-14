@@ -7,12 +7,24 @@ import UIKit
 
 public class NeedReviewWordsViewController: UIViewController, UISearchResultsUpdating {
     
+    public enum NotebookTab: Int {
+        case needReview = 0
+        case mastered = 1
+    }
+    
+    private var currentTab: NotebookTab = .needReview
+    
     private var words: [VocabWord] = []
     private var filteredWords: [VocabWord] = []
     
+    private let segmentedControl = UISegmentedControl(items: ["⚠️ Cần ôn tập", "⭐ Đã thuộc"])
     private let searchController = UISearchController(searchResultsController: nil)
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
+    
     private let emptyStateView = UIView()
+    private let emptyIcon = UIImageView()
+    private let emptyTitleLbl = UILabel()
+    private let emptyDescLbl = UILabel()
     
     private let headerActionContainer = UIView()
     private let statsBadge = UILabel()
@@ -21,10 +33,11 @@ public class NeedReviewWordsViewController: UIViewController, UISearchResultsUpd
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Sổ tay từ chưa nhớ"
+        title = "Sổ tay từ vựng"
         view.backgroundColor = .systemGroupedBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        setupSegmentedControl()
         setupSearchController()
         setupUI()
     }
@@ -34,10 +47,26 @@ public class NeedReviewWordsViewController: UIViewController, UISearchResultsUpd
         reloadWords()
     }
     
+    private func setupSegmentedControl() {
+        segmentedControl.selectedSegmentIndex = currentTab.rawValue
+        segmentedControl.selectedSegmentTintColor = .systemPurple
+        segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 13, weight: .bold)], for: .selected)
+        segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.label, .font: UIFont.systemFont(ofSize: 13, weight: .medium)], for: .normal)
+        segmentedControl.addTarget(self, action: #selector(didChangeTab), for: .valueChanged)
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(segmentedControl)
+    }
+    
+    @objc private func didChangeTab() {
+        currentTab = NotebookTab(rawValue: segmentedControl.selectedSegmentIndex) ?? .needReview
+        searchController.searchBar.text = ""
+        reloadWords()
+    }
+    
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Tìm kiếm từ chưa nhớ..."
+        searchController.searchBar.placeholder = "Tìm kiếm từ trong danh sách..."
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -53,8 +82,6 @@ public class NeedReviewWordsViewController: UIViewController, UISearchResultsUpd
         view.addSubview(headerActionContainer)
         
         statsBadge.font = .systemFont(ofSize: 13, weight: .bold)
-        statsBadge.textColor = .systemOrange
-        statsBadge.backgroundColor = UIColor.systemOrange.withAlphaComponent(0.12)
         statsBadge.layer.cornerRadius = 8
         statsBadge.clipsToBounds = true
         statsBadge.textAlignment = .center
@@ -102,7 +129,12 @@ public class NeedReviewWordsViewController: UIViewController, UISearchResultsUpd
         setupEmptyStateView()
         
         NSLayoutConstraint.activate([
-            headerActionContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 6),
+            segmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            segmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            segmentedControl.heightAnchor.constraint(equalToConstant: 34),
+            
+            headerActionContainer.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 10),
             headerActionContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             headerActionContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
@@ -135,58 +167,86 @@ public class NeedReviewWordsViewController: UIViewController, UISearchResultsUpd
         emptyStateView.isHidden = true
         view.addSubview(emptyStateView)
         
-        let icon = UIImageView(image: UIImage(systemName: "checkmark.circle.fill"))
-        icon.tintColor = .systemGreen
-        icon.contentMode = .scaleAspectFit
-        icon.translatesAutoresizingMaskIntoConstraints = false
+        emptyIcon.contentMode = .scaleAspectFit
+        emptyIcon.translatesAutoresizingMaskIntoConstraints = false
         
-        let titleLbl = UILabel()
-        titleLbl.text = "Tuyệt vời! Không có từ nào cần ôn tập 🎉"
-        titleLbl.font = .systemFont(ofSize: 17, weight: .bold)
-        titleLbl.textColor = .label
-        titleLbl.textAlignment = .center
-        titleLbl.translatesAutoresizingMaskIntoConstraints = false
+        emptyTitleLbl.font = .systemFont(ofSize: 17, weight: .bold)
+        emptyTitleLbl.textColor = .label
+        emptyTitleLbl.textAlignment = .center
+        emptyTitleLbl.translatesAutoresizingMaskIntoConstraints = false
         
-        let descLbl = UILabel()
-        descLbl.text = "Khi bạn làm bài kiểm tra hoặc quiz bị sai, từ vựng sẽ tự động được lưu vào đây để bạn dễ dàng ôn lại."
-        descLbl.font = .systemFont(ofSize: 14, weight: .regular)
-        descLbl.textColor = .secondaryLabel
-        descLbl.textAlignment = .center
-        descLbl.numberOfLines = 0
-        descLbl.translatesAutoresizingMaskIntoConstraints = false
+        emptyDescLbl.font = .systemFont(ofSize: 14, weight: .regular)
+        emptyDescLbl.textColor = .secondaryLabel
+        emptyDescLbl.textAlignment = .center
+        emptyDescLbl.numberOfLines = 0
+        emptyDescLbl.translatesAutoresizingMaskIntoConstraints = false
         
-        emptyStateView.addSubview(icon)
-        emptyStateView.addSubview(titleLbl)
-        emptyStateView.addSubview(descLbl)
+        emptyStateView.addSubview(emptyIcon)
+        emptyStateView.addSubview(emptyTitleLbl)
+        emptyStateView.addSubview(emptyDescLbl)
         
         NSLayoutConstraint.activate([
             emptyStateView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            emptyStateView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            emptyStateView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 20),
             emptyStateView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             emptyStateView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             
-            icon.topAnchor.constraint(equalTo: emptyStateView.topAnchor),
-            icon.centerXAnchor.constraint(equalTo: emptyStateView.centerXAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 64),
-            icon.heightAnchor.constraint(equalToConstant: 64),
+            emptyIcon.topAnchor.constraint(equalTo: emptyStateView.topAnchor),
+            emptyIcon.centerXAnchor.constraint(equalTo: emptyStateView.centerXAnchor),
+            emptyIcon.widthAnchor.constraint(equalToConstant: 64),
+            emptyIcon.heightAnchor.constraint(equalToConstant: 64),
             
-            titleLbl.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 16),
-            titleLbl.leadingAnchor.constraint(equalTo: emptyStateView.leadingAnchor),
-            titleLbl.trailingAnchor.constraint(equalTo: emptyStateView.trailingAnchor),
+            emptyTitleLbl.topAnchor.constraint(equalTo: emptyIcon.bottomAnchor, constant: 16),
+            emptyTitleLbl.leadingAnchor.constraint(equalTo: emptyStateView.leadingAnchor),
+            emptyTitleLbl.trailingAnchor.constraint(equalTo: emptyStateView.trailingAnchor),
             
-            descLbl.topAnchor.constraint(equalTo: titleLbl.bottomAnchor, constant: 8),
-            descLbl.leadingAnchor.constraint(equalTo: emptyStateView.leadingAnchor),
-            descLbl.trailingAnchor.constraint(equalTo: emptyStateView.trailingAnchor),
-            descLbl.bottomAnchor.constraint(equalTo: emptyStateView.bottomAnchor)
+            emptyDescLbl.topAnchor.constraint(equalTo: emptyTitleLbl.bottomAnchor, constant: 8),
+            emptyDescLbl.leadingAnchor.constraint(equalTo: emptyStateView.leadingAnchor),
+            emptyDescLbl.trailingAnchor.constraint(equalTo: emptyStateView.trailingAnchor),
+            emptyDescLbl.bottomAnchor.constraint(equalTo: emptyStateView.bottomAnchor)
         ])
     }
     
     private func reloadWords() {
-        words = ProgressService.shared.getNeedReviewWords()
+        let needReviewCount = ProgressService.shared.getNeedReviewCount()
+        let masteredCount = ProgressService.shared.getMasteredWords().count
+        
+        segmentedControl.setTitle("⚠️ Cần ôn (\(needReviewCount))", forSegmentAt: 0)
+        segmentedControl.setTitle("⭐ Đã thuộc (\(masteredCount))", forSegmentAt: 1)
+        
+        if currentTab == .needReview {
+            words = ProgressService.shared.getNeedReviewWords()
+            statsBadge.text = " ⚠️ Cần ôn tập: \(words.count) từ "
+            statsBadge.textColor = .systemOrange
+            statsBadge.backgroundColor = UIColor.systemOrange.withAlphaComponent(0.12)
+            
+            var fcConfig = flashcardActionBtn.configuration ?? UIButton.Configuration.filled()
+            fcConfig.title = "Luyện Flashcard"
+            flashcardActionBtn.configuration = fcConfig
+            
+            emptyIcon.image = UIImage(systemName: "checkmark.circle.fill")
+            emptyIcon.tintColor = .systemGreen
+            emptyTitleLbl.text = "Tuyệt vời! Không có từ nào cần ôn tập 🎉"
+            emptyDescLbl.text = "Khi bạn làm bài kiểm tra hoặc quiz bị sai, từ vựng sẽ tự động được lưu vào đây để bạn dễ dàng ôn lại."
+        } else {
+            words = ProgressService.shared.getMasteredWords()
+            statsBadge.text = " ⭐ Đã thuộc: \(words.count) từ "
+            statsBadge.textColor = .systemGreen
+            statsBadge.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.12)
+            
+            var fcConfig = flashcardActionBtn.configuration ?? UIButton.Configuration.filled()
+            fcConfig.title = "Ôn lại Flashcard"
+            flashcardActionBtn.configuration = fcConfig
+            
+            emptyIcon.image = UIImage(systemName: "star.circle.fill")
+            emptyIcon.tintColor = .systemYellow
+            emptyTitleLbl.text = "Chưa có từ nào được đánh dấu đã thuộc ⭐"
+            emptyDescLbl.text = "Khi học từ vựng trên Flashcard, hãy chạm vào biểu tượng Ngôi sao ⭐ để đánh dấu những từ bạn đã ghi nhớ vững vàng nhé!"
+        }
+        
         filterWords()
         
         let count = words.count
-        statsBadge.text = " ⚠️ Cần ôn tập: \(count) từ "
         headerActionContainer.isHidden = (count == 0)
         tableView.isHidden = (count == 0)
         emptyStateView.isHidden = (count > 0)
@@ -213,10 +273,17 @@ public class NeedReviewWordsViewController: UIViewController, UISearchResultsUpd
     
     @objc private func didTapStudyFlashcard() {
         guard !words.isEmpty else { return }
-        let lessonTitle = "Sổ tay từ chưa nhớ (\(words.count) từ)"
-        let topic = VocabTopic(id: "review_topic", title: lessonTitle, iconName: "exclamationmark.triangle.fill", detail: "Ôn tập các từ chưa thuộc")
-        let vc = VocabFlashcardViewController(topic: topic)
-        navigationController?.pushViewController(vc, animated: true)
+        if currentTab == .needReview {
+            let lessonTitle = "Sổ tay từ chưa nhớ (\(words.count) từ)"
+            let topic = VocabTopic(id: "review_topic", title: lessonTitle, iconName: "exclamationmark.triangle.fill", detail: "Ôn tập các từ chưa thuộc")
+            let vc = VocabFlashcardViewController(topic: topic)
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let lessonTitle = "Danh sách từ đã thuộc (\(words.count) từ)"
+            let topic = VocabTopic(id: "mastered_topic", title: lessonTitle, iconName: "star.fill", detail: "Xem lại các từ đã thuộc")
+            let vc = VocabFlashcardViewController(topic: topic)
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @objc private func didTapTestReviewWords() {
@@ -239,11 +306,21 @@ extension NeedReviewWordsViewController: UITableViewDataSource, UITableViewDeleg
         }
         
         let word = filteredWords[indexPath.row]
-        cell.configure(word: word) { [weak self] in
-            // Mark as mastered / remove from review list
-            ProgressService.shared.unmarkWordForReview(id: word.id)
-            AudioService.shared.playCorrectFeedback()
-            self?.reloadWords()
+        let isMasteredMode = (currentTab == .mastered)
+        
+        cell.configure(word: word, isMasteredMode: isMasteredMode) { [weak self] in
+            guard let self = self else { return }
+            if isMasteredMode {
+                // User wants to unmark mastered -> move back to need review
+                ProgressService.shared.unmarkMastered(id: word.id)
+                ProgressService.shared.markWordForReview(id: word.id)
+                AudioService.shared.playCorrectFeedback()
+            } else {
+                // User marks as mastered -> removed from review list and added to mastered
+                _ = ProgressService.shared.toggleMastered(id: word.id)
+                AudioService.shared.playCorrectFeedback()
+            }
+            self.reloadWords()
         }
         return cell
     }
@@ -257,9 +334,9 @@ final class NeedReviewWordCell: UITableViewCell {
     private let readingLabel = UILabel()
     private let meaningLabel = UILabel()
     private let speakBtn = UIButton(type: .system)
-    private let masteredBtn = UIButton(type: .system)
+    private let actionBtn = UIButton(type: .system)
     
-    private var onMasteredTap: (() -> Void)?
+    private var onActionTap: (() -> Void)?
     private var currentWord: VocabWord?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -298,19 +375,10 @@ final class NeedReviewWordCell: UITableViewCell {
         speakBtn.addTarget(self, action: #selector(speakTapped), for: .touchUpInside)
         contentView.addSubview(speakBtn)
         
-        var mConfig = UIButton.Configuration.filled()
-        mConfig.title = "Đã thuộc"
-        mConfig.image = UIImage(systemName: "checkmark")
-        mConfig.imagePlacement = .leading
-        mConfig.imagePadding = 4
-        mConfig.baseBackgroundColor = UIColor.systemGreen.withAlphaComponent(0.15)
-        mConfig.baseForegroundColor = .systemGreen
-        mConfig.cornerStyle = .capsule
-        masteredBtn.configuration = mConfig
-        masteredBtn.titleLabel?.font = .systemFont(ofSize: 12, weight: .semibold)
-        masteredBtn.translatesAutoresizingMaskIntoConstraints = false
-        masteredBtn.addTarget(self, action: #selector(masteredTapped), for: .touchUpInside)
-        contentView.addSubview(masteredBtn)
+        actionBtn.titleLabel?.font = .systemFont(ofSize: 12, weight: .semibold)
+        actionBtn.translatesAutoresizingMaskIntoConstraints = false
+        actionBtn.addTarget(self, action: #selector(actionTapped), for: .touchUpInside)
+        contentView.addSubview(actionBtn)
         
         NSLayoutConstraint.activate([
             jpWordLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
@@ -323,7 +391,7 @@ final class NeedReviewWordCell: UITableViewCell {
             
             meaningLabel.topAnchor.constraint(equalTo: readingLabel.bottomAnchor, constant: 4),
             meaningLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            meaningLabel.trailingAnchor.constraint(equalTo: masteredBtn.leadingAnchor, constant: -8),
+            meaningLabel.trailingAnchor.constraint(equalTo: actionBtn.leadingAnchor, constant: -8),
             meaningLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
             
             speakBtn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
@@ -331,20 +399,42 @@ final class NeedReviewWordCell: UITableViewCell {
             speakBtn.widthAnchor.constraint(equalToConstant: 32),
             speakBtn.heightAnchor.constraint(equalToConstant: 32),
             
-            masteredBtn.centerYAnchor.constraint(equalTo: meaningLabel.centerYAnchor),
-            masteredBtn.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            masteredBtn.heightAnchor.constraint(equalToConstant: 30),
-            masteredBtn.widthAnchor.constraint(equalToConstant: 96)
+            actionBtn.centerYAnchor.constraint(equalTo: meaningLabel.centerYAnchor),
+            actionBtn.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            actionBtn.heightAnchor.constraint(equalToConstant: 30),
+            actionBtn.widthAnchor.constraint(equalToConstant: 96)
         ])
     }
     
-    public func configure(word: VocabWord, onMastered: @escaping () -> Void) {
+    public func configure(word: VocabWord, isMasteredMode: Bool, onActionTap: @escaping () -> Void) {
         self.currentWord = word
-        self.onMasteredTap = onMastered
+        self.onActionTap = onActionTap
         
         jpWordLabel.text = word.displayText
         readingLabel.text = word.kanji != nil ? "\(word.kana) • /\(word.romaji)/" : "/\(word.romaji)/"
         meaningLabel.text = word.meaningVi
+        
+        if isMasteredMode {
+            var mConfig = UIButton.Configuration.filled()
+            mConfig.title = "Học lại"
+            mConfig.image = UIImage(systemName: "arrow.uturn.backward")
+            mConfig.imagePlacement = .leading
+            mConfig.imagePadding = 4
+            mConfig.baseBackgroundColor = UIColor.systemOrange.withAlphaComponent(0.15)
+            mConfig.baseForegroundColor = .systemOrange
+            mConfig.cornerStyle = .capsule
+            actionBtn.configuration = mConfig
+        } else {
+            var mConfig = UIButton.Configuration.filled()
+            mConfig.title = "Đã thuộc"
+            mConfig.image = UIImage(systemName: "checkmark")
+            mConfig.imagePlacement = .leading
+            mConfig.imagePadding = 4
+            mConfig.baseBackgroundColor = UIColor.systemGreen.withAlphaComponent(0.15)
+            mConfig.baseForegroundColor = .systemGreen
+            mConfig.cornerStyle = .capsule
+            actionBtn.configuration = mConfig
+        }
     }
     
     @objc private func speakTapped() {
@@ -352,7 +442,7 @@ final class NeedReviewWordCell: UITableViewCell {
         AudioService.shared.speak(text: w.speechText)
     }
     
-    @objc private func masteredTapped() {
-        onMasteredTap?()
+    @objc private func actionTapped() {
+        onActionTap?()
     }
 }
