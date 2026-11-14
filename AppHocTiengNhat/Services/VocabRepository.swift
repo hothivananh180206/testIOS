@@ -67,11 +67,11 @@ public final class VocabRepository {
         // ==========================================
         // MARK: - BÀI 4: Thời gian & Thói quen
         // ==========================================
-        VocabWord(kanji: "起きる", kana: "おきる", romaji: "okiru", meaningVi: "Thức dậy", topicId: "time", lessonNumber: 4, exampleJp: "毎朝六時に起きます。", exampleVi: "Mỗi sáng tôi thức dậy lúc 6 giờ."),
-        VocabWord(kanji: "寝る", kana: "ねる", romaji: "neru", meaningVi: "Đi ngủ", topicId: "time", lessonNumber: 4, exampleJp: "夜十一時に寝ます。", exampleVi: "Tôi đi ngủ lúc 11 giờ đêm."),
-        VocabWord(kanji: "働く", kana: "はたらく", romaji: "hataraku", meaningVi: "Làm việc", topicId: "greeting", lessonNumber: 4, exampleJp: "月曜日から金曜日まで働きます。", exampleVi: "Tôi làm việc từ thứ Hai đến thứ Sáu."),
-        VocabWord(kanji: "休む", kana: "やすむ", romaji: "yasumu", meaningVi: "Nghỉ ngơi, xin nghỉ", topicId: "time", lessonNumber: 4, exampleJp: "日曜日は休みます。", exampleVi: "Chủ nhật tôi được nghỉ."),
-        VocabWord(kanji: "勉強する", kana: "べんきょうする", romaji: "benkyousuru", meaningVi: "Học tập", topicId: "greeting", lessonNumber: 4, exampleJp: "毎日二時間勉強します。", exampleVi: "Mỗi ngày tôi học 2 tiếng."),
+        VocabWord(kanji: "起きます", kana: "おきます", romaji: "okimasu", meaningVi: "Thức dậy", topicId: "time", lessonNumber: 4, exampleJp: "毎朝六時に起きます。", exampleVi: "Mỗi sáng tôi thức dậy lúc 6 giờ."),
+        VocabWord(kanji: "寝ます", kana: "ねます", romaji: "nemasu", meaningVi: "Đi ngủ", topicId: "time", lessonNumber: 4, exampleJp: "夜十一時に寝ます。", exampleVi: "Tôi đi ngủ lúc 11 giờ đêm."),
+        VocabWord(kanji: "働きます", kana: "はたらきます", romaji: "hatarakimasu", meaningVi: "Làm việc", topicId: "greeting", lessonNumber: 4, exampleJp: "月曜日から金曜日まで働きます。", exampleVi: "Tôi làm việc từ thứ Hai đến thứ Sáu."),
+        VocabWord(kanji: "休みます", kana: "やすみます", romaji: "yasumimasu", meaningVi: "Nghỉ ngơi, xin nghỉ", topicId: "time", lessonNumber: 4, exampleJp: "日曜日は休みます。", exampleVi: "Chủ nhật tôi được nghỉ."),
+        VocabWord(kanji: "勉強します", kana: "べんきょうします", romaji: "benkyoushimasu", meaningVi: "Học tập", topicId: "greeting", lessonNumber: 4, exampleJp: "毎日二時間勉強します。", exampleVi: "Mỗi ngày tôi học 2 tiếng."),
         VocabWord(kanji: "銀行", kana: "ぎんこう", romaji: "ginkou", meaningVi: "Ngân hàng", topicId: "travel", lessonNumber: 4, exampleJp: "銀行は九時から開きます。", exampleVi: "Ngân hàng mở cửa từ 9 giờ."),
         VocabWord(kanji: "郵便局", kana: "ゆうびんきょく", romaji: "yuubinkyoku", meaningVi: "Bưu điện", topicId: "travel", lessonNumber: 4, exampleJp: "郵便局で切手を買います。", exampleVi: "Tôi mua tem ở bưu điện."),
         VocabWord(kanji: "図書館", kana: "としょかん", romaji: "toshokan", meaningVi: "Thư viện", topicId: "time", lessonNumber: 4, exampleJp: "図書館で静かに勉強します。", exampleVi: "Học bài yên tĩnh ở thư viện."),
@@ -79,9 +79,9 @@ public final class VocabRepository {
         // ==========================================
         // MARK: - BÀI 5: Đi lại & Phương tiện
         // ==========================================
-        VocabWord(kanji: "行く", kana: "いく", romaji: "iku", meaningVi: "Đi", topicId: "travel", lessonNumber: 5, exampleJp: "明日東京へ行きます。", exampleVi: "Ngày mai tôi đi Tokyo."),
-        VocabWord(kanji: "来る", kana: "くる", romaji: "kuru", meaningVi: "Đến", topicId: "travel", lessonNumber: 5, exampleJp: "日本へ勉強に来ました。", exampleVi: "Tôi đã đến Nhật Bản để học tập."),
-        VocabWord(kanji: "帰る", kana: "かえる", romaji: "kaeru", meaningVi: "Trở về (nhà, nước)", topicId: "travel", lessonNumber: 5, exampleJp: "来年ベトナムへ帰ります。", exampleVi: "Năm sau tôi sẽ về Việt Nam."),
+        VocabWord(kanji: "行きます", kana: "いきます", romaji: "ikimasu", meaningVi: "Đi", topicId: "travel", lessonNumber: 5, exampleJp: "明日東京へ行きます。", exampleVi: "Ngày mai tôi đi Tokyo."),
+        VocabWord(kanji: "来ます", kana: "きます", romaji: "kimasu", meaningVi: "Đến", topicId: "travel", lessonNumber: 5, exampleJp: "日本へ勉強に来ました。", exampleVi: "Tôi đã đến Nhật Bản để học tập."),
+        VocabWord(kanji: "帰ります", kana: "かえります", romaji: "kaerimasu", meaningVi: "Trở về (nhà, nước)", topicId: "travel", lessonNumber: 5, exampleJp: "来年ベトナムへ帰ります。", exampleVi: "Năm sau tôi sẽ về Việt Nam."),
         VocabWord(kanji: "学校", kana: "がっこう", romaji: "gakkou", meaningVi: "Trường học", topicId: "travel", lessonNumber: 5, exampleJp: "自転車で学校へ通います。", exampleVi: "Tôi đi học bằng xe đạp."),
         VocabWord(kanji: "飛行機", kana: "ひこうき", romaji: "hikouki", meaningVi: "Máy bay", topicId: "travel", lessonNumber: 5, exampleJp: "飛行機で六時間かかります。", exampleVi: "Mất 6 tiếng đi bằng máy bay."),
         VocabWord(kanji: "地下鉄", kana: "ちかてつ", romaji: "chikatetsu", meaningVi: "Tàu điện ngầm", topicId: "travel", lessonNumber: 5, exampleJp: "地下鉄は便利です。", exampleVi: "Tàu điện ngầm rất tiện lợi."),
@@ -90,11 +90,11 @@ public final class VocabRepository {
         // ==========================================
         // MARK: - BÀI 6: Ẩm thực & Mua sắm
         // ==========================================
-        VocabWord(kanji: "食べる", kana: "たべる", romaji: "taberu", meaningVi: "Ăn", topicId: "food", lessonNumber: 6, exampleJp: "朝ご飯を食べます。", exampleVi: "Tôi ăn bữa sáng."),
-        VocabWord(kanji: "飲む", kana: "のむ", romaji: "nomu", meaningVi: "Uống", topicId: "food", lessonNumber: 6, exampleJp: "温かいお茶を飲みます。", exampleVi: "Tôi uống trà ấm."),
-        VocabWord(kanji: "買う", kana: "かう", romaji: "kau", meaningVi: "Mua hàng", topicId: "food", lessonNumber: 6, exampleJp: "デパートで服を買いました。", exampleVi: "Tôi đã mua quần áo ở trung tâm thương mại."),
-        VocabWord(kanji: "見る", kana: "みる", romaji: "miru", meaningVi: "Xem, nhìn", topicId: "time", lessonNumber: 6, exampleJp: "週末に映画を見ます。", exampleVi: "Cuối tuần tôi xem phim."),
-        VocabWord(kanji: "聞く", kana: "きく", romaji: "kiku", meaningVi: "Nghe, hỏi", topicId: "time", lessonNumber: 6, exampleJp: "日本の音楽を聞きます。", exampleVi: "Tôi nghe âm nhạc Nhật Bản."),
+        VocabWord(kanji: "食べます", kana: "たべます", romaji: "tabemasu", meaningVi: "Ăn", topicId: "food", lessonNumber: 6, exampleJp: "朝ご飯を食べます。", exampleVi: "Tôi ăn bữa sáng."),
+        VocabWord(kanji: "飲みます", kana: "のみます", romaji: "nomimasu", meaningVi: "Uống", topicId: "food", lessonNumber: 6, exampleJp: "温かいお茶を飲みます。", exampleVi: "Tôi uống trà ấm."),
+        VocabWord(kanji: "買います", kana: "かいます", romaji: "kaimasu", meaningVi: "Mua hàng", topicId: "food", lessonNumber: 6, exampleJp: "デパートで服を買いました。", exampleVi: "Tôi đã mua quần áo ở trung tâm thương mại."),
+        VocabWord(kanji: "見ます", kana: "みます", romaji: "mimasu", meaningVi: "Xem, nhìn", topicId: "time", lessonNumber: 6, exampleJp: "週末に映画を見ます。", exampleVi: "Cuối tuần tôi xem phim."),
+        VocabWord(kanji: "聞きます", kana: "ききます", romaji: "kikimasu", meaningVi: "Nghe, hỏi", topicId: "time", lessonNumber: 6, exampleJp: "日本の音楽を聞きます。", exampleVi: "Tôi nghe âm nhạc Nhật Bản."),
         VocabWord(kanji: "手紙", kana: "てがみ", romaji: "tegami", meaningVi: "Bức thư", topicId: "greeting", lessonNumber: 6, exampleJp: "両親に手紙を書きます。", exampleVi: "Tôi viết thư cho bố mẹ."),
         VocabWord(kanji: "写真", kana: "しゃしん", romaji: "shashin", meaningVi: "Bức ảnh", topicId: "travel", lessonNumber: 6, exampleJp: "富士山の写真を撮りました。", exampleVi: "Tôi đã chụp ảnh núi Phú Sĩ."),
 
