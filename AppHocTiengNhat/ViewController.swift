@@ -644,7 +644,7 @@ class ViewController: UIViewController {
         let grammarTestRow = createTestOptionRow(
             title: "Kiểm tra Ngữ pháp Tính điểm",
             detail: "10 câu trắc nghiệm trợ từ, dạng chia và mẫu câu N5",
-            icon: "doc.text.badge.plus",
+            icon: "doc.badge.plus",
             color: .systemTeal
         ) { [weak self] in
             let vc = GrammarQuizViewController()
@@ -712,7 +712,7 @@ class ViewController: UIViewController {
         view.layer.borderColor = UIColor.systemGray5.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        let iconView = UIImageView(image: UIImage(systemName: icon))
+        let iconView = UIImageView(image: UIImage(systemName: icon) ?? UIImage(systemName: "book.fill"))
         iconView.isUserInteractionEnabled = false
         iconView.tintColor = color
         iconView.contentMode = .scaleAspectFit
