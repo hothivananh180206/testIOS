@@ -16,6 +16,10 @@ public struct SearchResultItem {
 public class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     private let searchBar = UISearchBar()
+    private let modeSegment = UISegmentedControl(items: ["🇻🇳 Tiếng Việt", "🇯🇵 Kana gốc", "🇯🇵 Có dấu (゛゜)", "🇯🇵 Âm ghép"])
+    private let keyboardScrollView = UIScrollView()
+    private let keyboardStackView = UIStackView()
+    
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
     private let emptyLabel = UILabel()
     
@@ -29,6 +33,7 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
         
         setupData()
         setupViews()
+        renderKeyboardKeys(for: 0)
     }
     
     private func setupData() {
@@ -64,11 +69,31 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     private func setupViews() {
-        searchBar.placeholder = "Nhập Kanji, Romaji hoặc tiếng Việt..."
+        searchBar.placeholder = "Nhập hoặc chọn phím bên dưới (ví dụ: ăn, が)..."
         searchBar.delegate = self
         searchBar.searchBarStyle = .minimal
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(searchBar)
+        
+        // Segment chuyển bàn phím
+        modeSegment.selectedSegmentIndex = 0
+        modeSegment.selectedSegmentTintColor = .systemPurple
+        modeSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        modeSegment.setTitleTextAttributes([.foregroundColor: UIColor.label], for: .normal)
+        modeSegment.translatesAutoresizingMaskIntoConstraints = false
+        modeSegment.addTarget(self, action: #selector(handleModeChanged), for: .valueChanged)
+        view.addSubview(modeSegment)
+        
+        // Khay phím cuộn ngang
+        keyboardScrollView.showsHorizontalScrollIndicator = false
+        keyboardScrollView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(keyboardScrollView)
+        
+        keyboardStackView.axis = .horizontal
+        keyboardStackView.spacing = 8
+        keyboardStackView.alignment = .center
+        keyboardStackView.translatesAutoresizingMaskIntoConstraints = false
+        keyboardScrollView.addSubview(keyboardStackView)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -89,7 +114,23 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             
-            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            modeSegment.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 4),
+            modeSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            modeSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            modeSegment.heightAnchor.constraint(equalToConstant: 32),
+            
+            keyboardScrollView.topAnchor.constraint(equalTo: modeSegment.bottomAnchor, constant: 8),
+            keyboardScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            keyboardScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            keyboardScrollView.heightAnchor.constraint(equalToConstant: 44),
+            
+            keyboardStackView.topAnchor.constraint(equalTo: keyboardScrollView.topAnchor),
+            keyboardStackView.leadingAnchor.constraint(equalTo: keyboardScrollView.leadingAnchor),
+            keyboardStackView.trailingAnchor.constraint(equalTo: keyboardScrollView.trailingAnchor),
+            keyboardStackView.bottomAnchor.constraint(equalTo: keyboardScrollView.bottomAnchor),
+            keyboardStackView.heightAnchor.constraint(equalTo: keyboardScrollView.heightAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: keyboardScrollView.bottomAnchor, constant: 8),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -99,17 +140,84 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
         ])
     }
     
+    // MARK: - Virtual Keyboard Render
+    @objc private func handleModeChanged() {
+        renderKeyboardKeys(for: modeSegment.selectedSegmentIndex)
+    }
+    
+    private func renderKeyboardKeys(for index: Int) {
+        keyboardStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        var keys: [String] = []
+        switch index {
+        case 0:
+            // 🇻🇳 Tiếng Việt có dấu
+            keys = ["ă", "â", "đ", "ê", "ô", "ơ", "ư", "á", "à", "ả", "ã", "ạ", "ắ", "ằ", "ẳ", "ẵ", "ặ", "ấ", "ầ", "ẩ", "ẫ", "ậ", "é", "è", "ẻ", "ẽ", "ẹ", "ế", "ề", "ể", "ễ", "ệ", "í", "ì", "ỉ", "ĩ", "ị", "ó", "ò", "ỏ", "õ", "ọ", "ố", "ồ", "ổ", "ỗ", "ộ", "ớ", "ờ", "ở", "ỡ", "ợ", "ú", "ù", "ủ", "ũ", "ụ", "ứ", "ừ", "ử", "ữ", "ự", "ý", "ỳ", "ỷ", "ỹ", "ỵ", "⌫ Xóa", "Xóa hết"]
+        case 1:
+            // 🇯🇵 Kana gốc
+            keys = ["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ", "さ", "し", "す", "せ", "そ", "た", "ち", "つ", "て", "と", "な", "に", "ぬ", "ね", "の", "は", "ひ", "ふ", "へ", "ほ", "ま", "み", "む", "め", "も", "や", "ゆ", "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "ん", "⌫ Xóa", "Xóa hết"]
+        case 2:
+            // 🇯🇵 Có dấu (Dakuon ゛ ゜)
+            keys = ["が", "ぎ", "ぐ", "げ", "ご", "ざ", "じ", "ず", "ぜ", "ぞ", "だ", "ぢ", "づ", "で", "ど", "ば", "び", "ぶ", "べ", "ぼ", "ぱ", "ぴ", "ぷ", "ぺ", "ぽ", "゛", "゜", "⌫ Xóa", "Xóa hết"]
+        case 3:
+            // 🇯🇵 Âm ghép nhỏ
+            keys = ["きゃ", "きゅ", "きょ", "しゃ", "しゅ", "しょ", "ちゃ", "ちゅ", "ちょ", "にゃ", "にゅ", "にょ", "ひゃ", "ひゅ", "ひょ", "みゃ", "みゅ", "みょ", "りゃ", "りゅ", "りょ", "ぎゃ", "ぎゅ", "ぎょ", "じゃ", "じゅ", "じょ", "びゃ", "びゅ", "びょ", "ぴゃ", "ぴゅ", "ぴょ", "っ", "⌫ Xóa", "Xóa hết"]
+        default:
+            break
+        }
+        
+        for key in keys {
+            let btn = UIButton(type: .system)
+            btn.setTitle(key, for: .normal)
+            btn.titleLabel?.font = .systemFont(ofSize: key.count > 2 ? 13 : 16, weight: .bold)
+            btn.backgroundColor = key.contains("Xóa") ? UIColor.systemRed.withAlphaComponent(0.12) : UIColor.secondarySystemGroupedBackground
+            btn.tintColor = key.contains("Xóa") ? .systemRed : .label
+            btn.layer.cornerRadius = 10
+            btn.layer.borderWidth = 1
+            btn.layer.borderColor = UIColor.systemGray4.cgColor
+            btn.contentEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
+            
+            btn.addAction(UIAction(handler: { [weak self] _ in
+                self?.handleKeyPress(key: key)
+            }), for: .touchUpInside)
+            
+            keyboardStackView.addArrangedSubview(btn)
+        }
+        
+        keyboardScrollView.setContentOffset(.zero, animated: false)
+    }
+    
+    private func handleKeyPress(key: String) {
+        var currentText = searchBar.text ?? ""
+        if key == "Xóa hết" {
+            currentText = ""
+        } else if key == "⌫ Xóa" {
+            if !currentText.isEmpty {
+                currentText.removeLast()
+            }
+        } else {
+            currentText += key
+        }
+        searchBar.text = currentText
+        filterResults(searchText: currentText)
+    }
+    
     // MARK: - Search Logic
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterResults(searchText: searchText)
+    }
+    
+    private func filterResults(searchText: String) {
         let text = searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         if text.isEmpty {
             filteredItems = allItems
         } else {
+            // Hỗ trợ tìm kiếm cả có dấu lẫn không dấu (ví dụ: gõ 'an' vẫn tìm ra 'ăn')
+            let textNormalized = text.folding(options: .diacriticInsensitive, locale: .current)
             filteredItems = allItems.filter { item in
-                item.mainText.lowercased().contains(text) ||
-                item.subText.lowercased().contains(text) ||
-                item.meaning.lowercased().contains(text) ||
-                item.tag.lowercased().contains(text)
+                let combined = "\(item.mainText) \(item.subText) \(item.meaning) \(item.tag)".lowercased()
+                let combinedNormalized = combined.folding(options: .diacriticInsensitive, locale: .current)
+                return combined.contains(text) || combinedNormalized.contains(textNormalized)
             }
         }
         emptyLabel.isHidden = !filteredItems.isEmpty
@@ -136,7 +244,7 @@ public class SearchViewController: UIViewController, UITableViewDataSource, UITa
         cell.detailTextLabel?.textColor = .secondaryLabel
         cell.accessoryType = .disclosureIndicator
         
-        // Loa nhỏ bên phải
+        // Loa nhỏ bên phải phát âm tức thì
         let speakBtn = UIButton(type: .system)
         speakBtn.setImage(UIImage(systemName: "speaker.wave.2.fill"), for: .normal)
         speakBtn.tintColor = .systemPurple
