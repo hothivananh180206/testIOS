@@ -82,12 +82,14 @@ public final class ProgressService {
         var set = Set(defaults.stringArray(forKey: needReviewKey) ?? [])
         set.insert(id)
         defaults.set(Array(set), forKey: needReviewKey)
+        AuthService.shared.uploadProgressToCloud()
     }
     
     public func unmarkWordForReview(id: String) {
         var set = Set(defaults.stringArray(forKey: needReviewKey) ?? [])
         set.remove(id)
         defaults.set(Array(set), forKey: needReviewKey)
+        AuthService.shared.uploadProgressToCloud()
     }
     
     public func toggleNeedReview(id: String) -> Bool {
@@ -187,6 +189,7 @@ public final class ProgressService {
             defaults.set(1, forKey: streakKey)
         }
         defaults.set(currentDate, forKey: lastStudyDateKey)
+        AuthService.shared.uploadProgressToCloud()
     }
     
     private func checkAndUpdateStreak() {

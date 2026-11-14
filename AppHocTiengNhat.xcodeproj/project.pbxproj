@@ -46,6 +46,11 @@
 		CEDBB000308B9712003ED405 /* Controllers/NeedReviewWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA000308B9712003ED405 /* Controllers/NeedReviewWordsViewController.swift */; };
 		CEDBB000308B9712003ED501 /* Services/NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA000308B9712003ED501 /* Services/NotificationService.swift */; };
 		CEDBB000308B9712003ED502 /* Controllers/SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA000308B9712003ED502 /* Controllers/SearchViewController.swift */; };
+		CEDBB000308B9712003ED503 /* Services/FirebaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA000308B9712003ED503 /* Services/FirebaseConfig.swift */; };
+		CEDBB000308B9712003ED504 /* Services/AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA000308B9712003ED504 /* Services/AuthService.swift */; };
+		CEDBB000308B9712003ED505 /* Controllers/LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA000308B9712003ED505 /* Controllers/LoginViewController.swift */; };
+		CEDBB000308B9712003ED506 /* Controllers/UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBA000308B9712003ED506 /* Controllers/UserProfileViewController.swift */; };
+		CEDBB000308B9712003ED507 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDBA000308B9712003ED507 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +114,11 @@
 		CEDBA000308B9712003ED405 /* Controllers/NeedReviewWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers/NeedReviewWordsViewController.swift; sourceTree = "<group>"; };
 		CEDBA000308B9712003ED501 /* Services/NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/NotificationService.swift; sourceTree = "<group>"; };
 		CEDBA000308B9712003ED502 /* Controllers/SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers/SearchViewController.swift; sourceTree = "<group>"; };
+		CEDBA000308B9712003ED503 /* Services/FirebaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/FirebaseConfig.swift; sourceTree = "<group>"; };
+		CEDBA000308B9712003ED504 /* Services/AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AuthService.swift; sourceTree = "<group>"; };
+		CEDBA000308B9712003ED505 /* Controllers/LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		CEDBA000308B9712003ED506 /* Controllers/UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers/UserProfileViewController.swift; sourceTree = "<group>"; };
+		CEDBA000308B9712003ED507 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +199,11 @@
 				CEDBA000308B9712003ED006 /* Controllers/AudioQuizViewController.swift */,
 				CEDBA000308B9712003ED501 /* Services/NotificationService.swift */,
 				CEDBA000308B9712003ED502 /* Controllers/SearchViewController.swift */,
+				CEDBA000308B9712003ED503 /* Services/FirebaseConfig.swift */,
+				CEDBA000308B9712003ED504 /* Services/AuthService.swift */,
+				CEDBA000308B9712003ED505 /* Controllers/LoginViewController.swift */,
+				CEDBA000308B9712003ED506 /* Controllers/UserProfileViewController.swift */,
+				CEDBA000308B9712003ED507 /* GoogleService-Info.plist */,
 				CEDB6C14308B9712003ED670 /* AppDelegate.swift */,
 				CEDB6C16308B9712003ED670 /* SceneDelegate.swift */,
 				CEDB6C18308B9712003ED670 /* ViewController.swift */,
@@ -321,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDBB000308B9712003ED507 /* GoogleService-Info.plist in Resources */,
 				CEDB6C21308B9713003ED670 /* LaunchScreen.storyboard in Resources */,
 				CEDB6C1E308B9713003ED670 /* Assets.xcassets in Resources */,
 				CEDB6C1C308B9712003ED670 /* Main.storyboard in Resources */,
@@ -378,6 +394,10 @@
 				CEDBB000308B9712003ED006 /* Controllers/AudioQuizViewController.swift in Sources */,
 				CEDBB000308B9712003ED501 /* Services/NotificationService.swift in Sources */,
 				CEDBB000308B9712003ED502 /* Controllers/SearchViewController.swift in Sources */,
+				CEDBB000308B9712003ED503 /* Services/FirebaseConfig.swift in Sources */,
+				CEDBB000308B9712003ED504 /* Services/AuthService.swift in Sources */,
+				CEDBB000308B9712003ED505 /* Controllers/LoginViewController.swift in Sources */,
+				CEDBB000308B9712003ED506 /* Controllers/UserProfileViewController.swift in Sources */,
 				CEDB6C19308B9712003ED670 /* ViewController.swift in Sources */,
 				CEDB6C15308B9712003ED670 /* AppDelegate.swift in Sources */,
 				CEDB6C17308B9712003ED670 /* SceneDelegate.swift in Sources */,

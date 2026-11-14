@@ -50,10 +50,19 @@ class ViewController: UIViewController {
     }
     
     private func setupNavButtons() {
+        let userBtn = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .plain, target: self, action: #selector(handleProfileTap))
+        userBtn.tintColor = .systemPurple
+        navigationItem.leftBarButtonItem = userBtn
+
         let searchBtn = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(handleSearchTap))
         let bellBtn = UIBarButtonItem(image: UIImage(systemName: "bell.badge.fill"), style: .plain, target: self, action: #selector(handleNotificationTap))
         bellBtn.tintColor = .systemOrange
         navigationItem.rightBarButtonItems = [searchBtn, bellBtn]
+    }
+    
+    @objc private func handleProfileTap() {
+        let vc = UserProfileViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func handleSearchTap() {
