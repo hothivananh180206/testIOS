@@ -38,13 +38,14 @@ public class StatsHeaderView: UIView {
         stack.axis = .horizontal
         stack.distribution = .fillEqually
         stack.alignment = .center
+        stack.spacing = 4
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
         
         let item1 = createStatItem(
             icon: "flame.fill",
             iconColor: .systemOrange,
-            title: "Streak",
+            title: "Chuỗi ngày",
             valueLabel: streakValueLabel
         )
         let item2 = createStatItem(
@@ -76,10 +77,10 @@ public class StatsHeaderView: UIView {
         stack.addArrangedSubview(item4)
         
         NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: topAnchor, constant: 14),
-            stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14)
+            stack.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
         
         refresh()
@@ -100,6 +101,8 @@ public class StatsHeaderView: UIView {
         valueLabel.font = .systemFont(ofSize: 16, weight: .bold)
         valueLabel.textColor = .label
         valueLabel.textAlignment = .center
+        valueLabel.adjustsFontSizeToFitWidth = true
+        valueLabel.minimumScaleFactor = 0.75
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         
         let titleLabel = UILabel()
@@ -107,6 +110,9 @@ public class StatsHeaderView: UIView {
         titleLabel.font = .systemFont(ofSize: 11, weight: .medium)
         titleLabel.textColor = .secondaryLabel
         titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 1
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.minimumScaleFactor = 0.75
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         container.addSubview(iconView)
@@ -121,11 +127,13 @@ public class StatsHeaderView: UIView {
             
             valueLabel.topAnchor.constraint(equalTo: iconView.bottomAnchor, constant: 6),
             valueLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-            valueLabel.leadingAnchor.constraint(greaterThanOrEqualTo: container.leadingAnchor),
-            valueLabel.trailingAnchor.constraint(lessThanOrEqualTo: container.trailingAnchor),
+            valueLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 2),
+            valueLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -2),
             
             titleLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 2),
             titleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 1),
+            titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -1),
             titleLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor)
         ])
         
