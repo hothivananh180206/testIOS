@@ -191,8 +191,8 @@ public final class GrammarRepository {
         )
     ]
     
-    // MARK: - Danh sách Ngữ pháp N5 chi tiết (Theo từng Bài học)
-    public let grammarPoints: [GrammarPoint] = [
+    // MARK: - Ngữ pháp Bài 1 (6 điểm)
+    public static let lesson1Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 1,
             order: 1,
@@ -203,7 +203,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "わたしは　がくせいです。",
-                    romaji: "watashiwa gakuseidesu.",
+                    romaji: "watashiwa gakuseiでsu.",
                     vietnamese: "Tôi là sinh viên."
                 )
             ],
@@ -219,7 +219,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "わたしは　ぎんこういんじゃ（では）ありません。",
-                    romaji: "watashiwa ginkouinja（deha）arimasen.",
+                    romaji: "watashiwa ginkouinja（でha）arimasen.",
                     vietnamese: "Tôi không phải là nhân viên ngân hàng."
                 )
             ],
@@ -235,12 +235,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：ハイさんは　いしゃですか。 B：はい、いしゃです。",
-                    romaji: "A: waisanwa ishadesuka. B: wai, ishadesu.",
+                    romaji: "A: waisanwa ishaでsuka. B: wai, ishaでsu.",
                     vietnamese: "Anh Hải là bác sĩ phải không? — Vâng, anh Hải là bác sĩ."
                 ),
                 GrammarExample(
                     japanese: "A：やまださんは　かいしゃいんですか。 B：いいえ、かいしゃいんじゃありません。ぎんこういんです。",
-                    romaji: "A: yamadasanwa kaishaindesuka. B: iie, kaishainjaarimasen. ginkouindesu.",
+                    romaji: "A: yamadasanwa kaishainでsuka. B: iie, kaishainjaarimasen. ginkouinでsu.",
                     vietnamese: "Anh Yamada là nhân viên công ty phải không? — Không, anh Yamada không phải nhân viên công ty. Anh ấy là nhân viên ngân hàng."
                 )
             ],
@@ -256,7 +256,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "わたしは　ベトナムじんです。アンさんも　ベトナムじんです。",
-                    romaji: "watashiwa betonamujindesu. ansanmo betonamujindesu.",
+                    romaji: "watashiwa betonamujinでsu. ansanmo betonamujinでsu.",
                     vietnamese: "Tôi là người Việt Nam. Bạn An cũng là người Việt Nam."
                 )
             ],
@@ -272,7 +272,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：わたしは　なごやだいがくの　がくせいです。",
-                    romaji: "A: watashiwa nagoyadaigakuno gakuseidesu.",
+                    romaji: "A: watashiwa nagoyadaigakuno gakuseiでsu.",
                     vietnamese: "Tôi là sinh viên trường Đại học Nagoya."
                 )
             ],
@@ -288,22 +288,26 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "はなちゃんは　9 さいです。",
-                    romaji: "wanachanwa 9 saidesu.",
+                    romaji: "wanachanwa 9 saiでsu.",
                     vietnamese: "Bé Hana 9 tuổi."
                 ),
                 GrammarExample(
                     japanese: "A：たかひろくんも　9 さいですか。 B：いいえ、たかひろくんは　9 さいじゃありません。 A：たかひろくんは　なんさいですか。 B：たかひろくんは　8 さいです。",
-                    romaji: "A: takahirokunmo 9 saidesuka. B: iie, takahirokunwa 9 saijaarimasen. A: takahirokunwa nansaidesuka. B: takahirokunwa 8 saidesu.",
+                    romaji: "A: takahirokunmo 9 saiでsuka. B: iie, takahirokunwa 9 saijaarimasen. A: takahirokunwa nansaiでsuka. B: takahirokunwa 8 saiでsu.",
                     vietnamese: "Bé Takahiro cũng 9 tuổi phải không? — Không, Takahiro không phải 9 tuổi. — Vậy Takahiro mấy tuổi? — Takahiro 8 tuổi."
                 ),
                 GrammarExample(
                     japanese: "なかじまさんは　おいくつですか。",
-                    romaji: "nakajimasanwa oikutsudesuka.",
+                    romaji: "nakajimasanwa oikutsuでsuka.",
                     vietnamese: "Cô Nakajima bao nhiêu tuổi rồi?"
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 2 (6 điểm)
+    public static let lesson2Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 2,
             order: 1,
@@ -314,12 +318,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：これは　じしょですか。 B：いいえ、じしょじゃありません。それは　ノートです。",
-                    romaji: "A: korewa jishodesuka. B: iie, jishojaarimasen. sorewa nootodesu.",
+                    romaji: "A: korewa jishoでsuka. B: iie, jishojaarimasen. sorewa nootoでsu.",
                     vietnamese: "Đây là quyển từ điển phải không? — Không phải. Đó là quyển vở."
                 ),
                 GrammarExample(
                     japanese: "A：あれは　なんですか。 B：あれは　かばんです。",
-                    romaji: "A: arewa nandesuka. B: arewa kabandesu.",
+                    romaji: "A: arewa nanでsuka. B: arewa kabanでsu.",
                     vietnamese: "Kia là cái gì? — Kia là cái cặp. (Cả A và B đều ở xa cái cặp.)"
                 )
             ],
@@ -335,12 +339,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：このほんは　なんの　ほんですか。 B：そのほんは　えいごの　ほんです。",
-                    romaji: "A: konohonwa nanno hondesuka. B: sonohonwa eigono hondesu.",
+                    romaji: "A: konohonwa nanno honでsuka. B: sonohonwa eigono honでsu.",
                     vietnamese: "Quyển sách này là sách gì? — Quyển sách đó là sách tiếng Anh."
                 ),
                 GrammarExample(
                     japanese: "A：あのかたは　どなたですか。 B：あのかたは　なごやだいがくの　せんせいです。",
-                    romaji: "A: anokatawa donatadesuka. B: anokatawa nagoyadaigakuno senseidesu.",
+                    romaji: "A: anokatawa donataでsuka. B: anokatawa nagoyadaigakuno senseiでsu.",
                     vietnamese: "Vị đó là ai? — Vị đó là giáo viên của trường Đại học Nagoya."
                 )
             ],
@@ -356,12 +360,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：それは　スマホですか。 B：はい、そうです。",
-                    romaji: "A: sorewa sumahodesuka. B: wai, soudesu.",
+                    romaji: "A: sorewa sumahoでsuka. B: wai, souでsu.",
                     vietnamese: "Đó là điện thoại thông minh phải không? — Vâng, đúng rồi."
                 ),
                 GrammarExample(
                     japanese: "A：それは　ワイヤレススピーカーですか。 B：いいえ、そうじゃありません。",
-                    romaji: "A: sorewa waiyaresusupiikaadesuka. B: iie, soujaarimasen.",
+                    romaji: "A: sorewa waiyaresusupiikaaでsuka. B: iie, soujaarimasen.",
                     vietnamese: "Đó là loa không dây phải không? — Không, không phải."
                 )
             ],
@@ -377,7 +381,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：これは　ボールペンですか、シャープペンシルですか。 B：シャープペンシルです。",
-                    romaji: "A: korewa boorupendesuka, shaapupenshirudesuka. B: shaapupenshirudesu.",
+                    romaji: "A: korewa boorupenでsuka, shaapupenshiruでsuka. B: shaapupenshiruでsu.",
                     vietnamese: "Đây là bút bi hay bút chì máy? — Bút chì máy."
                 )
             ],
@@ -393,27 +397,27 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "これは　コンピューターの　ほんです。",
-                    romaji: "korewa konpyuutaano hondesu.",
+                    romaji: "korewa konpyuutaano honでsu.",
                     vietnamese: "Đây là sách về máy tính."
                 ),
                 GrammarExample(
                     japanese: "A：これは　なんの　ざっしですか。 B：それは　じどうしゃの　ざっしです。",
-                    romaji: "A: korewa nanno zasshidesuka. B: sorewa jidoushano zasshidesu.",
+                    romaji: "A: korewa nanno zasshiでsuka. B: sorewa jidoushano zasshiでsu.",
                     vietnamese: "Đây là tạp chí gì? — Đó là tạp chí về xe hơi. (2) Chỉ sự sở hữu — N2 thuộc về N1. Trong trường hợp này, danh từ đứng sau thường được giản lược khi đã rõ nghĩa."
                 ),
                 GrammarExample(
                     japanese: "このほんは　わたしの　ほんです。",
-                    romaji: "konohonwa watashino hondesu.",
+                    romaji: "konohonwa watashino honでsu.",
                     vietnamese: "Quyển sách này là sách của tôi."
                 ),
                 GrammarExample(
                     japanese: "A：あれは　だれの　かばんですか。 B：マイさんの　です。 Kia là cặp của ai? — Của Mai. (Không cần lặp lại かばん vì đã rõ từ câu hỏi.)",
-                    romaji: "A: arewa dareno kabandesuka. B: maisanno desu. Kia là cặp của ai? — Của Mai. (Không cần lặp lại kaban vì đã rõ từ câu hỏi.)",
+                    romaji: "A: arewa dareno kabanでsuka. B: maisanno でsu. Kia là cặp của ai? — Của Mai. (Không cần lặp lại kaban vì đã rõ từ câu hỏi.)",
                     vietnamese: "Tuy nhiên, nếu danh từ bị giản lược là từ chỉ người thì không được giản lược:"
                 ),
                 GrammarExample(
                     japanese: "A：ミラーさんは　IMC の　しゃいんですか。 B：はい、IMC の　しゃいんです。",
-                    romaji: "A: miraasanwa IMC no shaindesuka. B: wai, IMC no shaindesu.",
+                    romaji: "A: miraasanwa IMC no shainでsuka. B: wai, IMC no shainでsu.",
                     vietnamese: "Anh Miller là nhân viên công ty IMC phải không? — Đúng rồi."
                 )
             ],
@@ -429,12 +433,16 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：このかさは　あなたの　ですか。 B：いいえ、ちがいます。ハイさんの　です。 A：そうですか。",
-                    romaji: "A: konokasawa anatano desuka. B: iie, chigaimasu. waisanno desu. A: soudesuka.",
+                    romaji: "A: konokasawa anatano でsuka. B: iie, chigaimasu. waisanno でsu. A: souでsuka.",
                     vietnamese: "Cái ô này là của bạn phải không? — Không phải. Của Hải. — Thế à."
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 3 (7 điểm)
+    public static let lesson3Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 3,
             order: 1,
@@ -445,17 +453,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ここは　きょうしつです。— Đây là phòng học.",
-                    romaji: "kokowa kyoushitsudesu. — Đây là phòng học.",
+                    romaji: "kokowa kyoushitsuでsu. — Đây là phòng học.",
                     vietnamese: "Ví dụ minh hoạ"
                 ),
                 GrammarExample(
                     japanese: "そこは　じむしょです。— Đó là văn phòng.",
-                    romaji: "sokowa jimushodesu. — Đó là văn phòng.",
+                    romaji: "sokowa jimushoでsu. — Đó là văn phòng.",
                     vietnamese: "Ví dụ minh hoạ"
                 ),
                 GrammarExample(
                     japanese: "あそこは　しょくどうです。— Kia là nhà ăn.",
-                    romaji: "asokowa shokudoudesu. — Kia là nhà ăn.",
+                    romaji: "asokowa shokudouでsu. — Kia là nhà ăn.",
                     vietnamese: "Ví dụ minh hoạ"
                 )
             ],
@@ -471,17 +479,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "おてあらいは　あそこです。— Nhà vệ sinh ở kia.",
-                    romaji: "otearaiwa asokodesu. — Nhà vệ sinh ở kia.",
+                    romaji: "otearaiwa asokoでsu. — Nhà vệ sinh ở kia.",
                     vietnamese: "Ví dụ minh hoạ"
                 ),
                 GrammarExample(
                     japanese: "でんわは　2 かいです。— Điện thoại ở tầng 2.",
-                    romaji: "denwawa 2 kaidesu. — Điện thoại ở tầng 2.",
+                    romaji: "でnwawa 2 kaiでsu. — Điện thoại ở tầng 2.",
                     vietnamese: "Ví dụ minh hoạ"
                 ),
                 GrammarExample(
                     japanese: "やまださんは　じむしょです。— Anh Yamada ở văn phòng.",
-                    romaji: "yamadasanwa jimushodesu. — Anh Yamada ở văn phòng.",
+                    romaji: "yamadasanwa jimushoでsu. — Anh Yamada ở văn phòng.",
                     vietnamese: "Ví dụ minh hoạ"
                 )
             ],
@@ -497,27 +505,27 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：わたしの　うちは　ハノイです。B さんの　うちは　どこですか。 B：わたしの　うちは　こうべです。",
-                    romaji: "A: watashino uchiwa wanoidesu. B sanno uchiwa dokodesuka. B: watashino uchiwa koubedesu.",
+                    romaji: "A: watashino uchiwa wanoiでsu. B sanno uchiwa dokoでsuka. B: watashino uchiwa koubeでsu.",
                     vietnamese: "Nhà tôi ở Hà Nội. Nhà anh B ở đâu? — Nhà tôi ở Kobe."
                 ),
                 GrammarExample(
                     japanese: "A：エレベーターは　どちらですか。 B：あちらです。",
-                    romaji: "A: erebeetaawa dochiradesuka. B: achiradesu.",
+                    romaji: "A: erebeetaawa dochiraでsuka. B: achiraでsu.",
                     vietnamese: "Thang máy ở đâu ạ? — Ở đằng kia."
                 ),
                 GrammarExample(
                     japanese: "がっこうは　どこですか。( ) ○ ／ がっこうは　なんですか。(×)",
-                    romaji: "gakkouwa dokodesuka. ( ) ○ ／ gakkouwa nandesuka. (×)",
+                    romaji: "gakkouwa dokoでsuka. ( ) ○ ／ gakkouwa nanでsuka. (×)",
                     vietnamese: "Ví dụ minh hoạ"
                 ),
                 GrammarExample(
                     japanese: "A：B さんの　かいしゃは　どちらですか。 B：FPT です。",
-                    romaji: "A: B sanno kaishawa dochiradesuka. B: FPT desu.",
+                    romaji: "A: B sanno kaishawa dochiraでsuka. B: FPT でsu.",
                     vietnamese: "Bạn làm ở công ty nào? — FPT."
                 ),
                 GrammarExample(
                     japanese: "A：B さんの　おくには　どちらですか。 B：かんこくです。",
-                    romaji: "A: B sanno okuniwa dochiradesuka. B: kankokudesu.",
+                    romaji: "A: B sanno okuniwa dochiraでsuka. B: kankokuでsu.",
                     vietnamese: "Quê bạn ở nước nào? — Hàn Quốc."
                 )
             ],
@@ -533,12 +541,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "これは　トヨタの　じどうしゃです。",
-                    romaji: "korewa toyotano jidoushadesu.",
+                    romaji: "korewa toyotano jidoushaでsu.",
                     vietnamese: "Đây là xe hơi của công ty Toyota."
                 ),
                 GrammarExample(
                     japanese: "A：これは　どこの　ワインですか。 B：フランスの　ワインです。",
-                    romaji: "A: korewa dokono waindesuka. B: furansuno waindesu.",
+                    romaji: "A: korewa dokono wainでsuka. B: furansuno wainでsu.",
                     vietnamese: "Đây là rượu vang của nước nào? — Rượu vang của Pháp."
                 )
             ],
@@ -554,12 +562,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "このネクタイは　1500 えんです。",
-                    romaji: "kononekutaiwa 1500 endesu.",
+                    romaji: "kononekutaiwa 1500 enでsu.",
                     vietnamese: "Cái cà vạt này giá 1.500 yên."
                 ),
                 GrammarExample(
                     japanese: "A：これは　いくらですか。 B：8400 えんです。",
-                    romaji: "A: korewa ikuradesuka. B: 8400 endesu.",
+                    romaji: "A: korewa ikuraでsuka. B: 8400 enでsu.",
                     vietnamese: "Cái này bao nhiêu tiền? — 8.400 yên."
                 )
             ],
@@ -584,7 +592,11 @@ public final class GrammarRepository {
             explanation: "こ そ あ ど\nVật これ それ あれ どれ\nNgười, vật この N その N あの N どの N\nĐịa điểm ここ そこ あそこ どこ\nPhương hướng /\nĐịa điểm (lịch\nsự)\nこちら そちら あちら どちら",
             examples: [],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 4 (7 điểm)
+    public static let lesson4Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 4,
             order: 1,
@@ -600,12 +612,12 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：いま　なんじですか。 B：7 じ 10 ぷんです。",
-                    romaji: "A: ima nanjidesuka. B: 7 ji 10 pundesu.",
+                    romaji: "A: ima nanjiでsuka. B: 7 ji 10 punでsu.",
                     vietnamese: "Bây giờ là mấy giờ? — 7 giờ 10 phút."
                 ),
                 GrammarExample(
                     japanese: "A：ニューヨークは　いま　なんじですか。 B：ごぜん　4 じです。",
-                    romaji: "A: nyuuyookuwa ima nanjidesuka. B: gozen 4 jidesu.",
+                    romaji: "A: nyuuyookuwa ima nanjiでsuka. B: gozen 4 jiでsu.",
                     vietnamese: "New York bây giờ là mấy giờ? — 4 giờ sáng."
                 )
             ],
@@ -652,7 +664,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：きのう　べんきょうしましたか。 B1：はい、べんきょうしました。 B2：いいえ、べんきょうしませんでした。",
-                    romaji: "A: kinou benkyoushimashitaka. B1: wai, benkyoushimashita. B2: iie, benkyoushimasendeshita.",
+                    romaji: "A: kinou benkyoushimashitaka. B1: wai, benkyoushimashita. B2: iie, benkyoushimasenでshita.",
                     vietnamese: "Hôm qua bạn có học không? — Có, tôi có học. / Không, tôi không học."
                 ),
                 GrammarExample(
@@ -704,12 +716,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ごぜん 9 じから　ごご 5 じまで　はたらきます。",
-                    romaji: "gozen 9 jikara gogo 5 jimade watarakimasu.",
+                    romaji: "gozen 9 jikara gogo 5 jimaで watarakimasu.",
                     vietnamese: "Tôi làm việc từ 9 giờ sáng đến 5 giờ chiều."
                 ),
                 GrammarExample(
                     japanese: "おおさかから　とうきょうまで　3 じかん　かかります。",
-                    romaji: "oosakakara toukyoumade 3 jikan kakarimasu.",
+                    romaji: "oosakakara toukyoumaで 3 jikan kakarimasu.",
                     vietnamese: "Đi từ Osaka đến Tokyo mất 3 tiếng. (Ngữ pháp bài 11)"
                 ),
                 GrammarExample(
@@ -719,12 +731,12 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "ぎんこうは　9 じから　3 じまでです。",
-                    romaji: "ginkouwa 9 jikara 3 jimadedesu.",
+                    romaji: "ginkouwa 9 jikara 3 jimaででsu.",
                     vietnamese: "Ngân hàng mở cửa từ 9 giờ (sáng) đến 3 giờ (chiều)."
                 ),
                 GrammarExample(
                     japanese: "ひるやすみは　12 じからです。",
-                    romaji: "hiruyasumiwa 12 jikaradesu.",
+                    romaji: "hiruyasumiwa 12 jikaraでsu.",
                     vietnamese: "Giờ nghỉ trưa bắt đầu từ 12 giờ."
                 )
             ],
@@ -740,7 +752,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ぎんこうの　やすみは　どようびと　にちようびです。",
-                    romaji: "ginkouno yasumiwa doyoubito nichiyoubidesu.",
+                    romaji: "ginkouno yasumiwa doyoubito nichiyoubiでsu.",
                     vietnamese: "Ngân hàng nghỉ (đóng cửa) ngày thứ 7 và Chủ Nhật."
                 )
             ],
@@ -756,17 +768,21 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：まいあさ　9 じから　5 じまで　はたらきます。 B：（それは）たいへんですね。(đọc thấp giọng xuống)",
-                    romaji: "A: maiasa 9 jikara 5 jimade watarakimasu. B: （soreha）taihendesune. (đọc thấp giọng xuống)",
+                    romaji: "A: maiasa 9 jikara 5 jimaで watarakimasu. B: （soreha）taihenでsune. (đọc thấp giọng xuống)",
                     vietnamese: "Tôi làm việc từ 9 giờ sáng đến 5 giờ chiều mỗi ngày. — (Thế thì) vất vả nhỉ."
                 ),
                 GrammarExample(
                     japanese: "A：やまださんの　でんわばんごうは　871 の 6813 です。 B：871-6813 ですね。(đọc cao giọng lên)",
-                    romaji: "A: yamadasanno denwabangouwa 871 no 6813 desu. B: 871-6813 desune. (đọc cao giọng lên)",
+                    romaji: "A: yamadasanno でnwabangouwa 871 no 6813 でsu. B: 871-6813 でsune. (đọc cao giọng lên)",
                     vietnamese: "Số điện thoại của Yamada là 871-6813. — 871-6813 hả."
                 )
             ],
             usageNotes: "Lưu ý: ね không phải bao giờ cũng có nghĩa là \"nhỉ\" của tiếng Việt."
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 5 (6 điểm)
+    public static let lesson5Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 5,
             order: 1,
@@ -803,7 +819,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "きのう　どこ［へ］も　いきませんでした。",
-                    romaji: "kinou doko［he］mo ikimasendeshita.",
+                    romaji: "kinou doko［he］mo ikimasenでshita.",
                     vietnamese: "Hôm qua tôi không đi đâu cả."
                 ),
                 GrammarExample(
@@ -824,17 +840,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "バスで　だいがくへ　きます。",
-                    romaji: "basude daigakuhe kimasu.",
+                    romaji: "basuで daigakuhe kimasu.",
                     vietnamese: "Tôi đến trường bằng xe buýt."
                 ),
                 GrammarExample(
                     japanese: "じてんしゃで　スーパーへ　いきます。",
-                    romaji: "jitenshade suupaahe ikimasu.",
+                    romaji: "jitenshaで suupaahe ikimasu.",
                     vietnamese: "Tôi đi xe đạp đến siêu thị."
                 ),
                 GrammarExample(
                     japanese: "でんしゃで　ハイフォンへ　かえります。",
-                    romaji: "denshade waifonhe kaerimasu.",
+                    romaji: "でnshaで waifonhe kaerimasu.",
                     vietnamese: "Tôi đi tàu về Hải Phòng (Tôi về Hải Phòng bằng tàu)."
                 ),
                 GrammarExample(
@@ -860,7 +876,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "ひとりで　とうきょうへ　いきます。",
-                    romaji: "hitoride toukyouhe ikimasu.",
+                    romaji: "hitoriで toukyouhe ikimasu.",
                     vietnamese: "Tôi đi một mình tới Tokyo."
                 )
             ],
@@ -897,17 +913,21 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：このでんしゃは　こうしえんへ　いきますか。 B：いいえ、いきません。つぎの　ふつうですよ。",
-                    romaji: "A: konodenshawa koushienhe ikimasuka. B: iie, ikimasen. tsugino futsuudesuyo.",
+                    romaji: "A: konoでnshawa koushienhe ikimasuka. B: iie, ikimasen. tsugino futsuuでsuyo.",
                     vietnamese: "Chuyến tàu này đến Koshien phải không? — Không phải. Chuyến tàu thường tiếp theo cơ. (Ý 1)"
                 ),
                 GrammarExample(
                     japanese: "むりな　ダイエットは　からだに　よくないですよ。",
-                    romaji: "murina daiettowa karadani yokunaidesuyo.",
+                    romaji: "murina daiettowa karadani yokunaiでsuyo.",
                     vietnamese: "Ăn kiêng không điều độ không tốt cho cơ thể đâu. (Ý 2) (Tham khảo bài 19)"
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 6 (8 điểm)
+    public static let lesson6Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 6,
             order: 1,
@@ -980,12 +1000,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "それは　なんですか。",
-                    romaji: "sorewa nandesuka.",
+                    romaji: "sorewa nanでsuka.",
                     vietnamese: "Ví dụ minh hoạ"
                 ),
                 GrammarExample(
                     japanese: "なんの　ほんですか。",
-                    romaji: "nanno hondesuka.",
+                    romaji: "nanno honでsuka.",
                     vietnamese: "Ví dụ minh hoạ"
                 ),
                 GrammarExample(
@@ -1006,12 +1026,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "えきで　しんぶんを　かいます。",
-                    romaji: "ekide shinbuno kaimasu.",
+                    romaji: "ekiで shinbuno kaimasu.",
                     vietnamese: "Tôi mua báo ở ga."
                 ),
                 GrammarExample(
                     japanese: "きょうしつで　にほんごを　べんきょうします。",
-                    romaji: "kyoushitsude nihongoo benkyoushimasu.",
+                    romaji: "kyoushitsuで nihongoo benkyoushimasu.",
                     vietnamese: "Tôi học tiếng Nhật trong phòng học."
                 )
             ],
@@ -1027,7 +1047,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：いっしょに　チャン・ティエンプラザへ　いきませんか。 B：ええ、いいですね。",
-                    romaji: "A: isshoni chan・tienpurazahe ikimasenka. B: ee, iidesune.",
+                    romaji: "A: isshoni chan・tienpurazahe ikimasenka. B: ee, iiでsune.",
                     vietnamese: "Chúng ta cùng đi tới Trang Tien Plaza đi. — Ừ, hay đấy."
                 )
             ],
@@ -1063,7 +1083,11 @@ public final class GrammarRepository {
             explanation: "Như đã học trong bài 3, tiếp đầu ngữ お được đặt trước một từ nào đó có liên quan tới\nngười nghe hoặc người thứ 3 để thể hiện sự tôn trọng (ví dụ: おくに). Ngoài ra, nó còn\nđược đặt trước rất nhiều từ khác nữa khi người nói muốn nói một cách lịch sự (ví dụ: [お]\nさけ、[お]はなみ…).\nCó rất nhiều từ thường được đi kèm với お nhưng không phải để thể hiện sự tôn trọng\nhoặc lịch sự, mà đơn thuần chỉ là thói quen của người Nhật (ví dụ: おちゃ、おかね…).",
             examples: [],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 7 (5 điểm)
+    public static let lesson7Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 7,
             order: 1,
@@ -1074,12 +1098,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "はしで　たべます。",
-                    romaji: "washide tabemasu.",
+                    romaji: "washiで tabemasu.",
                     vietnamese: "Ăn bằng đũa."
                 ),
                 GrammarExample(
                     japanese: "にほんごで　レポートを　かきます。",
-                    romaji: "nihongode repootoo kakimasu.",
+                    romaji: "nihongoで repootoo kakimasu.",
                     vietnamese: "Viết báo cáo bằng tiếng Nhật."
                 )
             ],
@@ -1095,12 +1119,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：「ありがとう」は　ベトナムごで　なんですか。 B：「Cảm ơn」です。",
-                    romaji: "A: \"arigatou\"wa betonamugode nandesuka. B: \"Cảm ơn\"desu.",
+                    romaji: "A: \"arigatou\"wa betonamugoで nanでsuka. B: \"Cảm ơn\"でsu.",
                     vietnamese: "\"Cảm ơn\" tiếng Việt là gì? — Là \"Cảm ơn\"."
                 ),
                 GrammarExample(
                     japanese: "A：ベトナムごの「Chúc ngủ ngon」は　にほんごで　なんですか。 B：「おやすみなさい」です。 \"Chúc ngủ ngon\" tiếng Nhật là gì? — Là \"おやすみなさい\".",
-                    romaji: "A: betonamugono\"Chúc ngủ ngon\"wa nihongode nandesuka. B: \"oyasuminasai\"desu. \"Chúc ngủ ngon\" tiếng Nhật là gì? — Là \"oyasuminasai\".",
+                    romaji: "A: betonamugono\"Chúc ngủ ngon\"wa nihongoで nanでsuka. B: \"oyasuminasai\"でsu. \"Chúc ngủ ngon\" tiếng Nhật là gì? — Là \"oyasuminasai\".",
                     vietnamese: "Ví dụ minh hoạ"
                 )
             ],
@@ -1178,12 +1202,16 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：もう　ひるごはんを　たべましたか。 B：いいえ、まだです。",
-                    romaji: "A: mou hirugohano tabemashitaka. B: iie, madadesu.",
+                    romaji: "A: mou hirugohano tabemashitaka. B: iie, madaでsu.",
                     vietnamese: "Bạn đã ăn trưa chưa? — Chưa, tôi chưa ăn."
                 )
             ],
             usageNotes: "Lưu ý: trong trường hợp muốn đưa ra câu trả lời phủ định cho dạng câu hỏi này, không dùng V ません"
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 8 (10 điểm)
+    public static let lesson8Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 8,
             order: 1,
@@ -1204,12 +1232,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "かなむらさんは　しんせつです。",
-                    romaji: "kanamurasanwa shinsetsudesu.",
+                    romaji: "kanamurasanwa shinsetsuでsu.",
                     vietnamese: "Cô Kanamura thân thiện."
                 ),
                 GrammarExample(
                     japanese: "ふじさんは　たかいです。",
-                    romaji: "fujisanwa takaidesu.",
+                    romaji: "fujisanwa takaiでsu.",
                     vietnamese: "Núi Phú Sĩ cao."
                 )
             ],
@@ -1230,7 +1258,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "このほんは　おもしろくないです。",
-                    romaji: "konohonwa omoshirokunaidesu.",
+                    romaji: "konohonwa omoshirokunaiでsu.",
                     vietnamese: "Quyển sách này không hay."
                 )
             ],
@@ -1246,17 +1274,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：ペキンは　さむいですか。 B：はい、さむいです。",
-                    romaji: "A: pekinwa samuidesuka. B: wai, samuidesu.",
+                    romaji: "A: pekinwa samuiでsuka. B: wai, samuiでsu.",
                     vietnamese: "Bắc Kinh có lạnh không? — Có, lạnh."
                 ),
                 GrammarExample(
                     japanese: "A：ハノイは　あついですか。 B：いいえ、あつくないです。",
-                    romaji: "A: wanoiwa atsuidesuka. B: iie, atsukunaidesu.",
+                    romaji: "A: wanoiwa atsuiでsuka. B: iie, atsukunaiでsu.",
                     vietnamese: "Hà Nội có nóng không? — Không, không nóng."
                 ),
                 GrammarExample(
                     japanese: "A：びわこの　みずは　きれいですか。 B：いいえ、きれいじゃありません。",
-                    romaji: "A: biwakono mizuwa kireidesuka. B: iie, kireijaarimasen.",
+                    romaji: "A: biwakono mizuwa kireiでsuka. B: iie, kireijaarimasen.",
                     vietnamese: "Nước hồ Biwa có sạch (trong) không? — Không, không sạch (trong)."
                 )
             ],
@@ -1272,12 +1300,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "かなむらさんは　しんせつな　せんせいです。",
-                    romaji: "kanamurasanwa shinsetsuna senseidesu.",
+                    romaji: "kanamurasanwa shinsetsuna senseiでsu.",
                     vietnamese: "Cô Kanamura là một cô giáo thân thiện."
                 ),
                 GrammarExample(
                     japanese: "ふじさんは　たかい　やまです。",
-                    romaji: "fujisanwa takai yamadesu.",
+                    romaji: "fujisanwa takai yamaでsu.",
                     vietnamese: "Núi Phú Sĩ là ngọn núi cao."
                 )
             ],
@@ -1293,17 +1321,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ペキンは　とても　さむいです。",
-                    romaji: "pekinwa totemo samuidesu.",
+                    romaji: "pekinwa totemo samuiでsu.",
                     vietnamese: "Bắc Kinh rất lạnh."
                 ),
                 GrammarExample(
                     japanese: "これは　とても　ゆうめいな　えいがです。",
-                    romaji: "korewa totemo yuumeina eigadesu.",
+                    romaji: "korewa totemo yuumeina eigaでsu.",
                     vietnamese: "Đây là phim rất nổi tiếng."
                 ),
                 GrammarExample(
                     japanese: "シャンハイは　あまり　さむくないです。",
-                    romaji: "shanhaiwa amari samukunaidesu.",
+                    romaji: "shanhaiwa amari samukunaiでsu.",
                     vietnamese: "Thượng Hải không lạnh lắm."
                 ),
                 GrammarExample(
@@ -1329,7 +1357,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：にほんの　せいかつは　どうですか。 B：たのしいです。",
-                    romaji: "A: nihonno seikatsuwa doudesuka. B: tanoshiidesu.",
+                    romaji: "A: nihonno seikatsuwa douでsuka. B: tanoshiiでsu.",
                     vietnamese: "Cuộc sống ở Nhật thế nào (ra sao)? — Vui."
                 )
             ],
@@ -1345,7 +1373,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：ならは　どんな　まちですか。 B：ふるい　まちです。",
-                    romaji: "A: narawa donna machidesuka. B: furui machidesu.",
+                    romaji: "A: narawa donna machiでsuka. B: furui machiでsu.",
                     vietnamese: "Nara là thành phố như thế nào? — Là một thành phố cũ (cổ kính)."
                 )
             ],
@@ -1361,17 +1389,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "にほんの　たべものは　おいしいですが、たかいです。",
-                    romaji: "nihonno tabemonowa oishiidesuga, takaidesu.",
+                    romaji: "nihonno tabemonowa oishiiでsuga, takaiでsu.",
                     vietnamese: "Món ăn Nhật ngon nhưng đắt."
                 ),
                 GrammarExample(
                     japanese: "ベトナムの　たべものは　おいしいです。そして、やすいです。",
-                    romaji: "betonamuno tabemonowa oishiidesu. soshite, yasuidesu.",
+                    romaji: "betonamuno tabemonowa oishiiでsu. soshite, yasuiでsu.",
                     vietnamese: "Món ăn Việt Nam ngon. Và rẻ."
                 ),
                 GrammarExample(
                     japanese: "わたしの　へやは　ちいさいです。そして、ふるいです。",
-                    romaji: "watashino heyawa chiisaidesu. soshite, furuidesu.",
+                    romaji: "watashino heyawa chiisaiでsu. soshite, furuiでsu.",
                     vietnamese: "Phòng tôi nhỏ. Và cũ."
                 )
             ],
@@ -1387,12 +1415,16 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：あなたの　かさは　どれですか。 B：あの　あおい　かさです。",
-                    romaji: "A: anatano kasawa doredesuka. B: ano aoi kasadesu.",
+                    romaji: "A: anatano kasawa doreでsuka. B: ano aoi kasaでsu.",
                     vietnamese: "Ô của anh là cái nào? — Cái màu xanh kia."
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 9 (5 điểm)
+    public static let lesson9Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 9,
             order: 1,
@@ -1403,7 +1435,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "わたしは　イタリアりょうりが　すきです。",
-                    romaji: "watashiwa itariaryouriga sukidesu.",
+                    romaji: "watashiwa itariaryouriga sukiでsu.",
                     vietnamese: "Tôi thích món ăn Ý."
                 ),
                 GrammarExample(
@@ -1428,7 +1460,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "やまださんは　ダンスが　とても　じょうずです。",
-                    romaji: "yamadasanwa dansuga totemo jouzudesu.",
+                    romaji: "yamadasanwa dansuga totemo jouzuでsu.",
                     vietnamese: "Anh Yamada khiêu vũ rất giỏi."
                 )
             ],
@@ -1444,7 +1476,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：どんな　スポーツが　すきですか。 B：サッカーが　すきです。",
-                    romaji: "A: donna supootsuga sukidesuka. B: sakkaaga sukidesu.",
+                    romaji: "A: donna supootsuga sukiでsuka. B: sakkaaga sukiでsu.",
                     vietnamese: "Bạn thích môn thể thao nào? — Tôi thích bóng đá."
                 )
             ],
@@ -1485,12 +1517,12 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "ここは　すこし　さむいです。",
-                    romaji: "kokowa sukoshi samuidesu.",
+                    romaji: "kokowa sukoshi samuiでsu.",
                     vietnamese: "Ở đây hơi lạnh."
                 ),
                 GrammarExample(
                     japanese: "このえいがは　ぜんぜん　おもしろくないです。",
-                    romaji: "konoeigawa zenzen omoshirokunaidesu.",
+                    romaji: "konoeigawa zenzen omoshirokunaiでsu.",
                     vietnamese: "Phim này chẳng hay gì cả."
                 )
             ],
@@ -1532,7 +1564,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 10 (7 điểm)
+    public static let lesson10Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 10,
             order: 1,
@@ -1610,17 +1646,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：ホアンキエムこに　なにが　いますか。 B：かめが　います。 A：そうですか！！",
-                    romaji: "A: hoankiemukoni naniga imasuka. B: kamega imasu. A: soudesuka! !",
+                    romaji: "A: hoankiemukoni naniga imasuka. B: kamega imasu. A: souでsuka! !",
                     vietnamese: "Hồ Hoàn Kiếm có gì? — Có rùa. — Thế à!! (ngạc nhiên)"
                 ),
                 GrammarExample(
                     japanese: "例 2 (A đang đi tìm anh Long)： A：ロンさんは　どこですか。 B：じむしょに　いますよ。",
-                    romaji: "例 2 (A đang đi tìm anh Long): A: ronsanwa dokodesuka. B: jimushoni imasuyo.",
+                    romaji: "例 2 (A đang đi tìm anh Long): A: ronsanwa dokoでsuka. B: jimushoni imasuyo.",
                     vietnamese: "Anh Long ở đâu? — Ở văn phòng."
                 ),
                 GrammarExample(
                     japanese: "A：とうきょうディズニーランドは　どこに　ありますか。 B1：ちばけんに　あります。 B2：ちばけんです。",
-                    romaji: "A: toukyoudizuniirandowa dokoni arimasuka. B1: chibakenni arimasu. B2: chibakendesu.",
+                    romaji: "A: toukyoudizuniirandowa dokoni arimasuka. B1: chibakenni arimasu. B2: chibakenでsu.",
                     vietnamese: "Tokyo Disneyland ở đâu? — Ở tỉnh Chiba."
                 )
             ],
@@ -1646,7 +1682,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "えきの　ちかくで　キエムさんに　あいました。",
-                    romaji: "ekino chikakude kiemusanni aimashita.",
+                    romaji: "ekino chikakuで kiemusanni aimashita.",
                     vietnamese: "Tôi gặp anh Kiên ở gần ga."
                 )
             ],
@@ -1683,7 +1719,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：すみません。ヴィンコム・タワーは　どこですか。 B：ヴィンコム・タワーですか。あの　ビルです。",
-                    romaji: "A: sumimasen. vinkomu・tawaawa dokodesuka. B: vinkomu・tawaadesuka. ano birudesu.",
+                    romaji: "A: sumimasen. vinkomu・tawaawa dokoでsuka. B: vinkomu・tawaaでsuka. ano biruでsu.",
                     vietnamese: "Xin lỗi. Tháp Vincom ở đâu? — Tháp Vincom à? Ở tòa nhà kia."
                 )
             ],
@@ -1698,7 +1734,11 @@ public final class GrammarRepository {
             explanation: "Cách diễn đạt 「N は ありませんか。」 ta sẽ gặp trong hội thoại của bài này. Bằng cách sử\ndụng dạng phủ định ありませんか thay cho động từ あります, bạn có thể hỏi một cách lịch\nsự về sự tồn tại, hiện hữu của N, và thể hiện cho người nghe biết một cách gián tiếp rằng\nbạn đã chuẩn bị tinh thần để nhận câu trả lời phủ định của họ.",
             examples: [],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 11 (7 điểm)
+    public static let lesson11Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 11,
             order: 1,
@@ -1739,7 +1779,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "くにで　にかげつ　にほんごを　べんきょうしました。 Hoặc là: くにで　にほんごを　にかげつ　べんきょうしました。",
-                    romaji: "kunide nikagetsu nihongoo benkyoushimashita. Hoặc là: kunide nihongoo nikagetsu benkyoushimashita.",
+                    romaji: "kuniで nikagetsu nihongoo benkyoushimashita. Hoặc là: kuniで nihongoo nikagetsu benkyoushimashita.",
                     vietnamese: "Tôi đã học tiếng Nhật 2 tháng ở trong nước."
                 )
             ],
@@ -1786,7 +1826,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：ハノイから　ハイフォンまで　どのぐらい　かかりますか。 B：きしゃで　にじかんはん　かかります。",
-                    romaji: "A: wanoikara waifonmade donogurai kakarimasuka. B: kishade nijikanhan kakarimasu.",
+                    romaji: "A: wanoikara waifonmaで donogurai kakarimasuka. B: kishaで nijikanhan kakarimasu.",
                     vietnamese: "Từ Hà Nội đến Hải Phòng mất bao lâu? — Đi bằng tàu hỏa mất 2 tiếng rưỡi."
                 ),
                 GrammarExample(
@@ -1796,7 +1836,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：ほうかだいがくから　ここまで　バスで　どのぐらい　かかりますか。 B：じゅうごふんぐらい　かかります。",
-                    romaji: "A: houkadaigakukara kokomade basude donogurai kakarimasuka. B: juugofungurai kakarimasu.",
+                    romaji: "A: houkadaigakukara kokomaで basuで donogurai kakarimasuka. B: juugofungurai kakarimasu.",
                     vietnamese: "Từ trường Đại học Luật tới đây đi bằng xe buýt mất khoảng bao lâu? — Khoảng 15 phút."
                 )
             ],
@@ -1833,12 +1873,16 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "やすみは　にちようびだけです。",
-                    romaji: "yasumiwa nichiyoubidakedesu.",
+                    romaji: "yasumiwa nichiyoubidakeでsu.",
                     vietnamese: "Tôi chỉ được nghỉ mỗi ngày Chủ Nhật (thôi)."
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 12 (6 điểm)
+    public static let lesson12Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 12,
             order: 1,
@@ -1849,17 +1893,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "きのうは　あめでした。",
-                    romaji: "kinouwa amedeshita.",
+                    romaji: "kinouwa ameでshita.",
                     vietnamese: "Hôm qua trời mưa."
                 ),
                 GrammarExample(
                     japanese: "おとといは　ひまでした。",
-                    romaji: "ototoiwa himadeshita.",
+                    romaji: "ototoiwa himaでshita.",
                     vietnamese: "Hôm kia tôi rảnh."
                 ),
                 GrammarExample(
                     japanese: "きのうの　しけんは　かんたんじゃ　ありませんでした。",
-                    romaji: "kinouno shikenwa kantanja arimasendeshita.",
+                    romaji: "kinouno shikenwa kantanja arimasenでshita.",
                     vietnamese: "Bài thi hôm qua không đơn giản."
                 )
             ],
@@ -1875,17 +1919,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "あついです → あつかったです わるいです → わるかったです あつくないです → あつくなかったです わるくないです → わるくなかったです",
-                    romaji: "atsuidesu → atsukattadesu waruidesu → warukattadesu atsukunaidesu → atsukunakattadesu warukunaidesu → warukunakattadesu",
+                    romaji: "atsuiでsu → atsukattaでsu waruiでsu → warukattaでsu atsukunaiでsu → atsukunakattaでsu warukunaiでsu → warukunakattaでsu",
                     vietnamese: "Ví dụ minh hoạ"
                 ),
                 GrammarExample(
                     japanese: "きのうは　あつかったです。",
-                    romaji: "kinouwa atsukattadesu.",
+                    romaji: "kinouwa atsukattaでsu.",
                     vietnamese: "Hôm qua trời nóng."
                 ),
                 GrammarExample(
                     japanese: "せんしゅうの　パーティーは　あまり　たのしくなかったです。",
-                    romaji: "senshuuno paatiiwa amari tanoshikunakattadesu.",
+                    romaji: "senshuuno paatiiwa amari tanoshikunakattaでsu.",
                     vietnamese: "Buổi tiệc tuần trước không vui lắm."
                 )
             ],
@@ -1901,17 +1945,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "この　くるまは　あの　くるまより　おおきいです。",
-                    romaji: "kono kurumawa ano kurumayori ookiidesu.",
+                    romaji: "kono kurumawa ano kurumayori ookiiでsu.",
                     vietnamese: "Cái xe này to hơn (so với) cái xe kia."
                 ),
                 GrammarExample(
                     japanese: "バスは　タクシーより　やすいです。",
-                    romaji: "basuwa takushiiyori yasuidesu.",
+                    romaji: "basuwa takushiiyori yasuiでsu.",
                     vietnamese: "Xe buýt rẻ hơn (so với) taxi."
                 ),
                 GrammarExample(
                     japanese: "ハイフォンは　ハノイより　しずかです。",
-                    romaji: "waifonwa wanoiyori shizukadesu.",
+                    romaji: "waifonwa wanoiyori shizukaでsu.",
                     vietnamese: "Hải Phòng yên tĩnh hơn (so với) Hà Nội."
                 )
             ],
@@ -1927,22 +1971,22 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：サッカーと　やきゅうと　どちらが　おもしろいですか。 B：サッカーの　ほうが　おもしろいです。",
-                    romaji: "A: sakkaato yakyuuto dochiraga omoshiroidesuka. B: sakkaano houga omoshiroidesu.",
+                    romaji: "A: sakkaato yakyuuto dochiraga omoshiroiでsuka. B: sakkaano houga omoshiroiでsu.",
                     vietnamese: "Bóng đá và bóng chày, môn nào hay hơn? — Bóng đá hay hơn."
                 ),
                 GrammarExample(
                     japanese: "A：やまもとさんと　なりたさんと　どちらが　テニスが　じょうずですか。 B：やまもとさんの　ほうが　テニスが　じょうずです。",
-                    romaji: "A: yamamotosanto naritasanto dochiraga tenisuga jouzudesuka. B: yamamotosanno houga tenisuga jouzudesu.",
+                    romaji: "A: yamamotosanto naritasanto dochiraga tenisuga jouzuでsuka. B: yamamotosanno houga tenisuga jouzuでsu.",
                     vietnamese: "Anh Yamamoto và anh Narita, ai giỏi tennis hơn? — Anh Yamamoto giỏi tennis hơn."
                 ),
                 GrammarExample(
                     japanese: "A：ほっかいどうと　おおさかと　どちらが　すずしいですか。 B：ほっかいどうの　ほうが　すずしいです。",
-                    romaji: "A: hokkaidouto oosakato dochiraga suzushiidesuka. B: hokkaidouno houga suzushiidesu.",
+                    romaji: "A: hokkaidouto oosakato dochiraga suzushiiでsuka. B: hokkaidouno houga suzushiiでsu.",
                     vietnamese: "Hokkaido và Osaka, chỗ nào mát hơn? — Hokkaido mát hơn."
                 ),
                 GrammarExample(
                     japanese: "A：はると　あきと　どちらが　すきですか。 B：はるの　ほうが　すきです。",
-                    romaji: "A: waruto akito dochiraga sukidesuka. B: waruno houga sukidesu.",
+                    romaji: "A: waruto akito dochiraga sukiでsuka. B: waruno houga sukiでsu.",
                     vietnamese: "Mùa xuân và mùa thu, bạn thích mùa nào hơn? — Tôi thích mùa xuân hơn."
                 )
             ],
@@ -1958,22 +2002,22 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：にほんりょうりの　なかで　なにが　いちばん　おいしいですか。 B：てんぷらが　いちばん　おいしいです。",
-                    romaji: "A: nihonryourino nakade naniga ichiban oishiidesuka. B: tenpuraga ichiban oishiidesu.",
+                    romaji: "A: nihonryourino nakaで naniga ichiban oishiiでsuka. B: tenpuraga ichiban oishiiでsu.",
                     vietnamese: "Trong các món ăn Nhật, món nào ngon nhất? — Món tempura ngon nhất."
                 ),
                 GrammarExample(
                     japanese: "A：ヨーロッパで　どこが　いちばん　よかったですか。 B：スイスが　いちばん　よかったです。",
-                    romaji: "A: yooroppade dokoga ichiban yokattadesuka. B: suisuga ichiban yokattadesu.",
+                    romaji: "A: yooroppaで dokoga ichiban yokattaでsuka. B: suisuga ichiban yokattaでsu.",
                     vietnamese: "Ở châu Âu thì chỗ nào hay nhất? — Thụy Sĩ hay nhất."
                 ),
                 GrammarExample(
                     japanese: "A：かぞくで　だれが　いちばん　せが　たかいですか。 B：おとうとが　いちばん　せが　たかいです。",
-                    romaji: "A: kazokude darega ichiban sega takaidesuka. B: otoutoga ichiban sega takaidesu.",
+                    romaji: "A: kazokuで darega ichiban sega takaiでsuka. B: otoutoga ichiban sega takaiでsu.",
                     vietnamese: "Trong gia đình bạn ai cao nhất? — Em trai tôi cao nhất."
                 ),
                 GrammarExample(
                     japanese: "A：１年で　いつが　いちばん　さむいですか。 B：２がつが　いちばん　さむいです。",
-                    romaji: "A: １年de itsuga ichiban samuidesuka. B: ２gatsuga ichiban samuidesu.",
+                    romaji: "A: １年で itsuga ichiban samuiでsuka. B: ２gatsuga ichiban samuiでsu.",
                     vietnamese: "Trong một năm thì khi nào lạnh nhất? — Tháng 2 lạnh nhất."
                 )
             ],
@@ -1989,12 +2033,16 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：りょこうは　どうでしたか。 B：とても　たのしかったです。",
-                    romaji: "A: ryokouwa doudeshitaka. B: totemo tanoshikattadesu.",
+                    romaji: "A: ryokouwa douでshitaka. B: totemo tanoshikattaでsu.",
                     vietnamese: "Chuyến đi thế nào? — Rất vui."
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 13 (6 điểm)
+    public static let lesson13Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 13,
             order: 1,
@@ -2005,17 +2053,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "わたしは　ともだちが　ほしいです。",
-                    romaji: "watashiwa tomodachiga hoshiidesu.",
+                    romaji: "watashiwa tomodachiga hoshiiでsu.",
                     vietnamese: "Tôi muốn có bạn."
                 ),
                 GrammarExample(
                     japanese: "A：いま　なにが　いちばん　ほしいですか。 B：くるまが　ほしいです。",
-                    romaji: "A: ima naniga ichiban hoshiidesuka. B: kurumaga hoshiidesu.",
+                    romaji: "A: ima naniga ichiban hoshiiでsuka. B: kurumaga hoshiiでsu.",
                     vietnamese: "Bây giờ bạn muốn gì nhất? — Tôi muốn có xe hơi."
                 ),
                 GrammarExample(
                     japanese: "A：こどもが　ほしいですか。 B：いいえ、ほしくないです。",
-                    romaji: "A: kodomoga hoshiidesuka. B: iie, hoshikunaidesu.",
+                    romaji: "A: kodomoga hoshiiでsuka. B: iie, hoshikunaiでsu.",
                     vietnamese: "Bạn muốn có con không? — Không, tôi không muốn."
                 )
             ],
@@ -2041,7 +2089,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "Câu gốc：おなかが　いたいですから、なにも　たべません。",
-                    romaji: "Câu gốc: onakaga itaidesukara, nanimo tabemasen.",
+                    romaji: "Câu gốc: onakaga itaiでsukara, nanimo tabemasen.",
                     vietnamese: "Vì đau bụng nên tôi không ăn gì cả."
                 )
             ],
@@ -2093,7 +2141,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "けさ　７じに　うちを　でました。",
-                    romaji: "kesa ７jini uchio demashita.",
+                    romaji: "kesa ７jini uchio でmashita.",
                     vietnamese: "Sáng nay tôi ra khỏi nhà lúc 7 giờ."
                 )
             ],
@@ -2114,7 +2162,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "のどが　かわきましたから、なにか（を）　のみたいです。",
-                    romaji: "nodoga kawakimashitakara, nanika（o） nomitaidesu.",
+                    romaji: "nodoga kawakimashitakara, nanika（o） nomitaiでsu.",
                     vietnamese: "Vì khát nên tôi muốn uống cái gì đó."
                 )
             ],
@@ -2135,7 +2183,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 14 (7 điểm)
+    public static let lesson14Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 14,
             order: 1,
@@ -2151,7 +2203,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "たべます、おしえます、つけます、むかえます、でます、あげます Đặc biệt：います、おきます、おります、かります、みます Động từ nhóm III: nhóm này bao gồm các động từ します, các động từ tạo thành bởi \"danh từ có tính động tác ＋ します\" và động từ きます. Khác với 2 nhóm trên, động từ ở",
-                    romaji: "tabemasu, oshiemasu, tsukemasu, mukaemasu, demasu, agemasu Đặc biệt: imasu, okimasu, orimasu, karimasu, mimasu Động từ nhóm III: nhóm này bao gồm các động từ shimasu, các động từ tạo thành bởi \"danh từ có tính động tác ＋ shimasu\" và động từ kimasu. Khác với 2 nhóm trên, động từ ở",
+                    romaji: "tabemasu, oshiemasu, tsukemasu, mukaemasu, でmasu, agemasu Đặc biệt: imasu, okimasu, orimasu, karimasu, mimasu Động từ nhóm III: nhóm này bao gồm các động từ shimasu, các động từ tạo thành bởi \"danh từ có tính động tác ＋ shimasu\" và động từ kimasu. Khác với 2 nhóm trên, động từ ở",
                     vietnamese: "nhóm III này không có quy tắc biến đổi nên bạn buộc phải nhớ các cách biến đổi đặc biệt của chúng."
                 ),
                 GrammarExample(
@@ -2208,7 +2260,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ソンさんは　いま　でんわを　かけています。",
-                    romaji: "sonsanwa ima denwao kaketeimasu.",
+                    romaji: "sonsanwa ima でnwao kaketeimasu.",
                     vietnamese: "Bây giờ anh Sơn đang gọi điện thoại."
                 ),
                 GrammarExample(
@@ -2239,7 +2291,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：にもつを　もちましょうか。 B：いいえ、けっこうです。",
-                    romaji: "A: nimotsuo mochimashouka. B: iie, kekkoudesu.",
+                    romaji: "A: nimotsuo mochimashouka. B: iie, kekkouでsu.",
                     vietnamese: "Tôi cầm hành lý (giúp) nhé? — Không cần đâu ạ. Trong những mẫu hội thoại ở trên, cách trả lời của B cho ta biết: •  Ví dụ 1: cách đề nghị, yêu cầu ai làm gì đó. •  Ví dụ 2: nhận sự giúp đỡ đó với một lời cảm ơn. •  Ví dụ 3: từ chối sự giúp đỡ một cách lịch sự."
                 )
             ],
@@ -2255,7 +2307,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "しつれいですが、おなまえは？",
-                    romaji: "shitsureidesuga, onamaeha?",
+                    romaji: "shitsureiでsuga, onamaeha?",
                     vietnamese: "Xin lỗi (xin thất lễ), tên bạn là gì?"
                 ),
                 GrammarExample(
@@ -2281,7 +2333,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 15 (5 điểm)
+    public static let lesson15Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 15,
             order: 1,
@@ -2292,42 +2348,42 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "しゃしんを　とっても　いいです。",
-                    romaji: "shashino tottemo iidesu.",
+                    romaji: "shashino tottemo iiでsu.",
                     vietnamese: "Bạn có thể (được phép) chụp ảnh. Mẫu này cũng được sử dụng khi người nói muốn hỏi xem mình có được phép làm việc gì đó không. Câu hỏi dạng này được chia làm 2 loại như sau: •  Loại 1: hỏi để xin phép trực tiếp người nghe. •  Loại 2: hỏi người nghe về quy định, luật lệ... Tương ứng với mỗi loại, ta sẽ có cách trả lời câu hỏi khác nhau. Xét các ví dụ sau đây: Loại 1 — xin phép trực tiếp:"
                 ),
                 GrammarExample(
                     japanese: "A：すみません、ボールペンを　かりても　いいですか。 B：はい（ええ）、いいです（よ）。どうぞ。",
-                    romaji: "A: sumimasen, boorupeno karitemo iidesuka. B: wai（ee）, iidesu（yo）. douzo.",
+                    romaji: "A: sumimasen, boorupeno karitemo iiでsuka. B: wai（ee）, iiでsu（yo）. douzo.",
                     vietnamese: "Xin lỗi, tôi mượn cái bút bi có được không? — Vâng, được. Mời anh."
                 ),
                 GrammarExample(
                     japanese: "A：この　ざっしを　もらっても　いいですか。 B：すみません（いいえ）、ちょっと。",
-                    romaji: "A: kono zasshio morattemo iidesuka. B: sumimasen（iie）, chotto.",
+                    romaji: "A: kono zasshio morattemo iiでsuka. B: sumimasen（iie）, chotto.",
                     vietnamese: "Tôi lấy quyển tạp chí này có được không? — Xin lỗi... Cần lưu ý 2 điểm sau đây khi trả lời:"
                 ),
                 GrammarExample(
                     japanese: "先生：ハイさん、かばんを　かりても　いいですか。 学生 1：はい、いいですよ。(×)  không dùng.→ 学生 2：はい、どうぞ。( )○",
-                    romaji: "先生: waisan, kabano karitemo iidesuka. 学生 1: wai, iidesuyo. (×) không dùng.→ 学生 2: wai, douzo. ( )○",
+                    romaji: "先生: waisan, kabano karitemo iiでsuka. 学生 1: wai, iiでsuyo. (×) không dùng.→ 学生 2: wai, douzo. ( )○",
                     vietnamese: "•  Với câu trả lời không đồng ý: khi không đồng ý thì nên trả lời từ chối một cách tế"
                 ),
                 GrammarExample(
                     japanese: "例 4（trong phòng triển lãm）： A：すみません、ここで　しゃしんを　とっても　いいですか。 B：はい、いいです。",
-                    romaji: "例 4（trong phòng triển lãm）: A: sumimasen, kokode shashino tottemo iidesuka. B: wai, iidesu.",
+                    romaji: "例 4（trong phòng triển lãm）: A: sumimasen, kokoで shashino tottemo iiでsuka. B: wai, iiでsu.",
                     vietnamese: "Xin lỗi, ở đây có được phép chụp ảnh không? — Vâng, được."
                 ),
                 GrammarExample(
                     japanese: "例 5（trong phòng học）： 学生：せんせい、ここで　パンを　たべても　いいですか。 先生：いいえ、だめです。/ いいえ、いけません。",
-                    romaji: "例 5（trong phòng học）: 学生: sensei, kokode pano tabetemo iidesuka. 先生: iie, damedesu. / iie, ikemasen.",
+                    romaji: "例 5（trong phòng học）: 学生: sensei, kokoで pano tabetemo iiでsuka. 先生: iie, dameでsu. / iie, ikemasen.",
                     vietnamese: "Thưa thầy, có được phép ăn bánh ở đây không ạ? — Không được."
                 ),
                 GrammarExample(
                     japanese: "日本人の先生：ベトナムで　だいがくせいは　たばこを　すっても　いいですか。 学生：はい、いいです。",
-                    romaji: "日本人no先生: betonamude daigakuseiwa tabakoo suttemo iidesuka. 学生: wai, iidesu.",
+                    romaji: "日本人no先生: betonamuで daigakuseiwa tabakoo suttemo iiでsuka. 学生: wai, iiでsu.",
                     vietnamese: "Ở Việt Nam sinh viên đại học có được phép hút thuốc không? — Có, được (ạ)."
                 ),
                 GrammarExample(
                     japanese: "イギリス人の先生：にほんで　こうこうせいは　おさけを　のんでも　いいですか。 日本人の学生：いいえ、だめです。",
-                    romaji: "igirisu人no先生: nihonde koukouseiwa osakeo nondemo iidesuka. 日本人no学生: iie, damedesu.",
+                    romaji: "igirisu人no先生: nihonで koukouseiwa osakeo nonでmo iiでsuka. 日本人no学生: iie, dameでsu.",
                     vietnamese: "Ở Nhật, học sinh cấp 3 có được phép uống rượu không? — Không được (ạ)."
                 )
             ],
@@ -2343,12 +2399,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "この　かわで　およいでは　いけません。",
-                    romaji: "kono kawade oyoidewa ikemasen.",
+                    romaji: "kono kawaで oyoiでwa ikemasen.",
                     vietnamese: "Không được bơi ở con sông này."
                 ),
                 GrammarExample(
                     japanese: "A：せんせい、ここで　あそんでも　いいですか。 B：いいえ、いけません。",
-                    romaji: "A: sensei, kokode asondemo iidesuka. B: iie, ikemasen.",
+                    romaji: "A: sensei, kokoで asonでmo iiでsuka. B: iie, ikemasen.",
                     vietnamese: "Cô ơi, chơi ở đây có được không? — Không được. Tóm lại, ta có bảng sau: Hỏi về luật lệ, quy định Xin phép cá nhân thông thường"
                 )
             ],
@@ -2390,17 +2446,17 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "スーパーで　スマホケースを　うっています。",
-                    romaji: "suupaade sumahokeesuo utteimasu.",
+                    romaji: "suupaaで sumahokeesuo utteimasu.",
                     vietnamese: "Ở siêu thị có bán ốp điện thoại."
                 ),
                 GrammarExample(
                     japanese: "ハイさんは　FPT で　はたらいています。",
-                    romaji: "waisanwa FPT de wataraiteimasu.",
+                    romaji: "waisanwa FPT で wataraiteimasu.",
                     vietnamese: "Anh Hải đang làm ở công ty FPT."
                 ),
                 GrammarExample(
                     japanese: "いもうとは　だいがくで　べんきょうしています。",
-                    romaji: "imoutowa daigakude benkyoushiteimasu.",
+                    romaji: "imoutowa daigakuで benkyoushiteimasu.",
                     vietnamese: "Em gái tôi đang học đại học."
                 )
             ],
@@ -2416,12 +2472,16 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：しやくしょの　でんわばんごうを　しっていますか。 (×) しやくしょの　でんわばんごうを　しりますか。→ không dùng. B1：はい、しっています。 (×) はい、しります。→ không dùng. B2：いいえ、しりません。 (×) いいえ、しっていません。→ không dùng.",
-                    romaji: "A: shiyakushono denwabangouo shitteimasuka. (×) shiyakushono denwabangouo shirimasuka. → không dùng. B1: wai, shitteimasu. (×) wai, shirimasu. → không dùng. B2: iie, shirimasen. (×) iie, shitteimasen. → không dùng.",
+                    romaji: "A: shiyakushono でnwabangouo shitteimasuka. (×) shiyakushono でnwabangouo shirimasuka. → không dùng. B1: wai, shitteimasu. (×) wai, shirimasu. → không dùng. B2: iie, shirimasen. (×) iie, shitteimasen. → không dùng.",
                     vietnamese: "Bạn có biết số điện thoại của tòa thị chính không? — Có, tôi biết. / Không, tôi không biết."
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 16 (7 điểm)
+    public static let lesson16Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 16,
             order: 1,
@@ -2432,7 +2492,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "でんしゃに　のります　／　のりかえます　／　でんしゃを　おります → おおさかで　でんしゃに　のります。しんおおさかで　しんかんせんに　のりかえま す。とうきょうで　おります。 → おおさかで　でんしゃに　のって、しんおおさかで　しんかんせんに　のりかえて、 とうきょうで　おります。",
-                    romaji: "denshani norimasu ／ norikaemasu ／ denshao orimasu → oosakade denshani norimasu. shinoosakade shinkansenni norikaema su. toukyoude orimasu. → oosakade denshani notte, shinoosakade shinkansenni norikaete, toukyoude orimasu.",
+                    romaji: "でnshani norimasu ／ norikaemasu ／ でnshao orimasu → oosakaで でnshani norimasu. shinoosakaで shinkansenni norikaema su. toukyouで orimasu. → oosakaで でnshani notte, shinoosakaで shinkansenni norikaete, toukyouで orimasu.",
                     vietnamese: "Tôi lên tàu điện ở Osaka, chuyển sang Shinkansen ở Shin Osaka rồi xuống ở ga Tokyo."
                 ),
                 GrammarExample(
@@ -2458,12 +2518,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "でんきを　けします　／　きょうしつを　でます → でんきを　けします。それから、きょうしつを　でます。 → でんきを　けしてから、きょうしつを　でます。",
-                    romaji: "denkio keshimasu ／ kyoushitsuo demasu → denkio keshimasu. sorekara, kyoushitsuo demasu. → denkio keshitekara, kyoushitsuo demasu.",
+                    romaji: "でnkio keshimasu ／ kyoushitsuo でmasu → でnkio keshimasu. sorekara, kyoushitsuo でmasu. → でnkio keshitekara, kyoushitsuo でmasu.",
                     vietnamese: "Tôi tắt điện, sau đó ra khỏi phòng học."
                 ),
                 GrammarExample(
                     japanese: "でんしゃを　おります　／　あるいて　いきます → でんしゃを　おりました。それから、たなかさんの　うちまで　あるいて　いきまし た。 → でんしゃを　おりてから、たなかさんの　うちまで　あるいて　いきました。",
-                    romaji: "denshao orimasu ／ aruite ikimasu → denshao orimashita. sorekara, tanakasanno uchimade aruite ikimashi ta. → denshao oritekara, tanakasanno uchimade aruite ikimashita.",
+                    romaji: "でnshao orimasu ／ aruite ikimasu → でnshao orimashita. sorekara, tanakasanno uchimaで aruite ikimashi ta. → でnshao oritekara, tanakasanno uchimaで aruite ikimashita.",
                     vietnamese: "Tôi xuống tàu và đi bộ đến nhà anh Tanaka."
                 ),
                 GrammarExample(
@@ -2484,17 +2544,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ベトナムりょうりは　おいしいです。そして　やすいです。 → ベトナムりょうりは　おいしくて、やすいです。",
-                    romaji: "betonamuryouriwa oishiidesu. soshite yasuidesu. → betonamuryouriwa oishikute, yasuidesu.",
+                    romaji: "betonamuryouriwa oishiiでsu. soshite yasuiでsu. → betonamuryouriwa oishikute, yasuiでsu.",
                     vietnamese: "Món ăn Việt Nam ngon và rẻ."
                 ),
                 GrammarExample(
                     japanese: "やまださんは　わかいです。そして　げんきです。 → やまださんは　わかくて、げんきです。",
-                    romaji: "yamadasanwa wakaidesu. soshite genkidesu. → yamadasanwa wakakute, genkidesu.",
+                    romaji: "yamadasanwa wakaiでsu. soshite genkiでsu. → yamadasanwa wakakute, genkiでsu.",
                     vietnamese: "Anh Yamada trẻ và khỏe mạnh."
                 ),
                 GrammarExample(
                     japanese: "このへやは　あかるいです。このへやは　ひろいです。そして、やすいです。 → このへやは　あかるくて、ひろくて、やすいです。",
-                    romaji: "konoheyawa akaruidesu. konoheyawa hiroidesu. soshite, yasuidesu. → konoheyawa akarukute, hirokute, yasuidesu.",
+                    romaji: "konoheyawa akaruiでsu. konoheyawa hiroiでsu. soshite, yasuiでsu. → konoheyawa akarukute, hirokute, yasuiでsu.",
                     vietnamese: "Căn phòng này sáng, rộng và rẻ."
                 )
             ],
@@ -2510,22 +2570,22 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "カリナさんは　インドネシア人です。カリナさんは　なごやだいがくの　りゅうがくせ いです。 → カリナさんは　インドネシア人で、なごやだいがくの　りゅうがくせいです。",
-                    romaji: "karinasanwa indoneshia人desu. karinasanwa nagoyadaigakuno ryuugakuse idesu. → karinasanwa indoneshia人de, nagoyadaigakuno ryuugakuseidesu.",
+                    romaji: "karinasanwa indoneshia人でsu. karinasanwa nagoyadaigakuno ryuugakuse iでsu. → karinasanwa indoneshia人で, nagoyadaigakuno ryuugakuseiでsu.",
                     vietnamese: "Chị Carina là người Indonesia và là lưu học sinh của Đại học Nagoya."
                 ),
                 GrammarExample(
                     japanese: "やまださんは　ハンサムです。そして　しんせつです。 → やまださんは　ハンサムで、しんせつです。",
-                    romaji: "yamadasanwa wansamudesu. soshite shinsetsudesu. → yamadasanwa wansamude, shinsetsudesu.",
+                    romaji: "yamadasanwa wansamuでsu. soshite shinsetsuでsu. → yamadasanwa wansamuで, shinsetsuでsu.",
                     vietnamese: "Anh Yamada vừa đẹp trai vừa thân thiện (đẹp trai và thân thiện)."
                 ),
                 GrammarExample(
                     japanese: "ならは　しずかです。ならは　きれいなまちです。 → ならは　しずかで、きれいなまちです。",
-                    romaji: "narawa shizukadesu. narawa kireinamachidesu. → narawa shizukade, kireinamachidesu.",
+                    romaji: "narawa shizukaでsu. narawa kireinamachiでsu. → narawa shizukaで, kireinamachiでsu.",
                     vietnamese: "Nara là một thành phố yên tĩnh và đẹp."
                 ),
                 GrammarExample(
                     japanese: "カリナさんは　がくせいです。なりたさんは　いしゃです。 → カリナさんは　がくせいで、なりたさんは　いしゃです。",
-                    romaji: "karinasanwa gakuseidesu. naritasanwa ishadesu. → karinasanwa gakuseide, naritasanwa ishadesu.",
+                    romaji: "karinasanwa gakuseiでsu. naritasanwa ishaでsu. → karinasanwa gakuseiで, naritasanwa ishaでsu.",
                     vietnamese: "Chị Carina là sinh viên, còn chị Narita là bác sĩ."
                 )
             ],
@@ -2541,12 +2601,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "マリアさんは　かみが　ながいです。",
-                    romaji: "mariasanwa kamiga nagaidesu.",
+                    romaji: "mariasanwa kamiga nagaiでsu.",
                     vietnamese: "Chị Maria tóc dài."
                 ),
                 GrammarExample(
                     japanese: "このみせは　コーヒーが　おいしいです。",
-                    romaji: "konomisewa koohiiga oishiidesu.",
+                    romaji: "konomisewa koohiiga oishiiでsu.",
                     vietnamese: "Cửa hàng này cà phê ngon."
                 )
             ],
@@ -2562,7 +2622,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：おおさかから　とうきょうまで　どうやって　いきますか。",
-                    romaji: "A: oosakakara toukyoumade douyatte ikimasuka.",
+                    romaji: "A: oosakakara toukyoumaで douyatte ikimasuka.",
                     vietnamese: "Đi từ Osaka đến Tokyo bằng cách nào?"
                 )
             ],
@@ -2578,12 +2638,16 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：なりたさんは　どの　ひとですか。",
-                    romaji: "A: naritasanwa dono hitodesuka.",
+                    romaji: "A: naritasanwa dono hitoでsuka.",
                     vietnamese: "Chị Narita là người nào?"
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 17 (6 điểm)
+    public static let lesson17Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 17,
             order: 1,
@@ -2604,12 +2668,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "わたしは　げんきですから、しんぱいしないで　ください。",
-                    romaji: "watashiwa genkidesukara, shinpaishinaide kudasai.",
+                    romaji: "watashiwa genkiでsukara, shinpaishinaiで kudasai.",
                     vietnamese: "Tôi khỏe, vì thế đừng lo lắng."
                 ),
                 GrammarExample(
                     japanese: "ここで　しゃしんを　とらないで　ください。",
-                    romaji: "kokode shashino toranaide kudasai.",
+                    romaji: "kokoで shashino toranaiで kudasai.",
                     vietnamese: "Đừng chụp ảnh ở đây."
                 )
             ],
@@ -2625,12 +2689,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "あした　こなくても　いいですよ。",
-                    romaji: "ashita konakutemo iidesuyo.",
+                    romaji: "ashita konakutemo iiでsuyo.",
                     vietnamese: "Ngày mai bạn không cần phải đến đâu."
                 ),
                 GrammarExample(
                     japanese: "しけんは　かんたんですから、しんぱいしなくても　いいです。",
-                    romaji: "shikenwa kantandesukara, shinpaishinakutemo iidesu.",
+                    romaji: "shikenwa kantanでsukara, shinpaishinakutemo iiでsu.",
                     vietnamese: "Vì bài thi đơn giản nên không cần phải lo lắng."
                 )
             ],
@@ -2661,7 +2725,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：この　DVD は　いつまでに　かえさなければ　なりませんか。",
-                    romaji: "A: kono DVD wa itsumadeni kaesanakereba narimasenka.",
+                    romaji: "A: kono DVD wa itsumaでni kaesanakereba narimasenka.",
                     vietnamese: "Đĩa DVD này phải trả trước lúc nào?"
                 ),
                 GrammarExample(
@@ -2687,7 +2751,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "（わたしは）かいしゃの　しょくどうで　ひるごはんを　たべます。",
-                    romaji: "（watashiha）kaishano shokudoude hirugohano tabemasu.",
+                    romaji: "（watashiha）kaishano shokudouで hirugohano tabemasu.",
                     vietnamese: "Tôi ăn trưa ở nhà ăn của công ty."
                 )
             ],
@@ -2703,17 +2767,21 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "かいぎは　5 じまでに　おわります。",
-                    romaji: "kaigiwa 5 jimadeni owarimasu.",
+                    romaji: "kaigiwa 5 jimaでni owarimasu.",
                     vietnamese: "Cuộc họp sẽ kết thúc trước 5 giờ."
                 ),
                 GrammarExample(
                     japanese: "どようびまでに　ほんを　かえさなければ　なりません。",
-                    romaji: "doyoubimadeni hono kaesanakereba narimasen.",
+                    romaji: "doyoubimaでni hono kaesanakereba narimasen.",
                     vietnamese: "Phải trả lại sách trước thứ 7."
                 )
             ],
             usageNotes: "Lưu ý: tránh nhầm lẫn まで và までに."
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 18 (6 điểm)
+    public static let lesson18Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 18,
             order: 1,
@@ -2734,22 +2802,22 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ハイさんは　にほんごが　できます。",
-                    romaji: "waisanwa nihongoga dekimasu.",
+                    romaji: "waisanwa nihongoga でkimasu.",
                     vietnamese: "Anh Hải có thể nói tiếng Nhật / Anh ấy biết tiếng Nhật."
                 ),
                 GrammarExample(
                     japanese: "ゆきが　たくさん　ふりましたから、ことしは　スキーが　できます。",
-                    romaji: "yukiga takusan furimashitakara, kotoshiwa sukiiga dekimasu.",
+                    romaji: "yukiga takusan furimashitakara, kotoshiwa sukiiga でkimasu.",
                     vietnamese: "Vì tuyết rơi nhiều nên năm nay (chúng ta) có thể trượt tuyết được. Động từ: khi một động từ được sử dụng để biểu đạt năng lực hay khả năng, người ta sẽ"
                 ),
                 GrammarExample(
                     japanese: "ハイさんは　かんじを　よむことが　できます。",
-                    romaji: "waisanwa kanjio yomukotoga dekimasu.",
+                    romaji: "waisanwa kanjio yomukotoga でkimasu.",
                     vietnamese: "Anh Hải đọc được chữ Hán / Anh Hải có thể đọc chữ Hán."
                 ),
                 GrammarExample(
                     japanese: "カードで　はらうことが　できます。",
-                    romaji: "kaadode waraukotoga dekimasu.",
+                    romaji: "kaadoで waraukotoga でkimasu.",
                     vietnamese: "Bạn có thể trả tiền bằng thẻ."
                 )
             ],
@@ -2765,17 +2833,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "わたしの　しゅみは　サッカーです。",
-                    romaji: "watashino shumiwa sakkaadesu.",
+                    romaji: "watashino shumiwa sakkaaでsu.",
                     vietnamese: "Sở thích của tôi là bóng đá. Trong câu trên, người nói chỉ nói sở thích của mình là bóng đá nói chung, tức là có thể hiểu là thích xem bóng đá, cũng có thể hiểu là thích chơi bóng đá…  không cụ thể.→"
                 ),
                 GrammarExample(
                     japanese: "わたしの　しゅみは　サッカーを　する　ことです。",
-                    romaji: "watashino shumiwa sakkaao suru kotodesu.",
+                    romaji: "watashino shumiwa sakkaao suru kotoでsu.",
                     vietnamese: "Sở thích của tôi là chơi bóng đá."
                 ),
                 GrammarExample(
                     japanese: "わたしの　しゅみは　サッカーを　みることです。",
-                    romaji: "watashino shumiwa sakkaao mirukotodesu.",
+                    romaji: "watashino shumiwa sakkaao mirukotoでsu.",
                     vietnamese: "Sở thích của tôi là xem bóng đá."
                 )
             ],
@@ -2827,7 +2895,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "なかなか　かんじを　おぼえることが　できません。",
-                    romaji: "nakanaka kanjio oboerukotoga dekimasen.",
+                    romaji: "nakanaka kanjio oboerukotoga でkimasen.",
                     vietnamese: "Mãi mà không nhớ được chữ Hán."
                 )
             ],
@@ -2843,7 +2911,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ぜひ　ほっかいどうへ　いきたいです。",
-                    romaji: "zehi hokkaidouhe ikitaidesu.",
+                    romaji: "zehi hokkaidouhe ikitaiでsu.",
                     vietnamese: "Tôi rất muốn đến Hokkaido."
                 ),
                 GrammarExample(
@@ -2853,7 +2921,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 19 (5 điểm)
+    public static let lesson19Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 19,
             order: 1,
@@ -2889,7 +2961,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：にほんごで　てがみを　かいたことが　ありますか。",
-                    romaji: "A: nihongode tegamio kaitakotoga arimasuka.",
+                    romaji: "A: nihongoで tegamio kaitakotoga arimasuka.",
                     vietnamese: "Bạn đã từng viết thư bằng tiếng Nhật bao giờ chưa?"
                 ),
                 GrammarExample(
@@ -2935,12 +3007,12 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "まいにち　スマホで　にほんごを　きいたり、かんじを　べんきょうしたり　し なければ　なりません。",
-                    romaji: "mainichi sumahode nihongoo kiitari, kanjio benkyoushitari shi nakereba narimasen.",
+                    romaji: "mainichi sumahoで nihongoo kiitari, kanjio benkyoushitari shi nakereba narimasen.",
                     vietnamese: "Hàng ngày, tôi phải nghe tiếng Nhật bằng điện thoại thông minh, học chữ Hán,..."
                 ),
                 GrammarExample(
                     japanese: "ねつが　ありますから、シャワーを　あびたり、おふろに　はいったり　しない で　ください。",
-                    romaji: "netsuga arimasukara, shawaao abitari, ofuroni waittari shinai de kudasai.",
+                    romaji: "netsuga arimasukara, shawaao abitari, ofuroni waittari shinai で kudasai.",
                     vietnamese: "Vì bạn đang bị sốt nên đừng tắm... (Có thể người nói còn bao hàm ý dặn: không gội đầu, không ngâm mình,...)"
                 ),
                 GrammarExample(
@@ -2961,17 +3033,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "くらく　なりましたね。でんきを　つけましょうか。",
-                    romaji: "kuraku narimashitane. denkio tsukemashouka.",
+                    romaji: "kuraku narimashitane. でnkio tsukemashouka.",
                     vietnamese: "Tối rồi nhỉ (Trở nên tối rồi nhỉ). Bật điện lên nhé."
                 ),
                 GrammarExample(
                     japanese: "A：ここは　にぎやかですね。",
-                    romaji: "A: kokowa nigiyakadesune.",
+                    romaji: "A: kokowa nigiyakaでsune.",
                     vietnamese: "Ở đây nhộn nhịp nhỉ."
                 ),
                 GrammarExample(
                     japanese: "わたしは　べんごしに　なりたいです。",
-                    romaji: "watashiwa bengoshini naritaidesu.",
+                    romaji: "watashiwa bengoshini naritaiでsu.",
                     vietnamese: "Tôi muốn trở thành luật sư."
                 )
             ],
@@ -2992,7 +3064,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 20 (4 điểm)
+    public static let lesson20Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 20,
             order: 1,
@@ -3079,12 +3155,16 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "かいものをしたいですけど、おかねが　ありません。",
-                    romaji: "kaimonooshitaidesukedo, okanega arimasen.",
+                    romaji: "kaimonooshitaiでsukedo, okanega arimasen.",
                     vietnamese: "Tôi muốn đi mua sắm nhưng không có tiền."
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 21 (7 điểm)
+    public static let lesson21Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 21,
             order: 1,
@@ -3115,7 +3195,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：しけんは　むずかしかったですか。",
-                    romaji: "A: shikenwa muzukashikattadesuka.",
+                    romaji: "A: shikenwa muzukashikattaでsuka.",
                     vietnamese: "Bài thi khó không?"
                 ),
                 GrammarExample(
@@ -3130,7 +3210,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "A：スマホは　べんりですね。",
-                    romaji: "A: sumahowa benridesune.",
+                    romaji: "A: sumahowa benriでsune.",
                     vietnamese: "Điện thoại thông minh tiện lợi nhỉ."
                 )
             ],
@@ -3177,17 +3257,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：あした　パーティーに　いくでしょう？",
-                    romaji: "A: ashita paatiini ikudeshou?",
+                    romaji: "A: ashita paatiini ikuでshou?",
                     vietnamese: "Mai bạn cũng đi party đúng không?"
                 ),
                 GrammarExample(
                     japanese: "B vừa đi Hokkaido về, A hỏi B: A：ほっかいどうは　とても　さむかったでしょう？",
-                    romaji: "B vừa đi Hokkaido về, A hỏi B: A: hokkaidouwa totemo samukattadeshou?",
+                    romaji: "B vừa đi Hokkaido về, A hỏi B: A: hokkaidouwa totemo samukattaでshou?",
                     vietnamese: "Hokkaido lạnh đúng không?"
                 ),
                 GrammarExample(
                     japanese: "A：サイゴンは　にぎやかでしょう？",
-                    romaji: "A: saigonwa nigiyakadeshou?",
+                    romaji: "A: saigonwa nigiyakaでshou?",
                     vietnamese: "Sài Gòn sầm uất phải không?"
                 )
             ],
@@ -3203,12 +3283,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "とうきょうで　日本と　ブラジルの　サッカーの　しあいが　あります。",
-                    romaji: "toukyoude 日本to burajiruno sakkaano shiaiga arimasu.",
+                    romaji: "toukyouで 日本to burajiruno sakkaano shiaiga arimasu.",
                     vietnamese: "Trận bóng đá giữa Nhật Bản và Brazil diễn ra ở Tokyo."
                 ),
                 GrammarExample(
                     japanese: "らいしゅう　日本ほうセンターで　クリスマスパーティーが　あります。",
-                    romaji: "raishuu 日本housentaade kurisumasupaatiiga arimasu.",
+                    romaji: "raishuu 日本housentaaで kurisumasupaatiiga arimasu.",
                     vietnamese: "Tuần sau ở trung tâm Luật Nhật Bản sẽ có 1 buổi tiệc giáng sinh. (tức là: Tuần sau ở trung tâm Luật Nhật Bản, 1 buổi tiệc giáng sinh sẽ được tổ chức)."
                 ),
                 GrammarExample(
@@ -3229,7 +3309,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "かいぎで　なにか　いけんを　いいましたか。",
-                    romaji: "kaigide nanika ikeno iimashitaka.",
+                    romaji: "kaigiで nanika ikeno iimashitaka.",
                     vietnamese: "Bạn có nói ý kiến gì trong buổi họp không?"
                 )
             ],
@@ -3245,7 +3325,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "ちょっと　ビールでも　のみませんか。",
-                    romaji: "chotto biirudemo nomimasenka.",
+                    romaji: "chotto biiruでmo nomimasenka.",
                     vietnamese: "Uống bia hay cái gì đấy không? Trong ví dụ trên, người nói muốn đề xuất việc uống một đồ uống gì đó, và đưa bia lên làm ví dụ từ rất nhiều đồ uống (cà phê, chè, nước,...). Tức là người nói không chỉ rủ người nghe uống bia, mà là rủ người nghe uống một thứ gì đó mà có thể là bia chẳng hạn."
                 )
             ],
@@ -3266,7 +3346,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 22 (2 điểm)
+    public static let lesson22Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 22,
             order: 1,
@@ -3277,7 +3361,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "おんがくを　きいている　人（は　ハイさんです）。",
-                    romaji: "ongakuo kiiteiru 人（wa waisandesu）.",
+                    romaji: "ongakuo kiiteiru 人（wa waisanでsu）.",
                     vietnamese: "Người đang nghe nhạc (là anh Hải)."
                 ),
                 GrammarExample(
@@ -3292,12 +3376,12 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "あの　せが　たかくて、かみが　ながい　ひと（は　だれですか）。",
-                    romaji: "ano sega takakute, kamiga nagai hito（wa daredesuka）.",
+                    romaji: "ano sega takakute, kamiga nagai hito（wa dareでsuka）.",
                     vietnamese: "Người cao, tóc dài kia (là ai?)"
                 ),
                 GrammarExample(
                     japanese: "（これは）　わたしが　すきな　えいが（です）。",
-                    romaji: "（koreha） watashiga sukina eiga（desu）.",
+                    romaji: "（koreha） watashiga sukina eiga（でsu）.",
                     vietnamese: "(Đây là) bộ phim tôi thích."
                 ),
                 GrammarExample(
@@ -3307,32 +3391,32 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "これは　ハイさんが　すんでいた　うちです。",
-                    romaji: "korewa waisanga sundeita uchidesu.",
+                    romaji: "korewa waisanga sunでita uchiでsu.",
                     vietnamese: "Đây là ngôi nhà anh Hải đã từng sống."
                 ),
                 GrammarExample(
                     japanese: "ハイさんが　すんでいた　うちは　とても　ふるいです。",
-                    romaji: "waisanga sundeita uchiwa totemo furuidesu.",
+                    romaji: "waisanga sunでita uchiwa totemo furuiでsu.",
                     vietnamese: "Ngôi nhà anh Hải đã từng sống rất cũ."
                 ),
                 GrammarExample(
                     japanese: "ハイさんが　すんでいた　うちを　かいました。",
-                    romaji: "waisanga sundeita uchio kaimashita.",
+                    romaji: "waisanga sunでita uchio kaimashita.",
                     vietnamese: "Tôi đã mua ngôi nhà mà anh Hải đã từng sống."
                 ),
                 GrammarExample(
                     japanese: "わたしは　ハイさんが　すんでいた　うちが　すきです。",
-                    romaji: "watashiwa waisanga sundeita uchiga sukidesu.",
+                    romaji: "watashiwa waisanga sunでita uchiga sukiでsu.",
                     vietnamese: "Tôi thích ngôi nhà anh Hải đã từng sống."
                 ),
                 GrammarExample(
                     japanese: "ハイさんが　すんでいた　うちに　ねこが　いました。",
-                    romaji: "waisanga sundeita uchini nekoga imashita.",
+                    romaji: "waisanga sunでita uchini nekoga imashita.",
                     vietnamese: "Trong ngôi nhà anh Hải đã từng sống có con mèo."
                 ),
                 GrammarExample(
                     japanese: "ハイさんが　すんでいた　うちに　いったことが　ありますか。",
-                    romaji: "waisanga sundeita uchini ittakotoga arimasuka.",
+                    romaji: "waisanga sunでita uchini ittakotoga arimasuka.",
                     vietnamese: "Bạn đã đến ngôi nhà anh Hải đã từng sống bao giờ chưa?"
                 ),
                 GrammarExample(
@@ -3342,7 +3426,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "わたしは　［やまださんが　かいた］　えが　すきです。",
-                    romaji: "watashiwa ［yamadasanga kaita］ ega sukidesu.",
+                    romaji: "watashiwa ［yamadasanga kaita］ ega sukiでsu.",
                     vietnamese: "Tôi thích bức tranh anh Yamada vẽ."
                 ),
                 GrammarExample(
@@ -3378,7 +3462,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 23 (5 điểm)
+    public static let lesson23Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 23,
             order: 1,
@@ -3389,7 +3477,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "としょかんで　本を　かりる　とき、カードが　いります。",
-                    romaji: "toshokande 本o kariru toki, kaadoga irimasu.",
+                    romaji: "toshokanで 本o kariru toki, kaadoga irimasu.",
                     vietnamese: "Khi mượn sách ở thư viện, cần có thẻ."
                 ),
                 GrammarExample(
@@ -3404,7 +3492,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "わかい　とき、あまり　べんきょうしませんでした。",
-                    romaji: "wakai toki, amari benkyoushimasendeshita.",
+                    romaji: "wakai toki, amari benkyoushimasenでshita.",
                     vietnamese: "Lúc trẻ, tôi không học mấy."
                 ),
                 GrammarExample(
@@ -3419,7 +3507,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "こどもの　とき、よく　かわで　およぎました。",
-                    romaji: "kodomono toki, yoku kawade oyogimashita.",
+                    romaji: "kodomono toki, yoku kawaで oyogimashita.",
                     vietnamese: "Lúc nhỏ, tôi rất hay bơi ở sông."
                 )
             ],
@@ -3461,7 +3549,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "この　ボタンを　おすと、おつりが　でます。",
-                    romaji: "kono botano osuto, otsuriga demasu.",
+                    romaji: "kono botano osuto, otsuriga でmasu.",
                     vietnamese: "Ấn cái nút này thì tiền trả lại sẽ ra."
                 ),
                 GrammarExample(
@@ -3487,17 +3575,17 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "おとが　ちいさいです。",
-                    romaji: "otoga chiisaidesu.",
+                    romaji: "otoga chiisaiでsu.",
                     vietnamese: "Âm thanh bé."
                 ),
                 GrammarExample(
                     japanese: "でんきが　あかるく　なりました。",
-                    romaji: "denkiga akaruku narimashita.",
+                    romaji: "でnkiga akaruku narimashita.",
                     vietnamese: "Đèn trở nên sáng."
                 ),
                 GrammarExample(
                     japanese: "この　ボタンを　おすと、きっぷが　でます。",
-                    romaji: "kono botano osuto, kippuga demasu.",
+                    romaji: "kono botano osuto, kippuga でmasu.",
                     vietnamese: "Ấn nút này thì vé sẽ chui ra."
                 )
             ],
@@ -3528,7 +3616,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 24 (4 điểm)
+    public static let lesson24Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 24,
             order: 1,
@@ -3575,7 +3667,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "ハイさんは　やまださんに　としょかんの　でんわばんごうを　おしえて　もら いました。",
-                    romaji: "waisanwa yamadasanni toshokanno denwabangouo oshiete mora imashita.",
+                    romaji: "waisanwa yamadasanni toshokanno でnwabangouo oshiete mora imashita.",
                     vietnamese: "Anh Hải được anh Yamada cho biết số điện thoại của thư viện."
                 ),
                 GrammarExample(
@@ -3596,7 +3688,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "A：すてきな　ネクタイですね。",
-                    romaji: "A: sutekina nekutaidesune.",
+                    romaji: "A: sutekina nekutaiでsune.",
                     vietnamese: "Cà vạt đẹp nhỉ."
                 )
             ],
@@ -3617,7 +3709,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "１年で　いつが　いちばん　さむいですか。",
-                    romaji: "１年de itsuga ichiban samuidesuka.",
+                    romaji: "１年で itsuga ichiban samuiでsuka.",
                     vietnamese: "Trong một năm, khi nào là lạnh nhất? Câu động từ cũng tương tự như vậy:"
                 ),
                 GrammarExample(
@@ -3627,7 +3719,11 @@ public final class GrammarRepository {
                 )
             ],
             usageNotes: nil
-        ),
+        )
+    ]
+    
+    // MARK: - Ngữ pháp Bài 25 (6 điểm)
+    public static let lesson25Points: [GrammarPoint] = [
         GrammarPoint(
             lessonNumber: 25,
             order: 1,
@@ -3648,7 +3744,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "やすかったら、パソコンを　かいたいです。",
-                    romaji: "yasukattara, pasokono kaitaidesu.",
+                    romaji: "yasukattara, pasokono kaitaiでsu.",
                     vietnamese: "Nếu rẻ thì tôi muốn mua máy tính."
                 ),
                 GrammarExample(
@@ -3673,12 +3769,12 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "100 万えんが　あったら、りょこうに　いきたいです。",
-                    romaji: "100 万enga attara, ryokouni ikitaidesu.",
+                    romaji: "100 万enga attara, ryokouni ikitaiでsu.",
                     vietnamese: "Nếu có 1 triệu yên thì tôi muốn đi du lịch."
                 ),
                 GrammarExample(
                     japanese: "にわが　もう　ちょっと　ひろかったら、はなを　つくりたいです。",
-                    romaji: "niwaga mou chotto hirokattara, wanao tsukuritaidesu.",
+                    romaji: "niwaga mou chotto hirokattara, wanao tsukuritaiでsu.",
                     vietnamese: "Nếu vườn rộng hơn một chút nữa thì tôi muốn trồng hoa."
                 ),
                 GrammarExample(
@@ -3704,7 +3800,7 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "10 時に　なったら、でかけましょう。",
-                    romaji: "10 時ni nattara, dekakemashou.",
+                    romaji: "10 時ni nattara, でkakemashou.",
                     vietnamese: "Đến 10 giờ thì chúng ta sẽ đi ra ngoài."
                 ),
                 GrammarExample(
@@ -3725,22 +3821,22 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "にちようびでも　はたらきます。",
-                    romaji: "nichiyoubidemo watarakimasu.",
+                    romaji: "nichiyoubiでmo watarakimasu.",
                     vietnamese: "Mặc dù là chủ nhật nhưng tôi vẫn làm việc."
                 ),
                 GrammarExample(
                     japanese: "やすくても、わたしは　グループりょこうが　きらいです。",
-                    romaji: "yasukutemo, watashiwa guruupuryokouga kiraidesu.",
+                    romaji: "yasukutemo, watashiwa guruupuryokouga kiraiでsu.",
                     vietnamese: "Dù rẻ nhưng tôi ghét du lịch theo tour."
                 ),
                 GrammarExample(
                     japanese: "べんりでも、パソコンを　つかいません。",
-                    romaji: "benridemo, pasokono tsukaimasen.",
+                    romaji: "benriでmo, pasokono tsukaimasen.",
                     vietnamese: "Dù tiện nhưng tôi không dùng máy tính."
                 ),
                 GrammarExample(
                     japanese: "がんばっても、この　しごとは　あしたまでに　おわらないと　おもいます。",
-                    romaji: "ganbattemo, kono shigotowa ashitamadeni owaranaito omoimasu.",
+                    romaji: "ganbattemo, kono shigotowa ashitamaでni owaranaito omoimasu.",
                     vietnamese: "Tôi nghĩ là dù có cố gắng thì công việc này cũng không xong trước ngày mai. Xét các ví dụ trên:"
                 ),
                 GrammarExample(
@@ -3766,12 +3862,12 @@ public final class GrammarRepository {
             examples: [
                 GrammarExample(
                     japanese: "もし　1 おくえん　あったら、いろいろな　くにを　りょこうしたいです。",
-                    romaji: "moshi 1 okuen attara, iroirona kunio ryokoushitaidesu.",
+                    romaji: "moshi 1 okuen attara, iroirona kunio ryokoushitaiでsu.",
                     vietnamese: "Nếu có 100 triệu yên thì tôi sẽ đi du lịch nhiều nước."
                 ),
                 GrammarExample(
                     japanese: "もし　あした　ひまだったら、やまへ　いきたいです。",
-                    romaji: "moshi ashita himadattara, yamahe ikitaidesu.",
+                    romaji: "moshi ashita himadattara, yamahe ikitaiでsu.",
                     vietnamese: "Nếu ngày mai rỗi thì tôi muốn đi lên núi."
                 ),
                 GrammarExample(
@@ -3812,7 +3908,7 @@ public final class GrammarRepository {
                 ),
                 GrammarExample(
                     japanese: "ちずが　なくても、くることが　できます。",
-                    romaji: "chizuga nakutemo, kurukotoga dekimasu.",
+                    romaji: "chizuga nakutemo, kurukotoga でkimasu.",
                     vietnamese: "Dù không có bản đồ thì tôi vẫn có thể đến được."
                 ),
                 GrammarExample(
@@ -3846,9 +3942,68 @@ public final class GrammarRepository {
         )
     ]
     
+    // MARK: - Toàn bộ điểm ngữ pháp N5
+    public let grammarPoints: [GrammarPoint] = {
+        var list: [GrammarPoint] = []
+        list.reserveCapacity(200)
+        list.append(contentsOf: lesson1Points)
+        list.append(contentsOf: lesson2Points)
+        list.append(contentsOf: lesson3Points)
+        list.append(contentsOf: lesson4Points)
+        list.append(contentsOf: lesson5Points)
+        list.append(contentsOf: lesson6Points)
+        list.append(contentsOf: lesson7Points)
+        list.append(contentsOf: lesson8Points)
+        list.append(contentsOf: lesson9Points)
+        list.append(contentsOf: lesson10Points)
+        list.append(contentsOf: lesson11Points)
+        list.append(contentsOf: lesson12Points)
+        list.append(contentsOf: lesson13Points)
+        list.append(contentsOf: lesson14Points)
+        list.append(contentsOf: lesson15Points)
+        list.append(contentsOf: lesson16Points)
+        list.append(contentsOf: lesson17Points)
+        list.append(contentsOf: lesson18Points)
+        list.append(contentsOf: lesson19Points)
+        list.append(contentsOf: lesson20Points)
+        list.append(contentsOf: lesson21Points)
+        list.append(contentsOf: lesson22Points)
+        list.append(contentsOf: lesson23Points)
+        list.append(contentsOf: lesson24Points)
+        list.append(contentsOf: lesson25Points)
+        return list
+    }()
+    
     // MARK: - Query Functions
     public func getGrammarPoints(forLesson lessonNumber: Int) -> [GrammarPoint] {
-        return grammarPoints.filter { $0.lessonNumber == lessonNumber }
+        switch lessonNumber {
+        case 1: return Self.lesson1Points
+        case 2: return Self.lesson2Points
+        case 3: return Self.lesson3Points
+        case 4: return Self.lesson4Points
+        case 5: return Self.lesson5Points
+        case 6: return Self.lesson6Points
+        case 7: return Self.lesson7Points
+        case 8: return Self.lesson8Points
+        case 9: return Self.lesson9Points
+        case 10: return Self.lesson10Points
+        case 11: return Self.lesson11Points
+        case 12: return Self.lesson12Points
+        case 13: return Self.lesson13Points
+        case 14: return Self.lesson14Points
+        case 15: return Self.lesson15Points
+        case 16: return Self.lesson16Points
+        case 17: return Self.lesson17Points
+        case 18: return Self.lesson18Points
+        case 19: return Self.lesson19Points
+        case 20: return Self.lesson20Points
+        case 21: return Self.lesson21Points
+        case 22: return Self.lesson22Points
+        case 23: return Self.lesson23Points
+        case 24: return Self.lesson24Points
+        case 25: return Self.lesson25Points
+        default: return []
+        }
     }
     
     public func getAllGrammarPoints() -> [GrammarPoint] {

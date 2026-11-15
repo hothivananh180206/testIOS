@@ -21,11 +21,8 @@ public final class VocabRepository {
         VocabTopic(id: "travel", title: "Đi lại & Phương tiện", iconName: "tram.fill", detail: "Tàu điện, xe bus, hỏi đường")
     ]
     
-    // MARK: - Danh sách Từ vựng N5 (Phân loại theo Chủ đề & Theo từng Bài học 1 - 25)
-    public let vocabList: [VocabWord] = [
-        // ==========================================
-        // MARK: - BÀI 1
-        // ==========================================
+    // MARK: - Bài 1 (60 từ)
+    public static let lesson1Words: [VocabWord] = [
         VocabWord(
             kanji: "私",
             kana: "わたし",
@@ -329,7 +326,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "電気",
             kana: "でんき",
-            romaji: "denki",
+            romaji: "でnki",
             meaningVi: "Điện、điện lực",
             topicId: "travel",
             lessonNumber: 1,
@@ -625,10 +622,11 @@ public final class VocabRepository {
             lessonNumber: 1,
             exampleJp: "ベトナムがあります。",
             exampleVi: "Có việt nam."
-        ),
-        // ==========================================
-        // MARK: - BÀI 2
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 2 (67 từ)
+    public static let lesson2Words: [VocabWord] = [
         VocabWord(
             kanji: nil,
             kana: "これ",
@@ -1002,7 +1000,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "電話",
             kana: "でんわ",
-            romaji: "denwa",
+            romaji: "でnwa",
             meaningVi: "Điện thoại",
             topicId: "travel",
             lessonNumber: 2,
@@ -1252,7 +1250,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "そうですか。",
-            romaji: "soudesuka.",
+            romaji: "souでsuka.",
             meaningVi: "Thế à?/ tôi hiểu rồi.",
             topicId: "family",
             lessonNumber: 2,
@@ -1298,10 +1296,11 @@ public final class VocabRepository {
             lessonNumber: 2,
             exampleJp: "こちらこそがあります。",
             exampleVi: "Có よろしく。 tôi cũng mong anh quan tâm, giúp đỡ.."
-        ),
-        // ==========================================
-        // MARK: - BÀI 3
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 3 (49 từ)
+    public static let lesson3Words: [VocabWord] = [
         VocabWord(
             kanji: nil,
             kana: "ここ",
@@ -1791,10 +1790,11 @@ public final class VocabRepository {
             lessonNumber: 3,
             exampleJp: "じゃが好きです。",
             exampleVi: "Tôi thích vậy thì, trong trường hợp đó thì… 「これ」を ください。 xin bán cho tôi."
-        ),
-        // ==========================================
-        // MARK: - BÀI 4
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 4 (90 từ)
+    public static let lesson4Words: [VocabWord] = [
         VocabWord(
             kanji: "起きます",
             kana: "おきます",
@@ -1858,7 +1858,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "デパート",
-            romaji: "depaato",
+            romaji: "でpaato",
             meaningVi: "Cửa hàng bách hóa",
             topicId: "travel",
             lessonNumber: 4,
@@ -2298,7 +2298,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "～まで",
-            romaji: "～made",
+            romaji: "～maで",
             meaningVi: "Đến ~",
             topicId: "travel",
             lessonNumber: 4,
@@ -2418,7 +2418,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "そうですか。",
-            romaji: "soudesuka.",
+            romaji: "souでsuka.",
             meaningVi: "Thế à? ( tỏ ý mình đang nghe）",
             topicId: "greeting",
             lessonNumber: 4,
@@ -2628,7 +2628,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "デパート",
-            romaji: "depaato",
+            romaji: "でpaato",
             meaningVi: "Bách hóa Osaka (tên tưởng tượng, không có thực)",
             topicId: "family",
             lessonNumber: 4,
@@ -2694,10 +2694,11 @@ public final class VocabRepository {
             lessonNumber: 4,
             exampleJp: "かんがあります。",
             exampleVi: "Có thư viện midori."
-        ),
-        // ==========================================
-        // MARK: - BÀI 5
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 5 (60 từ)
+    public static let lesson5Words: [VocabWord] = [
         VocabWord(
             kanji: "行きます",
             kana: "いきます",
@@ -3021,7 +3022,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "電車",
             kana: "でんしゃ",
-            romaji: "densha",
+            romaji: "でnsha",
             meaningVi: "Tàu điện",
             topicId: "travel",
             lessonNumber: 5,
@@ -3151,7 +3152,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "１人で",
             kana: "ひとりで",
-            romaji: "hitoride",
+            romaji: "hitoriで",
             meaningVi: "Một mình",
             topicId: "greeting",
             lessonNumber: 5,
@@ -3297,10 +3298,11 @@ public final class VocabRepository {
             lessonNumber: 5,
             exampleJp: "大阪城があります。",
             exampleVi: "Có （おおさかじょう） thành cổ osaka, thành cổ nổi tiếng ở osaka."
-        ),
-        // ==========================================
-        // MARK: - BÀI 6
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 6 (87 từ)
+    public static let lesson6Words: [VocabWord] = [
         VocabWord(
             kanji: "食べます",
             kana: "たべます",
@@ -3844,7 +3846,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "ビデオ",
-            romaji: "bideo",
+            romaji: "biでo",
             meaningVi: "Băng video CD（シーディー） Đĩa CD",
             topicId: "food",
             lessonNumber: 6,
@@ -4170,10 +4172,11 @@ public final class VocabRepository {
             lessonNumber: 6,
             exampleJp: "大阪城公園へ行きます。",
             exampleVi: "Tôi đi đến （おおさかじょうこうえん） công viên ở osaka."
-        ),
-        // ==========================================
-        // MARK: - BÀI 7
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 7 (79 từ)
+    public static let lesson7Words: [VocabWord] = [
         VocabWord(
             kanji: "切ります",
             kana: "きります",
@@ -4207,7 +4210,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "で",
-            romaji: "de",
+            romaji: "で",
             meaningVi: "ん わ",
             topicId: "greeting",
             lessonNumber: 7,
@@ -4747,7 +4750,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "おめでとう",
-            romaji: "omedetou",
+            romaji: "omeでtou",
             meaningVi: "ございます。 Chúc mừng!",
             topicId: "greeting",
             lessonNumber: 7,
@@ -4777,7 +4780,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "おめでとうございます。",
-            romaji: "omedetougozaimasu.",
+            romaji: "omeでtougozaimasu.",
             meaningVi: "Chúc mừng sinh nhật!",
             topicId: "greeting",
             lessonNumber: 7,
@@ -4957,16 +4960,17 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "いい［シャツ］ですね。",
-            romaji: "ii［shatsu］desune.",
+            romaji: "ii［shatsu］でsune.",
             meaningVi: "[Áo sơ mi] tốt/đẹp quá nhỉ!",
             topicId: "greeting",
             lessonNumber: 7,
             exampleJp: "いい［シャツ］ですね。があります。",
             exampleVi: "Có [áo sơ mi] tốt/đẹp quá nhỉ!."
-        ),
-        // ==========================================
-        // MARK: - BÀI 8
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 8 (72 từ)
+    public static let lesson8Words: [VocabWord] = [
         VocabWord(
             kanji: nil,
             kana: "きれい「な」",
@@ -5500,7 +5504,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "しばらくですね。",
-            romaji: "shibarakudesune.",
+            romaji: "shibarakuでsune.",
             meaningVi: "Lâu lắm không gặp nhỉ.",
             topicId: "family",
             lessonNumber: 8,
@@ -5510,7 +5514,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "おげんきですか。",
-            romaji: "ogenkidesuka.",
+            romaji: "ogenkiでsuka.",
             meaningVi: "Bạn có khỏe không",
             topicId: "family",
             lessonNumber: 8,
@@ -5540,7 +5544,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "いかがですか。",
-            romaji: "ikagadesuka.",
+            romaji: "ikagaでsuka.",
             meaningVi: "Uống/Dùng thêm (cà phê) nhé/không?",
             topicId: "family",
             lessonNumber: 8,
@@ -5570,7 +5574,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "いいえ、けっこうです。",
-            romaji: "iie, kekkoudesu.",
+            romaji: "iie, kekkouでsu.",
             meaningVi: "Không, cảm ơn, tôi đủ rồi (nói khi từ chối ăn tiếp).",
             topicId: "family",
             lessonNumber: 8,
@@ -5610,7 +5614,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "ですね。",
-            romaji: "desune.",
+            romaji: "でsune.",
             meaningVi: "Đã 12 giờ rồi nhỉ.",
             topicId: "time",
             lessonNumber: 8,
@@ -5620,7 +5624,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "そうですね。",
-            romaji: "soudesune.",
+            romaji: "souでsune.",
             meaningVi: "À, cái đó thì… (nói khi tạm ngừng và suy nghĩ) Vâng, Vâng đúng rồi (nói khi đồng ý với ý kiến khác)",
             topicId: "food",
             lessonNumber: 8,
@@ -5686,10 +5690,11 @@ public final class VocabRepository {
             lessonNumber: 8,
             exampleJp: "またがあります。",
             exampleVi: "Có いらっしゃってください。 lần sau lại đến nhé.."
-        ),
-        // ==========================================
-        // MARK: - BÀI 9
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 9 (66 từ)
+    public static let lesson9Words: [VocabWord] = [
         VocabWord(
             kanji: "分かります",
             kana: "わかります",
@@ -6263,7 +6268,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "何ですか",
             kana: "なんですか。",
-            romaji: "nandesuka.",
+            romaji: "nanでsuka.",
             meaningVi: "Có việc gì đấy?",
             topicId: "greeting",
             lessonNumber: 9,
@@ -6283,7 +6288,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "残念ですね。",
             kana: "ざんねんです「ね」",
-            romaji: "zannendesu\"ne\"",
+            romaji: "zannenでsu\"ne\"",
             meaningVi: "Tiếc nhỉ!, tiếc quá nhỉ!",
             topicId: "greeting",
             lessonNumber: 9,
@@ -6323,7 +6328,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "だめですか。",
-            romaji: "damedesuka.",
+            romaji: "dameでsuka.",
             meaningVi: "Không được sao?",
             topicId: "family",
             lessonNumber: 9,
@@ -6349,10 +6354,11 @@ public final class VocabRepository {
             lessonNumber: 9,
             exampleJp: "小沢征爾があります。",
             exampleVi: "Có nhạc sĩ, chỉ huy dàn nhạc giao hưởng nổi tiếng người nhật - ozawa seiji."
-        ),
-        // ==========================================
-        // MARK: - BÀI 10
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 10 (49 từ)
+    public static let lesson10Words: [VocabWord] = [
         VocabWord(
             kanji: nil,
             kana: "います",
@@ -6546,7 +6552,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "電池",
             kana: "でんち",
-            romaji: "denchi",
+            romaji: "でnchi",
             meaningVi: "Pin, cục pin",
             topicId: "greeting",
             lessonNumber: 10,
@@ -6842,10 +6848,11 @@ public final class VocabRepository {
             lessonNumber: 10,
             exampleJp: "奥があります。",
             exampleVi: "Có phía sâu bên trong."
-        ),
-        // ==========================================
-        // MARK: - BÀI 11
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 11 (50 từ)
+    public static let lesson11Words: [VocabWord] = [
         VocabWord(
             kanji: nil,
             kana: "います",
@@ -7249,7 +7256,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "全部で",
             kana: "ぜんぶで",
-            romaji: "zenbude",
+            romaji: "zenbuで",
             meaningVi: "Tất cả là, tổng cộng là",
             topicId: "greeting",
             lessonNumber: 11,
@@ -7299,7 +7306,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "ですね。",
-            romaji: "desune.",
+            romaji: "でsune.",
             meaningVi: "Thời tiết đẹp nhỉ!",
             topicId: "greeting",
             lessonNumber: 11,
@@ -7345,10 +7352,11 @@ public final class VocabRepository {
             lessonNumber: 11,
             exampleJp: "いってまいります。があります。",
             exampleVi: "Có tôi đi rồi về."
-        ),
-        // ==========================================
-        // MARK: - BÀI 12
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 12 (56 từ)
+    public static let lesson12Words: [VocabWord] = [
         VocabWord(
             kanji: "暇「な」",
             kana: "ひま［な］",
@@ -7812,7 +7820,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "でも",
-            romaji: "demo",
+            romaji: "でmo",
             meaningVi: "Nhưng",
             topicId: "greeting",
             lessonNumber: 12,
@@ -7842,7 +7850,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "すごいですね。",
-            romaji: "sugoidesune.",
+            romaji: "sugoiでsune.",
             meaningVi: "Siêu quá nhỉ, kinh quá nhỉ!",
             topicId: "greeting",
             lessonNumber: 12,
@@ -7908,10 +7916,11 @@ public final class VocabRepository {
             lessonNumber: 12,
             exampleJp: "ジャパンがあります。",
             exampleVi: "Có nhật bản."
-        ),
-        // ==========================================
-        // MARK: - BÀI 13
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 13 (77 từ)
+    public static let lesson13Words: [VocabWord] = [
         VocabWord(
             kanji: "遊びます",
             kana: "あそびます",
@@ -8475,7 +8484,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "いいてんきですね。",
-            romaji: "iitenkidesune.",
+            romaji: "iitenkiでsune.",
             meaningVi: "Trời đẹp quá nhỉ.",
             topicId: "greeting",
             lessonNumber: 13,
@@ -8485,7 +8494,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "そうですね。",
-            romaji: "soudesune.",
+            romaji: "souでsune.",
             meaningVi: "Ừ nhỉ. (cách trả lời đồng ý đối với ý kiến của người ta)",
             topicId: "family",
             lessonNumber: 13,
@@ -8681,10 +8690,11 @@ public final class VocabRepository {
             lessonNumber: 13,
             exampleJp: "ロシアが好きです。",
             exampleVi: "Tôi thích nước nga."
-        ),
-        // ==========================================
-        // MARK: - BÀI 14
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 14 (74 từ)
+    public static let lesson14Words: [VocabWord] = [
         VocabWord(
             kanji: "呼びます",
             kana: "よびます",
@@ -9178,7 +9188,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "さあ、いいですよ。",
-            romaji: "saa, iidesuyo.",
+            romaji: "saa, iiでsuyo.",
             meaningVi: "Được đấy. Tất nhiên rồi (sử dụng khi cổ vũ, khích lệ một hành động nào đó)",
             topicId: "greeting",
             lessonNumber: 14,
@@ -9348,7 +9358,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "お願",
             kana: "これで",
-            romaji: "korede",
+            romaji: "koreで",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 14,
@@ -9424,10 +9434,11 @@ public final class VocabRepository {
             lessonNumber: 14,
             exampleJp: "うめだがあります。",
             exampleVi: "Có tên 1 thị trấn ở osaka."
-        ),
-        // ==========================================
-        // MARK: - BÀI 15
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 15 (40 từ)
+    public static let lesson15Words: [VocabWord] = [
         VocabWord(
             kanji: "使います",
             kana: "つかいます",
@@ -9581,7 +9592,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "住んでいます",
             kana: "すんでいます",
-            romaji: "sundeimasu",
+            romaji: "sunでimasu",
             meaningVi: "Sống, sinh sống [ở Tokyo]",
             topicId: "greeting",
             lessonNumber: 15,
@@ -9827,10 +9838,11 @@ public final class VocabRepository {
             lessonNumber: 15,
             exampleJp: "にほんばしがあります。",
             exampleVi: "Có tên 1 quận mua sắm ở osaka."
-        ),
-        // ==========================================
-        // MARK: - BÀI 16
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 16 (89 từ)
+    public static let lesson16Words: [VocabWord] = [
         VocabWord(
             kanji: "歩きます",
             kana: "あるきます",
@@ -9864,7 +9876,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "でんしゃ",
-            romaji: "densha",
+            romaji: "でnsha",
             meaningVi: "でんしゃ",
             topicId: "greeting",
             lessonNumber: 16,
@@ -9904,7 +9916,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "でんしゃ",
-            romaji: "densha",
+            romaji: "でnsha",
             meaningVi: "でんしゃ",
             topicId: "greeting",
             lessonNumber: 16,
@@ -10034,7 +10046,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "出ます",
             kana: "でます",
-            romaji: "demasu",
+            romaji: "でmasu",
             meaningVi: "Ra, ra khỏi, tốt nghiệp",
             topicId: "travel",
             lessonNumber: 16,
@@ -10474,7 +10486,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "なんでも",
-            romaji: "nandemo",
+            romaji: "nanでmo",
             meaningVi: "いいです。 Cái gì cũng được. Thế nào cũng được.",
             topicId: "food",
             lessonNumber: 16,
@@ -10544,7 +10556,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "しですか。",
-            romaji: "shidesuka.",
+            romaji: "shiでsuka.",
             meaningVi: "(Ngài) Rút tiền ạ?",
             topicId: "greeting",
             lessonNumber: 16,
@@ -10720,10 +10732,11 @@ public final class VocabRepository {
             lessonNumber: 16,
             exampleJp: "フエがあります。",
             exampleVi: "Có huế."
-        ),
-        // ==========================================
-        // MARK: - BÀI 17
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 17 (52 từ)
+    public static let lesson17Words: [VocabWord] = [
         VocabWord(
             kanji: "忘れます",
             kana: "わすれます",
@@ -10877,7 +10890,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "出かけます",
             kana: "でかけます",
-            romaji: "dekakemasu",
+            romaji: "でkakemasu",
             meaningVi: "Đi ra ngoài",
             topicId: "travel",
             lessonNumber: 17,
@@ -11147,7 +11160,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "～までに",
-            romaji: "～madeni",
+            romaji: "～maでni",
             meaningVi: "Đến khi ~, đến ~ (chỉ thời hạn)",
             topicId: "travel",
             lessonNumber: 17,
@@ -11157,7 +11170,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "ですから",
-            romaji: "desukara",
+            romaji: "でsukara",
             meaningVi: "Vì vậy, cho nên (đứng đầu câu)",
             topicId: "greeting",
             lessonNumber: 17,
@@ -11167,7 +11180,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "だめです。",
-            romaji: "damedesu.",
+            romaji: "dameでsu.",
             meaningVi: "Không được",
             topicId: "family",
             lessonNumber: 17,
@@ -11197,7 +11210,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "いです。",
-            romaji: "idesu.",
+            romaji: "iでsu.",
             meaningVi: "Đau [ ～]",
             topicId: "greeting",
             lessonNumber: 17,
@@ -11243,14 +11256,15 @@ public final class VocabRepository {
             lessonNumber: 17,
             exampleJp: "に。があります。",
             exampleVi: "Có chóng bình phục nhé!."
-        ),
-        // ==========================================
-        // MARK: - BÀI 18
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 18 (39 từ)
+    public static let lesson18Words: [VocabWord] = [
         VocabWord(
             kanji: nil,
             kana: "できます",
-            romaji: "dekimasu",
+            romaji: "でkimasu",
             meaningVi: "Có thể, được, có khả năng",
             topicId: "food",
             lessonNumber: 18,
@@ -11510,7 +11524,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "大丈夫です。",
             kana: "だいじょうぶです。",
-            romaji: "daijoubudesu.",
+            romaji: "daijoubuでsu.",
             meaningVi: "Không hề gì. Không sao đâu.",
             topicId: "family",
             lessonNumber: 18,
@@ -11610,7 +11624,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "ほんとうですか。",
-            romaji: "hontoudesuka.",
+            romaji: "hontouでsuka.",
             meaningVi: "Thật sao?",
             topicId: "greeting",
             lessonNumber: 18,
@@ -11636,10 +11650,11 @@ public final class VocabRepository {
             lessonNumber: 18,
             exampleJp: "ビートルズがあります。",
             exampleVi: "Có nhạc the beatles."
-        ),
-        // ==========================================
-        // MARK: - BÀI 19
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 19 (38 từ)
+    public static let lesson19Words: [VocabWord] = [
         VocabWord(
             kanji: "掃除します",
             kana: "そうじします",
@@ -11933,7 +11948,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "おかげさまで。",
-            romaji: "okagesamade.",
+            romaji: "okagesamaで.",
             meaningVi: "Cảm ơn. Nhờ trời.",
             topicId: "greeting",
             lessonNumber: 19,
@@ -12019,10 +12034,11 @@ public final class VocabRepository {
             lessonNumber: 19,
             exampleJp: "ケーキが好きです。",
             exampleVi: "Tôi thích bánh ngọt."
-        ),
-        // ==========================================
-        // MARK: - BÀI 20
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 20 (39 từ)
+    public static let lesson20Words: [VocabWord] = [
         VocabWord(
             kanji: "要ります",
             kana: "いります",
@@ -12096,7 +12112,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "電話します",
             kana: "でんわします",
-            romaji: "denwashimasu",
+            romaji: "でnwashimasu",
             meaningVi: "Gọi điện thoại",
             topicId: "travel",
             lessonNumber: 20,
@@ -12286,7 +12302,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "皆で",
             kana: "みんなで",
-            romaji: "minnade",
+            romaji: "minnaで",
             meaningVi: "Tất cả mọi người",
             topicId: "family",
             lessonNumber: 20,
@@ -12412,10 +12428,11 @@ public final class VocabRepository {
             lessonNumber: 20,
             exampleJp: "よかったらがあります。",
             exampleVi: "Có nếu bạn thích, nếu được, nếu ổn."
-        ),
-        // ==========================================
-        // MARK: - BÀI 21
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 21 (53 từ)
+    public static let lesson21Words: [VocabWord] = [
         VocabWord(
             kanji: "思います",
             kana: "おもいます",
@@ -12679,7 +12696,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "んでいます。",
-            romaji: "ndeimasu.",
+            romaji: "nでimasu.",
             meaningVi: "[Nhật Bản] tiên tiến về kỹ thuật. [Ở Nhật Bản] kỹ thuật phát triển (cao) Từ vự ng tham khả o",
             topicId: "travel",
             lessonNumber: 21,
@@ -12829,7 +12846,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "デザイン",
-            romaji: "dezain",
+            romaji: "でzain",
             meaningVi: "Mẫu thiết kế",
             topicId: "greeting",
             lessonNumber: 21,
@@ -12859,7 +12876,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "飲",
             kana: "～でも",
-            romaji: "～demo",
+            romaji: "～でmo",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 21,
@@ -12945,10 +12962,11 @@ public final class VocabRepository {
             lessonNumber: 21,
             exampleJp: "キャプテン・クックがあります。",
             exampleVi: "Có thuyền trưởng james cook."
-        ),
-        // ==========================================
-        // MARK: - BÀI 22
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 22 (47 từ)
+    public static let lesson22Words: [VocabWord] = [
         VocabWord(
             kanji: "着ます",
             kana: "きます",
@@ -13292,7 +13310,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "れさまでした。",
-            romaji: "resamadeshita.",
+            romaji: "resamaでshita.",
             meaningVi: "Cảm ơn nhé. Anh về nhé. (dùng khi người khác làm việc cho mình xong. Hoặc khi người cùng làm trong cơ quan về sớm hơn mình thì nói câu này để chào.) Từ vự ng tham khả o",
             topicId: "family",
             lessonNumber: 22,
@@ -13418,10 +13436,11 @@ public final class VocabRepository {
             lessonNumber: 22,
             exampleJp: "うーんがあります。",
             exampleVi: "Có để tôi xem đã.."
-        ),
-        // ==========================================
-        // MARK: - BÀI 23
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 23 (45 từ)
+    public static let lesson23Words: [VocabWord] = [
         VocabWord(
             kanji: "聞きます",
             kana: "ききます",
@@ -13505,7 +13524,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "出ます",
             kana: "でます",
-            romaji: "demasu",
+            romaji: "でmasu",
             meaningVi: "Ra, chạy ra (Nhóm Ⅱ, 出ます、出る、出て)",
             topicId: "travel",
             lessonNumber: 23,
@@ -13871,10 +13890,11 @@ public final class VocabRepository {
             lessonNumber: 23,
             exampleJp: "外国人登録証が好きです。",
             exampleVi: "Tôi thích thẻ đăng ký người nước ngoài."
-        ),
-        // ==========================================
-        // MARK: - BÀI 24
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 24 (26 từ)
+    public static let lesson24Words: [VocabWord] = [
         VocabWord(
             kanji: "送ります",
             kana: "おくります",
@@ -14038,7 +14058,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "自分で",
             kana: "じぶんで",
-            romaji: "jibunde",
+            romaji: "jibunで",
             meaningVi: "Tự mình",
             topicId: "greeting",
             lessonNumber: 24,
@@ -14058,7 +14078,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: "本当ですか",
             kana: "ほんとうですか",
-            romaji: "hontoudesuka",
+            romaji: "hontouでsuka",
             meaningVi: "Thậ t sao?",
             topicId: "greeting",
             lessonNumber: 24,
@@ -14134,10 +14154,11 @@ public final class VocabRepository {
             lessonNumber: 24,
             exampleJp: "母の日に勉強します。",
             exampleVi: "Tôi học vào ngày của mẹ."
-        ),
-        // ==========================================
-        // MARK: - BÀI 25
-        // ==========================================
+        )
+    ]
+    
+    // MARK: - Bài 25 (34 từ)
+    public static let lesson25Words: [VocabWord] = [
         VocabWord(
             kanji: "考えます",
             kana: "かんがえます",
@@ -14341,7 +14362,7 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "いつでも",
-            romaji: "itsudemo",
+            romaji: "itsuでmo",
             meaningVi: "Bất cứ lúc nào 「いろいろ」おせわに なりました。 Xin cảm ơn ông về tất cả những gì ông đã giúp tôi (lời tỏ lòng biết ơn đối với người đã giúp đỡ mình)",
             topicId: "family",
             lessonNumber: 25,
@@ -14480,13 +14501,72 @@ public final class VocabRepository {
         )
     ]
     
+    // MARK: - Danh sách toàn bộ từ vựng N5
+    public let vocabList: [VocabWord] = {
+        var list: [VocabWord] = []
+        list.reserveCapacity(1500)
+        list.append(contentsOf: lesson1Words)
+        list.append(contentsOf: lesson2Words)
+        list.append(contentsOf: lesson3Words)
+        list.append(contentsOf: lesson4Words)
+        list.append(contentsOf: lesson5Words)
+        list.append(contentsOf: lesson6Words)
+        list.append(contentsOf: lesson7Words)
+        list.append(contentsOf: lesson8Words)
+        list.append(contentsOf: lesson9Words)
+        list.append(contentsOf: lesson10Words)
+        list.append(contentsOf: lesson11Words)
+        list.append(contentsOf: lesson12Words)
+        list.append(contentsOf: lesson13Words)
+        list.append(contentsOf: lesson14Words)
+        list.append(contentsOf: lesson15Words)
+        list.append(contentsOf: lesson16Words)
+        list.append(contentsOf: lesson17Words)
+        list.append(contentsOf: lesson18Words)
+        list.append(contentsOf: lesson19Words)
+        list.append(contentsOf: lesson20Words)
+        list.append(contentsOf: lesson21Words)
+        list.append(contentsOf: lesson22Words)
+        list.append(contentsOf: lesson23Words)
+        list.append(contentsOf: lesson24Words)
+        list.append(contentsOf: lesson25Words)
+        return list
+    }()
+    
     // MARK: - Query Functions
     public func getWords(for topicId: String) -> [VocabWord] {
         return vocabList.filter { $0.topicId == topicId }
     }
     
     public func getWords(forLesson lessonNumber: Int) -> [VocabWord] {
-        return vocabList.filter { $0.lessonNumber == lessonNumber }
+        switch lessonNumber {
+        case 1: return Self.lesson1Words
+        case 2: return Self.lesson2Words
+        case 3: return Self.lesson3Words
+        case 4: return Self.lesson4Words
+        case 5: return Self.lesson5Words
+        case 6: return Self.lesson6Words
+        case 7: return Self.lesson7Words
+        case 8: return Self.lesson8Words
+        case 9: return Self.lesson9Words
+        case 10: return Self.lesson10Words
+        case 11: return Self.lesson11Words
+        case 12: return Self.lesson12Words
+        case 13: return Self.lesson13Words
+        case 14: return Self.lesson14Words
+        case 15: return Self.lesson15Words
+        case 16: return Self.lesson16Words
+        case 17: return Self.lesson17Words
+        case 18: return Self.lesson18Words
+        case 19: return Self.lesson19Words
+        case 20: return Self.lesson20Words
+        case 21: return Self.lesson21Words
+        case 22: return Self.lesson22Words
+        case 23: return Self.lesson23Words
+        case 24: return Self.lesson24Words
+        case 25: return Self.lesson25Words
+        default: return []
+        }
     }
     
     public func getLessonVocabCount(lessonNumber: Int) -> Int {
