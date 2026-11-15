@@ -52,9 +52,6 @@ public struct VocabWord: Identifiable, Codable {
     }
     
     public var displayText: String {
-        if let kanji = kanji, !kanji.isEmpty {
-            return kanji
-        }
         return kana
     }
     

@@ -2,7 +2,7 @@
 //  VocabRepository.swift
 //  AppHocTiengNhat
 //
-//  Nội dung Từ mới 25 bài sơ cấp theo Giáo trình Minna no Nihongo (FPT University)
+//  Nội dung Từ mới 25 bài sơ cấp N5 - 100% Hiragana / Katakana (không dùng Kanji)
 //
 
 import Foundation
@@ -24,23 +24,23 @@ public final class VocabRepository {
     // MARK: - Bài 1 (60 từ)
     public static let lesson1Words: [VocabWord] = [
         VocabWord(
-            kanji: "私",
+            kanji: nil,
             kana: "わたし",
             romaji: "watashi",
             meaningVi: "Tôi (ngôi thứ nhất số ít)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "私は学生です。",
+            exampleJp: "わたしは がくせいです。",
             exampleVi: "Tôi là học sinh."
         ),
         VocabWord(
-            kanji: "私たち",
+            kanji: nil,
             kana: "わたしたち",
             romaji: "watashitachi",
             meaningVi: "Chúng tôi, chúng ta…(ngôi thứ nhất số nhiều)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "私たちはベトナム人です。",
+            exampleJp: "わたしたちは ベトナムじんです。",
             exampleVi: "Chúng tôi là người Việt Nam."
         ),
         VocabWord(
@@ -50,7 +50,7 @@ public final class VocabRepository {
             meaningVi: "Bạn, ông, bà, anh, chị, cô, chú (ngôi thứ hai số ít)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "あなたは会社員ですか。",
+            exampleJp: "あなたは かいしゃいんですか。",
             exampleVi: "Bạn có phải là nhân viên công ty không?"
         ),
         VocabWord(
@@ -60,17 +60,17 @@ public final class VocabRepository {
             meaningVi: "Các bạn, các anh, các chị…(ngôi thứ hai số nhiều)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "あなたがたが好きです。",
+            exampleJp: "あなたがたが すきです。",
             exampleVi: "Tôi thích các bạn, các anh, các chị…."
         ),
         VocabWord(
-            kanji: "人",
+            kanji: nil,
             kana: "ひと",
             romaji: "hito",
             meaningVi: "Người",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "人があります。",
+            exampleJp: "ひとが あります。",
             exampleVi: "Có người."
         ),
         VocabWord(
@@ -80,17 +80,17 @@ public final class VocabRepository {
             meaningVi: "Người ấy, người kia",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "あのひとはどなたですか。",
+            exampleJp: "あのひとは どなたですか。",
             exampleVi: "Vị kia là ai vậy ạ?"
         ),
         VocabWord(
-            kanji: "方",
+            kanji: nil,
             kana: "かた",
             romaji: "kata",
             meaningVi: "(cánh nói lịch sự của 人) vị",
             topicId: "food",
             lessonNumber: 1,
-            exampleJp: "方が好きです。",
+            exampleJp: "かたが すきです。",
             exampleVi: "Tôi thích ."
         ),
         VocabWord(
@@ -100,17 +100,17 @@ public final class VocabRepository {
             meaningVi: "(cánh nói lịch sự của あの人) vị đó, vị kia",
             topicId: "food",
             lessonNumber: 1,
-            exampleJp: "あのかたはどなたですか。",
+            exampleJp: "あのかたは どなたですか。",
             exampleVi: "Vị kia là ai vậy ạ?"
         ),
         VocabWord(
-            kanji: "皆さん",
+            kanji: nil,
             kana: "みなさん",
             romaji: "minasan",
             meaningVi: "Các bạn, các anh, các chị, mọi người…",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "皆さんが好きです。",
+            exampleJp: "みなさんが すきです。",
             exampleVi: "Tôi thích các bạn, các anh, các chị, mọi người…."
         ),
         VocabWord(
@@ -120,7 +120,7 @@ public final class VocabRepository {
             meaningVi: "Ông ~, Bà ~, Anh ~, Chị ~,…..(đi kèm theo tên, dùng để gọi tên người khác một cách lịch sự)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "～さんが好きです。",
+            exampleJp: "～さんが すきです。",
             exampleVi: "Tôi thích ông ~, bà ~, anh ~, chị ~,…..."
         ),
         VocabWord(
@@ -130,7 +130,7 @@ public final class VocabRepository {
             meaningVi: "さん (cô/chị/bạn) Mai",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "Maiがあります。",
+            exampleJp: "Maiが あります。",
             exampleVi: "Có さん."
         ),
         VocabWord(
@@ -140,7 +140,7 @@ public final class VocabRepository {
             meaningVi: "(đi kèm theo tên, dùng để gọi các bé gái thay cho さん)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "～ちゃんが好きです。",
+            exampleJp: "～ちゃんが すきです。",
             exampleVi: "Tôi thích ."
         ),
         VocabWord(
@@ -150,7 +150,7 @@ public final class VocabRepository {
             meaningVi: "ちゃん Bé Linh",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "Linhがあります。",
+            exampleJp: "Linhが あります。",
             exampleVi: "Có ちゃん bé linh."
         ),
         VocabWord(
@@ -160,7 +160,7 @@ public final class VocabRepository {
             meaningVi: "(đi kèm theo tên, dùng để gọi các bé trai thay cho さん)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "～くんが好きです。",
+            exampleJp: "～くんが すきです。",
             exampleVi: "Tôi thích ."
         ),
         VocabWord(
@@ -170,7 +170,7 @@ public final class VocabRepository {
             meaningVi: "Bé Shin",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "しんくんがあります。",
+            exampleJp: "しんくんが あります。",
             exampleVi: "Có bé shin."
         ),
         VocabWord(
@@ -180,157 +180,157 @@ public final class VocabRepository {
             meaningVi: "(đi kèm theo tên nước ) người nước ~",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "～じんが好きです。",
+            exampleJp: "～じんが すきです。",
             exampleVi: "Tôi thích ."
         ),
         VocabWord(
-            kanji: "ベトナム人",
+            kanji: nil,
             kana: "ベトナムじん",
             romaji: "betonamujin",
             meaningVi: "Người Việt Nam",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "ベトナム人があります。",
+            exampleJp: "ベトナムじんが あります。",
             exampleVi: "Có người việt nam."
         ),
         VocabWord(
-            kanji: "先生",
+            kanji: nil,
             kana: "せんせい",
             romaji: "sensei",
             meaningVi: "Thầy giáo (cô giáo), giáo viên (không dùng để chỉ nghề nghiệp, đi kèm với tên để gọi giáo viên (VD: Nam 先生→ thầy Nam)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "Nam 先生",
-            exampleVi: "thầy Nam)"
+            exampleJp: "たなかせんせいは やさしいです。",
+            exampleVi: "Thầy Tanaka rất hiền từ."
         ),
         VocabWord(
-            kanji: "教師",
+            kanji: nil,
             kana: "きょうし",
             romaji: "kyoushi",
             meaningVi: "Nhà giáo, giáo viên (dùng để chỉ nghề nghiệp, dùng khi giới thiệu nghề nghiệp của mình (tôi làm nghề giáo viên)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "教師があります。",
+            exampleJp: "きょうしが あります。",
             exampleVi: "Có nhà giáo, giáo viên."
         ),
         VocabWord(
-            kanji: "学生",
+            kanji: nil,
             kana: "がくせい",
             romaji: "gakusei",
             meaningVi: "Học sinh, sinh viên (nói chung)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "妹は大学生です。",
+            exampleJp: "いもうとは だいがくせいです。",
             exampleVi: "Em gái tôi là sinh viên đại học."
         ),
         VocabWord(
-            kanji: "会社員",
+            kanji: nil,
             kana: "かいしゃいん",
             romaji: "kaishain",
             meaningVi: "Nhân viên công ty nói chung (dùng để chỉ nghề nghiệp)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "父は会社員です。",
+            exampleJp: "ちちは かいしゃいんです。",
             exampleVi: "Bố tôi là nhân viên công ty."
         ),
         VocabWord(
-            kanji: "社員",
+            kanji: nil,
             kana: "しゃいん",
             romaji: "shain",
             meaningVi: "nhân viên của một công ty cụ thể (VD: FPT の社員)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "社員があります。",
+            exampleJp: "しゃいんが あります。",
             exampleVi: "Có nhân viên của một công ty cụ thể."
         ),
         VocabWord(
-            kanji: "銀行員",
+            kanji: nil,
             kana: "ぎんこういん",
             romaji: "ginkouin",
             meaningVi: "nhân viên ngân hàng (nghề nghiệp)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "銀行員へ行きます。",
+            exampleJp: "ぎんこういんへ いきます。",
             exampleVi: "Tôi đi đến nhân viên ngân hàng."
         ),
         VocabWord(
-            kanji: "医者",
+            kanji: nil,
             kana: "いしゃ",
             romaji: "isha",
             meaningVi: "Bác sỹ (nghề nghiệp)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "病院の医者に診てもらいます。",
-            exampleVi: "Tôi được bác sĩ ở bệnh viện khám bệnh."
+            exampleJp: "びょういんの いしゃに みてもらいます。",
+            exampleVi: "Tôi được bác sĩ ở bệnh viện khám."
         ),
         VocabWord(
-            kanji: "研究者",
+            kanji: nil,
             kana: "けんきゅうしゃ",
             romaji: "kenkyuusha",
             meaningVi: "Nhà nghiên cứu (nghề nghiệp)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "研究者があります。",
+            exampleJp: "けんきゅうしゃが あります。",
             exampleVi: "Có nhà nghiên cứu."
         ),
         VocabWord(
-            kanji: "技術者",
+            kanji: nil,
             kana: "ぎじゅつしゃ",
             romaji: "gijutsusha",
             meaningVi: "Kỹ sư  エンジニア",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "技術者があります。",
+            exampleJp: "ぎじゅつしゃが あります。",
             exampleVi: "Có kỹ sư  エンジニア."
         ),
         VocabWord(
-            kanji: "研修生",
+            kanji: nil,
             kana: "けんしゅうせい",
             romaji: "Tu",
             meaningVi: "nghiệp sinh",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "日本の冬は研修生です。",
+            exampleJp: "にほんの ふゆは けんしゅうせいです。",
             exampleVi: "Mùa đông ở Nhật nghiệp sinh."
         ),
         VocabWord(
-            kanji: "大学",
+            kanji: nil,
             kana: "だいがく",
             romaji: "daigaku",
             meaningVi: "Đại học",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "大学があります。",
+            exampleJp: "だいがくが あります。",
             exampleVi: "Có đại học."
         ),
         VocabWord(
-            kanji: "病院",
+            kanji: nil,
             kana: "びょういん",
             romaji: "byouin",
             meaningVi: "Bệnh viện",
             topicId: "travel",
             lessonNumber: 1,
-            exampleJp: "病院へ行きます。",
+            exampleJp: "びょういんへ いきます。",
             exampleVi: "Tôi đi đến bệnh viện."
         ),
         VocabWord(
-            kanji: "専門",
+            kanji: nil,
             kana: "せんもん",
             romaji: "senmon",
             meaningVi: "Chuyên môn",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "専門があります。",
+            exampleJp: "せんもんが あります。",
             exampleVi: "Có chuyên môn."
         ),
         VocabWord(
-            kanji: "電気",
+            kanji: nil,
             kana: "でんき",
-            romaji: "でnki",
+            romaji: "denki",
             meaningVi: "Điện、điện lực",
             topicId: "travel",
             lessonNumber: 1,
-            exampleJp: "電気があります。",
+            exampleJp: "でんきが あります。",
             exampleVi: "Có điện、điện lực."
         ),
         VocabWord(
@@ -340,7 +340,7 @@ public final class VocabRepository {
             meaningVi: "Ai",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "だれがあります。",
+            exampleJp: "だれが あります。",
             exampleVi: "Có ai."
         ),
         VocabWord(
@@ -350,27 +350,27 @@ public final class VocabRepository {
             meaningVi: "( cách nói lịch sự của だれ) là người nào",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "どなたが好きです。",
+            exampleJp: "どなたが すきです。",
             exampleVi: "Tôi thích ."
         ),
         VocabWord(
-            kanji: "～歳",
+            kanji: nil,
             kana: "～さい",
             romaji: "～sai",
             meaningVi: "～ tuổi",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "日本の冬は～歳です。",
+            exampleJp: "にほんの ふゆは ～さいです。",
             exampleVi: "Mùa đông ở Nhật ～ tuổi."
         ),
         VocabWord(
-            kanji: "何歳",
+            kanji: nil,
             kana: "なんさい",
             romaji: "nansai",
             meaningVi: "Mấy tuổi?",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "日本の冬は何歳です。",
+            exampleJp: "にほんの ふゆは なんさいです。",
             exampleVi: "Mùa đông ở Nhật mấy tuổi?."
         ),
         VocabWord(
@@ -380,7 +380,7 @@ public final class VocabRepository {
             meaningVi: "nhiêu tuổi (hỏi lịch sự hơn 何歳)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "おいくつがあります。",
+            exampleJp: "おいくつが あります。",
             exampleVi: "Có nhiêu tuổi."
         ),
         VocabWord(
@@ -390,7 +390,7 @@ public final class VocabRepository {
             meaningVi: "Vâng, dạ, ừ",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "日本の冬ははいです。",
+            exampleJp: "にほんの ふゆは はいです。",
             exampleVi: "Mùa đông ở Nhật vâng, dạ, ừ."
         ),
         VocabWord(
@@ -400,17 +400,17 @@ public final class VocabRepository {
             meaningVi: "Không",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "いいえがあります。",
+            exampleJp: "いいえが あります。",
             exampleVi: "Có không."
         ),
         VocabWord(
-            kanji: "会話",
+            kanji: nil,
             kana: "かいわ",
             romaji: "kaiwa",
             meaningVi: "Hội thoại",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "会話があります。",
+            exampleJp: "かいわが あります。",
             exampleVi: "Có hội thoại."
         ),
         VocabWord(
@@ -420,7 +420,7 @@ public final class VocabRepository {
             meaningVi: "lỗi, tôi xin thất lễ",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "しつれいですががあります。",
+            exampleJp: "しつれいですがが あります。",
             exampleVi: "Có lỗi, tôi xin thất lễ."
         ),
         VocabWord(
@@ -430,17 +430,17 @@ public final class VocabRepository {
             meaningVi: "Tên bạn là gì?",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "おなまえは？があります。",
+            exampleJp: "おなまえは？が あります。",
             exampleVi: "Có tên bạn là gì?."
         ),
         VocabWord(
-            kanji: "初めまして",
+            kanji: nil,
             kana: "はじめまして。",
             romaji: "Xin",
             meaningVi: "chào anh (dùng khi lần đầu tiên gặp mặt)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "初めまして。",
+            exampleJp: "はじめまして。。",
             exampleVi: "chào anh (dùng khi lần đầu tiên gặp mặt)"
         ),
         VocabWord(
@@ -450,7 +450,7 @@ public final class VocabRepository {
             meaningVi: "よろしく [おねがいします] Từ nay mong anh giúp đỡ",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "どうぞがあります。",
+            exampleJp: "どうぞが あります。",
             exampleVi: "Có よろしく [おねがいします] từ nay mong anh giúp đỡ."
         ),
         VocabWord(
@@ -460,7 +460,7 @@ public final class VocabRepository {
             meaningVi: "～さんです。 Đây là anh (chị)..... (dùng khi giới thiệu người khác)",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "こちらはがあります。",
+            exampleJp: "こちらはが あります。",
             exampleVi: "Có ～さんです。 đây là anh."
         ),
         VocabWord(
@@ -470,7 +470,7 @@ public final class VocabRepository {
             meaningVi: "きました。 (tôi) đến từ ……..",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "～からがあります。",
+            exampleJp: "～からが あります。",
             exampleVi: "Có きました。."
         ),
         VocabWord(
@@ -480,7 +480,7 @@ public final class VocabRepository {
             meaningVi: "きました。 Tôi đến từ Nhật Bản",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "にほんからがあります。",
+            exampleJp: "にほんからが あります。",
             exampleVi: "Có きました。 tôi đến từ nhật bản."
         ),
         VocabWord(
@@ -490,7 +490,7 @@ public final class VocabRepository {
             meaningVi: "Mỹ",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "アメリカがあります。",
+            exampleJp: "アメリカが あります。",
             exampleVi: "Có mỹ."
         ),
         VocabWord(
@@ -500,7 +500,7 @@ public final class VocabRepository {
             meaningVi: "Anh",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "イギリスがあります。",
+            exampleJp: "イギリスが あります。",
             exampleVi: "Có anh."
         ),
         VocabWord(
@@ -510,7 +510,7 @@ public final class VocabRepository {
             meaningVi: "Ấn Độ",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "インドがあります。",
+            exampleJp: "インドが あります。",
             exampleVi: "Có ấn độ."
         ),
         VocabWord(
@@ -520,7 +520,7 @@ public final class VocabRepository {
             meaningVi: "Indonesia",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "インドネシアがあります。",
+            exampleJp: "インドネシアが あります。",
             exampleVi: "Có indonesia."
         ),
         VocabWord(
@@ -530,17 +530,17 @@ public final class VocabRepository {
             meaningVi: "Malaysia",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "マレーシアがあります。",
+            exampleJp: "マレーシアが あります。",
             exampleVi: "Có malaysia."
         ),
         VocabWord(
-            kanji: "韓国",
+            kanji: nil,
             kana: "かんこく",
             romaji: "kankoku",
             meaningVi: "Hàn Quốc",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "韓国があります。",
+            exampleJp: "かんこくが あります。",
             exampleVi: "Có hàn quốc."
         ),
         VocabWord(
@@ -550,17 +550,17 @@ public final class VocabRepository {
             meaningVi: "Thái",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "タイがあります。",
+            exampleJp: "タイが あります。",
             exampleVi: "Có thái."
         ),
         VocabWord(
-            kanji: "中国",
+            kanji: nil,
             kana: "ちゅうごく",
             romaji: "Trung",
             meaningVi: "Quốc",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "中国があります。",
+            exampleJp: "ちゅうごくが あります。",
             exampleVi: "Có quốc."
         ),
         VocabWord(
@@ -570,7 +570,7 @@ public final class VocabRepository {
             meaningVi: "Philipin",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "フィリピンがあります。",
+            exampleJp: "フィリピンが あります。",
             exampleVi: "Có philipin."
         ),
         VocabWord(
@@ -580,17 +580,17 @@ public final class VocabRepository {
             meaningVi: "Đức",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "ドイツがあります。",
+            exampleJp: "ドイツが あります。",
             exampleVi: "Có đức."
         ),
         VocabWord(
-            kanji: "日本",
+            kanji: nil,
             kana: "にほん",
             romaji: "nihon",
             meaningVi: "Nhật Bản",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "日本があります。",
+            exampleJp: "にほんが あります。",
             exampleVi: "Có nhật bản."
         ),
         VocabWord(
@@ -600,7 +600,7 @@ public final class VocabRepository {
             meaningVi: "Pháp",
             topicId: "greeting",
             lessonNumber: 1,
-            exampleJp: "フランスがあります。",
+            exampleJp: "フランスが あります。",
             exampleVi: "Có pháp."
         ),
         VocabWord(
@@ -610,7 +610,7 @@ public final class VocabRepository {
             meaningVi: "Brazil",
             topicId: "travel",
             lessonNumber: 1,
-            exampleJp: "ブラジルがあります。",
+            exampleJp: "ブラジルが あります。",
             exampleVi: "Có brazil."
         ),
         VocabWord(
@@ -620,7 +620,7 @@ public final class VocabRepository {
             meaningVi: "Việt Nam",
             topicId: "family",
             lessonNumber: 1,
-            exampleJp: "ベトナムがあります。",
+            exampleJp: "ベトナムが あります。",
             exampleVi: "Có việt nam."
         )
     ]
@@ -634,7 +634,7 @@ public final class VocabRepository {
             meaningVi: "Cái này",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "これは本です。",
+            exampleJp: "これは ほんです。",
             exampleVi: "これ là quyển sách."
         ),
         VocabWord(
@@ -644,7 +644,7 @@ public final class VocabRepository {
             meaningVi: "Cái đó",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "それは本です。",
+            exampleJp: "それは ほんです。",
             exampleVi: "それ là quyển sách."
         ),
         VocabWord(
@@ -654,7 +654,7 @@ public final class VocabRepository {
             meaningVi: "Cái kia",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "あれは本です。",
+            exampleJp: "あれは ほんです。",
             exampleVi: "あれ là quyển sách."
         ),
         VocabWord(
@@ -664,7 +664,7 @@ public final class VocabRepository {
             meaningVi: "Cái~ này",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "この～が好きです。",
+            exampleJp: "この～が すきです。",
             exampleVi: "Tôi thích cái~ này."
         ),
         VocabWord(
@@ -674,7 +674,7 @@ public final class VocabRepository {
             meaningVi: "Cái ~ đó",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "その～が好きです。",
+            exampleJp: "その～が すきです。",
             exampleVi: "Tôi thích cái ~ đó."
         ),
         VocabWord(
@@ -684,47 +684,47 @@ public final class VocabRepository {
             meaningVi: "Cái ~ kia",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "あの～が好きです。",
+            exampleJp: "あの～が すきです。",
             exampleVi: "Tôi thích cái ~ kia."
         ),
         VocabWord(
-            kanji: "本",
+            kanji: nil,
             kana: "ほん",
             romaji: "hon",
             meaningVi: "Sách",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "本があります。",
+            exampleJp: "ほんが あります。",
             exampleVi: "Có sách."
         ),
         VocabWord(
-            kanji: "辞書",
+            kanji: nil,
             kana: "じしょ",
             romaji: "jisho",
             meaningVi: "Từ điển",
             topicId: "travel",
             lessonNumber: 2,
-            exampleJp: "辞書があります。",
+            exampleJp: "じしょが あります。",
             exampleVi: "Có từ điển."
         ),
         VocabWord(
-            kanji: "雑誌",
+            kanji: nil,
             kana: "ざっし",
             romaji: "zasshi",
             meaningVi: "Tạp chí",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "雑誌があります。",
+            exampleJp: "ざっしが あります。",
             exampleVi: "Có tạp chí."
         ),
         VocabWord(
-            kanji: "新聞",
+            kanji: nil,
             kana: "しんぶん",
             romaji: "shinbun",
             meaningVi: "Báo",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "新聞があります。",
+            exampleJp: "しんぶんが あります。",
             exampleVi: "Có báo."
         ),
         VocabWord(
@@ -734,27 +734,27 @@ public final class VocabRepository {
             meaningVi: "Vở",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ノートがあります。",
+            exampleJp: "ノートが あります。",
             exampleVi: "Có vở."
         ),
         VocabWord(
-            kanji: "手帳",
+            kanji: nil,
             kana: "てちょう",
             romaji: "techou",
             meaningVi: "Sổ tay",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "手帳があります。",
+            exampleJp: "てちょうが あります。",
             exampleVi: "Có sổ tay."
         ),
         VocabWord(
-            kanji: "名刺",
+            kanji: nil,
             kana: "めいし",
             romaji: "Danh",
             meaningVi: "thiếp",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "名刺があります。",
+            exampleJp: "めいしが あります。",
             exampleVi: "Có thiếp."
         ),
         VocabWord(
@@ -764,7 +764,7 @@ public final class VocabRepository {
             meaningVi: "Card",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "カードがあります。",
+            exampleJp: "カードが あります。",
             exampleVi: "Có card."
         ),
         VocabWord(
@@ -774,37 +774,37 @@ public final class VocabRepository {
             meaningVi: "(Terehon Kādo) Card điện thoại",
             topicId: "travel",
             lessonNumber: 2,
-            exampleJp: "テレホンカードがあります。",
+            exampleJp: "テレホンカードが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
-            kanji: "紙",
+            kanji: nil,
             kana: "かみ",
             romaji: "kami",
             meaningVi: "Giấy",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "紙があります。",
+            exampleJp: "かみが あります。",
             exampleVi: "Có giấy."
         ),
         VocabWord(
-            kanji: "手紙",
+            kanji: nil,
             kana: "てがみ",
             romaji: "tegami",
             meaningVi: "Thư",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "手紙があります。",
+            exampleJp: "てがみが あります。",
             exampleVi: "Có thư."
         ),
         VocabWord(
-            kanji: "鉛筆",
+            kanji: nil,
             kana: "えんぴつ",
             romaji: "enpitsu",
             meaningVi: "Bút chì",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "鉛筆があります。",
+            exampleJp: "えんぴつが あります。",
             exampleVi: "Có bút chì."
         ),
         VocabWord(
@@ -814,7 +814,7 @@ public final class VocabRepository {
             meaningVi: "Bút bi",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ボールペンがあります。",
+            exampleJp: "ボールペンが あります。",
             exampleVi: "Có bút bi."
         ),
         VocabWord(
@@ -824,7 +824,7 @@ public final class VocabRepository {
             meaningVi: "シャープペンシ",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "シャープペンシがあります。",
+            exampleJp: "シャープペンシが あります。",
             exampleVi: "Có シャープペンシ."
         ),
         VocabWord(
@@ -834,7 +834,7 @@ public final class VocabRepository {
             meaningVi: "Bút chì kim",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ルがあります。",
+            exampleJp: "ルが あります。",
             exampleVi: "Có bút chì kim."
         ),
         VocabWord(
@@ -844,7 +844,7 @@ public final class VocabRepository {
             meaningVi: "Thuốc lá",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "タバコがあります。",
+            exampleJp: "タバコが あります。",
             exampleVi: "Có thuốc lá."
         ),
         VocabWord(
@@ -854,7 +854,7 @@ public final class VocabRepository {
             meaningVi: "Diêm",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "マッチがあります。",
+            exampleJp: "マッチが あります。",
             exampleVi: "Có diêm."
         ),
         VocabWord(
@@ -864,7 +864,7 @@ public final class VocabRepository {
             meaningVi: "Bật lửa",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ライターがあります。",
+            exampleJp: "ライターが あります。",
             exampleVi: "Có bật lửa."
         ),
         VocabWord(
@@ -874,7 +874,7 @@ public final class VocabRepository {
             meaningVi: "Gạt tàn thuốc lá",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "はいざらがあります。",
+            exampleJp: "はいざらが あります。",
             exampleVi: "Có gạt tàn thuốc lá."
         ),
         VocabWord(
@@ -884,17 +884,17 @@ public final class VocabRepository {
             meaningVi: "Chìa khóa",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "かぎがあります。",
+            exampleJp: "かぎが あります。",
             exampleVi: "Có chìa khóa."
         ),
         VocabWord(
-            kanji: "時計",
+            kanji: nil,
             kana: "とけい",
             romaji: "tokei",
             meaningVi: "Đồng hồ",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "日本の冬は時計です。",
+            exampleJp: "にほんの ふゆは とけいです。",
             exampleVi: "Mùa đông ở Nhật đồng hồ."
         ),
         VocabWord(
@@ -904,27 +904,27 @@ public final class VocabRepository {
             meaningVi: "Cặp, túi xách",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "かばんがあります。",
+            exampleJp: "かばんが あります。",
             exampleVi: "Có cặp, túi xách."
         ),
         VocabWord(
-            kanji: "箱",
+            kanji: nil,
             kana: "はこ",
             romaji: "wako",
             meaningVi: "Hộp",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "箱があります。",
+            exampleJp: "はこが あります。",
             exampleVi: "Có hộp."
         ),
         VocabWord(
-            kanji: "傘",
+            kanji: nil,
             kana: "かさ",
             romaji: "kasa",
             meaningVi: "Cái ô 「カセット」テー",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "傘が好きです。",
+            exampleJp: "かさが すきです。",
             exampleVi: "Tôi thích cái ô 「カセット」テー."
         ),
         VocabWord(
@@ -934,7 +934,7 @@ public final class VocabRepository {
             meaningVi: "(Kasetto) Tēpu Băng (cát xét)",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "プが好きです。",
+            exampleJp: "プが すきです。",
             exampleVi: "Tôi thích ."
         ),
         VocabWord(
@@ -944,7 +944,7 @@ public final class VocabRepository {
             meaningVi: "テープレコーダ",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "テープレコーダがあります。",
+            exampleJp: "テープレコーダが あります。",
             exampleVi: "Có テープレコーダ."
         ),
         VocabWord(
@@ -954,7 +954,7 @@ public final class VocabRepository {
             meaningVi: "Máy ghi âm",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ーがあります。",
+            exampleJp: "ーが あります。",
             exampleVi: "Có máy ghi âm."
         ),
         VocabWord(
@@ -964,7 +964,7 @@ public final class VocabRepository {
             meaningVi: "Tivi",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "テレビがあります。",
+            exampleJp: "テレビが あります。",
             exampleVi: "Có tivi."
         ),
         VocabWord(
@@ -974,7 +974,7 @@ public final class VocabRepository {
             meaningVi: "Đài radio",
             topicId: "travel",
             lessonNumber: 2,
-            exampleJp: "ラジオがあります。",
+            exampleJp: "ラジオが あります。",
             exampleVi: "Có đài radio."
         ),
         VocabWord(
@@ -984,57 +984,57 @@ public final class VocabRepository {
             meaningVi: "Máy ảnh",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "カメラがあります。",
+            exampleJp: "カメラが あります。",
             exampleVi: "Có máy ảnh."
         ),
         VocabWord(
-            kanji: "自動車",
+            kanji: nil,
             kana: "じどうしゃ",
             romaji: "jidousha",
             meaningVi: "Ô tô",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "自動車があります。",
+            exampleJp: "じどうしゃが あります。",
             exampleVi: "Có ô tô."
         ),
         VocabWord(
-            kanji: "電話",
+            kanji: nil,
             kana: "でんわ",
-            romaji: "でnwa",
+            romaji: "denwa",
             meaningVi: "Điện thoại",
             topicId: "travel",
             lessonNumber: 2,
-            exampleJp: "電話があります。",
+            exampleJp: "でんわが あります。",
             exampleVi: "Có điện thoại."
         ),
         VocabWord(
-            kanji: "椅子",
+            kanji: nil,
             kana: "いす",
             romaji: "isu",
             meaningVi: "Ghế",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "椅子があります。",
+            exampleJp: "いすが あります。",
             exampleVi: "Có ghế."
         ),
         VocabWord(
-            kanji: "机",
+            kanji: nil,
             kana: "つくえ",
             romaji: "tsukue",
             meaningVi: "Bàn",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "机があります。",
+            exampleJp: "つくえが あります。",
             exampleVi: "Có bàn."
         ),
         VocabWord(
-            kanji: "窓",
+            kanji: nil,
             kana: "まど",
             romaji: "mado",
             meaningVi: "Cửa sổ",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "窓があります。",
+            exampleJp: "まどが あります。",
             exampleVi: "Có cửa sổ."
         ),
         VocabWord(
@@ -1044,7 +1044,7 @@ public final class VocabRepository {
             meaningVi: "Cửa ra vào",
             topicId: "travel",
             lessonNumber: 2,
-            exampleJp: "ドアがあります。",
+            exampleJp: "ドアが あります。",
             exampleVi: "Có cửa ra vào."
         ),
         VocabWord(
@@ -1054,7 +1054,7 @@ public final class VocabRepository {
             meaningVi: "Sô cô la",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "チョコレートがあります。",
+            exampleJp: "チョコレートが あります。",
             exampleVi: "Có sô cô la."
         ),
         VocabWord(
@@ -1064,37 +1064,37 @@ public final class VocabRepository {
             meaningVi: "Cà phê",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "コーヒーが好きです。",
+            exampleJp: "コーヒーが すきです。",
             exampleVi: "Tôi thích cà phê."
         ),
         VocabWord(
-            kanji: "英語",
+            kanji: nil,
             kana: "えいご",
             romaji: "eigo",
             meaningVi: "Tiếng Anh",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "英語があります。",
+            exampleJp: "えいごが あります。",
             exampleVi: "Có tiếng anh."
         ),
         VocabWord(
-            kanji: "日本語",
+            kanji: nil,
             kana: "にほんご",
             romaji: "nihongo",
             meaningVi: "Tiếng Nhật",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "日本語があります。",
+            exampleJp: "にほんごが あります。",
             exampleVi: "Có tiếng nhật."
         ),
         VocabWord(
-            kanji: "～語",
+            kanji: nil,
             kana: "～ご",
             romaji: "～go",
             meaningVi: "(kèm theo tên nước, dùng để chỉ ngôn ngữ của nước nào đó) tiếng ~",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "～語が好きです。",
+            exampleJp: "～ごが すきです。",
             exampleVi: "Tôi thích ."
         ),
         VocabWord(
@@ -1104,17 +1104,17 @@ public final class VocabRepository {
             meaningVi: "Tiếng Việt",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ベトナム語があります。",
+            exampleJp: "ベトナム語が あります。",
             exampleVi: "Có tiếng việt."
         ),
         VocabWord(
-            kanji: "何",
+            kanji: nil,
             kana: "なん",
             romaji: "nan",
             meaningVi: "Cái gì",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "何が好きです。",
+            exampleJp: "なんが すきです。",
             exampleVi: "Tôi thích cái gì."
         ),
         VocabWord(
@@ -1124,7 +1124,7 @@ public final class VocabRepository {
             meaningVi: "Thế",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "そうがあります。",
+            exampleJp: "そうが あります。",
             exampleVi: "Có thế."
         ),
         VocabWord(
@@ -1134,7 +1134,7 @@ public final class VocabRepository {
             meaningVi: "お願",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "お願があります。",
+            exampleJp: "お願が あります。",
             exampleVi: "Có お願."
         ),
         VocabWord(
@@ -1144,7 +1144,7 @@ public final class VocabRepository {
             meaningVi: "ねが",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ねががあります。",
+            exampleJp: "ねがが あります。",
             exampleVi: "Có ねが."
         ),
         VocabWord(
@@ -1154,7 +1154,7 @@ public final class VocabRepository {
             meaningVi: "nhờ (ông, bà, anh , chị)",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "いします。があります。",
+            exampleJp: "いします。が あります。",
             exampleVi: "Có nhờ."
         ),
         VocabWord(
@@ -1164,7 +1164,7 @@ public final class VocabRepository {
             meaningVi: "mời (dùng khi mời ai cái gì, mời ai làm gì) [どうも]ありがとう ございます Cảm ơn anh rất nhiều",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "どうぞ。が好きです。",
+            exampleJp: "どうぞ。が すきです。",
             exampleVi: "Tôi thích mời."
         ),
         VocabWord(
@@ -1174,7 +1174,7 @@ public final class VocabRepository {
             meaningVi: "À! Chà! Ối chà! (từ cảm thán, dùng khi bỗng nhiên nhớ lại cái gì hoặc thình lình thấy cái gì)",
             topicId: "food",
             lessonNumber: 2,
-            exampleJp: "あが好きです。",
+            exampleJp: "あが すきです。",
             exampleVi: "Tôi thích à! chà! ối chà!."
         ),
         VocabWord(
@@ -1184,7 +1184,7 @@ public final class VocabRepository {
             meaningVi: "Một chút, một lát",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ちょっとがあります。",
+            exampleJp: "ちょっとが あります。",
             exampleVi: "Có một chút, một lát."
         ),
         VocabWord(
@@ -1194,7 +1194,7 @@ public final class VocabRepository {
             meaningVi: "待",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "待があります。",
+            exampleJp: "待が あります。",
             exampleVi: "Có 待."
         ),
         VocabWord(
@@ -1204,7 +1204,7 @@ public final class VocabRepository {
             meaningVi: "ま",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "まがあります。",
+            exampleJp: "まが あります。",
             exampleVi: "Có ま."
         ),
         VocabWord(
@@ -1214,7 +1214,7 @@ public final class VocabRepository {
             meaningVi: "anh (chị) hãy chờ",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "ってください。があります。",
+            exampleJp: "ってください。が あります。",
             exampleVi: "Có anh."
         ),
         VocabWord(
@@ -1224,7 +1224,7 @@ public final class VocabRepository {
             meaningVi: "違",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "違があります。",
+            exampleJp: "違が あります。",
             exampleVi: "Có 違."
         ),
         VocabWord(
@@ -1234,7 +1234,7 @@ public final class VocabRepository {
             meaningVi: "ちが",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "ちががあります。",
+            exampleJp: "ちがが あります。",
             exampleVi: "Có ちが."
         ),
         VocabWord(
@@ -1244,27 +1244,27 @@ public final class VocabRepository {
             meaningVi: "rồi, không phải",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "毎日 います。",
+            exampleJp: "まいにち います。",
             exampleVi: "Hằng ngày tôi rồi, không phải."
         ),
         VocabWord(
             kanji: nil,
             kana: "そうですか。",
-            romaji: "souでsuka.",
+            romaji: "soudesuka.",
             meaningVi: "Thế à?/ tôi hiểu rồi.",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "そうですか。があります。",
+            exampleJp: "そうですか。が あります。",
             exampleVi: "Có thế à?/ tôi hiểu rồi.."
         ),
         VocabWord(
-            kanji: "お世話",
+            kanji: nil,
             kana: "これから",
             romaji: "korekara",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "お世話があります。",
+            exampleJp: "これからが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -1274,7 +1274,7 @@ public final class VocabRepository {
             meaningVi: "せわ",
             topicId: "greeting",
             lessonNumber: 2,
-            exampleJp: "せわがあります。",
+            exampleJp: "せわが あります。",
             exampleVi: "Có せわ."
         ),
         VocabWord(
@@ -1284,7 +1284,7 @@ public final class VocabRepository {
             meaningVi: "vọng sẽ được anh quan tâm, giúp đỡ.",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "になります。があります。",
+            exampleJp: "になります。が あります。",
             exampleVi: "Có vọng sẽ được anh quan tâm, giúp đỡ.."
         ),
         VocabWord(
@@ -1294,7 +1294,7 @@ public final class VocabRepository {
             meaningVi: "よろしく。 Tôi cũng mong anh quan tâm, giúp đỡ.",
             topicId: "family",
             lessonNumber: 2,
-            exampleJp: "こちらこそがあります。",
+            exampleJp: "こちらこそが あります。",
             exampleVi: "Có よろしく。 tôi cũng mong anh quan tâm, giúp đỡ.."
         )
     ]
@@ -1308,7 +1308,7 @@ public final class VocabRepository {
             meaningVi: "Chỗ này",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "ここは教室です。",
+            exampleJp: "ここは きょうしつです。",
             exampleVi: "ここ là phòng học."
         ),
         VocabWord(
@@ -1318,7 +1318,7 @@ public final class VocabRepository {
             meaningVi: "Chỗ đó",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "そこは教室です。",
+            exampleJp: "そこは きょうしつです。",
             exampleVi: "そこ là phòng học."
         ),
         VocabWord(
@@ -1328,7 +1328,7 @@ public final class VocabRepository {
             meaningVi: "Chỗ kia",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "あそこは教室です。",
+            exampleJp: "あそこは きょうしつです。",
             exampleVi: "あそこ là phòng học."
         ),
         VocabWord(
@@ -1338,7 +1338,7 @@ public final class VocabRepository {
             meaningVi: "Chỗ nào、ở đâu",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "どこがあります。",
+            exampleJp: "どこが あります。",
             exampleVi: "Có chỗ nào、ở đâu."
         ),
         VocabWord(
@@ -1348,7 +1348,7 @@ public final class VocabRepository {
             meaningVi: "Chỗ này, đằng này (cách nói lịch sự của こちら)",
             topicId: "food",
             lessonNumber: 3,
-            exampleJp: "こちらが好きです。",
+            exampleJp: "こちらが すきです。",
             exampleVi: "Tôi thích chỗ này, đằng này."
         ),
         VocabWord(
@@ -1358,7 +1358,7 @@ public final class VocabRepository {
             meaningVi: "Chỗ đó, đằng đó (cách nói lịch sự của そ ちら)",
             topicId: "food",
             lessonNumber: 3,
-            exampleJp: "そちらが好きです。",
+            exampleJp: "そちらが すきです。",
             exampleVi: "Tôi thích chỗ đó, đằng đó."
         ),
         VocabWord(
@@ -1368,7 +1368,7 @@ public final class VocabRepository {
             meaningVi: "Chỗ kia, đằng kia (cách nói lịch sự của あちら)",
             topicId: "food",
             lessonNumber: 3,
-            exampleJp: "あちらが好きです。",
+            exampleJp: "あちらが すきです。",
             exampleVi: "Tôi thích chỗ kia, đằng kia."
         ),
         VocabWord(
@@ -1378,47 +1378,47 @@ public final class VocabRepository {
             meaningVi: "Ở đâu (cách nói lịch sự của どちら)",
             topicId: "food",
             lessonNumber: 3,
-            exampleJp: "どちらが好きです。",
+            exampleJp: "どちらが すきです。",
             exampleVi: "Tôi thích ở đâu."
         ),
         VocabWord(
-            kanji: "教室",
+            kanji: nil,
             kana: "きょうしつ",
             romaji: "kyoushitsu",
             meaningVi: "Lớp học, phòng học",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "教室へ行きます。",
+            exampleJp: "きょうしつへ いきます。",
             exampleVi: "Tôi đi đến lớp học, phòng học."
         ),
         VocabWord(
-            kanji: "食堂",
+            kanji: nil,
             kana: "しょくどう",
             romaji: "shokudou",
             meaningVi: "Nhà ăn, phòng ăn",
             topicId: "food",
             lessonNumber: 3,
-            exampleJp: "食堂へ行きます。",
+            exampleJp: "しょくどうへ いきます。",
             exampleVi: "Tôi đi đến nhà ăn, phòng ăn."
         ),
         VocabWord(
-            kanji: "事務所",
+            kanji: nil,
             kana: "じむしょ",
             romaji: "jimusho",
             meaningVi: "Văn phòng",
             topicId: "food",
             lessonNumber: 3,
-            exampleJp: "事務所へ行きます。",
+            exampleJp: "じむしょへ いきます。",
             exampleVi: "Tôi đi đến văn phòng."
         ),
         VocabWord(
-            kanji: "会議室",
+            kanji: nil,
             kana: "かいぎしつ",
             romaji: "kaigishitsu",
             meaningVi: "Phòng họp",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "会議室へ行きます。",
+            exampleJp: "かいぎしつへ いきます。",
             exampleVi: "Tôi đi đến phòng họp."
         ),
         VocabWord(
@@ -1428,7 +1428,7 @@ public final class VocabRepository {
             meaningVi: "お手",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "お手があります。",
+            exampleJp: "お手が あります。",
             exampleVi: "Có お手."
         ),
         VocabWord(
@@ -1438,7 +1438,7 @@ public final class VocabRepository {
             meaningVi: "て",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "てがあります。",
+            exampleJp: "てが あります。",
             exampleVi: "Có て."
         ),
         VocabWord(
@@ -1448,7 +1448,7 @@ public final class VocabRepository {
             meaningVi: "洗",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "洗があります。",
+            exampleJp: "洗が あります。",
             exampleVi: "Có 洗."
         ),
         VocabWord(
@@ -1458,7 +1458,7 @@ public final class VocabRepository {
             meaningVi: "あら",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "あらがあります。",
+            exampleJp: "あらが あります。",
             exampleVi: "Có あら."
         ),
         VocabWord(
@@ -1468,7 +1468,7 @@ public final class VocabRepository {
             meaningVi: "(トイレ） Nhà vệ sinh",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "日本の冬はいです。",
+            exampleJp: "にほんの ふゆは いです。",
             exampleVi: "Mùa đông ở Nhật ."
         ),
         VocabWord(
@@ -1478,37 +1478,37 @@ public final class VocabRepository {
             meaningVi: "Phòng đợi, tiền sảnh",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "ロビーへ行きます。",
+            exampleJp: "ロビーへ いきます。",
             exampleVi: "Tôi đi đến phòng đợi, tiền sảnh."
         ),
         VocabWord(
-            kanji: "受付",
+            kanji: nil,
             kana: "うけつけ",
             romaji: "uketsuke",
             meaningVi: "Bàn tiếp tân, thường trực",
             topicId: "family",
             lessonNumber: 3,
-            exampleJp: "受付があります。",
+            exampleJp: "うけつけが あります。",
             exampleVi: "Có bàn tiếp tân, thường trực."
         ),
         VocabWord(
-            kanji: "部屋",
+            kanji: nil,
             kana: "へや",
             romaji: "heya",
             meaningVi: "Phòng",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "部屋へ行きます。",
+            exampleJp: "へやへ いきます。",
             exampleVi: "Tôi đi đến phòng."
         ),
         VocabWord(
-            kanji: "庭",
+            kanji: nil,
             kana: "にわ",
             romaji: "niwa",
             meaningVi: "Sân [ ［",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "庭があります。",
+            exampleJp: "にわが あります。",
             exampleVi: "Có sân [ ［."
         ),
         VocabWord(
@@ -1518,7 +1518,7 @@ public final class VocabRepository {
             meaningVi: "研修",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "研修があります。",
+            exampleJp: "研修が あります。",
             exampleVi: "Có 研修."
         ),
         VocabWord(
@@ -1528,17 +1528,17 @@ public final class VocabRepository {
             meaningVi: "] ］",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "けんしゅうがあります。",
+            exampleJp: "けんしゅうが あります。",
             exampleVi: "Có ] ］."
         ),
         VocabWord(
-            kanji: "階段",
+            kanji: nil,
             kana: "かいだん",
             romaji: "kaidan",
             meaningVi: "Cầu thang",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "階段があります。",
+            exampleJp: "かいだんが あります。",
             exampleVi: "Có cầu thang."
         ),
         VocabWord(
@@ -1548,7 +1548,7 @@ public final class VocabRepository {
             meaningVi: "Cầu thang máy",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "エレベーターがあります。",
+            exampleJp: "エレベーターが あります。",
             exampleVi: "Có cầu thang máy."
         ),
         VocabWord(
@@ -1558,37 +1558,37 @@ public final class VocabRepository {
             meaningVi: "Cầu thang cuốn",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "エスカレーターがあります。",
+            exampleJp: "エスカレーターが あります。",
             exampleVi: "Có cầu thang cuốn."
         ),
         VocabWord(
-            kanji: "家",
+            kanji: nil,
             kana: "うち",
             romaji: "uchi",
             meaningVi: "Nhà",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "家があります。",
+            exampleJp: "うちが あります。",
             exampleVi: "Có nhà."
         ),
         VocabWord(
-            kanji: "会社",
+            kanji: nil,
             kana: "かいしゃ",
             romaji: "kaisha",
             meaningVi: "Công ty ｢お」くに 「お」国 Nước (quốc gia)",
             topicId: "family",
             lessonNumber: 3,
-            exampleJp: "会社が好きです。",
+            exampleJp: "かいしゃが すきです。",
             exampleVi: "Tôi thích công ty ｢お」くに 「お」国 nước."
         ),
         VocabWord(
-            kanji: "売り場",
+            kanji: nil,
             kana: "うりば",
             romaji: "uriba",
             meaningVi: "Quầy, chỗ bán hàng (trong cửa hàng bách hóa, siêu thị)",
             topicId: "travel",
             lessonNumber: 3,
-            exampleJp: "売り場へ行きます。",
+            exampleJp: "うりばへ いきます。",
             exampleVi: "Tôi đi đến quầy, chỗ bán hàng."
         ),
         VocabWord(
@@ -1598,7 +1598,7 @@ public final class VocabRepository {
             meaningVi: "ワイン売",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "ワイン売があります。",
+            exampleJp: "ワイン売が あります。",
             exampleVi: "Có ワイン売."
         ),
         VocabWord(
@@ -1608,7 +1608,7 @@ public final class VocabRepository {
             meaningVi: "う",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "うがあります。",
+            exampleJp: "うが あります。",
             exampleVi: "Có う."
         ),
         VocabWord(
@@ -1618,7 +1618,7 @@ public final class VocabRepository {
             meaningVi: "り場",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "り場があります。",
+            exampleJp: "り場が あります。",
             exampleVi: "Có り場."
         ),
         VocabWord(
@@ -1628,7 +1628,7 @@ public final class VocabRepository {
             meaningVi: "Quầy bán rượu vang",
             topicId: "food",
             lessonNumber: 3,
-            exampleJp: "ばがあります。",
+            exampleJp: "ばが あります。",
             exampleVi: "Có quầy bán rượu vang."
         ),
         VocabWord(
@@ -1638,7 +1638,7 @@ public final class VocabRepository {
             meaningVi: "Giầy",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "くつがあります。",
+            exampleJp: "くつが あります。",
             exampleVi: "Có giầy."
         ),
         VocabWord(
@@ -1648,7 +1648,7 @@ public final class VocabRepository {
             meaningVi: "Cà vạt",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "ネクタイがあります。",
+            exampleJp: "ネクタイが あります。",
             exampleVi: "Có cà vạt."
         ),
         VocabWord(
@@ -1658,17 +1658,17 @@ public final class VocabRepository {
             meaningVi: "Rượu vang",
             topicId: "food",
             lessonNumber: 3,
-            exampleJp: "ワインがあります。",
+            exampleJp: "ワインが あります。",
             exampleVi: "Có rượu vang."
         ),
         VocabWord(
-            kanji: "地下",
+            kanji: nil,
             kana: "ちか",
             romaji: "chika",
             meaningVi: "Tầng hầm",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "地下があります。",
+            exampleJp: "ちかが あります。",
             exampleVi: "Có tầng hầm."
         ),
         VocabWord(
@@ -1678,7 +1678,7 @@ public final class VocabRepository {
             meaningVi: "地下一階",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "地下一階があります。",
+            exampleJp: "地下一階が あります。",
             exampleVi: "Có 地下一階."
         ),
         VocabWord(
@@ -1688,37 +1688,37 @@ public final class VocabRepository {
             meaningVi: "か い っ か い Tầng ngầm (dưới đất)",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "ちがあります。",
+            exampleJp: "ちが あります。",
             exampleVi: "Có か い っ か い tầng ngầm."
         ),
         VocabWord(
-            kanji: "～階",
+            kanji: nil,
             kana: "～かい",
             romaji: "～kai",
             meaningVi: "Tầng ~",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "日本の冬は～階です。",
-            exampleVi: "Mùa đông ở Nhật tầng ~."
+            exampleJp: "～かいが あります。",
+            exampleVi: "Có tầng ~."
         ),
         VocabWord(
-            kanji: "何階",
+            kanji: nil,
             kana: "なんかい",
             romaji: "nankai",
             meaningVi: "Tầng mấy",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "日本の冬は何階です。",
-            exampleVi: "Mùa đông ở Nhật tầng mấy."
+            exampleJp: "なんかいが あります。",
+            exampleVi: "Có tầng mấy."
         ),
         VocabWord(
-            kanji: "～円",
+            kanji: nil,
             kana: "～えん",
             romaji: "～en",
             meaningVi: "~ yên",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "～円があります。",
+            exampleJp: "～えんが あります。",
             exampleVi: "Có ~ yên."
         ),
         VocabWord(
@@ -1728,37 +1728,37 @@ public final class VocabRepository {
             meaningVi: "nhiêu tiền",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "いくらがあります。",
+            exampleJp: "いくらが あります。",
             exampleVi: "Có nhiêu tiền."
         ),
         VocabWord(
-            kanji: "百",
+            kanji: nil,
             kana: "ひゃく",
             romaji: "hyaku",
             meaningVi: "Trăm",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "百があります。",
+            exampleJp: "ひゃくが あります。",
             exampleVi: "Có trăm."
         ),
         VocabWord(
-            kanji: "千",
+            kanji: nil,
             kana: "せん",
             romaji: "sen",
             meaningVi: "Nghìn",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "千があります。",
+            exampleJp: "せんが あります。",
             exampleVi: "Có nghìn."
         ),
         VocabWord(
-            kanji: "万",
+            kanji: nil,
             kana: "まん",
             romaji: "man",
             meaningVi: "Vạn, mười nghìn",
             topicId: "greeting",
             lessonNumber: 3,
-            exampleJp: "万があります。",
+            exampleJp: "まんが あります。",
             exampleVi: "Có vạn, mười nghìn."
         ),
         VocabWord(
@@ -1768,7 +1768,7 @@ public final class VocabRepository {
             meaningVi: "「ちょっと」すみません。 Cho tôi xin lỗi (một chút)",
             topicId: "family",
             lessonNumber: 3,
-            exampleJp: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~があります。",
+            exampleJp: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~が あります。",
             exampleVi: "Có 「ちょっと」すみません。 cho tôi xin lỗi."
         ),
         VocabWord(
@@ -1788,7 +1788,7 @@ public final class VocabRepository {
             meaningVi: "Vậy thì, trong trường hợp đó thì… 「これ」を ください。 Xin bán cho tôi (cái này)",
             topicId: "family",
             lessonNumber: 3,
-            exampleJp: "じゃが好きです。",
+            exampleJp: "じゃが すきです。",
             exampleVi: "Tôi thích vậy thì, trong trường hợp đó thì… 「これ」を ください。 xin bán cho tôi."
         )
     ]
@@ -1796,123 +1796,123 @@ public final class VocabRepository {
     // MARK: - Bài 4 (90 từ)
     public static let lesson4Words: [VocabWord] = [
         VocabWord(
-            kanji: "起きます",
+            kanji: nil,
             kana: "おきます",
             romaji: "okimasu",
             meaningVi: "Thức dậy",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "寝ます",
+            kanji: nil,
             kana: "ねます",
             romaji: "nemasu",
             meaningVi: "Ngủ",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "毎日 寝ます。",
+            exampleJp: "まいにち ねます。",
             exampleVi: "Hằng ngày tôi ngủ."
         ),
         VocabWord(
-            kanji: "働きます",
+            kanji: nil,
             kana: "はたらきます",
             romaji: "watarakimasu",
             meaningVi: "Làm việc",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "休みます",
+            kanji: nil,
             kana: "やすみます",
             romaji: "yasumimasu",
             meaningVi: "Nghỉ",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "映画を見ます。",
+            exampleJp: "えいがを みます。",
             exampleVi: "Tôi xem phim."
         ),
         VocabWord(
-            kanji: "勉強します",
+            kanji: nil,
             kana: "べんきょうします",
             romaji: "benkyoushimasu",
             meaningVi: "Học",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "日本語を勉強します。",
+            exampleJp: "にほんごを べんきょうします。",
             exampleVi: "Tôi học tiếng Nhật."
         ),
         VocabWord(
-            kanji: "終わります",
+            kanji: nil,
             kana: "おわります",
             romaji: "owarimasu",
             meaningVi: "Xong, kết thúc",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "毎日 終わります。",
+            exampleJp: "まいにち おわります。",
             exampleVi: "Hằng ngày tôi xong, kết thúc."
         ),
         VocabWord(
             kanji: nil,
             kana: "デパート",
-            romaji: "でpaato",
+            romaji: "depaato",
             meaningVi: "Cửa hàng bách hóa",
             topicId: "travel",
             lessonNumber: 4,
-            exampleJp: "デパートがあります。",
+            exampleJp: "デパートが あります。",
             exampleVi: "Có cửa hàng bách hóa."
         ),
         VocabWord(
-            kanji: "銀行",
+            kanji: nil,
             kana: "ぎんこう",
             romaji: "ginkou",
             meaningVi: "Ngân hàng",
             topicId: "travel",
             lessonNumber: 4,
-            exampleJp: "銀行へ行きます。",
+            exampleJp: "ぎんこうへ いきます。",
             exampleVi: "Tôi đi đến ngân hàng."
         ),
         VocabWord(
-            kanji: "郵便局",
+            kanji: nil,
             kana: "ゆうびんきょく",
             romaji: "yuubinkyoku",
             meaningVi: "Bưu điện",
             topicId: "travel",
             lessonNumber: 4,
-            exampleJp: "郵便局へ行きます。",
+            exampleJp: "ゆうびんきょくへ いきます。",
             exampleVi: "Tôi đi đến bưu điện."
         ),
         VocabWord(
-            kanji: "図書館",
+            kanji: nil,
             kana: "としょかん",
             romaji: "toshokan",
             meaningVi: "Thư viện",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "図書館があります。",
+            exampleJp: "としょかんが あります。",
             exampleVi: "Có thư viện."
         ),
         VocabWord(
-            kanji: "美術館",
+            kanji: nil,
             kana: "びじゅつかん",
             romaji: "bijutsukan",
             meaningVi: "Bảo tàng mỹ thuật",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "美術館があります。",
+            exampleJp: "びじゅつかんが あります。",
             exampleVi: "Có bảo tàng mỹ thuật."
         ),
         VocabWord(
-            kanji: "駅",
+            kanji: nil,
             kana: "えき",
             romaji: "eki",
             meaningVi: "Ga",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "駅へ行きます。",
+            exampleJp: "えきへ いきます。",
             exampleVi: "Tôi đi đến ga."
         ),
         VocabWord(
@@ -1922,37 +1922,37 @@ public final class VocabRepository {
             meaningVi: "Bể bơi",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "プールがあります。",
+            exampleJp: "プールが あります。",
             exampleVi: "Có bể bơi."
         ),
         VocabWord(
-            kanji: "今",
+            kanji: nil,
             kana: "いま",
             romaji: "ima",
             meaningVi: "Bây giờ",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "今に勉強します。",
+            exampleJp: "いまに べんきょうします。",
             exampleVi: "Tôi học vào bây giờ."
         ),
         VocabWord(
-            kanji: "～時",
+            kanji: nil,
             kana: "～じ",
             romaji: "～ji",
             meaningVi: "～giờ",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "～時に勉強します。",
+            exampleJp: "～じに べんきょうします。",
             exampleVi: "Tôi học vào ～giờ."
         ),
         VocabWord(
-            kanji: "分",
+            kanji: nil,
             kana: "～",
             romaji: "～",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "分があります。",
+            exampleJp: "～が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -1962,7 +1962,7 @@ public final class VocabRepository {
             meaningVi: "（～ 分",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "ぶんがあります。",
+            exampleJp: "ぶんが あります。",
             exampleVi: "Có （～ 分."
         ),
         VocabWord(
@@ -1972,47 +1972,47 @@ public final class VocabRepository {
             meaningVi: "） ～phút",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "ふんがあります。",
+            exampleJp: "ふんが あります。",
             exampleVi: "Có ） ～phút."
         ),
         VocabWord(
-            kanji: "半",
+            kanji: nil,
             kana: "はん",
             romaji: "wan",
             meaningVi: "Nửa, rưỡi",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "半があります。",
+            exampleJp: "はんが あります。",
             exampleVi: "Có nửa, rưỡi."
         ),
         VocabWord(
-            kanji: "何時",
+            kanji: nil,
             kana: "なんじ",
             romaji: "nanji",
             meaningVi: "Mấy giờ?",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "何時に勉強します。",
+            exampleJp: "なんじに べんきょうします。",
             exampleVi: "Tôi học vào mấy giờ?."
         ),
         VocabWord(
-            kanji: "何分",
+            kanji: nil,
             kana: "なんぷん",
             romaji: "nanpun",
             meaningVi: "Mấy phút?, bao nhiêu phút?",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "何分があります。",
+            exampleJp: "なんぷんが あります。",
             exampleVi: "Có mấy phút?, bao nhiêu phút?."
         ),
         VocabWord(
-            kanji: "午前",
+            kanji: nil,
             kana: "ごぜん",
             romaji: "gozen",
             meaningVi: "Buổi sáng",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "午前に勉強します。",
+            exampleJp: "ごぜんに べんきょうします。",
             exampleVi: "Tôi học vào buổi sáng."
         ),
         VocabWord(
@@ -2022,7 +2022,7 @@ public final class VocabRepository {
             meaningVi: "午",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "午があります。",
+            exampleJp: "午が あります。",
             exampleVi: "Có 午."
         ),
         VocabWord(
@@ -2032,17 +2032,17 @@ public final class VocabRepository {
             meaningVi: "前",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "前があります。",
+            exampleJp: "前が あります。",
             exampleVi: "Có 前."
         ),
         VocabWord(
-            kanji: "７時",
+            kanji: nil,
             kana: "ぜん",
             romaji: "zen",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "７時があります。",
+            exampleJp: "ぜんが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -2052,17 +2052,17 @@ public final class VocabRepository {
             meaningVi: "7 giờ sáng",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "じに勉強します。",
+            exampleJp: "じに べんきょうします。",
             exampleVi: "Tôi học vào 7 giờ sáng."
         ),
         VocabWord(
-            kanji: "午後",
+            kanji: nil,
             kana: "ごご",
             romaji: "gogo",
             meaningVi: "Buổi trưa",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "午後に勉強します。",
+            exampleJp: "ごごに べんきょうします。",
             exampleVi: "Tôi học vào buổi trưa."
         ),
         VocabWord(
@@ -2072,17 +2072,17 @@ public final class VocabRepository {
             meaningVi: "午",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "午があります。",
+            exampleJp: "午が あります。",
             exampleVi: "Có 午."
         ),
         VocabWord(
-            kanji: "５時",
+            kanji: nil,
             kana: "後",
             romaji: "後",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "５時があります。",
+            exampleJp: "後が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -2092,37 +2092,37 @@ public final class VocabRepository {
             meaningVi: "5 giờ chiều",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "じに勉強します。",
+            exampleJp: "じに べんきょうします。",
             exampleVi: "Tôi học vào 5 giờ chiều."
         ),
         VocabWord(
-            kanji: "朝",
+            kanji: nil,
             kana: "あさ",
             romaji: "asa",
             meaningVi: "Sáng",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "朝に勉強します。",
+            exampleJp: "あさに べんきょうします。",
             exampleVi: "Tôi học vào sáng."
         ),
         VocabWord(
-            kanji: "昼",
+            kanji: nil,
             kana: "ひる",
             romaji: "hiru",
             meaningVi: "Trưa",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "昼に勉強します。",
+            exampleJp: "ひるに べんきょうします。",
             exampleVi: "Tôi học vào trưa."
         ),
         VocabWord(
-            kanji: "晩（夜）",
+            kanji: nil,
             kana: "ばん（よる）",
             romaji: "ban（yoru）",
             meaningVi: "Tối (đêm)",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "晩（夜）に勉強します。",
+            exampleJp: "ばん（よる）に べんきょうします。",
             exampleVi: "Tôi học vào tối."
         ),
         VocabWord(
@@ -2132,37 +2132,37 @@ public final class VocabRepository {
             meaningVi: "Hôm kia",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "日本の冬はおとといです。",
+            exampleJp: "にほんの ふゆは おとといです。",
             exampleVi: "Mùa đông ở Nhật hôm kia."
         ),
         VocabWord(
-            kanji: "昨日",
+            kanji: nil,
             kana: "きのう",
             romaji: "kinou",
             meaningVi: "Hôm qua",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "昨日があります。",
+            exampleJp: "きのうが あります。",
             exampleVi: "Có hôm qua."
         ),
         VocabWord(
-            kanji: "今日",
+            kanji: nil,
             kana: "きょう",
             romaji: "kyou",
             meaningVi: "Hôm nay",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "今日があります。",
+            exampleJp: "きょうが あります。",
             exampleVi: "Có hôm nay."
         ),
         VocabWord(
-            kanji: "明日",
+            kanji: nil,
             kana: "あした",
             romaji: "ashita",
             meaningVi: "Ngày mai",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "明日に勉強します。",
+            exampleJp: "あしたに べんきょうします。",
             exampleVi: "Tôi học vào ngày mai."
         ),
         VocabWord(
@@ -2172,117 +2172,117 @@ public final class VocabRepository {
             meaningVi: "Ngày kia",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "あさってに勉強します。",
+            exampleJp: "あさってに べんきょうします。",
             exampleVi: "Tôi học vào ngày kia."
         ),
         VocabWord(
-            kanji: "今朝",
+            kanji: nil,
             kana: "けさ",
             romaji: "kesa",
             meaningVi: "Sáng nay",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "今朝に勉強します。",
+            exampleJp: "けさに べんきょうします。",
             exampleVi: "Tôi học vào sáng nay."
         ),
         VocabWord(
-            kanji: "今晩",
+            kanji: nil,
             kana: "こんばん",
             romaji: "konban",
             meaningVi: "Tối nay",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "今晩に勉強します。",
+            exampleJp: "こんばんに べんきょうします。",
             exampleVi: "Tôi học vào tối nay."
         ),
         VocabWord(
-            kanji: "毎朝",
+            kanji: nil,
             kana: "まいあさ",
             romaji: "maiasa",
             meaningVi: "Hàng sáng",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "毎朝に勉強します。",
+            exampleJp: "まいあさに べんきょうします。",
             exampleVi: "Tôi học vào hàng sáng."
         ),
         VocabWord(
-            kanji: "毎晩",
+            kanji: nil,
             kana: "まいばん",
             romaji: "maiban",
             meaningVi: "Hàng tối",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "毎晩に勉強します。",
+            exampleJp: "まいばんに べんきょうします。",
             exampleVi: "Tôi học vào hàng tối."
         ),
         VocabWord(
-            kanji: "毎日",
+            kanji: nil,
             kana: "まいにち",
             romaji: "mainichi",
             meaningVi: "Hàng ngày",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "毎日に勉強します。",
+            exampleJp: "まいにちに べんきょうします。",
             exampleVi: "Tôi học vào hàng ngày."
         ),
         VocabWord(
-            kanji: "休み",
+            kanji: nil,
             kana: "やすみ",
             romaji: "yasumi",
             meaningVi: "Nghỉ",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "休みがあります。",
+            exampleJp: "やすみが あります。",
             exampleVi: "Có nghỉ."
         ),
         VocabWord(
-            kanji: "昼休み",
+            kanji: nil,
             kana: "ひるやすみ",
             romaji: "hiruyasumi",
             meaningVi: "Nghỉ trưa",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "昼休みに勉強します。",
+            exampleJp: "ひるやすみに べんきょうします。",
             exampleVi: "Tôi học vào nghỉ trưa."
         ),
         VocabWord(
-            kanji: "日本語",
+            kanji: nil,
             kana: "にほんご",
             romaji: "nihongo",
             meaningVi: "Tiếng Nhật",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "日本語があります。",
+            exampleJp: "にほんごが あります。",
             exampleVi: "Có tiếng nhật."
         ),
         VocabWord(
-            kanji: "勉強",
+            kanji: nil,
             kana: "べんきょう",
             romaji: "benkyou",
             meaningVi: "Việc học tập",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "勉強があります。",
+            exampleJp: "べんきょうが あります。",
             exampleVi: "Có việc học tập."
         ),
         VocabWord(
-            kanji: "講義",
+            kanji: nil,
             kana: "こうぎ",
             romaji: "kougi",
             meaningVi: "Bài giảng, giờ giảng",
             topicId: "family",
             lessonNumber: 4,
-            exampleJp: "講義に勉強します。",
+            exampleJp: "こうぎに べんきょうします。",
             exampleVi: "Tôi học vào bài giảng, giờ giảng."
         ),
         VocabWord(
-            kanji: "見学",
+            kanji: nil,
             kana: "けんがく",
             romaji: "Tham",
             meaningVi: "quan (đi xem để học hỏi)",
             topicId: "family",
             lessonNumber: 4,
-            exampleJp: "見学があります。",
+            exampleJp: "けんがくが あります。",
             exampleVi: "Có quan."
         ),
         VocabWord(
@@ -2292,117 +2292,117 @@ public final class VocabRepository {
             meaningVi: "Từ ~",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "～からがあります。",
+            exampleJp: "～からが あります。",
             exampleVi: "Có từ ~."
         ),
         VocabWord(
             kanji: nil,
             kana: "～まで",
-            romaji: "～maで",
+            romaji: "～made",
             meaningVi: "Đến ~",
             topicId: "travel",
             lessonNumber: 4,
-            exampleJp: "～までがあります。",
+            exampleJp: "～までが あります。",
             exampleVi: "Có đến ~."
         ),
         VocabWord(
-            kanji: "月曜日",
+            kanji: nil,
             kana: "げつようび",
             romaji: "getsuyoubi",
             meaningVi: "Ngày thứ hai",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "月曜日に勉強します。",
+            exampleJp: "げつようびに べんきょうします。",
             exampleVi: "Tôi học vào ngày thứ hai."
         ),
         VocabWord(
-            kanji: "火曜日",
+            kanji: nil,
             kana: "かようび",
             romaji: "kayoubi",
             meaningVi: "Ngày thứ ba",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "火曜日に勉強します。",
+            exampleJp: "かようびに べんきょうします。",
             exampleVi: "Tôi học vào ngày thứ ba."
         ),
         VocabWord(
-            kanji: "水曜日",
+            kanji: nil,
             kana: "すいようび",
             romaji: "suiyoubi",
             meaningVi: "Ngày thứ tư",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "水曜日に勉強します。",
+            exampleJp: "すいようびに べんきょうします。",
             exampleVi: "Tôi học vào ngày thứ tư."
         ),
         VocabWord(
-            kanji: "木曜日",
+            kanji: nil,
             kana: "もくようび",
             romaji: "mokuyoubi",
             meaningVi: "Ngày thứ năm",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "木曜日に勉強します。",
+            exampleJp: "もくようびに べんきょうします。",
             exampleVi: "Tôi học vào ngày thứ năm."
         ),
         VocabWord(
-            kanji: "金曜日",
+            kanji: nil,
             kana: "きんようび",
             romaji: "kinyoubi",
             meaningVi: "Ngày thứ sáu",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "金曜日に勉強します。",
+            exampleJp: "きんようびに べんきょうします。",
             exampleVi: "Tôi học vào ngày thứ sáu."
         ),
         VocabWord(
-            kanji: "土曜日",
+            kanji: nil,
             kana: "どようび",
             romaji: "doyoubi",
             meaningVi: "Ngày thứ bẩy",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "土曜日に勉強します。",
+            exampleJp: "どようびに べんきょうします。",
             exampleVi: "Tôi học vào ngày thứ bẩy."
         ),
         VocabWord(
-            kanji: "日曜日",
+            kanji: nil,
             kana: "にちようび",
             romaji: "nichiyoubi",
             meaningVi: "Ngày chủ nhật",
             topicId: "time",
             lessonNumber: 4,
-            exampleJp: "日曜日に勉強します。",
+            exampleJp: "にちようびに べんきょうします。",
             exampleVi: "Tôi học vào ngày chủ nhật."
         ),
         VocabWord(
-            kanji: "何曜日",
+            kanji: nil,
             kana: "なんようび",
             romaji: "nanyoubi",
             meaningVi: "Ngày thứ mấy (từ để hỏi)",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "何曜日に勉強します。",
+            exampleJp: "なんようびに べんきょうします。",
             exampleVi: "Tôi học vào ngày thứ mấy."
         ),
         VocabWord(
-            kanji: "番号",
+            kanji: nil,
             kana: "ばんごう",
             romaji: "bangou",
             meaningVi: "Số",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "番号があります。",
+            exampleJp: "ばんごうが あります。",
             exampleVi: "Có số."
         ),
         VocabWord(
-            kanji: "何番",
+            kanji: nil,
             kana: "なんばん",
             romaji: "nanban",
             meaningVi: "Số mấy",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "何番があります。",
+            exampleJp: "なんばんが あります。",
             exampleVi: "Có số mấy."
         ),
         VocabWord(
@@ -2412,17 +2412,17 @@ public final class VocabRepository {
             meaningVi: "~ và ~ (dùng nối 2 danh từ)",
             topicId: "family",
             lessonNumber: 4,
-            exampleJp: "～と～があります。",
+            exampleJp: "～と～が あります。",
             exampleVi: "Có ~ và ~."
         ),
         VocabWord(
             kanji: nil,
             kana: "そうですか。",
-            romaji: "souでsuka.",
+            romaji: "soudesuka.",
             meaningVi: "Thế à? ( tỏ ý mình đang nghe）",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "そうですか。があります。",
+            exampleJp: "そうですか。が あります。",
             exampleVi: "Có thế à?."
         ),
         VocabWord(
@@ -2432,7 +2432,7 @@ public final class VocabRepository {
             meaningVi: "大変",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "大変があります。",
+            exampleJp: "大変が あります。",
             exampleVi: "Có 大変."
         ),
         VocabWord(
@@ -2442,7 +2442,7 @@ public final class VocabRepository {
             meaningVi: "たいへん",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "たいへんがあります。",
+            exampleJp: "たいへんが あります。",
             exampleVi: "Có たいへん."
         ),
         VocabWord(
@@ -2452,7 +2452,7 @@ public final class VocabRepository {
             meaningVi: "nhỉ!, căng nhỉ!",
             topicId: "food",
             lessonNumber: 4,
-            exampleJp: "ですね。があります。",
+            exampleJp: "ですね。が あります。",
             exampleVi: "Có nhỉ!, căng nhỉ!."
         ),
         VocabWord(
@@ -2462,7 +2462,7 @@ public final class VocabRepository {
             meaningVi: "Để tôi xem",
             topicId: "family",
             lessonNumber: 4,
-            exampleJp: "えーとがあります。",
+            exampleJp: "えーとが あります。",
             exampleVi: "Có để tôi xem."
         ),
         VocabWord(
@@ -2472,7 +2472,7 @@ public final class VocabRepository {
             meaningVi: "～～～～～～～～～～～～～～",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "～～～～～～～～～～～～～～があります。",
+            exampleJp: "～～～～～～～～～～～～～～が あります。",
             exampleVi: "Có ～～～～～～～～～～～～～～."
         ),
         VocabWord(
@@ -2482,7 +2482,7 @@ public final class VocabRepository {
             meaningVi: "York",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "ニューヨークがあります。",
+            exampleJp: "ニューヨークが あります。",
             exampleVi: "Có york."
         ),
         VocabWord(
@@ -2492,7 +2492,7 @@ public final class VocabRepository {
             meaningVi: "Bắc Kinh",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "ペキンがあります。",
+            exampleJp: "ペキンが あります。",
             exampleVi: "Có bắc kinh."
         ),
         VocabWord(
@@ -2502,7 +2502,7 @@ public final class VocabRepository {
             meaningVi: "London",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "ロンドンがあります。",
+            exampleJp: "ロンドンが あります。",
             exampleVi: "Có london."
         ),
         VocabWord(
@@ -2512,7 +2512,7 @@ public final class VocabRepository {
             meaningVi: "Bangkok",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "バンコクがあります。",
+            exampleJp: "バンコクが あります。",
             exampleVi: "Có bangkok."
         ),
         VocabWord(
@@ -2522,7 +2522,7 @@ public final class VocabRepository {
             meaningVi: "Angeles",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "ロサンゼルスがあります。",
+            exampleJp: "ロサンゼルスが あります。",
             exampleVi: "Có angeles."
         ),
         VocabWord(
@@ -2532,7 +2532,7 @@ public final class VocabRepository {
             meaningVi: "やまと美",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "やまと美があります。",
+            exampleJp: "やまと美が あります。",
             exampleVi: "Có やまと美."
         ),
         VocabWord(
@@ -2542,7 +2542,7 @@ public final class VocabRepository {
             meaningVi: "び",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "びがあります。",
+            exampleJp: "びが あります。",
             exampleVi: "Có び."
         ),
         VocabWord(
@@ -2552,7 +2552,7 @@ public final class VocabRepository {
             meaningVi: "術",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "術があります。",
+            exampleJp: "術が あります。",
             exampleVi: "Có 術."
         ),
         VocabWord(
@@ -2562,7 +2562,7 @@ public final class VocabRepository {
             meaningVi: "じゅつ",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "じゅつがあります。",
+            exampleJp: "じゅつが あります。",
             exampleVi: "Có じゅつ."
         ),
         VocabWord(
@@ -2572,7 +2572,7 @@ public final class VocabRepository {
             meaningVi: "館",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "館があります。",
+            exampleJp: "館が あります。",
             exampleVi: "Có 館."
         ),
         VocabWord(
@@ -2582,7 +2582,7 @@ public final class VocabRepository {
             meaningVi: "Bảo tàng mỹ thuật Yamato (tên tưởng tượng, không có thực)",
             topicId: "family",
             lessonNumber: 4,
-            exampleJp: "かんがあります。",
+            exampleJp: "かんが あります。",
             exampleVi: "Có bảo tàng mỹ thuật yamato."
         ),
         VocabWord(
@@ -2592,7 +2592,7 @@ public final class VocabRepository {
             meaningVi: "大",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "大があります。",
+            exampleJp: "大が あります。",
             exampleVi: "Có 大."
         ),
         VocabWord(
@@ -2602,7 +2602,7 @@ public final class VocabRepository {
             meaningVi: "おお",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "おおがあります。",
+            exampleJp: "おおが あります。",
             exampleVi: "Có おお."
         ),
         VocabWord(
@@ -2612,7 +2612,7 @@ public final class VocabRepository {
             meaningVi: "阪",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "阪があります。",
+            exampleJp: "阪が あります。",
             exampleVi: "Có 阪."
         ),
         VocabWord(
@@ -2622,17 +2622,17 @@ public final class VocabRepository {
             meaningVi: "さか",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "さかがあります。",
+            exampleJp: "さかが あります。",
             exampleVi: "Có さか."
         ),
         VocabWord(
             kanji: nil,
             kana: "デパート",
-            romaji: "でpaato",
+            romaji: "depaato",
             meaningVi: "Bách hóa Osaka (tên tưởng tượng, không có thực)",
             topicId: "family",
             lessonNumber: 4,
-            exampleJp: "デパートがあります。",
+            exampleJp: "デパートが あります。",
             exampleVi: "Có bách hóa osaka."
         ),
         VocabWord(
@@ -2642,7 +2642,7 @@ public final class VocabRepository {
             meaningVi: "みどり図",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "みどり図があります。",
+            exampleJp: "みどり図が あります。",
             exampleVi: "Có みどり図."
         ),
         VocabWord(
@@ -2652,7 +2652,7 @@ public final class VocabRepository {
             meaningVi: "と",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "とがあります。",
+            exampleJp: "とが あります。",
             exampleVi: "Có と."
         ),
         VocabWord(
@@ -2662,7 +2662,7 @@ public final class VocabRepository {
             meaningVi: "書",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "書があります。",
+            exampleJp: "書が あります。",
             exampleVi: "Có 書."
         ),
         VocabWord(
@@ -2672,7 +2672,7 @@ public final class VocabRepository {
             meaningVi: "しょ",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "しょがあります。",
+            exampleJp: "しょが あります。",
             exampleVi: "Có しょ."
         ),
         VocabWord(
@@ -2682,7 +2682,7 @@ public final class VocabRepository {
             meaningVi: "館",
             topicId: "greeting",
             lessonNumber: 4,
-            exampleJp: "館があります。",
+            exampleJp: "館が あります。",
             exampleVi: "Có 館."
         ),
         VocabWord(
@@ -2692,7 +2692,7 @@ public final class VocabRepository {
             meaningVi: "Thư viện Midori (tên tưởng tượng, không có thực)",
             topicId: "family",
             lessonNumber: 4,
-            exampleJp: "かんがあります。",
+            exampleJp: "かんが あります。",
             exampleVi: "Có thư viện midori."
         )
     ]
@@ -2700,73 +2700,73 @@ public final class VocabRepository {
     // MARK: - Bài 5 (60 từ)
     public static let lesson5Words: [VocabWord] = [
         VocabWord(
-            kanji: "行きます",
+            kanji: nil,
             kana: "いきます",
             romaji: "ikimasu",
             meaningVi: "Đi",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "学校へ行きます。",
+            exampleJp: "がっこうへ いきます。",
             exampleVi: "Tôi đi đến trường."
         ),
         VocabWord(
-            kanji: "来ます",
+            kanji: nil,
             kana: "きます",
             romaji: "kimasu",
             meaningVi: "Đến",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "帰ります",
+            kanji: nil,
             kana: "かえります",
             romaji: "kaerimasu",
             meaningVi: "Về, trở về (về nhà, về quê, về nước…)",
             topicId: "food",
             lessonNumber: 5,
-            exampleJp: "うちへ帰ります。",
+            exampleJp: "うちへ かえります。",
             exampleVi: "Tôi trở về nhà."
         ),
         VocabWord(
-            kanji: "工場",
+            kanji: nil,
             kana: "こうじょう",
             romaji: "koujou",
             meaningVi: "Nhà máy",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "工場があります。",
+            exampleJp: "こうじょうが あります。",
             exampleVi: "Có nhà máy."
         ),
         VocabWord(
-            kanji: "駅",
+            kanji: nil,
             kana: "えき",
             romaji: "eki",
             meaningVi: "Ga",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "駅へ行きます。",
+            exampleJp: "えきへ いきます。",
             exampleVi: "Tôi đi đến ga."
         ),
         VocabWord(
-            kanji: "病院",
+            kanji: nil,
             kana: "びょういん",
             romaji: "byouin",
             meaningVi: "Bệnh viện",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "病院へ行きます。",
+            exampleJp: "びょういんへ いきます。",
             exampleVi: "Tôi đi đến bệnh viện."
         ),
         VocabWord(
-            kanji: "学校",
+            kanji: nil,
             kana: "がっこう",
             romaji: "gakkou",
             meaningVi: "Trường học (nói chung)",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "学校へ行きます。",
+            exampleJp: "がっこうへ いきます。",
             exampleVi: "Tôi đi đến trường học."
         ),
         VocabWord(
@@ -2776,27 +2776,27 @@ public final class VocabRepository {
             meaningVi: "Siêu thị",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "スーパーへ行きます。",
+            exampleJp: "スーパーへ いきます。",
             exampleVi: "Tôi đi đến siêu thị."
         ),
         VocabWord(
-            kanji: "本屋",
+            kanji: nil,
             kana: "ほんや",
             romaji: "honya",
             meaningVi: "Hiệu sách",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "本屋があります。",
+            exampleJp: "ほんやが あります。",
             exampleVi: "Có hiệu sách."
         ),
         VocabWord(
-            kanji: "～屋",
+            kanji: nil,
             kana: "～や",
             romaji: "～ya",
             meaningVi: "Hiệu ~ , cửa hàng ~",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "～屋があります。",
+            exampleJp: "～やが あります。",
             exampleVi: "Có hiệu ~ , cửa hàng ~."
         ),
         VocabWord(
@@ -2806,7 +2806,7 @@ public final class VocabRepository {
             meaningVi: "さかな屋",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "さかな屋があります。",
+            exampleJp: "さかな屋が あります。",
             exampleVi: "Có さかな屋."
         ),
         VocabWord(
@@ -2816,67 +2816,67 @@ public final class VocabRepository {
             meaningVi: "Cửa hàng cá",
             topicId: "food",
             lessonNumber: 5,
-            exampleJp: "やが好きです。",
+            exampleJp: "やが すきです。",
             exampleVi: "Tôi thích cửa hàng cá."
         ),
         VocabWord(
-            kanji: "～月",
+            kanji: nil,
             kana: "～がつ",
             romaji: "～gatsu",
             meaningVi: "Tháng～",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "～月に勉強します。",
+            exampleJp: "～がつに べんきょうします。",
             exampleVi: "Tôi học vào tháng～."
         ),
         VocabWord(
-            kanji: "何月",
+            kanji: nil,
             kana: "なんがつ",
             romaji: "nangatsu",
             meaningVi: "Tháng mấy?",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "何月に勉強します。",
+            exampleJp: "なんがつに べんきょうします。",
             exampleVi: "Tôi học vào tháng mấy?."
         ),
         VocabWord(
-            kanji: "～日",
+            kanji: nil,
             kana: "～にち",
             romaji: "～nichi",
             meaningVi: "Ngày～ , (～ ngày)",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "～日に勉強します。",
+            exampleJp: "～にちに べんきょうします。",
             exampleVi: "Tôi học vào ngày～ ,."
         ),
         VocabWord(
-            kanji: "何日",
+            kanji: nil,
             kana: "なんにち",
             romaji: "nannichi",
             meaningVi: "Ngày bao nhiêu? (bao nhiêu ngày?)",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "何日に勉強します。",
+            exampleJp: "なんにちに べんきょうします。",
             exampleVi: "Tôi học vào ngày bao nhiêu?."
         ),
         VocabWord(
-            kanji: "～年",
+            kanji: nil,
             kana: "～ねん",
             romaji: "～nen",
             meaningVi: "Năm～",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "～年に勉強します。",
+            exampleJp: "～ねんに べんきょうします。",
             exampleVi: "Tôi học vào năm～."
         ),
         VocabWord(
-            kanji: "何年",
+            kanji: nil,
             kana: "なんねん",
             romaji: "nannen",
             meaningVi: "Năm bao nhiêu? (bao nhiêu năm?)",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "何年に勉強します。",
+            exampleJp: "なんねんに べんきょうします。",
             exampleVi: "Tôi học vào năm bao nhiêu?."
         ),
         VocabWord(
@@ -2886,7 +2886,7 @@ public final class VocabRepository {
             meaningVi: "bảng ngày tháng cụ thể kèm theo",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "Xemに勉強します。",
+            exampleJp: "Xemに べんきょうします。",
             exampleVi: "Tôi học vào bảng ngày tháng cụ thể kèm theo."
         ),
         VocabWord(
@@ -2896,157 +2896,157 @@ public final class VocabRepository {
             meaningVi: "nào, lúc nào",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "いつがあります。",
+            exampleJp: "いつが あります。",
             exampleVi: "Có nào, lúc nào."
         ),
         VocabWord(
-            kanji: "先週",
+            kanji: nil,
             kana: "せんしゅう",
             romaji: "senshuu",
             meaningVi: "Tuần trước",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "先週に勉強します。",
+            exampleJp: "せんしゅうに べんきょうします。",
             exampleVi: "Tôi học vào tuần trước."
         ),
         VocabWord(
-            kanji: "今週",
+            kanji: nil,
             kana: "こんしゅう",
             romaji: "konshuu",
             meaningVi: "Tuần này",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "今週に勉強します。",
+            exampleJp: "こんしゅうに べんきょうします。",
             exampleVi: "Tôi học vào tuần này."
         ),
         VocabWord(
-            kanji: "来週",
+            kanji: nil,
             kana: "らいしゅう",
             romaji: "raishuu",
             meaningVi: "Tuần sau, tuần tới",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "来週に勉強します。",
+            exampleJp: "らいしゅうに べんきょうします。",
             exampleVi: "Tôi học vào tuần sau, tuần tới."
         ),
         VocabWord(
-            kanji: "先月",
+            kanji: nil,
             kana: "せんげつ",
             romaji: "sengetsu",
             meaningVi: "Tháng trước",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "先月に勉強します。",
+            exampleJp: "せんげつに べんきょうします。",
             exampleVi: "Tôi học vào tháng trước."
         ),
         VocabWord(
-            kanji: "今月",
+            kanji: nil,
             kana: "こんげつ",
             romaji: "kongetsu",
             meaningVi: "Tháng này",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "今月に勉強します。",
+            exampleJp: "こんげつに べんきょうします。",
             exampleVi: "Tôi học vào tháng này."
         ),
         VocabWord(
-            kanji: "来月",
+            kanji: nil,
             kana: "らいげつ",
             romaji: "raigetsu",
             meaningVi: "Tháng sau, tháng tới",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "来月に勉強します。",
+            exampleJp: "らいげつに べんきょうします。",
             exampleVi: "Tôi học vào tháng sau, tháng tới."
         ),
         VocabWord(
-            kanji: "去年",
+            kanji: nil,
             kana: "きょねん",
             romaji: "kyonen",
             meaningVi: "Năm ngoái, năm trước",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "去年に勉強します。",
+            exampleJp: "きょねんに べんきょうします。",
             exampleVi: "Tôi học vào năm ngoái, năm trước."
         ),
         VocabWord(
-            kanji: "今年",
+            kanji: nil,
             kana: "ことし",
             romaji: "kotoshi",
             meaningVi: "Năm nay",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "今年に勉強します。",
+            exampleJp: "ことしに べんきょうします。",
             exampleVi: "Tôi học vào năm nay."
         ),
         VocabWord(
-            kanji: "来年",
+            kanji: nil,
             kana: "らいねん",
             romaji: "rainen",
             meaningVi: "Năm sau, năm tới",
             topicId: "time",
             lessonNumber: 5,
-            exampleJp: "来年に勉強します。",
+            exampleJp: "らいねんに べんきょうします。",
             exampleVi: "Tôi học vào năm sau, năm tới."
         ),
         VocabWord(
-            kanji: "誕生日",
+            kanji: nil,
             kana: "たんじょうび",
             romaji: "Sinh",
             meaningVi: "nhật, ngày sinh",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "誕生日に勉強します。",
+            exampleJp: "たんじょうびに べんきょうします。",
             exampleVi: "Tôi học vào nhật, ngày sinh."
         ),
         VocabWord(
-            kanji: "飛行機",
+            kanji: nil,
             kana: "ひこうき",
             romaji: "hikouki",
             meaningVi: "Máy bay",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "飛行機があります。",
+            exampleJp: "ひこうきが あります。",
             exampleVi: "Có máy bay."
         ),
         VocabWord(
-            kanji: "船",
+            kanji: nil,
             kana: "ふね",
             romaji: "fune",
             meaningVi: "Tàu thủy",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "船があります。",
+            exampleJp: "ふねが あります。",
             exampleVi: "Có tàu thủy."
         ),
         VocabWord(
-            kanji: "電車",
+            kanji: nil,
             kana: "でんしゃ",
-            romaji: "でnsha",
+            romaji: "densha",
             meaningVi: "Tàu điện",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "電車があります。",
+            exampleJp: "でんしゃが あります。",
             exampleVi: "Có tàu điện."
         ),
         VocabWord(
-            kanji: "地下鉄",
+            kanji: nil,
             kana: "ちかてつ",
             romaji: "chikatetsu",
             meaningVi: "Tàu điện ngầm",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "地下鉄があります。",
+            exampleJp: "ちかてつが あります。",
             exampleVi: "Có tàu điện ngầm."
         ),
         VocabWord(
-            kanji: "新幹線",
+            kanji: nil,
             kana: "しんかんせん",
             romaji: "shinkansen",
             meaningVi: "Tàu Shinkansen",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "新幹線があります。",
+            exampleJp: "しんかんせんが あります。",
             exampleVi: "Có tàu shinkansen."
         ),
         VocabWord(
@@ -3056,7 +3056,7 @@ public final class VocabRepository {
             meaningVi: "buýt",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "バスがあります。",
+            exampleJp: "バスが あります。",
             exampleVi: "Có buýt."
         ),
         VocabWord(
@@ -3066,137 +3066,137 @@ public final class VocabRepository {
             meaningVi: "Taxi",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "タクシーがあります。",
+            exampleJp: "タクシーが あります。",
             exampleVi: "Có taxi."
         ),
         VocabWord(
-            kanji: "自転車",
+            kanji: nil,
             kana: "じてんしゃ",
             romaji: "Xe",
             meaningVi: "đạp",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "自転車があります。",
+            exampleJp: "じてんしゃが あります。",
             exampleVi: "Có đạp."
         ),
         VocabWord(
-            kanji: "歩いて",
+            kanji: nil,
             kana: "あるいて",
             romaji: "aruite",
             meaningVi: "Đi bộ (chỉ phương tiện, = on foot)",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "歩いてがあります。",
+            exampleJp: "あるいてが あります。",
             exampleVi: "Có đi bộ."
         ),
         VocabWord(
-            kanji: "人",
+            kanji: nil,
             kana: "ひと",
             romaji: "hito",
             meaningVi: "Người",
             topicId: "family",
             lessonNumber: 5,
-            exampleJp: "人があります。",
+            exampleJp: "ひとが あります。",
             exampleVi: "Có người."
         ),
         VocabWord(
-            kanji: "友達",
+            kanji: nil,
             kana: "ともだち",
             romaji: "tomodachi",
             meaningVi: "Bạn, bạn bè",
             topicId: "family",
             lessonNumber: 5,
-            exampleJp: "友達があります。",
+            exampleJp: "ともだちが あります。",
             exampleVi: "Có bạn, bạn bè."
         ),
         VocabWord(
-            kanji: "恋人",
+            kanji: nil,
             kana: "こいびと",
             romaji: "koibito",
             meaningVi: "Người yêu",
             topicId: "family",
             lessonNumber: 5,
-            exampleJp: "恋人があります。",
+            exampleJp: "こいびとが あります。",
             exampleVi: "Có người yêu."
         ),
         VocabWord(
-            kanji: "彼",
+            kanji: nil,
             kana: "かれ",
             romaji: "Anh",
             meaningVi: "ấy (ngôi thứ ba số ít)",
             topicId: "family",
             lessonNumber: 5,
-            exampleJp: "彼があります。",
+            exampleJp: "かれが あります。",
             exampleVi: "Có ấy."
         ),
         VocabWord(
-            kanji: "彼女",
+            kanji: nil,
             kana: "かのじょ",
             romaji: "kanojo",
             meaningVi: "Cô ấy (ngôi thứ ba số ít)",
             topicId: "family",
             lessonNumber: 5,
-            exampleJp: "彼女があります。",
+            exampleJp: "かのじょが あります。",
             exampleVi: "Có cô ấy."
         ),
         VocabWord(
-            kanji: "家族",
+            kanji: nil,
             kana: "かぞく",
             romaji: "Gia",
             meaningVi: "đình",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "家族があります。",
+            exampleJp: "かぞくが あります。",
             exampleVi: "Có đình."
         ),
         VocabWord(
-            kanji: "１人で",
+            kanji: nil,
             kana: "ひとりで",
-            romaji: "hitoriで",
+            romaji: "hitoride",
             meaningVi: "Một mình",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "１人でがあります。",
+            exampleJp: "ひとりでが あります。",
             exampleVi: "Có một mình."
         ),
         VocabWord(
-            kanji: "普通",
+            kanji: nil,
             kana: "ふつう",
             romaji: "futsuu",
             meaningVi: "Thông thường, tàu thường",
             topicId: "family",
             lessonNumber: 5,
-            exampleJp: "普通があります。",
+            exampleJp: "ふつうが あります。",
             exampleVi: "Có thông thường, tàu thường."
         ),
         VocabWord(
-            kanji: "急行",
+            kanji: nil,
             kana: "きゅうこう",
             romaji: "kyuukou",
             meaningVi: "Tốc hành, tàu tốc hành",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "急行があります。",
+            exampleJp: "きゅうこうが あります。",
             exampleVi: "Có tốc hành, tàu tốc hành."
         ),
         VocabWord(
-            kanji: "特急",
+            kanji: nil,
             kana: "とっきゅう",
             romaji: "Cao",
             meaningVi: "tốc, tàu cao tốc",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "特急があります。",
+            exampleJp: "とっきゅうが あります。",
             exampleVi: "Có tốc, tàu cao tốc."
         ),
         VocabWord(
-            kanji: "次の～",
+            kanji: nil,
             kana: "つぎの～",
             romaji: "tsugino～",
             meaningVi: "～tiếp theo",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "次の～があります。",
+            exampleJp: "つぎの～が あります。",
             exampleVi: "Có ～tiếp theo."
         ),
         VocabWord(
@@ -3206,7 +3206,7 @@ public final class VocabRepository {
             meaningVi: "次",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "次があります。",
+            exampleJp: "次が あります。",
             exampleVi: "Có 次."
         ),
         VocabWord(
@@ -3216,17 +3216,17 @@ public final class VocabRepository {
             meaningVi: "つぎ",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "つぎがあります。",
+            exampleJp: "つぎが あります。",
             exampleVi: "Có つぎ."
         ),
         VocabWord(
-            kanji: "駅",
+            kanji: nil,
             kana: "の",
             romaji: "no",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "駅があります。",
+            exampleJp: "のが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -3236,17 +3236,17 @@ public final class VocabRepository {
             meaningVi: "tiếp theo",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "えきがあります。",
+            exampleJp: "えきが あります。",
             exampleVi: "Có tiếp theo."
         ),
         VocabWord(
-            kanji: "番線",
+            kanji: nil,
             kana: "～ばんせん",
             romaji: "～bansen",
             meaningVi: "Bến tàu số ～ , Đường tàu số ～",
             topicId: "travel",
             lessonNumber: 5,
-            exampleJp: "番線があります。",
+            exampleJp: "～ばんせんが あります。",
             exampleVi: "Có bến tàu số ～ , đường tàu số ～."
         ),
         VocabWord(
@@ -3256,7 +3256,7 @@ public final class VocabRepository {
             meaningVi: "～～～～～～～～～～",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "～～～～～～～～～～があります。",
+            exampleJp: "～～～～～～～～～～が あります。",
             exampleVi: "Có ～～～～～～～～～～."
         ),
         VocabWord(
@@ -3266,7 +3266,7 @@ public final class VocabRepository {
             meaningVi: "Thị trấn Hakata ở Kyushu",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "博多（はかた）があります。",
+            exampleJp: "博多（はかた）が あります。",
             exampleVi: "Có thị trấn hakata ở kyushu."
         ),
         VocabWord(
@@ -3276,7 +3276,7 @@ public final class VocabRepository {
             meaningVi: "（ふしみ） Thị trấn Fushimi ở Kyoto",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "伏見があります。",
+            exampleJp: "伏見が あります。",
             exampleVi: "Có （ふしみ） thị trấn fushimi ở kyoto."
         ),
         VocabWord(
@@ -3286,7 +3286,7 @@ public final class VocabRepository {
             meaningVi: "（こうしえん） Thị trấn Koshien gần Osaka",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "甲子園があります。",
+            exampleJp: "甲子園が あります。",
             exampleVi: "Có （こうしえん） thị trấn koshien gần osaka."
         ),
         VocabWord(
@@ -3296,7 +3296,7 @@ public final class VocabRepository {
             meaningVi: "（おおさかじょう） Thành cổ Osaka, thành cổ nổi tiếng ở Osaka",
             topicId: "greeting",
             lessonNumber: 5,
-            exampleJp: "大阪城があります。",
+            exampleJp: "大阪城が あります。",
             exampleVi: "Có （おおさかじょう） thành cổ osaka, thành cổ nổi tiếng ở osaka."
         )
     ]
@@ -3304,33 +3304,33 @@ public final class VocabRepository {
     // MARK: - Bài 6 (87 từ)
     public static let lesson6Words: [VocabWord] = [
         VocabWord(
-            kanji: "食べます",
+            kanji: nil,
             kana: "たべます",
             romaji: "tabemasu",
             meaningVi: "Ăn",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "朝ごはんを食べます。",
+            exampleJp: "あさごはんを たべます。",
             exampleVi: "Tôi ăn bữa sáng."
         ),
         VocabWord(
-            kanji: "飲みます",
+            kanji: nil,
             kana: "のみます",
             romaji: "nomimasu",
             meaningVi: "Uống",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "水を飲みます。",
+            exampleJp: "みずを のみます。",
             exampleVi: "Tôi uống nước."
         ),
         VocabWord(
-            kanji: "吸います",
+            kanji: nil,
             kana: "すいます",
             romaji: "suimasu",
             meaningVi: "Hút",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "毎日 吸います。",
+            exampleJp: "まいにち すいます。",
             exampleVi: "Hằng ngày tôi hút."
         ),
         VocabWord(
@@ -3340,7 +3340,7 @@ public final class VocabRepository {
             meaningVi: "「たばこを～」吸",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "「たばこを～」吸があります。",
+            exampleJp: "「たばこを～」吸が あります。",
             exampleVi: "Có 「たばこを～」吸."
         ),
         VocabWord(
@@ -3350,7 +3350,7 @@ public final class VocabRepository {
             meaningVi: "す",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "すがあります。",
+            exampleJp: "すが あります。",
             exampleVi: "Có す."
         ),
         VocabWord(
@@ -3360,77 +3360,77 @@ public final class VocabRepository {
             meaningVi: "Hút thuốc lá",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "毎日 います。",
+            exampleJp: "まいにち います。",
             exampleVi: "Hằng ngày tôi hút thuốc lá."
         ),
         VocabWord(
-            kanji: "書きます",
+            kanji: nil,
             kana: "かきます",
             romaji: "kakimasu",
             meaningVi: "Viết, vẽ",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "読みます",
+            kanji: nil,
             kana: "よみます",
             romaji: "yomimasu",
             meaningVi: "Đọc",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "映画を見ます。",
+            exampleJp: "えいがを みます。",
             exampleVi: "Tôi xem phim."
         ),
         VocabWord(
-            kanji: "聞きます",
+            kanji: nil,
             kana: "ききます",
             romaji: "kikimasu",
             meaningVi: "Nghe",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "見ます",
+            kanji: nil,
             kana: "みます",
             romaji: "mimasu",
             meaningVi: "Xem, nhìn",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "映画を見ます。",
+            exampleJp: "えいがを みます。",
             exampleVi: "Tôi xem phim."
         ),
         VocabWord(
-            kanji: "買います",
+            kanji: nil,
             kana: "かいます",
             romaji: "kaimasu",
             meaningVi: "Mua",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "スーパーでパンを買います。",
+            exampleJp: "スーパーで パンを かいます。",
             exampleVi: "Tôi mua bánh mì ở siêu thị."
         ),
         VocabWord(
-            kanji: "撮ります",
+            kanji: nil,
             kana: "とります",
             romaji: "torimasu",
             meaningVi: "Chụp",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "毎日 撮ります。",
+            exampleJp: "まいにち とります。",
             exampleVi: "Hằng ngày tôi chụp."
         ),
         VocabWord(
-            kanji: "写真",
+            kanji: nil,
             kana: "「",
             romaji: "\"",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "写真があります。",
+            exampleJp: "「が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -3440,7 +3440,7 @@ public final class VocabRepository {
             meaningVi: "しゃしん",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "しゃしんがあります。",
+            exampleJp: "しゃしんが あります。",
             exampleVi: "Có しゃしん."
         ),
         VocabWord(
@@ -3450,7 +3450,7 @@ public final class VocabRepository {
             meaningVi: "を～」撮",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "を～」撮があります。",
+            exampleJp: "を～」撮が あります。",
             exampleVi: "Có を～」撮."
         ),
         VocabWord(
@@ -3460,7 +3460,7 @@ public final class VocabRepository {
             meaningVi: "と",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "とがあります。",
+            exampleJp: "とが あります。",
             exampleVi: "Có と."
         ),
         VocabWord(
@@ -3470,7 +3470,7 @@ public final class VocabRepository {
             meaningVi: "Chụp ảnh",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "毎日 ります。",
+            exampleJp: "まいにち ります。",
             exampleVi: "Hằng ngày tôi chụp ảnh."
         ),
         VocabWord(
@@ -3480,37 +3480,37 @@ public final class VocabRepository {
             meaningVi: "Làm",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "毎日 します。",
+            exampleJp: "まいにち します。",
             exampleVi: "Hằng ngày tôi làm."
         ),
         VocabWord(
-            kanji: "実習",
+            kanji: nil,
             kana: "じっしゅう（をします）",
             romaji: "jisshuu（oshimasu）",
             meaningVi: "Thực tập",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "実習があります。",
+            exampleJp: "じっしゅう（をします）が あります。",
             exampleVi: "Có thực tập."
         ),
         VocabWord(
-            kanji: "会います",
+            kanji: nil,
             kana: "あいます",
             romaji: "aimasu",
             meaningVi: "Gặp, gặp gỡ, gặp mật",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "毎日 会います。",
+            exampleJp: "まいにち あいます。",
             exampleVi: "Hằng ngày tôi gặp, gặp gỡ, gặp mật."
         ),
         VocabWord(
-            kanji: "友達",
+            kanji: nil,
             kana: "「",
             romaji: "\"",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "友達があります。",
+            exampleJp: "「が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -3520,7 +3520,7 @@ public final class VocabRepository {
             meaningVi: "ともだち",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "ともだちがあります。",
+            exampleJp: "ともだちが あります。",
             exampleVi: "Có ともだち."
         ),
         VocabWord(
@@ -3530,7 +3530,7 @@ public final class VocabRepository {
             meaningVi: "に～」会",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "に～」会があります。",
+            exampleJp: "に～」会が あります。",
             exampleVi: "Có に～」会."
         ),
         VocabWord(
@@ -3540,7 +3540,7 @@ public final class VocabRepository {
             meaningVi: "あ",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "あがあります。",
+            exampleJp: "あが あります。",
             exampleVi: "Có あ."
         ),
         VocabWord(
@@ -3550,47 +3550,47 @@ public final class VocabRepository {
             meaningVi: "Gặp gỡ bạn",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "毎日 います。",
+            exampleJp: "まいにち います。",
             exampleVi: "Hằng ngày tôi gặp gỡ bạn."
         ),
         VocabWord(
-            kanji: "ご飯",
+            kanji: nil,
             kana: "ごはん",
             romaji: "gohan",
             meaningVi: "Cơm, bữa cơm",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "ご飯が好きです。",
+            exampleJp: "ごはんが すきです。",
             exampleVi: "Tôi thích cơm, bữa cơm."
         ),
         VocabWord(
-            kanji: "朝ご飯",
+            kanji: nil,
             kana: "あさごはん",
             romaji: "asagohan",
             meaningVi: "Bữa ăn sáng",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "朝ご飯に勉強します。",
+            exampleJp: "あさごはんに べんきょうします。",
             exampleVi: "Tôi học vào bữa ăn sáng."
         ),
         VocabWord(
-            kanji: "昼ご飯",
+            kanji: nil,
             kana: "ひるごはん",
             romaji: "hirugohan",
             meaningVi: "Bữa ăn trưa",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "昼ご飯に勉強します。",
+            exampleJp: "ひるごはんに べんきょうします。",
             exampleVi: "Tôi học vào bữa ăn trưa."
         ),
         VocabWord(
-            kanji: "晩ご飯",
+            kanji: nil,
             kana: "ばんごはん",
             romaji: "bangohan",
             meaningVi: "Bữa ăn chiều",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "晩ご飯に勉強します。",
+            exampleJp: "ばんごはんに べんきょうします。",
             exampleVi: "Tôi học vào bữa ăn chiều."
         ),
         VocabWord(
@@ -3600,47 +3600,47 @@ public final class VocabRepository {
             meaningVi: "Bánh mì",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "パンが好きです。",
+            exampleJp: "パンが すきです。",
             exampleVi: "Tôi thích bánh mì."
         ),
         VocabWord(
-            kanji: "卵",
+            kanji: nil,
             kana: "たまご",
             romaji: "tamago",
             meaningVi: "Trứng, quả trứng",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "卵があります。",
+            exampleJp: "たまごが あります。",
             exampleVi: "Có trứng, quả trứng."
         ),
         VocabWord(
-            kanji: "肉",
+            kanji: nil,
             kana: "にく",
             romaji: "niku",
             meaningVi: "Thịt, miếng thịt",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "肉が好きです。",
+            exampleJp: "にくが すきです。",
             exampleVi: "Tôi thích thịt, miếng thịt."
         ),
         VocabWord(
-            kanji: "魚",
+            kanji: nil,
             kana: "さかな",
             romaji: "sakana",
             meaningVi: "Cá, con cá",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "魚が好きです。",
+            exampleJp: "さかなが すきです。",
             exampleVi: "Tôi thích cá, con cá."
         ),
         VocabWord(
-            kanji: "野菜",
+            kanji: nil,
             kana: "やさい",
             romaji: "yasai",
             meaningVi: "Rau, rau sống",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "日本の冬は野菜です。",
+            exampleJp: "にほんの ふゆは やさいです。",
             exampleVi: "Mùa đông ở Nhật rau, rau sống."
         ),
         VocabWord(
@@ -3650,17 +3650,17 @@ public final class VocabRepository {
             meaningVi: "Quả táo, táo tây",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "りんごがあります。",
+            exampleJp: "りんごが あります。",
             exampleVi: "Có quả táo, táo tây."
         ),
         VocabWord(
-            kanji: "果物",
+            kanji: nil,
             kana: "くだもの",
             romaji: "Hoa",
             meaningVi: "quả, trái cây",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "果物があります。",
+            exampleJp: "くだものが あります。",
             exampleVi: "Có quả, trái cây."
         ),
         VocabWord(
@@ -3670,7 +3670,7 @@ public final class VocabRepository {
             meaningVi: "牛",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "牛があります。",
+            exampleJp: "牛が あります。",
             exampleVi: "Có 牛."
         ),
         VocabWord(
@@ -3680,7 +3680,7 @@ public final class VocabRepository {
             meaningVi: "ぎゅう",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "ぎゅうがあります。",
+            exampleJp: "ぎゅうが あります。",
             exampleVi: "Có ぎゅう."
         ),
         VocabWord(
@@ -3690,7 +3690,7 @@ public final class VocabRepository {
             meaningVi: "乳",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "乳があります。",
+            exampleJp: "乳が あります。",
             exampleVi: "Có 乳."
         ),
         VocabWord(
@@ -3700,27 +3700,27 @@ public final class VocabRepository {
             meaningVi: "／ミルク Sữa",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "にゅうがあります。",
+            exampleJp: "にゅうが あります。",
             exampleVi: "Có ／ミルク sữa."
         ),
         VocabWord(
-            kanji: "水",
+            kanji: nil,
             kana: "みず",
             romaji: "mizu",
             meaningVi: "Nước, nước lã",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "水が好きです。",
+            exampleJp: "みずが すきです。",
             exampleVi: "Tôi thích nước, nước lã."
         ),
         VocabWord(
-            kanji: "お茶",
+            kanji: nil,
             kana: "おちゃ",
             romaji: "ocha",
             meaningVi: "Nước trà",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "お茶が好きです。",
+            exampleJp: "おちゃが すきです。",
             exampleVi: "Tôi thích nước trà."
         ),
         VocabWord(
@@ -3730,17 +3730,17 @@ public final class VocabRepository {
             meaningVi: "Cà phê",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "コーヒーが好きです。",
+            exampleJp: "コーヒーが すきです。",
             exampleVi: "Tôi thích cà phê."
         ),
         VocabWord(
-            kanji: "紅茶",
+            kanji: nil,
             kana: "こうちゃ",
             romaji: "koucha",
             meaningVi: "Trà đen",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "紅茶が好きです。",
+            exampleJp: "こうちゃが すきです。",
             exampleVi: "Tôi thích trà đen."
         ),
         VocabWord(
@@ -3750,7 +3750,7 @@ public final class VocabRepository {
             meaningVi: "Nước hoa quả, nước ngọt",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "ジュースが好きです。",
+            exampleJp: "ジュースが すきです。",
             exampleVi: "Tôi thích nước hoa quả, nước ngọt."
         ),
         VocabWord(
@@ -3760,7 +3760,7 @@ public final class VocabRepository {
             meaningVi: "Bia 「お」さけ 「お」酒 Rượu",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "ビールがあります。",
+            exampleJp: "ビールが あります。",
             exampleVi: "Có bia 「お」さけ 「お」酒 rượu."
         ),
         VocabWord(
@@ -3770,7 +3770,7 @@ public final class VocabRepository {
             meaningVi: "Cà vạt",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "ネクタイがあります。",
+            exampleJp: "ネクタイが あります。",
             exampleVi: "Có cà vạt."
         ),
         VocabWord(
@@ -3780,17 +3780,17 @@ public final class VocabRepository {
             meaningVi: "Áo sơ mi",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "シャツがあります。",
+            exampleJp: "シャツが あります。",
             exampleVi: "Có áo sơ mi."
         ),
         VocabWord(
-            kanji: "靴",
+            kanji: nil,
             kana: "くつ",
             romaji: "kutsu",
             meaningVi: "Giầy, đôi giầy",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "靴があります。",
+            exampleJp: "くつが あります。",
             exampleVi: "Có giầy, đôi giầy."
         ),
         VocabWord(
@@ -3800,7 +3800,7 @@ public final class VocabRepository {
             meaningVi: "Băng, cuộn băng",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "テープがあります。",
+            exampleJp: "テープが あります。",
             exampleVi: "Có băng, cuộn băng."
         ),
         VocabWord(
@@ -3810,7 +3810,7 @@ public final class VocabRepository {
             meaningVi: "Băng cát xét",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "カセットテープが好きです。",
+            exampleJp: "カセットテープが すきです。",
             exampleVi: "Tôi thích băng cát xét."
         ),
         VocabWord(
@@ -3820,37 +3820,37 @@ public final class VocabRepository {
             meaningVi: "(dùng để chụp ảnh)",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "フィルムがあります。",
+            exampleJp: "フィルムが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
-            kanji: "写真",
+            kanji: nil,
             kana: "しゃしん",
             romaji: "shashin",
             meaningVi: "Ảnh, bức ảnh",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "写真があります。",
+            exampleJp: "しゃしんが あります。",
             exampleVi: "Có ảnh, bức ảnh."
         ),
         VocabWord(
-            kanji: "映画",
+            kanji: nil,
             kana: "えいが",
             romaji: "eiga",
             meaningVi: "Phim, bộ phim",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "映画があります。",
+            exampleJp: "えいがが あります。",
             exampleVi: "Có phim, bộ phim."
         ),
         VocabWord(
             kanji: nil,
             kana: "ビデオ",
-            romaji: "biでo",
+            romaji: "bideo",
             meaningVi: "Băng video CD（シーディー） Đĩa CD",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "ビデオがあります。",
+            exampleJp: "ビデオが あります。",
             exampleVi: "Có băng video cd（シーディー） đĩa cd."
         ),
         VocabWord(
@@ -3860,7 +3860,7 @@ public final class VocabRepository {
             meaningVi: "Bóng bàn",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "ピンポンがあります。",
+            exampleJp: "ピンポンが あります。",
             exampleVi: "Có bóng bàn."
         ),
         VocabWord(
@@ -3870,27 +3870,27 @@ public final class VocabRepository {
             meaningVi: "Báo cáo",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "レポートが好きです。",
+            exampleJp: "レポートが すきです。",
             exampleVi: "Tôi thích báo cáo."
         ),
         VocabWord(
-            kanji: "店",
+            kanji: nil,
             kana: "みせ",
             romaji: "mise",
             meaningVi: "Cửa hàng, shop",
             topicId: "travel",
             lessonNumber: 6,
-            exampleJp: "店があります。",
+            exampleJp: "みせが あります。",
             exampleVi: "Có cửa hàng, shop."
         ),
         VocabWord(
-            kanji: "宿題",
+            kanji: nil,
             kana: "しゅくだい",
             romaji: "shukudai",
             meaningVi: "Bài tập về nhà",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "日本の冬は宿題です。",
+            exampleJp: "にほんの ふゆは しゅくだいです。",
             exampleVi: "Mùa đông ở Nhật bài tập về nhà."
         ),
         VocabWord(
@@ -3900,7 +3900,7 @@ public final class VocabRepository {
             meaningVi: "Nhà hàng",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "レストランがあります。",
+            exampleJp: "レストランが あります。",
             exampleVi: "Có nhà hàng."
         ),
         VocabWord(
@@ -3910,7 +3910,7 @@ public final class VocabRepository {
             meaningVi: "Tennis",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "テニスがあります。",
+            exampleJp: "テニスが あります。",
             exampleVi: "Có tennis."
         ),
         VocabWord(
@@ -3920,7 +3920,7 @@ public final class VocabRepository {
             meaningVi: "Chơi tennis",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "毎日 テニスをします。",
+            exampleJp: "まいにち テニスをします。",
             exampleVi: "Hằng ngày tôi chơi tennis."
         ),
         VocabWord(
@@ -3930,7 +3930,7 @@ public final class VocabRepository {
             meaningVi: "Bóng đá",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "サッカーがあります。",
+            exampleJp: "サッカーが あります。",
             exampleVi: "Có bóng đá."
         ),
         VocabWord(
@@ -3940,7 +3940,7 @@ public final class VocabRepository {
             meaningVi: "Chơi bóng đá 「お」 花",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "毎日 サッカーをします。",
+            exampleJp: "まいにち サッカーをします。",
             exampleVi: "Hằng ngày tôi chơi bóng đá 「お」 花."
         ),
         VocabWord(
@@ -3950,7 +3950,7 @@ public final class VocabRepository {
             meaningVi: "はな",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "はながあります。",
+            exampleJp: "はなが あります。",
             exampleVi: "Có はな."
         ),
         VocabWord(
@@ -3960,7 +3960,7 @@ public final class VocabRepository {
             meaningVi: "見",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "見があります。",
+            exampleJp: "見が あります。",
             exampleVi: "Có 見."
         ),
         VocabWord(
@@ -3970,17 +3970,17 @@ public final class VocabRepository {
             meaningVi: "Ngắm hoa Anh Đào (danh từ)",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "みがあります。",
+            exampleJp: "みが あります。",
             exampleVi: "Có ngắm hoa anh đào."
         ),
         VocabWord(
-            kanji: "花",
+            kanji: nil,
             kana: "「お」",
             romaji: "\"o\"",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "花があります。",
+            exampleJp: "「お」が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -3990,7 +3990,7 @@ public final class VocabRepository {
             meaningVi: "はな",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "はながあります。",
+            exampleJp: "はなが あります。",
             exampleVi: "Có はな."
         ),
         VocabWord(
@@ -4000,7 +4000,7 @@ public final class VocabRepository {
             meaningVi: "見",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "見があります。",
+            exampleJp: "見が あります。",
             exampleVi: "Có 見."
         ),
         VocabWord(
@@ -4010,7 +4010,7 @@ public final class VocabRepository {
             meaningVi: "み",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "みがあります。",
+            exampleJp: "みが あります。",
             exampleVi: "Có み."
         ),
         VocabWord(
@@ -4020,17 +4020,17 @@ public final class VocabRepository {
             meaningVi: "Ngắm hoa Anh Đào (động từ)",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "毎日 をします。",
+            exampleJp: "まいにち をします。",
             exampleVi: "Hằng ngày tôi ngắm hoa anh đào."
         ),
         VocabWord(
-            kanji: "何",
+            kanji: nil,
             kana: "なに",
             romaji: "nani",
             meaningVi: "Cái gì",
             topicId: "food",
             lessonNumber: 6,
-            exampleJp: "何が好きです。",
+            exampleJp: "なにが すきです。",
             exampleVi: "Tôi thích cái gì."
         ),
         VocabWord(
@@ -4040,7 +4040,7 @@ public final class VocabRepository {
             meaningVi: "Cùng với",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "いっしょにがあります。",
+            exampleJp: "いっしょにが あります。",
             exampleVi: "Có cùng với."
         ),
         VocabWord(
@@ -4050,7 +4050,7 @@ public final class VocabRepository {
             meaningVi: "1 chút, 1 lát",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "ちょっとがあります。",
+            exampleJp: "ちょっとが あります。",
             exampleVi: "Có 1 chút, 1 lát."
         ),
         VocabWord(
@@ -4060,7 +4060,7 @@ public final class VocabRepository {
             meaningVi: "Luôn luôn, lúc nào cũng",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "いつもがあります。",
+            exampleJp: "いつもが あります。",
             exampleVi: "Có luôn luôn, lúc nào cũng."
         ),
         VocabWord(
@@ -4070,7 +4070,7 @@ public final class VocabRepository {
             meaningVi: "Thỉnh thoảng",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "ときどきがあります。",
+            exampleJp: "ときどきが あります。",
             exampleVi: "Có thỉnh thoảng."
         ),
         VocabWord(
@@ -4080,7 +4080,7 @@ public final class VocabRepository {
             meaningVi: "đó",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "それからがあります。",
+            exampleJp: "それからが あります。",
             exampleVi: "Có đó."
         ),
         VocabWord(
@@ -4090,7 +4090,7 @@ public final class VocabRepository {
             meaningVi: "～～～～～～～～～～～～～",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "～～～～～～～～～～～～～があります。",
+            exampleJp: "～～～～～～～～～～～～～が あります。",
             exampleVi: "Có ～～～～～～～～～～～～～."
         ),
         VocabWord(
@@ -4100,7 +4100,7 @@ public final class VocabRepository {
             meaningVi: "lô (khi gọi điện thoại)",
             topicId: "travel",
             lessonNumber: 6,
-            exampleJp: "もしもしがあります。",
+            exampleJp: "もしもしが あります。",
             exampleVi: "Có lô."
         ),
         VocabWord(
@@ -4110,7 +4110,7 @@ public final class VocabRepository {
             meaningVi: "À! ｢あした」ひまですか。 (Ngày mai) Bạn có rảnh không?",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "ああに勉強します。",
+            exampleJp: "ああに べんきょうします。",
             exampleVi: "Tôi học vào à! ｢あした」ひまですか。."
         ),
         VocabWord(
@@ -4120,7 +4120,7 @@ public final class VocabRepository {
             meaningVi: "Có. Ừ. Đúng. Vâng",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "ええがあります。",
+            exampleJp: "ええが あります。",
             exampleVi: "Có có. ừ. đúng. vâng."
         ),
         VocabWord(
@@ -4130,7 +4130,7 @@ public final class VocabRepository {
             meaningVi: "nhỉ! Được đấy nhỉ!",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "いいですね。があります。",
+            exampleJp: "いいですね。が あります。",
             exampleVi: "Có nhỉ! được đấy nhỉ!."
         ),
         VocabWord(
@@ -4140,7 +4140,7 @@ public final class VocabRepository {
             meaningVi: "Hiểu rồi, nhất trí",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "わかりました。があります。",
+            exampleJp: "わかりました。が あります。",
             exampleVi: "Có hiểu rồi, nhất trí."
         ),
         VocabWord(
@@ -4150,7 +4150,7 @@ public final class VocabRepository {
             meaningVi: "Hẹn gặp lại (ngày mai)",
             topicId: "time",
             lessonNumber: 6,
-            exampleJp: "じゃ、また「あした」。に勉強します。",
+            exampleJp: "じゃ、また「あした」。に べんきょうします。",
             exampleVi: "Tôi học vào hẹn gặp lại."
         ),
         VocabWord(
@@ -4160,7 +4160,7 @@ public final class VocabRepository {
             meaningVi: "Mexico",
             topicId: "greeting",
             lessonNumber: 6,
-            exampleJp: "メキシコがあります。",
+            exampleJp: "メキシコが あります。",
             exampleVi: "Có mexico."
         ),
         VocabWord(
@@ -4170,7 +4170,7 @@ public final class VocabRepository {
             meaningVi: "（おおさかじょうこうえん） Công viên ở Osaka",
             topicId: "family",
             lessonNumber: 6,
-            exampleJp: "大阪城公園へ行きます。",
+            exampleJp: "大阪城公園へ いきます。",
             exampleVi: "Tôi đi đến （おおさかじょうこうえん） công viên ở osaka."
         )
     ]
@@ -4178,23 +4178,23 @@ public final class VocabRepository {
     // MARK: - Bài 7 (79 từ)
     public static let lesson7Words: [VocabWord] = [
         VocabWord(
-            kanji: "切ります",
+            kanji: nil,
             kana: "きります",
             romaji: "kirimasu",
             meaningVi: "Cắt, gọt",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "音楽を聞きます。",
+            exampleJp: "おんがくを ききます。",
             exampleVi: "Tôi nghe nhạc."
         ),
         VocabWord(
-            kanji: "修理します",
+            kanji: nil,
             kana: "しゅうりします",
             romaji: "shuurishimasu",
             meaningVi: "Sửa chữa",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "毎日 修理します。",
+            exampleJp: "まいにち しゅうりします。",
             exampleVi: "Hằng ngày tôi sửa chữa."
         ),
         VocabWord(
@@ -4204,17 +4204,17 @@ public final class VocabRepository {
             meaningVi: "Gọi (điện thoại) 「電話",
             topicId: "travel",
             lessonNumber: 7,
-            exampleJp: "毎日 かけます。",
+            exampleJp: "まいにち かけます。",
             exampleVi: "Hằng ngày tôi gọi."
         ),
         VocabWord(
             kanji: nil,
             kana: "で",
-            romaji: "で",
+            romaji: "de",
             meaningVi: "ん わ",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "でがあります。",
+            exampleJp: "でが あります。",
             exampleVi: "Có ん わ."
         ),
         VocabWord(
@@ -4224,7 +4224,7 @@ public final class VocabRepository {
             meaningVi: "Gọi điện thoại",
             topicId: "travel",
             lessonNumber: 7,
-            exampleJp: "を～」があります。",
+            exampleJp: "を～」が あります。",
             exampleVi: "Có gọi điện thoại."
         ),
         VocabWord(
@@ -4234,7 +4234,7 @@ public final class VocabRepository {
             meaningVi: "Cho, biếu, tặng",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "毎日 あげます。",
+            exampleJp: "まいにち あげます。",
             exampleVi: "Hằng ngày tôi cho, biếu, tặng."
         ),
         VocabWord(
@@ -4244,67 +4244,67 @@ public final class VocabRepository {
             meaningVi: "Nhận, nhận được",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "毎日 もらいます。",
+            exampleJp: "まいにち もらいます。",
             exampleVi: "Hằng ngày tôi nhận, nhận được."
         ),
         VocabWord(
-            kanji: "教えます",
+            kanji: nil,
             kana: "おしえます",
             romaji: "oshiemasu",
             meaningVi: "Dạy, giảng dạy",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "毎日 教えます。",
+            exampleJp: "まいにち おしえます。",
             exampleVi: "Hằng ngày tôi dạy, giảng dạy."
         ),
         VocabWord(
-            kanji: "習います",
+            kanji: nil,
             kana: "ならいます",
             romaji: "naraimasu",
             meaningVi: "Học",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "毎日 習います。",
+            exampleJp: "まいにち ならいます。",
             exampleVi: "Hằng ngày tôi học."
         ),
         VocabWord(
-            kanji: "貸します",
+            kanji: nil,
             kana: "かします",
             romaji: "Cho",
             meaningVi: "vay, cho mượn, cho thuê",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "毎日 貸します。",
+            exampleJp: "まいにち かします。",
             exampleVi: "Hằng ngày tôi vay, cho mượn, cho thuê."
         ),
         VocabWord(
-            kanji: "借ります",
+            kanji: nil,
             kana: "かります",
             romaji: "karimasu",
             meaningVi: "Mượn, vay, thuê",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "毎日 借ります。",
+            exampleJp: "まいにち かります。",
             exampleVi: "Hằng ngày tôi mượn, vay, thuê."
         ),
         VocabWord(
-            kanji: "送ります",
+            kanji: nil,
             kana: "おくります",
             romaji: "okurimasu",
             meaningVi: "Gửi",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "毎日 送ります。",
+            exampleJp: "まいにち おくります。",
             exampleVi: "Hằng ngày tôi gửi."
         ),
         VocabWord(
-            kanji: "手",
+            kanji: nil,
             kana: "て",
             romaji: "te",
             meaningVi: "Tay, bàn tay",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "手があります。",
+            exampleJp: "てが あります。",
             exampleVi: "Có tay, bàn tay."
         ),
         VocabWord(
@@ -4314,7 +4314,7 @@ public final class VocabRepository {
             meaningVi: "Đũa, đôi đũa",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "はしがあります。",
+            exampleJp: "はしが あります。",
             exampleVi: "Có đũa, đôi đũa."
         ),
         VocabWord(
@@ -4324,7 +4324,7 @@ public final class VocabRepository {
             meaningVi: "Dao, con dao",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "ナイフがあります。",
+            exampleJp: "ナイフが あります。",
             exampleVi: "Có dao, con dao."
         ),
         VocabWord(
@@ -4334,7 +4334,7 @@ public final class VocabRepository {
             meaningVi: "Cái dĩa, cái nĩa",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "フォークが好きです。",
+            exampleJp: "フォークが すきです。",
             exampleVi: "Tôi thích cái dĩa, cái nĩa."
         ),
         VocabWord(
@@ -4344,7 +4344,7 @@ public final class VocabRepository {
             meaningVi: "Cái thìa, cái muỗng",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "スプーンが好きです。",
+            exampleJp: "スプーンが すきです。",
             exampleVi: "Tôi thích cái thìa, cái muỗng."
         ),
         VocabWord(
@@ -4354,7 +4354,7 @@ public final class VocabRepository {
             meaningVi: "Cái kéo",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "はさみが好きです。",
+            exampleJp: "はさみが すきです。",
             exampleVi: "Tôi thích cái kéo."
         ),
         VocabWord(
@@ -4364,7 +4364,7 @@ public final class VocabRepository {
             meaningVi: "Cái tuốc-lơ-vít",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "ドライバーが好きです。",
+            exampleJp: "ドライバーが すきです。",
             exampleVi: "Tôi thích cái tuốc-lơ-vít."
         ),
         VocabWord(
@@ -4374,7 +4374,7 @@ public final class VocabRepository {
             meaningVi: "Cái mỏ lết",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "スパナが好きです。",
+            exampleJp: "スパナが すきです。",
             exampleVi: "Tôi thích cái mỏ lết."
         ),
         VocabWord(
@@ -4384,7 +4384,7 @@ public final class VocabRepository {
             meaningVi: "Cái kìm",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "ペンチが好きです。",
+            exampleJp: "ペンチが すきです。",
             exampleVi: "Tôi thích cái kìm."
         ),
         VocabWord(
@@ -4394,7 +4394,7 @@ public final class VocabRepository {
             meaningVi: "Cái dập ghim",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "ホッチキスが好きです。",
+            exampleJp: "ホッチキスが すきです。",
             exampleVi: "Tôi thích cái dập ghim."
         ),
         VocabWord(
@@ -4404,37 +4404,37 @@ public final class VocabRepository {
             meaningVi: "Băng dính, cuộn băng dính",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "セロテープがあります。",
+            exampleJp: "セロテープが あります。",
             exampleVi: "Có băng dính, cuộn băng dính."
         ),
         VocabWord(
-            kanji: "消しゴム",
+            kanji: nil,
             kana: "けしゴム",
             romaji: "keshigomu",
             meaningVi: "Cục tẩy",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "消しゴムがあります。",
+            exampleJp: "けしゴムが あります。",
             exampleVi: "Có cục tẩy."
         ),
         VocabWord(
-            kanji: "紙",
+            kanji: nil,
             kana: "かみ",
             romaji: "kami",
             meaningVi: "Giấy, tờ giấy",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "紙があります。",
+            exampleJp: "かみが あります。",
             exampleVi: "Có giấy, tờ giấy."
         ),
         VocabWord(
-            kanji: "お金",
+            kanji: nil,
             kana: "おかね",
             romaji: "okane",
             meaningVi: "Tiền",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "お金があります。",
+            exampleJp: "おかねが あります。",
             exampleVi: "Có tiền."
         ),
         VocabWord(
@@ -4444,37 +4444,37 @@ public final class VocabRepository {
             meaningVi: "Quà, món quà",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "プレゼントがあります。",
+            exampleJp: "プレゼントが あります。",
             exampleVi: "Có quà, món quà."
         ),
         VocabWord(
-            kanji: "花",
+            kanji: nil,
             kana: "はな",
             romaji: "wana",
             meaningVi: "Hoa, bông hoa",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "花があります。",
+            exampleJp: "はなが あります。",
             exampleVi: "Có hoa, bông hoa."
         ),
         VocabWord(
-            kanji: "荷物",
+            kanji: nil,
             kana: "にもつ",
             romaji: "nimotsu",
             meaningVi: "Hành lý, đồ đạc",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "荷物があります。",
+            exampleJp: "にもつが あります。",
             exampleVi: "Có hành lý, đồ đạc."
         ),
         VocabWord(
-            kanji: "切符",
+            kanji: nil,
             kana: "きっぷ",
             romaji: "kippu",
             meaningVi: "Vé, tấm vé",
             topicId: "travel",
             lessonNumber: 7,
-            exampleJp: "切符があります。",
+            exampleJp: "きっぷが あります。",
             exampleVi: "Có vé, tấm vé."
         ),
         VocabWord(
@@ -4484,7 +4484,7 @@ public final class VocabRepository {
             meaningVi: "Báo cáo, bản báo cáo",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "レポートが好きです。",
+            exampleJp: "レポートが すきです。",
             exampleVi: "Tôi thích báo cáo, bản báo cáo."
         ),
         VocabWord(
@@ -4494,7 +4494,7 @@ public final class VocabRepository {
             meaningVi: "Fax",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "ファクスがあります。",
+            exampleJp: "ファクスが あります。",
             exampleVi: "Có fax."
         ),
         VocabWord(
@@ -4504,7 +4504,7 @@ public final class VocabRepository {
             meaningVi: "Máy đánh chữ",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "ワープロがあります。",
+            exampleJp: "ワープロが あります。",
             exampleVi: "Có máy đánh chữ."
         ),
         VocabWord(
@@ -4514,7 +4514,7 @@ public final class VocabRepository {
             meaningVi: "Máy tính cá nhân",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "パソコンが好きです。",
+            exampleJp: "パソコンが すきです。",
             exampleVi: "Tôi thích máy tính cá nhân."
         ),
         VocabWord(
@@ -4524,197 +4524,197 @@ public final class VocabRepository {
             meaningVi: "Giáng sinh",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "クリスマスがあります。",
+            exampleJp: "クリスマスが あります。",
             exampleVi: "Có giáng sinh."
         ),
         VocabWord(
-            kanji: "家族",
+            kanji: nil,
             kana: "かぞく",
             romaji: "Gia",
             meaningVi: "đình",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "家族があります。",
+            exampleJp: "かぞくが あります。",
             exampleVi: "Có đình."
         ),
         VocabWord(
-            kanji: "父",
+            kanji: nil,
             kana: "ちち",
             romaji: "chichi",
             meaningVi: "Bố (của mình)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "父があります。",
+            exampleJp: "ちちが あります。",
             exampleVi: "Có bố."
         ),
         VocabWord(
-            kanji: "お父さん",
+            kanji: nil,
             kana: "おとうさん",
             romaji: "otousan",
             meaningVi: "Bố (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "お父さんがあります。",
+            exampleJp: "おとうさんが あります。",
             exampleVi: "Có bố."
         ),
         VocabWord(
-            kanji: "母",
+            kanji: nil,
             kana: "はは",
             romaji: "wawa",
             meaningVi: "Mẹ (của mình)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "母があります。",
+            exampleJp: "ははが あります。",
             exampleVi: "Có mẹ."
         ),
         VocabWord(
-            kanji: "お母さん",
+            kanji: nil,
             kana: "おかあさん",
             romaji: "okaasan",
             meaningVi: "Mẹ (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "お母さんがあります。",
+            exampleJp: "おかあさんが あります。",
             exampleVi: "Có mẹ."
         ),
         VocabWord(
-            kanji: "兄",
+            kanji: nil,
             kana: "あに",
             romaji: "Anh",
             meaningVi: "trai (của mình)",
             topicId: "travel",
             lessonNumber: 7,
-            exampleJp: "兄があります。",
+            exampleJp: "あにが あります。",
             exampleVi: "Có trai."
         ),
         VocabWord(
-            kanji: "お兄さん",
+            kanji: nil,
             kana: "おにいさん",
             romaji: "Anh",
             meaningVi: "trai (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "お兄さんがあります。",
+            exampleJp: "おにいさんが あります。",
             exampleVi: "Có trai."
         ),
         VocabWord(
-            kanji: "姉",
+            kanji: nil,
             kana: "あね",
             romaji: "ane",
             meaningVi: "Chị gái (của mình)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "姉があります。",
+            exampleJp: "あねが あります。",
             exampleVi: "Có chị gái."
         ),
         VocabWord(
-            kanji: "お姉さん",
+            kanji: nil,
             kana: "おねえさん",
             romaji: "oneesan",
             meaningVi: "Chị gái (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "お姉さんがあります。",
+            exampleJp: "おねえさんが あります。",
             exampleVi: "Có chị gái."
         ),
         VocabWord(
-            kanji: "弟",
+            kanji: nil,
             kana: "おとうと",
             romaji: "Em",
             meaningVi: "trai (của mình)",
             topicId: "travel",
             lessonNumber: 7,
-            exampleJp: "弟があります。",
+            exampleJp: "おとうとが あります。",
             exampleVi: "Có trai."
         ),
         VocabWord(
-            kanji: "弟さん",
+            kanji: nil,
             kana: "おとうとさん",
             romaji: "Em",
             meaningVi: "trai (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "弟さんがあります。",
+            exampleJp: "おとうとさんが あります。",
             exampleVi: "Có trai."
         ),
         VocabWord(
-            kanji: "妹",
+            kanji: nil,
             kana: "いもうと",
             romaji: "Em",
             meaningVi: "gái (của mình)",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "妹があります。",
+            exampleJp: "いもうとが あります。",
             exampleVi: "Có gái."
         ),
         VocabWord(
-            kanji: "妹さん",
+            kanji: nil,
             kana: "いもうとさん",
             romaji: "Em",
             meaningVi: "gái (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "妹さんがあります。",
+            exampleJp: "いもうとさんが あります。",
             exampleVi: "Có gái."
         ),
         VocabWord(
-            kanji: "家内",
+            kanji: nil,
             kana: "かない",
             romaji: "kanai",
             meaningVi: "Vợ (của mình)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "日本の冬は家内です。",
+            exampleJp: "にほんの ふゆは かないです。",
             exampleVi: "Mùa đông ở Nhật vợ."
         ),
         VocabWord(
-            kanji: "奥さん",
+            kanji: nil,
             kana: "おくさん",
             romaji: "okusan",
             meaningVi: "Vợ (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "奥さんがあります。",
+            exampleJp: "おくさんが あります。",
             exampleVi: "Có vợ."
         ),
         VocabWord(
-            kanji: "主人",
+            kanji: nil,
             kana: "しゅじん",
             romaji: "shujin",
             meaningVi: "Chồng (của mình)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "主人があります。",
+            exampleJp: "しゅじんが あります。",
             exampleVi: "Có chồng."
         ),
         VocabWord(
-            kanji: "ご主人",
+            kanji: nil,
             kana: "ごしゅじん",
             romaji: "goshujin",
             meaningVi: "Chồng (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "ご主人があります。",
+            exampleJp: "ごしゅじんが あります。",
             exampleVi: "Có chồng."
         ),
         VocabWord(
-            kanji: "子供",
+            kanji: nil,
             kana: "こども",
             romaji: "kodomo",
             meaningVi: "Con, con cái (của mình)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "子供が好きです。",
+            exampleJp: "こどもが すきです。",
             exampleVi: "Tôi thích con, con cái."
         ),
         VocabWord(
-            kanji: "お子さん",
+            kanji: nil,
             kana: "おこさん",
             romaji: "okosan",
             meaningVi: "Con, con cái (của người khác)",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "お子さんが好きです。",
+            exampleJp: "おこさんが すきです。",
             exampleVi: "Tôi thích con, con cái."
         ),
         VocabWord(
@@ -4724,7 +4724,7 @@ public final class VocabRepository {
             meaningVi: "Rồi, đã",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "もうがあります。",
+            exampleJp: "もうが あります。",
             exampleVi: "Có rồi, đã."
         ),
         VocabWord(
@@ -4734,7 +4734,7 @@ public final class VocabRepository {
             meaningVi: "Vẫn ~ ( chưa )",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "まだがあります。",
+            exampleJp: "まだが あります。",
             exampleVi: "Có vẫn ~."
         ),
         VocabWord(
@@ -4744,17 +4744,17 @@ public final class VocabRepository {
             meaningVi: "Từ nay trở đi, từ giờ trở đi 「 ～、」すてきですね。 ~ đẹp quá!, ~ tuyệt quá!",
             topicId: "travel",
             lessonNumber: 7,
-            exampleJp: "これからに勉強します。",
+            exampleJp: "これからに べんきょうします。",
             exampleVi: "Tôi học vào từ nay trở đi, từ giờ trở đi 「 ～、」すてきですね。 ~ đẹp quá!, ~ tuyệt quá!."
         ),
         VocabWord(
             kanji: nil,
             kana: "おめでとう",
-            romaji: "omeでtou",
+            romaji: "omedetou",
             meaningVi: "ございます。 Chúc mừng!",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "おめでとうがあります。",
+            exampleJp: "おめでとうが あります。",
             exampleVi: "Có ございます。 chúc mừng!."
         ),
         VocabWord(
@@ -4764,7 +4764,7 @@ public final class VocabRepository {
             meaningVi: "お誕生日",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "お誕生日があります。",
+            exampleJp: "お誕生日が あります。",
             exampleVi: "Có お誕生日."
         ),
         VocabWord(
@@ -4774,17 +4774,17 @@ public final class VocabRepository {
             meaningVi: "たんじょうび",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "たんじょうびがあります。",
+            exampleJp: "たんじょうびが あります。",
             exampleVi: "Có たんじょうび."
         ),
         VocabWord(
             kanji: nil,
             kana: "おめでとうございます。",
-            romaji: "omeでtougozaimasu.",
+            romaji: "omedetougozaimasu.",
             meaningVi: "Chúc mừng sinh nhật!",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "おめでとうございます。があります。",
+            exampleJp: "おめでとうございます。が あります。",
             exampleVi: "Có chúc mừng sinh nhật!."
         ),
         VocabWord(
@@ -4794,7 +4794,7 @@ public final class VocabRepository {
             meaningVi: "新",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "新があります。",
+            exampleJp: "新が あります。",
             exampleVi: "Có 新."
         ),
         VocabWord(
@@ -4804,7 +4804,7 @@ public final class VocabRepository {
             meaningVi: "しん",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "しんがあります。",
+            exampleJp: "しんが あります。",
             exampleVi: "Có しん."
         ),
         VocabWord(
@@ -4814,7 +4814,7 @@ public final class VocabRepository {
             meaningVi: "年",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "年があります。",
+            exampleJp: "年が あります。",
             exampleVi: "Có 年."
         ),
         VocabWord(
@@ -4824,7 +4824,7 @@ public final class VocabRepository {
             meaningVi: "ねん",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "ねんがあります。",
+            exampleJp: "ねんが あります。",
             exampleVi: "Có ねん."
         ),
         VocabWord(
@@ -4834,7 +4834,7 @@ public final class VocabRepository {
             meaningVi: "明",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "明があります。",
+            exampleJp: "明が あります。",
             exampleVi: "Có 明."
         ),
         VocabWord(
@@ -4844,7 +4844,7 @@ public final class VocabRepository {
             meaningVi: "あ",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "あがあります。",
+            exampleJp: "あが あります。",
             exampleVi: "Có あ."
         ),
         VocabWord(
@@ -4854,7 +4854,7 @@ public final class VocabRepository {
             meaningVi: "おめでとうございます。 Chúc mừng năm mới!",
             topicId: "time",
             lessonNumber: 7,
-            exampleJp: "けましてに勉強します。",
+            exampleJp: "けましてに べんきょうします。",
             exampleVi: "Tôi học vào おめでとうございます。 chúc mừng năm mới!."
         ),
         VocabWord(
@@ -4864,7 +4864,7 @@ public final class VocabRepository {
             meaningVi: "Ái chà, Ủa (biểu hiện sự ngạc nhiên)",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "わあがあります。",
+            exampleJp: "わあが あります。",
             exampleVi: "Có ái chà, ủa."
         ),
         VocabWord(
@@ -4874,7 +4874,7 @@ public final class VocabRepository {
             meaningVi: "lỗi, cho hỏi có ai ở nhà không?",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "ごめんください。があります。",
+            exampleJp: "ごめんください。が あります。",
             exampleVi: "Có lỗi, cho hỏi có ai ở nhà không?."
         ),
         VocabWord(
@@ -4894,17 +4894,17 @@ public final class VocabRepository {
             meaningVi: "おあがりください Mời bạn vào!",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "どうぞがあります。",
+            exampleJp: "どうぞが あります。",
             exampleVi: "Có おあがりください mời bạn vào!."
         ),
         VocabWord(
-            kanji: "失礼します",
+            kanji: nil,
             kana: "しつれいします。",
             romaji: "Xin",
             meaningVi: "lỗi, xin phép Làm phiền anh 「～は」いかがですか。 Bạn có dùng ~ không? ( Sử dụng khi mời người khác sử dụng, ăn uống thứ gì đó )",
             topicId: "family",
             lessonNumber: 7,
-            exampleJp: "失礼しますがあります。",
+            exampleJp: "しつれいします。が あります。",
             exampleVi: "Có lỗi, xin phép làm phiền anh 「～は」いかがですか。 bạn có dùng ~ không?."
         ),
         VocabWord(
@@ -4914,27 +4914,27 @@ public final class VocabRepository {
             meaningVi: "mời (nói khi bắt đầu ăn, uống)",
             topicId: "food",
             lessonNumber: 7,
-            exampleJp: "いただきます。があります。",
+            exampleJp: "いただきます。が あります。",
             exampleVi: "Có mời."
         ),
         VocabWord(
-            kanji: "旅行",
+            kanji: nil,
             kana: "りょこう",
             romaji: "Du",
             meaningVi: "lịch",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "旅行があります。",
+            exampleJp: "りょこうが あります。",
             exampleVi: "Có lịch."
         ),
         VocabWord(
-            kanji: "お土産",
+            kanji: nil,
             kana: "おみやげ",
             romaji: "omiyage",
             meaningVi: "Đồ lưu niệm",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "お土産があります。",
+            exampleJp: "おみやげが あります。",
             exampleVi: "Có đồ lưu niệm."
         ),
         VocabWord(
@@ -4944,7 +4944,7 @@ public final class VocabRepository {
             meaningVi: "Châu Âu",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "ヨーロッパがあります。",
+            exampleJp: "ヨーロッパが あります。",
             exampleVi: "Có châu âu."
         ),
         VocabWord(
@@ -4954,17 +4954,17 @@ public final class VocabRepository {
             meaningVi: "Tây Ban Nha",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "スペインがあります。",
+            exampleJp: "スペインが あります。",
             exampleVi: "Có tây ban nha."
         ),
         VocabWord(
             kanji: nil,
             kana: "いい［シャツ］ですね。",
-            romaji: "ii［shatsu］でsune.",
+            romaji: "ii［shatsu］desune.",
             meaningVi: "[Áo sơ mi] tốt/đẹp quá nhỉ!",
             topicId: "greeting",
             lessonNumber: 7,
-            exampleJp: "いい［シャツ］ですね。があります。",
+            exampleJp: "いい［シャツ］ですね。が あります。",
             exampleVi: "Có [áo sơ mi] tốt/đẹp quá nhỉ!."
         )
     ]
@@ -4978,8 +4978,8 @@ public final class VocabRepository {
             meaningVi: "Đẹp, xinh đẹp, sạch sẽ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "この町はきれいです。",
-            exampleVi: "Thành phố này đẹp, xinh đẹp, sạch sẽ."
+            exampleJp: "この まちは きれいです。",
+            exampleVi: "Thị trấn này đẹp, xinh đẹp, sạch sẽ."
         ),
         VocabWord(
             kanji: nil,
@@ -4988,48 +4988,48 @@ public final class VocabRepository {
             meaningVi: "Đẹp trai",
             topicId: "travel",
             lessonNumber: 8,
-            exampleJp: "この町はハンサムです。",
-            exampleVi: "Thành phố này đẹp trai."
+            exampleJp: "この まちは ハンサムです。",
+            exampleVi: "Thị trấn này đẹp trai."
         ),
         VocabWord(
-            kanji: "親切「な」",
+            kanji: nil,
             kana: "しんせつ「な」",
             romaji: "shinsetsu\"na\"",
             meaningVi: "Tử tế, tốt bụng, thân thiện",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "この町は親切です。",
-            exampleVi: "Thành phố này tử tế, tốt bụng, thân thiện."
+            exampleJp: "この まちは しんせつです。",
+            exampleVi: "Thị trấn này tử tế, tốt bụng, thân thiện."
         ),
         VocabWord(
-            kanji: "有名「な」",
+            kanji: nil,
             kana: "ゆうめい「な」",
             romaji: "yuumei\"na\"",
             meaningVi: "Nổi tiếng",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "この町は有名です。",
-            exampleVi: "Thành phố này nổi tiếng."
+            exampleJp: "この まちは ゆうめいです。",
+            exampleVi: "Thị trấn này nổi tiếng."
         ),
         VocabWord(
-            kanji: "元気「な」",
+            kanji: nil,
             kana: "げんき「な」",
             romaji: "genki\"na\"",
             meaningVi: "Khỏe, khỏe mạnh",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "この町は元気です。",
-            exampleVi: "Thành phố này khỏe, khỏe mạnh."
+            exampleJp: "この まちは げんきです。",
+            exampleVi: "Thị trấn này khỏe, khỏe mạnh."
         ),
         VocabWord(
-            kanji: "静か「な」",
+            kanji: nil,
             kana: "しずか「な」",
             romaji: "shizuka\"na\"",
             meaningVi: "Yên tĩnh, yên ắng",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "この町は静かです。",
-            exampleVi: "Thành phố này yên tĩnh, yên ắng."
+            exampleJp: "この まちは しずかです。",
+            exampleVi: "Thị trấn này yên tĩnh, yên ắng."
         ),
         VocabWord(
             kanji: nil,
@@ -5038,28 +5038,28 @@ public final class VocabRepository {
             meaningVi: "Đông đúc, nhộn nhịp",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "この町はにぎやかです。",
-            exampleVi: "Thành phố này đông đúc, nhộn nhịp."
+            exampleJp: "この まちは にぎやかです。",
+            exampleVi: "Thị trấn này đông đúc, nhộn nhịp."
         ),
         VocabWord(
-            kanji: "暇「な」",
+            kanji: nil,
             kana: "ひま「な」",
             romaji: "hima\"na\"",
             meaningVi: "Rảnh rỗi, rỗi rãi",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "この町は暇です。",
-            exampleVi: "Thành phố này rảnh rỗi, rỗi rãi."
+            exampleJp: "この まちは ひまです。",
+            exampleVi: "Thị trấn này rảnh rỗi, rỗi rãi."
         ),
         VocabWord(
-            kanji: "便利「な」",
+            kanji: nil,
             kana: "べんり「な」",
             romaji: "benri\"na\"",
             meaningVi: "Tiện lợi, thuận tiện",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "この町は便利です。",
-            exampleVi: "Thành phố này tiện lợi, thuận tiện."
+            exampleJp: "この まちは べんりです。",
+            exampleVi: "Thị trấn này tiện lợi, thuận tiện."
         ),
         VocabWord(
             kanji: nil,
@@ -5068,47 +5068,47 @@ public final class VocabRepository {
             meaningVi: "Đẹp, tuyệt vời",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "この町はすてきです。",
-            exampleVi: "Thành phố này đẹp, tuyệt vời."
+            exampleJp: "この まちは すてきです。",
+            exampleVi: "Thị trấn này đẹp, tuyệt vời."
         ),
         VocabWord(
-            kanji: "大きい",
+            kanji: nil,
             kana: "おおきい",
             romaji: "ookii",
             meaningVi: "To, lớn",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は大きいです。",
+            exampleJp: "にほんの ふゆは おおきいです。",
             exampleVi: "Mùa đông ở Nhật to, lớn."
         ),
         VocabWord(
-            kanji: "小さい",
+            kanji: nil,
             kana: "ちいさい",
             romaji: "chiisai",
             meaningVi: "Nhỏ, bé",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "日本の冬は小さいです。",
+            exampleJp: "にほんの ふゆは ちいさいです。",
             exampleVi: "Mùa đông ở Nhật nhỏ, bé."
         ),
         VocabWord(
-            kanji: "新しい",
+            kanji: nil,
             kana: "あたらしい",
             romaji: "atarashii",
             meaningVi: "Mới",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は新しいです。",
+            exampleJp: "にほんの ふゆは あたらしいです。",
             exampleVi: "Mùa đông ở Nhật mới."
         ),
         VocabWord(
-            kanji: "古い",
+            kanji: nil,
             kana: "ふるい",
             romaji: "furui",
             meaningVi: "Cũ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は古いです。",
+            exampleJp: "にほんの ふゆは ふるいです。",
             exampleVi: "Mùa đông ở Nhật cũ."
         ),
         VocabWord(
@@ -5118,97 +5118,97 @@ public final class VocabRepository {
             meaningVi: "Tốt, đẹp",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "いい（よい）があります。",
+            exampleJp: "いい（よい）が あります。",
             exampleVi: "Có tốt, đẹp."
         ),
         VocabWord(
-            kanji: "悪い",
+            kanji: nil,
             kana: "わるい",
             romaji: "warui",
             meaningVi: "Tồi, xấu",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は悪いです。",
+            exampleJp: "にほんの ふゆは わるいです。",
             exampleVi: "Mùa đông ở Nhật tồi, xấu."
         ),
         VocabWord(
-            kanji: "厚い",
+            kanji: nil,
             kana: "あつい",
             romaji: "atsui",
             meaningVi: "Nóng, bức",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は厚いです。",
+            exampleJp: "にほんの ふゆは あついです。",
             exampleVi: "Mùa đông ở Nhật nóng, bức."
         ),
         VocabWord(
-            kanji: "寒い",
+            kanji: nil,
             kana: "さむい",
             romaji: "samui",
             meaningVi: "Lạnh, rét (thời tiết)",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は寒いです。",
+            exampleJp: "にほんの ふゆは さむいです。",
             exampleVi: "Mùa đông ở Nhật lạnh, rét."
         ),
         VocabWord(
-            kanji: "冷たい",
+            kanji: nil,
             kana: "つめたい",
             romaji: "tsumetai",
             meaningVi: "Lạnh (nói về nhiệt độ)",
             topicId: "travel",
             lessonNumber: 8,
-            exampleJp: "日本の冬は冷たいです。",
+            exampleJp: "にほんの ふゆは つめたいです。",
             exampleVi: "Mùa đông ở Nhật lạnh."
         ),
         VocabWord(
-            kanji: "難しい",
+            kanji: nil,
             kana: "むずかしい",
             romaji: "muzukashii",
             meaningVi: "Khó",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は難しいです。",
+            exampleJp: "にほんの ふゆは むずかしいです。",
             exampleVi: "Mùa đông ở Nhật khó."
         ),
         VocabWord(
-            kanji: "優しい",
+            kanji: nil,
             kana: "やさしい",
             romaji: "yasashii",
             meaningVi: "Dễ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は優しいです。",
+            exampleJp: "にほんの ふゆは やさしいです。",
             exampleVi: "Mùa đông ở Nhật dễ."
         ),
         VocabWord(
-            kanji: "高い",
+            kanji: nil,
             kana: "たかい",
             romaji: "takai",
             meaningVi: "Đắt, cao",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は高いです。",
-            exampleVi: "Mùa đông ở Nhật đắt, cao."
+            exampleJp: "たかいが あります。",
+            exampleVi: "Có đắt, cao."
         ),
         VocabWord(
-            kanji: "安い",
+            kanji: nil,
             kana: "やすい",
             romaji: "yasui",
             meaningVi: "Rẻ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は安いです。",
+            exampleJp: "にほんの ふゆは やすいです。",
             exampleVi: "Mùa đông ở Nhật rẻ."
         ),
         VocabWord(
-            kanji: "低い",
+            kanji: nil,
             kana: "ひくい",
             romaji: "hikui",
             meaningVi: "Thấp",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は低いです。",
+            exampleJp: "にほんの ふゆは ひくいです。",
             exampleVi: "Mùa đông ở Nhật thấp."
         ),
         VocabWord(
@@ -5218,7 +5218,7 @@ public final class VocabRepository {
             meaningVi: "Hay, thú vị",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬はおもしろいです。",
+            exampleJp: "にほんの ふゆは おもしろいです。",
             exampleVi: "Mùa đông ở Nhật hay, thú vị."
         ),
         VocabWord(
@@ -5228,187 +5228,187 @@ public final class VocabRepository {
             meaningVi: "Ngon",
             topicId: "food",
             lessonNumber: 8,
-            exampleJp: "日本の冬はおいしいです。",
+            exampleJp: "にほんの ふゆは おいしいです。",
             exampleVi: "Mùa đông ở Nhật ngon."
         ),
         VocabWord(
-            kanji: "忙しい",
+            kanji: nil,
             kana: "いそがしい",
             romaji: "isogashii",
             meaningVi: "Bận, bận rộn",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は忙しいです。",
+            exampleJp: "にほんの ふゆは いそがしいです。",
             exampleVi: "Mùa đông ở Nhật bận, bận rộn."
         ),
         VocabWord(
-            kanji: "楽しい",
+            kanji: nil,
             kana: "たのしい",
             romaji: "Vui",
             meaningVi: "vẻ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は楽しいです。",
+            exampleJp: "にほんの ふゆは たのしいです。",
             exampleVi: "Mùa đông ở Nhật vẻ."
         ),
         VocabWord(
-            kanji: "白い",
+            kanji: nil,
             kana: "しろい",
             romaji: "shiroi",
             meaningVi: "Trắng",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は白いです。",
+            exampleJp: "にほんの ふゆは しろいです。",
             exampleVi: "Mùa đông ở Nhật trắng."
         ),
         VocabWord(
-            kanji: "黒い",
+            kanji: nil,
             kana: "くろい",
             romaji: "kuroi",
             meaningVi: "Đen",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は黒いです。",
+            exampleJp: "にほんの ふゆは くろいです。",
             exampleVi: "Mùa đông ở Nhật đen."
         ),
         VocabWord(
-            kanji: "赤い",
+            kanji: nil,
             kana: "あかい",
             romaji: "akai",
             meaningVi: "Đỏ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬は赤いです。",
-            exampleVi: "Mùa đông ở Nhật đỏ."
+            exampleJp: "あかいが あります。",
+            exampleVi: "Có đỏ."
         ),
         VocabWord(
-            kanji: "青い",
+            kanji: nil,
             kana: "あおい",
             romaji: "aoi",
             meaningVi: "Xanh",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "日本の冬は青いです。",
+            exampleJp: "にほんの ふゆは あおいです。",
             exampleVi: "Mùa đông ở Nhật xanh."
         ),
         VocabWord(
-            kanji: "試験",
+            kanji: nil,
             kana: "しけん",
             romaji: "shiken",
             meaningVi: "Thi, kiểm tra",
             topicId: "travel",
             lessonNumber: 8,
-            exampleJp: "試験があります。",
+            exampleJp: "しけんが あります。",
             exampleVi: "Có thi, kiểm tra."
         ),
         VocabWord(
-            kanji: "宿題",
+            kanji: nil,
             kana: "しゅくだい",
             romaji: "shukudai",
             meaningVi: "Bài tập (về nhà)",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "日本の冬は宿題です。",
+            exampleJp: "にほんの ふゆは しゅくだいです。",
             exampleVi: "Mùa đông ở Nhật bài tập."
         ),
         VocabWord(
-            kanji: "食べ物",
+            kanji: nil,
             kana: "たべもの",
             romaji: "tabemono",
             meaningVi: "Đồ ăn",
             topicId: "food",
             lessonNumber: 8,
-            exampleJp: "食べ物があります。",
+            exampleJp: "たべものが あります。",
             exampleVi: "Có đồ ăn."
         ),
         VocabWord(
-            kanji: "桜",
+            kanji: nil,
             kana: "さくら",
             romaji: "Hoa",
             meaningVi: "Anh Đào",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "桜があります。",
+            exampleJp: "さくらが あります。",
             exampleVi: "Có anh đào."
         ),
         VocabWord(
-            kanji: "花",
+            kanji: nil,
             kana: "はな",
             romaji: "wana",
             meaningVi: "Hoa, bông hoa",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "花があります。",
+            exampleJp: "はなが あります。",
             exampleVi: "Có hoa, bông hoa."
         ),
         VocabWord(
-            kanji: "町",
+            kanji: nil,
             kana: "まち",
             romaji: "machi",
             meaningVi: "Thị xã, phố, phường",
             topicId: "travel",
             lessonNumber: 8,
-            exampleJp: "町があります。",
+            exampleJp: "まちが あります。",
             exampleVi: "Có thị xã, phố, phường."
         ),
         VocabWord(
-            kanji: "山",
+            kanji: nil,
             kana: "やま",
             romaji: "yama",
             meaningVi: "Núi, ngọn núi",
             topicId: "travel",
             lessonNumber: 8,
-            exampleJp: "山があります。",
+            exampleJp: "やまが あります。",
             exampleVi: "Có núi, ngọn núi."
         ),
         VocabWord(
-            kanji: "富士山",
+            kanji: nil,
             kana: "ふじさん",
             romaji: "fujisan",
             meaningVi: "Núi Phú Sĩ",
             topicId: "travel",
             lessonNumber: 8,
-            exampleJp: "富士山があります。",
+            exampleJp: "ふじさんが あります。",
             exampleVi: "Có núi phú sĩ."
         ),
         VocabWord(
-            kanji: "所",
+            kanji: nil,
             kana: "ところ",
             romaji: "tokoro",
             meaningVi: "Nơi, chỗ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "所があります。",
+            exampleJp: "ところが あります。",
             exampleVi: "Có nơi, chỗ."
         ),
         VocabWord(
-            kanji: "寮",
+            kanji: nil,
             kana: "りょう",
             romaji: "ryou",
             meaningVi: "Ký túc xá",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "寮があります。",
+            exampleJp: "りょうが あります。",
             exampleVi: "Có ký túc xá."
         ),
         VocabWord(
-            kanji: "車",
+            kanji: nil,
             kana: "くるま",
             romaji: "Xe",
             meaningVi: "ô tô",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "車があります。",
+            exampleJp: "くるまが あります。",
             exampleVi: "Có ô tô."
         ),
         VocabWord(
-            kanji: "生活",
+            kanji: nil,
             kana: "せいかつ",
             romaji: "seikatsu",
             meaningVi: "Cuộc sống (hằng ngày) 「お」しごと 「お」仕事 Công việc",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "生活に勉強します。",
+            exampleJp: "せいかつに べんきょうします。",
             exampleVi: "Tôi học vào cuộc sống."
         ),
         VocabWord(
@@ -5418,7 +5418,7 @@ public final class VocabRepository {
             meaningVi: "Như thế nào, ra sao?",
             topicId: "travel",
             lessonNumber: 8,
-            exampleJp: "どうがあります。",
+            exampleJp: "どうが あります。",
             exampleVi: "Có như thế nào, ra sao?."
         ),
         VocabWord(
@@ -5428,7 +5428,7 @@ public final class VocabRepository {
             meaningVi: "~ như thế nào? (+danh từ )",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "どんな～があります。",
+            exampleJp: "どんな～が あります。",
             exampleVi: "Có ~ như thế nào?."
         ),
         VocabWord(
@@ -5438,17 +5438,17 @@ public final class VocabRepository {
             meaningVi: "Cái nào?",
             topicId: "food",
             lessonNumber: 8,
-            exampleJp: "どれが好きです。",
+            exampleJp: "どれが すきです。",
             exampleVi: "Tôi thích cái nào?."
         ),
         VocabWord(
-            kanji: "大変",
+            kanji: nil,
             kana: "たいへん",
             romaji: "taihen",
             meaningVi: "Cực kỳ, vô cùng",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "大変があります。",
+            exampleJp: "たいへんが あります。",
             exampleVi: "Có cực kỳ, vô cùng."
         ),
         VocabWord(
@@ -5458,7 +5458,7 @@ public final class VocabRepository {
             meaningVi: "định Không ~ lắm",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "あまり～phủがあります。",
+            exampleJp: "あまり～phủが あります。",
             exampleVi: "Có định không ~ lắm."
         ),
         VocabWord(
@@ -5468,7 +5468,7 @@ public final class VocabRepository {
             meaningVi: "Rất",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "とてもがあります。",
+            exampleJp: "とてもが あります。",
             exampleVi: "Có rất."
         ),
         VocabWord(
@@ -5478,7 +5478,7 @@ public final class VocabRepository {
             meaningVi: "Và rồi",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "そしてがあります。",
+            exampleJp: "そしてが あります。",
             exampleVi: "Có và rồi."
         ),
         VocabWord(
@@ -5488,7 +5488,7 @@ public final class VocabRepository {
             meaningVi: "~ nhưng ~",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "～が、～があります。",
+            exampleJp: "～が、～が あります。",
             exampleVi: "Có ~ nhưng ~."
         ),
         VocabWord(
@@ -5498,27 +5498,27 @@ public final class VocabRepository {
             meaningVi: "Này!, chào! (dùng để chào bạn bè)",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "やあがあります。",
+            exampleJp: "やあが あります。",
             exampleVi: "Có này!, chào!."
         ),
         VocabWord(
             kanji: nil,
             kana: "しばらくですね。",
-            romaji: "shibarakuでsune.",
+            romaji: "shibarakudesune.",
             meaningVi: "Lâu lắm không gặp nhỉ.",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "しばらくですね。があります。",
+            exampleJp: "しばらくですね。が あります。",
             exampleVi: "Có lâu lắm không gặp nhỉ.."
         ),
         VocabWord(
             kanji: nil,
             kana: "おげんきですか。",
-            romaji: "ogenkiでsuka.",
+            romaji: "ogenkidesuka.",
             meaningVi: "Bạn có khỏe không",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "おげんきですか。があります。",
+            exampleJp: "おげんきですか。が あります。",
             exampleVi: "Có bạn có khỏe không."
         ),
         VocabWord(
@@ -5528,7 +5528,7 @@ public final class VocabRepository {
             meaningVi: "こちらへ。 Xin mời đi lối này. 「コーヒー」は いかがですか。 Uống/Dùng (cà phê) nhé/không? 「コーヒー」をもう 一杯",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "どうぞが好きです。",
+            exampleJp: "どうぞが すきです。",
             exampleVi: "Tôi thích こちらへ。 xin mời đi lối này. 「コーヒー」は いかがですか。 uống/dùng."
         ),
         VocabWord(
@@ -5538,17 +5538,17 @@ public final class VocabRepository {
             meaningVi: "いっぱい",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬はいっぱいです。",
+            exampleJp: "にほんの ふゆは いっぱいです。",
             exampleVi: "Mùa đông ở Nhật いっぱい."
         ),
         VocabWord(
             kanji: nil,
             kana: "いかがですか。",
-            romaji: "ikagaでsuka.",
+            romaji: "ikagadesuka.",
             meaningVi: "Uống/Dùng thêm (cà phê) nhé/không?",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "いかがですか。が好きです。",
+            exampleJp: "いかがですか。が すきです。",
             exampleVi: "Tôi thích uống/dùng thêm."
         ),
         VocabWord(
@@ -5558,7 +5558,7 @@ public final class VocabRepository {
             meaningVi: "mời (nói khi bắt đầu ăn, uống gì đó)",
             topicId: "food",
             lessonNumber: 8,
-            exampleJp: "いただきます。があります。",
+            exampleJp: "いただきます。が あります。",
             exampleVi: "Có mời."
         ),
         VocabWord(
@@ -5568,17 +5568,17 @@ public final class VocabRepository {
             meaningVi: "cảm ơn (vì bữa ăn ngon) (nói khi ăn, uống xong)",
             topicId: "food",
             lessonNumber: 8,
-            exampleJp: "ごちそうさま「でした」。があります。",
+            exampleJp: "ごちそうさま「でした」。が あります。",
             exampleVi: "Có cảm ơn."
         ),
         VocabWord(
             kanji: nil,
             kana: "いいえ、けっこうです。",
-            romaji: "iie, kekkouでsu.",
+            romaji: "iie, kekkoudesu.",
             meaningVi: "Không, cảm ơn, tôi đủ rồi (nói khi từ chối ăn tiếp).",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "いいえ、けっこうです。があります。",
+            exampleJp: "いいえ、けっこうです。が あります。",
             exampleVi: "Có không, cảm ơn, tôi đủ rồi."
         ),
         VocabWord(
@@ -5588,17 +5588,17 @@ public final class VocabRepository {
             meaningVi: "～です「ね」。 Đã ~ rồi (nhỉ).",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "もうがあります。",
+            exampleJp: "もうが あります。",
             exampleVi: "Có ～です「ね」。 đã ~ rồi."
         ),
         VocabWord(
-            kanji: "１２時",
+            kanji: nil,
             kana: "もう",
             romaji: "mou",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "１２時があります。",
+            exampleJp: "もうが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -5608,37 +5608,37 @@ public final class VocabRepository {
             meaningVi: "じ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "じがあります。",
+            exampleJp: "じが あります。",
             exampleVi: "Có じ."
         ),
         VocabWord(
             kanji: nil,
             kana: "ですね。",
-            romaji: "でsune.",
+            romaji: "desune.",
             meaningVi: "Đã 12 giờ rồi nhỉ.",
             topicId: "time",
             lessonNumber: 8,
-            exampleJp: "ですね。に勉強します。",
+            exampleJp: "ですね。に べんきょうします。",
             exampleVi: "Tôi học vào đã 12 giờ rồi nhỉ.."
         ),
         VocabWord(
             kanji: nil,
             kana: "そうですね。",
-            romaji: "souでsune.",
+            romaji: "soudesune.",
             meaningVi: "À, cái đó thì… (nói khi tạm ngừng và suy nghĩ) Vâng, Vâng đúng rồi (nói khi đồng ý với ý kiến khác)",
             topicId: "food",
             lessonNumber: 8,
-            exampleJp: "そうですね。が好きです。",
+            exampleJp: "そうですね。が すきです。",
             exampleVi: "Tôi thích à, cái đó thì…."
         ),
         VocabWord(
-            kanji: "失",
+            kanji: nil,
             kana: "そろそろ",
             romaji: "sorosoro",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "失があります。",
+            exampleJp: "そろそろが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -5648,7 +5648,7 @@ public final class VocabRepository {
             meaningVi: "しつ",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "しつがあります。",
+            exampleJp: "しつが あります。",
             exampleVi: "Có しつ."
         ),
         VocabWord(
@@ -5658,7 +5658,7 @@ public final class VocabRepository {
             meaningVi: "礼",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "礼があります。",
+            exampleJp: "礼が あります。",
             exampleVi: "Có 礼."
         ),
         VocabWord(
@@ -5668,7 +5668,7 @@ public final class VocabRepository {
             meaningVi: "れい",
             topicId: "greeting",
             lessonNumber: 8,
-            exampleJp: "日本の冬はれいです。",
+            exampleJp: "にほんの ふゆは れいです。",
             exampleVi: "Mùa đông ở Nhật れい."
         ),
         VocabWord(
@@ -5678,7 +5678,7 @@ public final class VocabRepository {
             meaningVi: "Tôi xin phép ra về (vì đã đến giờ nên về)",
             topicId: "family",
             lessonNumber: 8,
-            exampleJp: "します。に勉強します。",
+            exampleJp: "します。に べんきょうします。",
             exampleVi: "Tôi học vào tôi xin phép ra về."
         ),
         VocabWord(
@@ -5688,7 +5688,7 @@ public final class VocabRepository {
             meaningVi: "いらっしゃってください。 Lần sau lại đến nhé.",
             topicId: "travel",
             lessonNumber: 8,
-            exampleJp: "またがあります。",
+            exampleJp: "またが あります。",
             exampleVi: "Có いらっしゃってください。 lần sau lại đến nhé.."
         )
     ]
@@ -5696,13 +5696,13 @@ public final class VocabRepository {
     // MARK: - Bài 9 (66 từ)
     public static let lesson9Words: [VocabWord] = [
         VocabWord(
-            kanji: "分かります",
+            kanji: nil,
             kana: "わかります",
             romaji: "wakarimasu",
             meaningVi: "Hiểu",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "毎日 分かります。",
+            exampleJp: "まいにち わかります。",
             exampleVi: "Hằng ngày tôi hiểu."
         ),
         VocabWord(
@@ -5712,48 +5712,48 @@ public final class VocabRepository {
             meaningVi: "Có ( nói về sự sở hữu )",
             topicId: "travel",
             lessonNumber: 9,
-            exampleJp: "毎日 あります。",
+            exampleJp: "まいにち あります。",
             exampleVi: "Hằng ngày tôi có."
         ),
         VocabWord(
-            kanji: "好き「な」",
+            kanji: nil,
             kana: "すき「な」",
             romaji: "suki\"na\"",
             meaningVi: "Thích",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "この町は好きです。",
-            exampleVi: "Thành phố này thích."
+            exampleJp: "この まちは すきです。",
+            exampleVi: "Thị trấn này thích."
         ),
         VocabWord(
-            kanji: "嫌い「な」",
+            kanji: nil,
             kana: "きらい「な」",
             romaji: "kirai\"na\"",
             meaningVi: "Ghét",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "この町は嫌いです。",
-            exampleVi: "Thành phố này ghét."
+            exampleJp: "この まちは きらいです。",
+            exampleVi: "Thị trấn này ghét."
         ),
         VocabWord(
-            kanji: "上手「な」",
+            kanji: nil,
             kana: "じょうず「な」",
             romaji: "jouzu\"na\"",
             meaningVi: "Khéo, giỏi",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "この町は上手です。",
-            exampleVi: "Thành phố này khéo, giỏi."
+            exampleJp: "この まちは じょうずです。",
+            exampleVi: "Thị trấn này khéo, giỏi."
         ),
         VocabWord(
-            kanji: "下手「な」",
+            kanji: nil,
             kana: "へた「な」",
             romaji: "heta\"na\"",
             meaningVi: "Kém, vụng",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "この町は下手です。",
-            exampleVi: "Thành phố này kém, vụng."
+            exampleJp: "この まちは へたです。",
+            exampleVi: "Thị trấn này kém, vụng."
         ),
         VocabWord(
             kanji: nil,
@@ -5762,7 +5762,7 @@ public final class VocabRepository {
             meaningVi: "Chữ Hiragana",
             topicId: "travel",
             lessonNumber: 9,
-            exampleJp: "ひらがなへ行きます。",
+            exampleJp: "ひらがなへ いきます。",
             exampleVi: "Tôi đi đến chữ hiragana."
         ),
         VocabWord(
@@ -5772,87 +5772,87 @@ public final class VocabRepository {
             meaningVi: "Chữ Katakana",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "カタカナがあります。",
+            exampleJp: "カタカナが あります。",
             exampleVi: "Có chữ katakana."
         ),
         VocabWord(
-            kanji: "字",
+            kanji: nil,
             kana: "じ",
             romaji: "ji",
             meaningVi: "Chữ cái",
             topicId: "food",
             lessonNumber: 9,
-            exampleJp: "字が好きです。",
+            exampleJp: "じが すきです。",
             exampleVi: "Tôi thích chữ cái."
         ),
         VocabWord(
-            kanji: "ローマ字",
+            kanji: nil,
             kana: "ローマじ",
             romaji: "roomaji",
             meaningVi: "Chữ La tinh",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "ローマ字があります。",
+            exampleJp: "ローマじが あります。",
             exampleVi: "Có chữ la tinh."
         ),
         VocabWord(
-            kanji: "漢字",
+            kanji: nil,
             kana: "かんじ",
             romaji: "kanji",
             meaningVi: "Chữ Kanji",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "漢字があります。",
+            exampleJp: "かんじが あります。",
             exampleVi: "Có chữ kanji."
         ),
         VocabWord(
-            kanji: "料理",
+            kanji: nil,
             kana: "りょうり",
             romaji: "ryouri",
             meaningVi: "Món ăn",
             topicId: "food",
             lessonNumber: 9,
-            exampleJp: "料理があります。",
+            exampleJp: "りょうりが あります。",
             exampleVi: "Có món ăn."
         ),
         VocabWord(
-            kanji: "飲み物",
+            kanji: nil,
             kana: "のみもの",
             romaji: "nomimono",
             meaningVi: "Đồ uống",
             topicId: "food",
             lessonNumber: 9,
-            exampleJp: "飲み物があります。",
+            exampleJp: "のみものが あります。",
             exampleVi: "Có đồ uống."
         ),
         VocabWord(
-            kanji: "豚肉",
+            kanji: nil,
             kana: "ぶたにく",
             romaji: "butaniku",
             meaningVi: "Thịt lợn",
             topicId: "food",
             lessonNumber: 9,
-            exampleJp: "豚肉が好きです。",
+            exampleJp: "ぶたにくが すきです。",
             exampleVi: "Tôi thích thịt lợn."
         ),
         VocabWord(
-            kanji: "鶏肉",
+            kanji: nil,
             kana: "とりにく",
             romaji: "toriniku",
             meaningVi: "Thịt gà",
             topicId: "food",
             lessonNumber: 9,
-            exampleJp: "鶏肉が好きです。",
+            exampleJp: "とりにくが すきです。",
             exampleVi: "Tôi thích thịt gà."
         ),
         VocabWord(
-            kanji: "牛肉",
+            kanji: nil,
             kana: "ぎゅうにく",
             romaji: "gyuuniku",
             meaningVi: "Thịt bò",
             topicId: "food",
             lessonNumber: 9,
-            exampleJp: "牛肉が好きです。",
+            exampleJp: "ぎゅうにくが すきです。",
             exampleVi: "Tôi thích thịt bò."
         ),
         VocabWord(
@@ -5862,7 +5862,7 @@ public final class VocabRepository {
             meaningVi: "Quýt",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "みかんがあります。",
+            exampleJp: "みかんが あります。",
             exampleVi: "Có quýt."
         ),
         VocabWord(
@@ -5872,27 +5872,27 @@ public final class VocabRepository {
             meaningVi: "Chuối",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "バナナがあります。",
+            exampleJp: "バナナが あります。",
             exampleVi: "Có chuối."
         ),
         VocabWord(
-            kanji: "音楽",
+            kanji: nil,
             kana: "おんがく",
             romaji: "ongaku",
             meaningVi: "Âm nhạc",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "音楽があります。",
+            exampleJp: "おんがくが あります。",
             exampleVi: "Có âm nhạc."
         ),
         VocabWord(
-            kanji: "歌",
+            kanji: nil,
             kana: "うた",
             romaji: "uta",
             meaningVi: "Bài hát",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "歌があります。",
+            exampleJp: "うたが あります。",
             exampleVi: "Có bài hát."
         ),
         VocabWord(
@@ -5902,7 +5902,7 @@ public final class VocabRepository {
             meaningVi: "Nhạc cổ điển",
             topicId: "travel",
             lessonNumber: 9,
-            exampleJp: "クラシックがあります。",
+            exampleJp: "クラシックが あります。",
             exampleVi: "Có nhạc cổ điển."
         ),
         VocabWord(
@@ -5912,7 +5912,7 @@ public final class VocabRepository {
             meaningVi: "Nhạc Jazz",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "ジャズがあります。",
+            exampleJp: "ジャズが あります。",
             exampleVi: "Có nhạc jazz."
         ),
         VocabWord(
@@ -5922,7 +5922,7 @@ public final class VocabRepository {
             meaningVi: "Hòa nhạc",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "コンサートがあります。",
+            exampleJp: "コンサートが あります。",
             exampleVi: "Có hòa nhạc."
         ),
         VocabWord(
@@ -5932,17 +5932,17 @@ public final class VocabRepository {
             meaningVi: "Karaoke",
             topicId: "travel",
             lessonNumber: 9,
-            exampleJp: "カラオケがあります。",
+            exampleJp: "カラオケが あります。",
             exampleVi: "Có karaoke."
         ),
         VocabWord(
-            kanji: "歌舞伎",
+            kanji: nil,
             kana: "かぶき",
             romaji: "kabuki",
             meaningVi: "Kịch Kabuki (1 loại kịch truyền thống của Nhật)",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "歌舞伎があります。",
+            exampleJp: "かぶきが あります。",
             exampleVi: "Có kịch kabuki."
         ),
         VocabWord(
@@ -5952,7 +5952,7 @@ public final class VocabRepository {
             meaningVi: "Nhảy, khiêu vũ",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "ダンスがあります。",
+            exampleJp: "ダンスが あります。",
             exampleVi: "Có nhảy, khiêu vũ."
         ),
         VocabWord(
@@ -5962,7 +5962,7 @@ public final class VocabRepository {
             meaningVi: "します (động từ) Nhảy, khiêu vũ",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "ダンスをがあります。",
+            exampleJp: "ダンスをが あります。",
             exampleVi: "Có します."
         ),
         VocabWord(
@@ -5972,7 +5972,7 @@ public final class VocabRepository {
             meaningVi: "Đàn ghita",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "ギターがあります。",
+            exampleJp: "ギターが あります。",
             exampleVi: "Có đàn ghita."
         ),
         VocabWord(
@@ -5982,7 +5982,7 @@ public final class VocabRepository {
             meaningVi: "ひきます (động từ) Chơi ghita",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "ギターをがあります。",
+            exampleJp: "ギターをが あります。",
             exampleVi: "Có ひきます."
         ),
         VocabWord(
@@ -5992,7 +5992,7 @@ public final class VocabRepository {
             meaningVi: "Thể thao",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "スポーツがあります。",
+            exampleJp: "スポーツが あります。",
             exampleVi: "Có thể thao."
         ),
         VocabWord(
@@ -6002,37 +6002,37 @@ public final class VocabRepository {
             meaningVi: "します (động từ) Chơi thể thao",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "スポーツをがあります。",
+            exampleJp: "スポーツをが あります。",
             exampleVi: "Có します."
         ),
         VocabWord(
-            kanji: "野球",
+            kanji: nil,
             kana: "やきゅう",
             romaji: "yakyuu",
             meaningVi: "Bóng chày",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "野球があります。",
+            exampleJp: "やきゅうが あります。",
             exampleVi: "Có bóng chày."
         ),
         VocabWord(
-            kanji: "絵",
+            kanji: nil,
             kana: "え",
             romaji: "e",
             meaningVi: "Tranh, bức tranh",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "絵があります。",
+            exampleJp: "えが あります。",
             exampleVi: "Có tranh, bức tranh."
         ),
         VocabWord(
-            kanji: "細かいお金",
+            kanji: nil,
             kana: "こまかいおかね",
             romaji: "komakaiokane",
             meaningVi: "Tiền lẻ",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "細かいお金があります。",
+            exampleJp: "こまかいおかねが あります。",
             exampleVi: "Có tiền lẻ."
         ),
         VocabWord(
@@ -6042,17 +6042,17 @@ public final class VocabRepository {
             meaningVi: "Vé, tấm vé (ticket)",
             topicId: "travel",
             lessonNumber: 9,
-            exampleJp: "チケットがあります。",
+            exampleJp: "チケットが あります。",
             exampleVi: "Có vé, tấm vé."
         ),
         VocabWord(
-            kanji: "時間",
+            kanji: nil,
             kana: "じかん",
             romaji: "jikan",
             meaningVi: "Thời gian",
             topicId: "time",
             lessonNumber: 9,
-            exampleJp: "時間があります。",
+            exampleJp: "じかんが あります。",
             exampleVi: "Có thời gian."
         ),
         VocabWord(
@@ -6062,7 +6062,7 @@ public final class VocabRepository {
             meaningVi: "Nhiều (phó từ)",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "たくさんがあります。",
+            exampleJp: "たくさんが あります。",
             exampleVi: "Có nhiều."
         ),
         VocabWord(
@@ -6072,7 +6072,7 @@ public final class VocabRepository {
             meaningVi: "Ít, một ít, một chút (phó từ)",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "すこしがあります。",
+            exampleJp: "すこしが あります。",
             exampleVi: "Có ít, một ít, một chút."
         ),
         VocabWord(
@@ -6082,7 +6082,7 @@ public final class VocabRepository {
             meaningVi: "Hay, thường, giỏi (phó từ)",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "よくがあります。",
+            exampleJp: "よくが あります。",
             exampleVi: "Có hay, thường, giỏi."
         ),
         VocabWord(
@@ -6092,7 +6092,7 @@ public final class VocabRepository {
             meaningVi: "Khoảng, độ, đại khái",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "日本の冬はだいたいです。",
+            exampleJp: "にほんの ふゆは だいたいです。",
             exampleVi: "Mùa đông ở Nhật khoảng, độ, đại khái."
         ),
         VocabWord(
@@ -6102,27 +6102,27 @@ public final class VocabRepository {
             meaningVi: "Không…một chút nào, hoàn toàn không",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "ぜんぜん（～ない／ません）があります。",
+            exampleJp: "ぜんぜん（～ない／ません）が あります。",
             exampleVi: "Có không…một chút nào, hoàn toàn không."
         ),
         VocabWord(
-            kanji: "速く",
+            kanji: nil,
             kana: "はやく",
             romaji: "wayaku",
             meaningVi: "Nhanh",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "速くがあります。",
+            exampleJp: "はやくが あります。",
             exampleVi: "Có nhanh."
         ),
         VocabWord(
-            kanji: "早く",
+            kanji: nil,
             kana: "はやく",
             romaji: "wayaku",
             meaningVi: "Sớm",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "早くがあります。",
+            exampleJp: "はやくが あります。",
             exampleVi: "Có sớm."
         ),
         VocabWord(
@@ -6132,7 +6132,7 @@ public final class VocabRepository {
             meaningVi: "Tất nhiên",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "もちろんがあります。",
+            exampleJp: "もちろんが あります。",
             exampleVi: "Có tất nhiên."
         ),
         VocabWord(
@@ -6142,7 +6142,7 @@ public final class VocabRepository {
             meaningVi: "Vì sao, tại sao (từ để hỏi)",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "どうしてがあります。",
+            exampleJp: "どうしてが あります。",
             exampleVi: "Có vì sao, tại sao."
         ),
         VocabWord(
@@ -6152,57 +6152,57 @@ public final class VocabRepository {
             meaningVi: "Vì ~, bởi ~",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "～からがあります。",
+            exampleJp: "～からが あります。",
             exampleVi: "Có vì ~, bởi ~."
         ),
         VocabWord(
-            kanji: "病気",
+            kanji: nil,
             kana: "びょうき",
             romaji: "byouki",
             meaningVi: "Bệnh, ốm",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "病気があります。",
+            exampleJp: "びょうきが あります。",
             exampleVi: "Có bệnh, ốm."
         ),
         VocabWord(
-            kanji: "薬",
+            kanji: nil,
             kana: "くすり",
             romaji: "kusuri",
             meaningVi: "Thuốc",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "薬があります。",
+            exampleJp: "くすりが あります。",
             exampleVi: "Có thuốc."
         ),
         VocabWord(
-            kanji: "頭",
+            kanji: nil,
             kana: "あたま",
             romaji: "atama",
             meaningVi: "Đầu",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "頭があります。",
+            exampleJp: "あたまが あります。",
             exampleVi: "Có đầu."
         ),
         VocabWord(
-            kanji: "お腹",
+            kanji: nil,
             kana: "おなか",
             romaji: "onaka",
             meaningVi: "Bụng",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "お腹があります。",
+            exampleJp: "おなかが あります。",
             exampleVi: "Có bụng."
         ),
         VocabWord(
-            kanji: "痛い",
+            kanji: nil,
             kana: "いたい",
             romaji: "itai",
             meaningVi: "Đau, nhức",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "日本の冬は痛いです。",
+            exampleJp: "にほんの ふゆは いたいです。",
             exampleVi: "Mùa đông ở Nhật đau, nhức."
         ),
         VocabWord(
@@ -6212,7 +6212,7 @@ public final class VocabRepository {
             meaningVi: "いたいです Đau đầu, nhức đầu",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "あたまががあります。",
+            exampleJp: "あたまがが あります。",
             exampleVi: "Có いたいです đau đầu, nhức đầu."
         ),
         VocabWord(
@@ -6222,7 +6222,7 @@ public final class VocabRepository {
             meaningVi: "あります 熱が あります Bị sốt",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "ねつががあります。",
+            exampleJp: "ねつがが あります。",
             exampleVi: "Có あります 熱が あります bị sốt."
         ),
         VocabWord(
@@ -6232,47 +6232,47 @@ public final class VocabRepository {
             meaningVi: "ひきます 風邪を ひきます Bị cảm",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "かぜをがあります。",
+            exampleJp: "かぜをが あります。",
             exampleVi: "Có ひきます 風邪を ひきます bị cảm."
         ),
         VocabWord(
-            kanji: "休みます",
+            kanji: nil,
             kana: "やすみます",
             romaji: "yasumimasu",
             meaningVi: "Nghỉ (không đến)",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "映画を見ます。",
+            exampleJp: "えいがを みます。",
             exampleVi: "Tôi xem phim."
         ),
         VocabWord(
-            kanji: "休みます",
+            kanji: nil,
             kana: "かいしゃを",
             romaji: "kaishao",
             meaningVi: "Nghỉ làm (không đến công ty làm việc)",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "休みますがあります。",
+            exampleJp: "かいしゃをが あります。",
             exampleVi: "Có nghỉ làm."
         ),
         VocabWord(
-            kanji: "休みます",
+            kanji: nil,
             kana: "がっこうを",
             romaji: "gakkouo",
             meaningVi: "Nghỉ học",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "休みますがあります。",
+            exampleJp: "がっこうをが あります。",
             exampleVi: "Có nghỉ học."
         ),
         VocabWord(
-            kanji: "何ですか",
+            kanji: nil,
             kana: "なんですか。",
-            romaji: "nanでsuka.",
+            romaji: "nandesuka.",
             meaningVi: "Có việc gì đấy?",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "何ですかがあります。",
+            exampleJp: "なんですか。が あります。",
             exampleVi: "Có có việc gì đấy?."
         ),
         VocabWord(
@@ -6286,13 +6286,13 @@ public final class VocabRepository {
             exampleVi: "lỗi, cho tôi hỏi (dùng khi bắt đầu câu chuyện)"
         ),
         VocabWord(
-            kanji: "残念ですね。",
+            kanji: nil,
             kana: "ざんねんです「ね」",
-            romaji: "zannenでsu\"ne\"",
+            romaji: "zannendesu\"ne\"",
             meaningVi: "Tiếc nhỉ!, tiếc quá nhỉ!",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "残念ですね。があります。",
+            exampleJp: "ざんねんです「ね」が あります。",
             exampleVi: "Có tiếc nhỉ!, tiếc quá nhỉ!."
         ),
         VocabWord(
@@ -6302,7 +6302,7 @@ public final class VocabRepository {
             meaningVi: "Alô (khi nghe điện thoại)",
             topicId: "travel",
             lessonNumber: 9,
-            exampleJp: "もしもしがあります。",
+            exampleJp: "もしもしが あります。",
             exampleVi: "Có alô."
         ),
         VocabWord(
@@ -6312,7 +6312,7 @@ public final class VocabRepository {
             meaningVi: "Oh! *************************",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "ああがあります。",
+            exampleJp: "ああが あります。",
             exampleVi: "Có oh! *************************."
         ),
         VocabWord(
@@ -6322,17 +6322,17 @@ public final class VocabRepository {
             meaningVi: "いかがですか。 Bạn tham gia cùng không? 「～は」 ちょっと…….。 Cái đó thì… (dùng khi muốn gián tiếp từ chối)",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "いっしょにが好きです。",
+            exampleJp: "いっしょにが すきです。",
             exampleVi: "Tôi thích いかがですか。 bạn tham gia cùng không? 「～は」 ちょっと…….。 cái đó thì…."
         ),
         VocabWord(
             kanji: nil,
             kana: "だめですか。",
-            romaji: "dameでsuka.",
+            romaji: "damedesuka.",
             meaningVi: "Không được sao?",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "だめですか。があります。",
+            exampleJp: "だめですか。が あります。",
             exampleVi: "Có không được sao?."
         ),
         VocabWord(
@@ -6342,17 +6342,17 @@ public final class VocabRepository {
             meaningVi: "こんど おねがいします。 Để lần khác nhé.",
             topicId: "greeting",
             lessonNumber: 9,
-            exampleJp: "またがあります。",
+            exampleJp: "またが あります。",
             exampleVi: "Có こんど おねがいします。 để lần khác nhé.."
         ),
         VocabWord(
-            kanji: "小沢征爾",
+            kanji: nil,
             kana: "おざわせいじ",
             romaji: "ozawaseiji",
             meaningVi: "Nhạc sĩ, chỉ huy dàn nhạc giao hưởng nổi tiếng người Nhật - Ozawa Seiji (1935 - )",
             topicId: "family",
             lessonNumber: 9,
-            exampleJp: "小沢征爾があります。",
+            exampleJp: "おざわせいじが あります。",
             exampleVi: "Có nhạc sĩ, chỉ huy dàn nhạc giao hưởng nổi tiếng người nhật - ozawa seiji."
         )
     ]
@@ -6366,7 +6366,7 @@ public final class VocabRepository {
             meaningVi: "Có (biểu thị sự tồn tại của người)",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "毎日 います。",
+            exampleJp: "まいにち います。",
             exampleVi: "Hằng ngày tôi có."
         ),
         VocabWord(
@@ -6376,7 +6376,7 @@ public final class VocabRepository {
             meaningVi: "Có (biểu thị sự tồn tại của vật)",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "毎日 あります。",
+            exampleJp: "まいにち あります。",
             exampleVi: "Hằng ngày tôi có."
         ),
         VocabWord(
@@ -6386,137 +6386,137 @@ public final class VocabRepository {
             meaningVi: "Nhiều loại, các loại",
             topicId: "food",
             lessonNumber: 10,
-            exampleJp: "この町はいろいろです。",
-            exampleVi: "Thành phố này nhiều loại, các loại."
+            exampleJp: "この まちは いろいろです。",
+            exampleVi: "Thị trấn này nhiều loại, các loại."
         ),
         VocabWord(
-            kanji: "上",
+            kanji: nil,
             kana: "うえ",
             romaji: "ue",
             meaningVi: "Trên, bên trên",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "上があります。",
+            exampleJp: "うえが あります。",
             exampleVi: "Có trên, bên trên."
         ),
         VocabWord(
-            kanji: "下",
+            kanji: nil,
             kana: "した",
             romaji: "shita",
             meaningVi: "Dưới, bên dưới",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "下があります。",
+            exampleJp: "したが あります。",
             exampleVi: "Có dưới, bên dưới."
         ),
         VocabWord(
-            kanji: "前",
+            kanji: nil,
             kana: "まえ",
             romaji: "mae",
             meaningVi: "Trước, phía trước",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "前があります。",
+            exampleJp: "まえが あります。",
             exampleVi: "Có trước, phía trước."
         ),
         VocabWord(
-            kanji: "後ろ",
+            kanji: nil,
             kana: "うしろ",
             romaji: "ushiro",
             meaningVi: "Sau, phía sau, đằng sau",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "後ろがあります。",
+            exampleJp: "うしろが あります。",
             exampleVi: "Có sau, phía sau, đằng sau."
         ),
         VocabWord(
-            kanji: "右",
+            kanji: nil,
             kana: "みぎ",
             romaji: "migi",
             meaningVi: "Bên phải",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "右があります。",
+            exampleJp: "みぎが あります。",
             exampleVi: "Có bên phải."
         ),
         VocabWord(
-            kanji: "左",
+            kanji: nil,
             kana: "ひだり",
             romaji: "hidari",
             meaningVi: "Bên trái",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "左があります。",
+            exampleJp: "ひだりが あります。",
             exampleVi: "Có bên trái."
         ),
         VocabWord(
-            kanji: "中",
+            kanji: nil,
             kana: "なか",
             romaji: "naka",
             meaningVi: "Trong, bên trong",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "中があります。",
+            exampleJp: "なかが あります。",
             exampleVi: "Có trong, bên trong."
         ),
         VocabWord(
-            kanji: "外",
+            kanji: nil,
             kana: "そと",
             romaji: "soto",
             meaningVi: "Ngoài, bên ngoài",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "外があります。",
+            exampleJp: "そとが あります。",
             exampleVi: "Có ngoài, bên ngoài."
         ),
         VocabWord(
-            kanji: "隣",
+            kanji: nil,
             kana: "となり",
             romaji: "tonari",
             meaningVi: "Bên cạnh (cạnh sát)",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "隣があります。",
+            exampleJp: "となりが あります。",
             exampleVi: "Có bên cạnh."
         ),
         VocabWord(
-            kanji: "間",
+            kanji: nil,
             kana: "あいだ",
             romaji: "aida",
             meaningVi: "Ở giữa",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "間があります。",
+            exampleJp: "あいだが あります。",
             exampleVi: "Có ở giữa."
         ),
         VocabWord(
-            kanji: "近く",
+            kanji: nil,
             kana: "ちかく",
             romaji: "chikaku",
             meaningVi: "Gần (ở vị trí gần)",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "近くがあります。",
+            exampleJp: "ちかくが あります。",
             exampleVi: "Có gần."
         ),
         VocabWord(
-            kanji: "物",
+            kanji: nil,
             kana: "もの",
             romaji: "mono",
             meaningVi: "Cái, đồ, vật, thứ…",
             topicId: "food",
             lessonNumber: 10,
-            exampleJp: "物が好きです。",
+            exampleJp: "ものが すきです。",
             exampleVi: "Tôi thích cái, đồ, vật, thứ…."
         ),
         VocabWord(
-            kanji: "地図",
+            kanji: nil,
             kana: "ちず",
             romaji: "chizu",
             meaningVi: "Bản đồ",
             topicId: "travel",
             lessonNumber: 10,
-            exampleJp: "地図があります。",
+            exampleJp: "ちずが あります。",
             exampleVi: "Có bản đồ."
         ),
         VocabWord(
@@ -6526,7 +6526,7 @@ public final class VocabRepository {
             meaningVi: "Băng dính",
             topicId: "food",
             lessonNumber: 10,
-            exampleJp: "セロテープがあります。",
+            exampleJp: "セロテープが あります。",
             exampleVi: "Có băng dính."
         ),
         VocabWord(
@@ -6536,7 +6536,7 @@ public final class VocabRepository {
             meaningVi: "Hộ chiếu",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "パスポートがあります。",
+            exampleJp: "パスポートが あります。",
             exampleVi: "Có hộ chiếu."
         ),
         VocabWord(
@@ -6546,27 +6546,27 @@ public final class VocabRepository {
             meaningVi: "Giường",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "ベッドがあります。",
+            exampleJp: "ベッドが あります。",
             exampleVi: "Có giường."
         ),
         VocabWord(
-            kanji: "電池",
+            kanji: nil,
             kana: "でんち",
-            romaji: "でnchi",
+            romaji: "denchi",
             meaningVi: "Pin, cục pin",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "電池があります。",
+            exampleJp: "でんちが あります。",
             exampleVi: "Có pin, cục pin."
         ),
         VocabWord(
-            kanji: "箱",
+            kanji: nil,
             kana: "はこ",
             romaji: "wako",
             meaningVi: "Hộp, cái hộp",
             topicId: "food",
             lessonNumber: 10,
-            exampleJp: "箱が好きです。",
+            exampleJp: "はこが すきです。",
             exampleVi: "Tôi thích hộp, cái hộp."
         ),
         VocabWord(
@@ -6576,17 +6576,17 @@ public final class VocabRepository {
             meaningVi: "Công tắc điện",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "スイッチがあります。",
+            exampleJp: "スイッチが あります。",
             exampleVi: "Có công tắc điện."
         ),
         VocabWord(
-            kanji: "冷蔵庫",
+            kanji: nil,
             kana: "れいぞうこ",
             romaji: "reizouko",
             meaningVi: "Tủ lạnh",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "冷蔵庫があります。",
+            exampleJp: "れいぞうこが あります。",
             exampleVi: "Có tủ lạnh."
         ),
         VocabWord(
@@ -6596,77 +6596,77 @@ public final class VocabRepository {
             meaningVi: "Bàn (bàn tròn, bàn ăn)",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "テーブルがあります。",
+            exampleJp: "テーブルが あります。",
             exampleVi: "Có bàn."
         ),
         VocabWord(
-            kanji: "棚",
+            kanji: nil,
             kana: "たな",
             romaji: "tana",
             meaningVi: "Giá, kệ (bầy hàng)",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "棚があります。",
+            exampleJp: "たなが あります。",
             exampleVi: "Có giá, kệ."
         ),
         VocabWord(
-            kanji: "男の人",
+            kanji: nil,
             kana: "おとこの人",
             romaji: "otokono人",
             meaningVi: "Người đàn ông, người con trai",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "男の人があります。",
+            exampleJp: "おとこの人が あります。",
             exampleVi: "Có người đàn ông, người con trai."
         ),
         VocabWord(
-            kanji: "女の人",
+            kanji: nil,
             kana: "おんなの人",
             romaji: "onnano人",
             meaningVi: "Người phụ nữ, người con gái",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "女の人があります。",
+            exampleJp: "おんなの人が あります。",
             exampleVi: "Có người phụ nữ, người con gái."
         ),
         VocabWord(
-            kanji: "男の子",
+            kanji: nil,
             kana: "おとこのこ",
             romaji: "otokonoko",
             meaningVi: "Bé trai, con trai (dùng cho trẻ con)",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "男の子があります。",
+            exampleJp: "おとこのこが あります。",
             exampleVi: "Có bé trai, con trai."
         ),
         VocabWord(
-            kanji: "女の子",
+            kanji: nil,
             kana: "おんなのこ",
             romaji: "onnanoko",
             meaningVi: "Bé gái, con gái (dùng cho trẻ con)",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "女の子があります。",
+            exampleJp: "おんなのこが あります。",
             exampleVi: "Có bé gái, con gái."
         ),
         VocabWord(
-            kanji: "公園",
+            kanji: nil,
             kana: "こうえん",
             romaji: "kouen",
             meaningVi: "Công viên",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "公園へ行きます。",
+            exampleJp: "こうえんへ いきます。",
             exampleVi: "Tôi đi đến công viên."
         ),
         VocabWord(
-            kanji: "大使館",
+            kanji: nil,
             kana: "たいしかん",
             romaji: "taishikan",
             meaningVi: "Đại sứ quán",
             topicId: "food",
             lessonNumber: 10,
-            exampleJp: "大使館があります。",
+            exampleJp: "たいしかんが あります。",
             exampleVi: "Có đại sứ quán."
         ),
         VocabWord(
@@ -6676,7 +6676,7 @@ public final class VocabRepository {
             meaningVi: "Hòm thư, hộp thư",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "ポストがあります。",
+            exampleJp: "ポストが あります。",
             exampleVi: "Có hòm thư, hộp thư."
         ),
         VocabWord(
@@ -6686,17 +6686,17 @@ public final class VocabRepository {
             meaningVi: "Tòa nhà cao tầng",
             topicId: "travel",
             lessonNumber: 10,
-            exampleJp: "ビルがあります。",
+            exampleJp: "ビルが あります。",
             exampleVi: "Có tòa nhà cao tầng."
         ),
         VocabWord(
-            kanji: "乗り場",
+            kanji: nil,
             kana: "のりば",
             romaji: "noriba",
             meaningVi: "Nơi lên xe (các phương tiện công cộng)",
             topicId: "family",
             lessonNumber: 10,
-            exampleJp: "乗り場が好きです。",
+            exampleJp: "のりばが すきです。",
             exampleVi: "Tôi thích nơi lên xe."
         ),
         VocabWord(
@@ -6706,17 +6706,17 @@ public final class VocabRepository {
             meaningVi: "Trạm dừng xe buýt",
             topicId: "travel",
             lessonNumber: 10,
-            exampleJp: "バスのりばがあります。",
+            exampleJp: "バスのりばが あります。",
             exampleVi: "Có trạm dừng xe buýt."
         ),
         VocabWord(
-            kanji: "県",
+            kanji: nil,
             kana: "けん",
             romaji: "ken",
             meaningVi: "Tỉnh",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "県があります。",
+            exampleJp: "けんが あります。",
             exampleVi: "Có tỉnh."
         ),
         VocabWord(
@@ -6726,7 +6726,7 @@ public final class VocabRepository {
             meaningVi: "神",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "神があります。",
+            exampleJp: "神が あります。",
             exampleVi: "Có 神."
         ),
         VocabWord(
@@ -6736,7 +6736,7 @@ public final class VocabRepository {
             meaningVi: "奈",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "奈があります。",
+            exampleJp: "奈が あります。",
             exampleVi: "Có 奈."
         ),
         VocabWord(
@@ -6746,7 +6746,7 @@ public final class VocabRepository {
             meaningVi: "な",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "ながあります。",
+            exampleJp: "なが あります。",
             exampleVi: "Có な."
         ),
         VocabWord(
@@ -6756,7 +6756,7 @@ public final class VocabRepository {
             meaningVi: "川",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "川があります。",
+            exampleJp: "川が あります。",
             exampleVi: "Có 川."
         ),
         VocabWord(
@@ -6766,7 +6766,7 @@ public final class VocabRepository {
             meaningVi: "がわ",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "がわがあります。",
+            exampleJp: "がわが あります。",
             exampleVi: "Có がわ."
         ),
         VocabWord(
@@ -6776,7 +6776,7 @@ public final class VocabRepository {
             meaningVi: "Tỉnh Kanagawa",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "県へ行きます。",
+            exampleJp: "県へ いきます。",
             exampleVi: "Tôi đi đến tỉnh kanagawa."
         ),
         VocabWord(
@@ -6786,7 +6786,7 @@ public final class VocabRepository {
             meaningVi: "(tính từ) ―番 ～ ~ nhất",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "いちばん～があります。",
+            exampleJp: "いちばん～が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -6796,17 +6796,17 @@ public final class VocabRepository {
             meaningVi: "むずかしい Khó nhất",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "いちばんがあります。",
+            exampleJp: "いちばんが あります。",
             exampleVi: "Có むずかしい khó nhất."
         ),
         VocabWord(
-            kanji: "～段目",
+            kanji: nil,
             kana: "～だんめ",
             romaji: "～danme",
             meaningVi: "Cái giá hàng thứ ~",
             topicId: "food",
             lessonNumber: 10,
-            exampleJp: "～段目が好きです。",
+            exampleJp: "～だんめが すきです。",
             exampleVi: "Tôi thích cái giá hàng thứ ~."
         ),
         VocabWord(
@@ -6816,7 +6816,7 @@ public final class VocabRepository {
             meaningVi: "Cái giá hàng thứ nhất",
             topicId: "food",
             lessonNumber: 10,
-            exampleJp: "一段目が好きです。",
+            exampleJp: "一段目が すきです。",
             exampleVi: "Tôi thích cái giá hàng thứ nhất."
         ),
         VocabWord(
@@ -6826,7 +6826,7 @@ public final class VocabRepository {
             meaningVi: "này,~ / dạ thưa, ~ (biểu thị thái độ ngập ngừng, khi bắt đầu câu chuyện)",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "あのうがあります。",
+            exampleJp: "あのうが あります。",
             exampleVi: "Có này,~ / dạ thưa, ~."
         ),
         VocabWord(
@@ -6836,17 +6836,17 @@ public final class VocabRepository {
             meaningVi: "Tương ớt",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "チリソースがあります。",
+            exampleJp: "チリソースが あります。",
             exampleVi: "Có tương ớt."
         ),
         VocabWord(
-            kanji: "奥",
+            kanji: nil,
             kana: "おく",
             romaji: "oku",
             meaningVi: "Phía sâu bên trong",
             topicId: "greeting",
             lessonNumber: 10,
-            exampleJp: "奥があります。",
+            exampleJp: "おくが あります。",
             exampleVi: "Có phía sâu bên trong."
         )
     ]
@@ -6860,7 +6860,7 @@ public final class VocabRepository {
             meaningVi: "Có (dùng cho người, động vật, chỉ sự sở hữu)",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "毎日 います。",
+            exampleJp: "まいにち います。",
             exampleVi: "Hằng ngày tôi có."
         ),
         VocabWord(
@@ -6870,7 +6870,7 @@ public final class VocabRepository {
             meaningVi: "Có con",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "こどもが～があります。",
+            exampleJp: "こどもが～が あります。",
             exampleVi: "Có có con."
         ),
         VocabWord(
@@ -6880,7 +6880,7 @@ public final class VocabRepository {
             meaningVi: "Ở (chỉ sự tồn tại)",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "毎日 います。",
+            exampleJp: "まいにち います。",
             exampleVi: "Hằng ngày tôi ở."
         ),
         VocabWord(
@@ -6890,7 +6890,7 @@ public final class VocabRepository {
             meaningVi: "Ở Nhật Bản",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "にほんに～があります。",
+            exampleJp: "にほんに～が あります。",
             exampleVi: "Có ở nhật bản."
         ),
         VocabWord(
@@ -6900,107 +6900,107 @@ public final class VocabRepository {
             meaningVi: "Mất, tốn (thời gian, tiền bạc)",
             topicId: "time",
             lessonNumber: 11,
-            exampleJp: "毎日 かかります。",
+            exampleJp: "まいにち かかります。",
             exampleVi: "Hằng ngày tôi mất, tốn."
         ),
         VocabWord(
-            kanji: "一つ",
+            kanji: nil,
             kana: "ひとつ",
             romaji: "hitotsu",
             meaningVi: "1 cái (sử dụng để đếm vật nói chung)",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "一つが好きです。",
+            exampleJp: "ひとつが すきです。",
             exampleVi: "Tôi thích 1 cái."
         ),
         VocabWord(
-            kanji: "二つ",
+            kanji: nil,
             kana: "ふたつ",
             romaji: "futatsu",
             meaningVi: "2 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "二つが好きです。",
+            exampleJp: "ふたつが すきです。",
             exampleVi: "Tôi thích 2 cái."
         ),
         VocabWord(
-            kanji: "三つ",
+            kanji: nil,
             kana: "みっつ",
             romaji: "mittsu",
             meaningVi: "3 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "三つが好きです。",
+            exampleJp: "みっつが すきです。",
             exampleVi: "Tôi thích 3 cái."
         ),
         VocabWord(
-            kanji: "四つ",
+            kanji: nil,
             kana: "よっつ",
             romaji: "yottsu",
             meaningVi: "4 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "四つが好きです。",
+            exampleJp: "よっつが すきです。",
             exampleVi: "Tôi thích 4 cái."
         ),
         VocabWord(
-            kanji: "五つ",
+            kanji: nil,
             kana: "いつつ",
             romaji: "itsutsu",
             meaningVi: "5 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "五つが好きです。",
+            exampleJp: "いつつが すきです。",
             exampleVi: "Tôi thích 5 cái."
         ),
         VocabWord(
-            kanji: "六つ",
+            kanji: nil,
             kana: "むっつ",
             romaji: "muttsu",
             meaningVi: "6 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "六つが好きです。",
+            exampleJp: "むっつが すきです。",
             exampleVi: "Tôi thích 6 cái."
         ),
         VocabWord(
-            kanji: "七つ",
+            kanji: nil,
             kana: "ななつ",
             romaji: "nanatsu",
             meaningVi: "7 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "七つが好きです。",
+            exampleJp: "ななつが すきです。",
             exampleVi: "Tôi thích 7 cái."
         ),
         VocabWord(
-            kanji: "八つ",
+            kanji: nil,
             kana: "やっつ",
             romaji: "yattsu",
             meaningVi: "8 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "八つが好きです。",
+            exampleJp: "やっつが すきです。",
             exampleVi: "Tôi thích 8 cái."
         ),
         VocabWord(
-            kanji: "九つ",
+            kanji: nil,
             kana: "ここのつ",
             romaji: "kokonotsu",
             meaningVi: "9 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "九つが好きです。",
+            exampleJp: "ここのつが すきです。",
             exampleVi: "Tôi thích 9 cái."
         ),
         VocabWord(
-            kanji: "十",
+            kanji: nil,
             kana: "とお",
             romaji: "too",
             meaningVi: "10 cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "十が好きです。",
+            exampleJp: "とおが すきです。",
             exampleVi: "Tôi thích 10 cái."
         ),
         VocabWord(
@@ -7010,117 +7010,117 @@ public final class VocabRepository {
             meaningVi: "いくつ Bao nhiêu cái",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "いくつが好きです。",
+            exampleJp: "いくつが すきです。",
             exampleVi: "Tôi thích いくつ bao nhiêu cái."
         ),
         VocabWord(
-            kanji: "一人",
+            kanji: nil,
             kana: "ひとり",
             romaji: "hitori",
             meaningVi: "1 người",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "一人があります。",
+            exampleJp: "ひとりが あります。",
             exampleVi: "Có 1 người."
         ),
         VocabWord(
-            kanji: "二人",
+            kanji: nil,
             kana: "ふたり",
             romaji: "futari",
             meaningVi: "2 người",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "二人があります。",
+            exampleJp: "ふたりが あります。",
             exampleVi: "Có 2 người."
         ),
         VocabWord(
-            kanji: "～人",
+            kanji: nil,
             kana: "～にん",
             romaji: "～nin",
             meaningVi: "~ người",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "～人があります。",
+            exampleJp: "～にんが あります。",
             exampleVi: "Có ~ người."
         ),
         VocabWord(
-            kanji: "～台",
+            kanji: nil,
             kana: "～だい",
             romaji: "～dai",
             meaningVi: "~ chiếc, ~ cái (dùng để đếm máy móc, xe cộ…)",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "日本の冬は～台です。",
+            exampleJp: "にほんの ふゆは ～だいです。",
             exampleVi: "Mùa đông ở Nhật ~ chiếc, ~ cái."
         ),
         VocabWord(
-            kanji: "～枚",
+            kanji: nil,
             kana: "～まい",
             romaji: "～mai",
             meaningVi: "~ tờ, chiếc, cái (đơn vị dùng để đếm vật mỏng)",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "日本の冬は～枚です。",
+            exampleJp: "にほんの ふゆは ～まいです。",
             exampleVi: "Mùa đông ở Nhật ~ tờ, chiếc, cái."
         ),
         VocabWord(
-            kanji: "～回",
+            kanji: nil,
             kana: "～かい",
             romaji: "～kai",
             meaningVi: "~ lần (đơn vị chỉ tần xuất)",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "日本の冬は～回です。",
-            exampleVi: "Mùa đông ở Nhật ~ lần."
+            exampleJp: "～かいが あります。",
+            exampleVi: "Có ~ lần."
         ),
         VocabWord(
-            kanji: "兄弟",
+            kanji: nil,
             kana: "きょうだい",
             romaji: "Anh",
             meaningVi: "chị em",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "日本の冬は兄弟です。",
+            exampleJp: "にほんの ふゆは きょうだいです。",
             exampleVi: "Mùa đông ở Nhật chị em."
         ),
         VocabWord(
-            kanji: "両親",
+            kanji: nil,
             kana: "りょうしん",
             romaji: "ryoushin",
             meaningVi: "Bố mẹ",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "両親があります。",
+            exampleJp: "りょうしんが あります。",
             exampleVi: "Có bố mẹ."
         ),
         VocabWord(
-            kanji: "切符",
+            kanji: nil,
             kana: "きっぷ",
             romaji: "kippu",
             meaningVi: "Vé",
             topicId: "travel",
             lessonNumber: 11,
-            exampleJp: "切符があります。",
+            exampleJp: "きっぷが あります。",
             exampleVi: "Có vé."
         ),
         VocabWord(
-            kanji: "封筒",
+            kanji: nil,
             kana: "ふうとう",
             romaji: "Phong",
             meaningVi: "bì",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "封筒があります。",
+            exampleJp: "ふうとうが あります。",
             exampleVi: "Có bì."
         ),
         VocabWord(
-            kanji: "切手",
+            kanji: nil,
             kana: "きって",
             romaji: "kitte",
             meaningVi: "Tem",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "切手があります。",
+            exampleJp: "きってが あります。",
             exampleVi: "Có tem."
         ),
         VocabWord(
@@ -7130,17 +7130,17 @@ public final class VocabRepository {
             meaningVi: "Thư hàng không",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "エアメールがあります。",
+            exampleJp: "エアメールが あります。",
             exampleVi: "Có thư hàng không."
         ),
         VocabWord(
-            kanji: "船便",
+            kanji: nil,
             kana: "ふなびん",
             romaji: "funabin",
             meaningVi: "Thư đường biển",
             topicId: "travel",
             lessonNumber: 11,
-            exampleJp: "船便があります。",
+            exampleJp: "ふなびんが あります。",
             exampleVi: "Có thư đường biển."
         ),
         VocabWord(
@@ -7150,87 +7150,87 @@ public final class VocabRepository {
             meaningVi: "Bưu thiếp (thư)",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "はがきがあります。",
+            exampleJp: "はがきが あります。",
             exampleVi: "Có bưu thiếp."
         ),
         VocabWord(
-            kanji: "速達",
+            kanji: nil,
             kana: "そくたつ",
             romaji: "sokutatsu",
             meaningVi: "Chuyển phát nhanh",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "速達があります。",
+            exampleJp: "そくたつが あります。",
             exampleVi: "Có chuyển phát nhanh."
         ),
         VocabWord(
-            kanji: "書留",
+            kanji: nil,
             kana: "かきとめ",
             romaji: "kakitome",
             meaningVi: "Thư bảo đảm",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "書留があります。",
+            exampleJp: "かきとめが あります。",
             exampleVi: "Có thư bảo đảm."
         ),
         VocabWord(
-            kanji: "外国",
+            kanji: nil,
             kana: "がいこく",
             romaji: "gaikoku",
             meaningVi: "Nước ngoài",
             topicId: "food",
             lessonNumber: 11,
-            exampleJp: "外国が好きです。",
+            exampleJp: "がいこくが すきです。",
             exampleVi: "Tôi thích nước ngoài."
         ),
         VocabWord(
-            kanji: "一日",
+            kanji: nil,
             kana: "いちにち",
             romaji: "ichinichi",
             meaningVi: "Một ngày",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "一日に勉強します。",
+            exampleJp: "いちにちに べんきょうします。",
             exampleVi: "Tôi học vào một ngày."
         ),
         VocabWord(
-            kanji: "～時間",
+            kanji: nil,
             kana: "～じかん",
             romaji: "～jikan",
             meaningVi: "~ tiếng đồng hồ",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "～時間があります。",
+            exampleJp: "～じかんが あります。",
             exampleVi: "Có ~ tiếng đồng hồ."
         ),
         VocabWord(
-            kanji: "～週間",
+            kanji: nil,
             kana: "～しゅうかん",
             romaji: "～shuukan",
             meaningVi: "~ tuần",
             topicId: "time",
             lessonNumber: 11,
-            exampleJp: "～週間に勉強します。",
+            exampleJp: "～しゅうかんに べんきょうします。",
             exampleVi: "Tôi học vào ~ tuần."
         ),
         VocabWord(
-            kanji: "～か月",
+            kanji: nil,
             kana: "～かげつ",
             romaji: "～kagetsu",
             meaningVi: "~ tháng",
             topicId: "time",
             lessonNumber: 11,
-            exampleJp: "～か月に勉強します。",
+            exampleJp: "～かげつに べんきょうします。",
             exampleVi: "Tôi học vào ~ tháng."
         ),
         VocabWord(
-            kanji: "～年",
+            kanji: nil,
             kana: "～ねん",
             romaji: "～nen",
             meaningVi: "~ năm",
             topicId: "time",
             lessonNumber: 11,
-            exampleJp: "～年に勉強します。",
+            exampleJp: "～ねんに べんきょうします。",
             exampleVi: "Tôi học vào ~ năm."
         ),
         VocabWord(
@@ -7240,7 +7240,7 @@ public final class VocabRepository {
             meaningVi: "Khoảng ~ (ước tính số lượng hoặc thời gian)",
             topicId: "time",
             lessonNumber: 11,
-            exampleJp: "日本の冬は～ぐらいです。",
+            exampleJp: "にほんの ふゆは ～ぐらいです。",
             exampleVi: "Mùa đông ở Nhật khoảng ~."
         ),
         VocabWord(
@@ -7250,17 +7250,17 @@ public final class VocabRepository {
             meaningVi: "Khoảng bao lâu, bao nhiêu",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "日本の冬はどのぐらいです。",
+            exampleJp: "にほんの ふゆは どのぐらいです。",
             exampleVi: "Mùa đông ở Nhật khoảng bao lâu, bao nhiêu."
         ),
         VocabWord(
-            kanji: "全部で",
+            kanji: nil,
             kana: "ぜんぶで",
-            romaji: "zenbuで",
+            romaji: "zenbude",
             meaningVi: "Tất cả là, tổng cộng là",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "全部でがあります。",
+            exampleJp: "ぜんぶでが あります。",
             exampleVi: "Có tất cả là, tổng cộng là."
         ),
         VocabWord(
@@ -7270,7 +7270,7 @@ public final class VocabRepository {
             meaningVi: "Mọi người, các bạn",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "みんなが好きです。",
+            exampleJp: "みんなが すきです。",
             exampleVi: "Tôi thích mọi người, các bạn."
         ),
         VocabWord(
@@ -7280,7 +7280,7 @@ public final class VocabRepository {
             meaningVi: "Chỉ ~ thôi",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "～だけがあります。",
+            exampleJp: "～だけが あります。",
             exampleVi: "Có chỉ ~ thôi."
         ),
         VocabWord(
@@ -7290,7 +7290,7 @@ public final class VocabRepository {
             meaningVi: "いい「お」天気",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "いい「お」天気があります。",
+            exampleJp: "いい「お」天気が あります。",
             exampleVi: "Có いい「お」天気."
         ),
         VocabWord(
@@ -7300,17 +7300,17 @@ public final class VocabRepository {
             meaningVi: "ん き",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "てがあります。",
+            exampleJp: "てが あります。",
             exampleVi: "Có ん き."
         ),
         VocabWord(
             kanji: nil,
             kana: "ですね。",
-            romaji: "でsune.",
+            romaji: "desune.",
             meaningVi: "Thời tiết đẹp nhỉ!",
             topicId: "greeting",
             lessonNumber: 11,
-            exampleJp: "ですね。があります。",
+            exampleJp: "ですね。が あります。",
             exampleVi: "Có thời tiết đẹp nhỉ!."
         ),
         VocabWord(
@@ -7320,7 +7320,7 @@ public final class VocabRepository {
             meaningVi: "đi ra ngoài đấy à?",
             topicId: "travel",
             lessonNumber: 11,
-            exampleJp: "おでかけですか。があります。",
+            exampleJp: "おでかけですか。が あります。",
             exampleVi: "Có đi ra ngoài đấy à?."
         ),
         VocabWord(
@@ -7330,7 +7330,7 @@ public final class VocabRepository {
             meaningVi: "～ まで。 Tôi đi tới ~ một chút",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "ちょっとがあります。",
+            exampleJp: "ちょっとが あります。",
             exampleVi: "Có ～ まで。 tôi đi tới ~ một chút."
         ),
         VocabWord(
@@ -7350,7 +7350,7 @@ public final class VocabRepository {
             meaningVi: "Tôi đi rồi về (Dùng khi người đi ra ngoài nói với người ở nhà)",
             topicId: "family",
             lessonNumber: 11,
-            exampleJp: "いってまいります。があります。",
+            exampleJp: "いってまいります。が あります。",
             exampleVi: "Có tôi đi rồi về."
         )
     ]
@@ -7358,93 +7358,93 @@ public final class VocabRepository {
     // MARK: - Bài 12 (56 từ)
     public static let lesson12Words: [VocabWord] = [
         VocabWord(
-            kanji: "暇「な」",
+            kanji: nil,
             kana: "ひま［な］",
             romaji: "hima［na］",
             meaningVi: "Rỗi, rảnh",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "この町は暇です。",
-            exampleVi: "Thành phố này rỗi, rảnh."
+            exampleJp: "この まちは ひまです。",
+            exampleVi: "Thị trấn này rỗi, rảnh."
         ),
         VocabWord(
-            kanji: "簡単「な」",
+            kanji: nil,
             kana: "かんたん［な］",
             romaji: "kantan［na］",
             meaningVi: "Đơn giản",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "この町は簡単です。",
-            exampleVi: "Thành phố này đơn giản."
+            exampleJp: "この まちは かんたんです。",
+            exampleVi: "Thị trấn này đơn giản."
         ),
         VocabWord(
-            kanji: "忙しい",
+            kanji: nil,
             kana: "いそがしい",
             romaji: "isogashii",
             meaningVi: "Bận",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は忙しいです。",
+            exampleJp: "にほんの ふゆは いそがしいです。",
             exampleVi: "Mùa đông ở Nhật bận."
         ),
         VocabWord(
-            kanji: "近い",
+            kanji: nil,
             kana: "ちかい",
             romaji: "chikai",
             meaningVi: "Gần",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は近いです。",
-            exampleVi: "Mùa đông ở Nhật gần."
+            exampleJp: "ちかいが あります。",
+            exampleVi: "Có gần."
         ),
         VocabWord(
-            kanji: "遠い",
+            kanji: nil,
             kana: "とおい",
             romaji: "tooi",
             meaningVi: "Xa",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は遠いです。",
+            exampleJp: "にほんの ふゆは とおいです。",
             exampleVi: "Mùa đông ở Nhật xa."
         ),
         VocabWord(
-            kanji: "早い",
+            kanji: nil,
             kana: "はやい",
             romaji: "wayai",
             meaningVi: "Sớm (về thời gian)",
             topicId: "travel",
             lessonNumber: 12,
-            exampleJp: "日本の冬は早いです。",
+            exampleJp: "にほんの ふゆは はやいです。",
             exampleVi: "Mùa đông ở Nhật sớm."
         ),
         VocabWord(
-            kanji: "速い",
+            kanji: nil,
             kana: "はやい",
             romaji: "Nhanh",
             meaningVi: "(về tốc độ)",
             topicId: "travel",
             lessonNumber: 12,
-            exampleJp: "日本の冬は速いです。",
+            exampleJp: "にほんの ふゆは はやいです。",
             exampleVi: "Mùa đông ở Nhật ."
         ),
         VocabWord(
-            kanji: "遅い",
+            kanji: nil,
             kana: "おそい",
             romaji: "osoi",
             meaningVi: "Chậm, muộn",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は遅いです。",
+            exampleJp: "にほんの ふゆは おそいです。",
             exampleVi: "Mùa đông ở Nhật chậm, muộn."
         ),
         VocabWord(
-            kanji: "多い",
+            kanji: nil,
             kana: "おおい",
             romaji: "ooi",
             meaningVi: "Nhiều, đông",
             topicId: "family",
             lessonNumber: 12,
-            exampleJp: "日本の冬は多いです。",
+            exampleJp: "にほんの ふゆは おおいです。",
             exampleVi: "Mùa đông ở Nhật nhiều, đông."
         ),
         VocabWord(
@@ -7454,17 +7454,17 @@ public final class VocabRepository {
             meaningVi: "Đông người",
             topicId: "family",
             lessonNumber: 12,
-            exampleJp: "ひとが～があります。",
+            exampleJp: "ひとが～が あります。",
             exampleVi: "Có đông người."
         ),
         VocabWord(
-            kanji: "少ない",
+            kanji: nil,
             kana: "すくない",
             romaji: "sukunai",
             meaningVi: "Ít, vắng",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は少ないです。",
+            exampleJp: "にほんの ふゆは すくないです。",
             exampleVi: "Mùa đông ở Nhật ít, vắng."
         ),
         VocabWord(
@@ -7474,78 +7474,78 @@ public final class VocabRepository {
             meaningVi: "Vắng người",
             topicId: "family",
             lessonNumber: 12,
-            exampleJp: "ひとが～があります。",
+            exampleJp: "ひとが～が あります。",
             exampleVi: "Có vắng người."
         ),
         VocabWord(
-            kanji: "暖かい",
+            kanji: nil,
             kana: "あたたかい",
             romaji: "atatakai",
             meaningVi: "Ấm (về thời tiết )",
             topicId: "travel",
             lessonNumber: 12,
-            exampleJp: "日本の冬は暖かいです。",
-            exampleVi: "Mùa đông ở Nhật ấm."
+            exampleJp: "あたたかいが あります。",
+            exampleVi: "Có ấm."
         ),
         VocabWord(
-            kanji: "温かい",
+            kanji: nil,
             kana: "あたたかい",
             romaji: "atatakai",
             meaningVi: "Ấm (về nhiệt độ)",
             topicId: "travel",
             lessonNumber: 12,
-            exampleJp: "日本の冬は温かいです。",
-            exampleVi: "Mùa đông ở Nhật ấm."
+            exampleJp: "あたたかいが あります。",
+            exampleVi: "Có ấm."
         ),
         VocabWord(
-            kanji: "涼しい",
+            kanji: nil,
             kana: "すずしい",
             romaji: "suzushii",
             meaningVi: "Mát",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は涼しいです。",
+            exampleJp: "にほんの ふゆは すずしいです。",
             exampleVi: "Mùa đông ở Nhật mát."
         ),
         VocabWord(
-            kanji: "甘い",
+            kanji: nil,
             kana: "あまい",
             romaji: "amai",
             meaningVi: "Ngọt",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "日本の冬は甘いです。",
+            exampleJp: "にほんの ふゆは あまいです。",
             exampleVi: "Mùa đông ở Nhật ngọt."
         ),
         VocabWord(
-            kanji: "辛い",
+            kanji: nil,
             kana: "からい",
             romaji: "karai",
             meaningVi: "Cay",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "日本の冬は辛いです。",
+            exampleJp: "にほんの ふゆは からいです。",
             exampleVi: "Mùa đông ở Nhật cay."
         ),
         VocabWord(
-            kanji: "楽しい",
+            kanji: nil,
             kana: "たのしい",
             romaji: "tanoshii",
             meaningVi: "Vui",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は楽しいです。",
+            exampleJp: "にほんの ふゆは たのしいです。",
             exampleVi: "Mùa đông ở Nhật vui."
         ),
         VocabWord(
-            kanji: "若い",
+            kanji: nil,
             kana: "わかい",
             romaji: "wakai",
             meaningVi: "Trẻ",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は若いです。",
-            exampleVi: "Mùa đông ở Nhật trẻ."
+            exampleJp: "わかいが あります。",
+            exampleVi: "Có trẻ."
         ),
         VocabWord(
             kanji: nil,
@@ -7554,7 +7554,7 @@ public final class VocabRepository {
             meaningVi: "Thích",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬はいいです。",
+            exampleJp: "にほんの ふゆは いいです。",
             exampleVi: "Mùa đông ở Nhật thích."
         ),
         VocabWord(
@@ -7564,127 +7564,127 @@ public final class VocabRepository {
             meaningVi: "Thích cà phê",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "コーヒーが～が好きです。",
+            exampleJp: "コーヒーが～が すきです。",
             exampleVi: "Tôi thích thích cà phê."
         ),
         VocabWord(
-            kanji: "重い",
+            kanji: nil,
             kana: "おもい",
             romaji: "omoi",
             meaningVi: "Nặng",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は重いです。",
+            exampleJp: "にほんの ふゆは おもいです。",
             exampleVi: "Mùa đông ở Nhật nặng."
         ),
         VocabWord(
-            kanji: "軽い",
+            kanji: nil,
             kana: "かるい",
             romaji: "karui",
             meaningVi: "Nhẹ",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は軽いです。",
+            exampleJp: "にほんの ふゆは かるいです。",
             exampleVi: "Mùa đông ở Nhật nhẹ."
         ),
         VocabWord(
-            kanji: "天気",
+            kanji: nil,
             kana: "てんき",
             romaji: "tenki",
             meaningVi: "Thời tiết",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "天気があります。",
+            exampleJp: "てんきが あります。",
             exampleVi: "Có thời tiết."
         ),
         VocabWord(
-            kanji: "雨",
+            kanji: nil,
             kana: "あめ",
             romaji: "ame",
             meaningVi: "Mưa",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "雨があります。",
+            exampleJp: "あめが あります。",
             exampleVi: "Có mưa."
         ),
         VocabWord(
-            kanji: "雪",
+            kanji: nil,
             kana: "ゆき",
             romaji: "yuki",
             meaningVi: "Tuyết",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "雪があります。",
+            exampleJp: "ゆきが あります。",
             exampleVi: "Có tuyết."
         ),
         VocabWord(
-            kanji: "曇り",
+            kanji: nil,
             kana: "くもり",
             romaji: "kumori",
             meaningVi: "Có mây",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "曇りがあります。",
+            exampleJp: "くもりが あります。",
             exampleVi: "Có có mây."
         ),
         VocabWord(
-            kanji: "季節",
+            kanji: nil,
             kana: "きせつ",
             romaji: "kisetsu",
             meaningVi: "Mùa",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "季節があります。",
+            exampleJp: "きせつが あります。",
             exampleVi: "Có mùa."
         ),
         VocabWord(
-            kanji: "春",
+            kanji: nil,
             kana: "はる",
             romaji: "waru",
             meaningVi: "Mùa xuân",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "春があります。",
+            exampleJp: "はるが あります。",
             exampleVi: "Có mùa xuân."
         ),
         VocabWord(
-            kanji: "夏",
+            kanji: nil,
             kana: "なつ",
             romaji: "natsu",
             meaningVi: "Mùa hè",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "夏があります。",
+            exampleJp: "なつが あります。",
             exampleVi: "Có mùa hè."
         ),
         VocabWord(
-            kanji: "秋",
+            kanji: nil,
             kana: "あき",
             romaji: "aki",
             meaningVi: "Mùa thu",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "秋があります。",
+            exampleJp: "あきが あります。",
             exampleVi: "Có mùa thu."
         ),
         VocabWord(
-            kanji: "冬",
+            kanji: nil,
             kana: "ふゆ",
             romaji: "fuyu",
             meaningVi: "Mùa đông",
             topicId: "family",
             lessonNumber: 12,
-            exampleJp: "冬があります。",
+            exampleJp: "ふゆが あります。",
             exampleVi: "Có mùa đông."
         ),
         VocabWord(
-            kanji: "旅行",
+            kanji: nil,
             kana: "りょこう",
             romaji: "ryokou",
             meaningVi: "Chuyến du lịch, sự du lịch",
             topicId: "travel",
             lessonNumber: 12,
-            exampleJp: "旅行があります。",
+            exampleJp: "りょこうが あります。",
             exampleVi: "Có chuyến du lịch, sự du lịch."
         ),
         VocabWord(
@@ -7694,17 +7694,17 @@ public final class VocabRepository {
             meaningVi: "Bữa tiệc, buổi liên hoan",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "パーティーがあります。",
+            exampleJp: "パーティーが あります。",
             exampleVi: "Có bữa tiệc, buổi liên hoan."
         ),
         VocabWord(
-            kanji: "店",
+            kanji: nil,
             kana: "みせ",
             romaji: "mise",
             meaningVi: "Tiệm, cửa hàng",
             topicId: "travel",
             lessonNumber: 12,
-            exampleJp: "店があります。",
+            exampleJp: "みせが あります。",
             exampleVi: "Có tiệm, cửa hàng."
         ),
         VocabWord(
@@ -7714,37 +7714,37 @@ public final class VocabRepository {
             meaningVi: "Lớp học 「お」まつり 「お」祭り Lễ hội",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "クラスがあります。",
+            exampleJp: "クラスが あります。",
             exampleVi: "Có lớp học 「お」まつり 「お」祭り lễ hội."
         ),
         VocabWord(
-            kanji: "世界",
+            kanji: nil,
             kana: "せかい",
             romaji: "sekai",
             meaningVi: "Thế giới",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "日本の冬は世界です。",
-            exampleVi: "Mùa đông ở Nhật thế giới."
+            exampleJp: "せかいが あります。",
+            exampleVi: "Có thế giới."
         ),
         VocabWord(
-            kanji: "すき焼き",
+            kanji: nil,
             kana: "すきやき",
             romaji: "sukiyaki",
             meaningVi: "Món nhúng",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "すき焼きがあります。",
+            exampleJp: "すきやきが あります。",
             exampleVi: "Có món nhúng."
         ),
         VocabWord(
-            kanji: "刺身",
+            kanji: nil,
             kana: "さしみ",
             romaji: "sashimi",
             meaningVi: "Gỏi 「お」すし Món sushi",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "刺身があります。",
+            exampleJp: "さしみが あります。",
             exampleVi: "Có gỏi 「お」すし món sushi."
         ),
         VocabWord(
@@ -7754,7 +7754,7 @@ public final class VocabRepository {
             meaningVi: "Món tôm tẩm bột rán",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "てんぷらがあります。",
+            exampleJp: "てんぷらが あります。",
             exampleVi: "Có món tôm tẩm bột rán."
         ),
         VocabWord(
@@ -7764,7 +7764,7 @@ public final class VocabRepository {
             meaningVi: "Nghệ thuật cắm hoa",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "いけばながあります。",
+            exampleJp: "いけばなが あります。",
             exampleVi: "Có nghệ thuật cắm hoa."
         ),
         VocabWord(
@@ -7774,7 +7774,7 @@ public final class VocabRepository {
             meaningVi: "Cây lá đỏ",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "もみじがあります。",
+            exampleJp: "もみじが あります。",
             exampleVi: "Có cây lá đỏ."
         ),
         VocabWord(
@@ -7784,7 +7784,7 @@ public final class VocabRepository {
             meaningVi: "Cái nào, đằng nào, loại nào, thứ nào",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "どちらが好きです。",
+            exampleJp: "どちらが すきです。",
             exampleVi: "Tôi thích cái nào, đằng nào, loại nào, thứ nào."
         ),
         VocabWord(
@@ -7794,7 +7794,7 @@ public final class VocabRepository {
             meaningVi: "Cái nào cũng, đằng nào cũng",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "どちらもが好きです。",
+            exampleJp: "どちらもが すきです。",
             exampleVi: "Tôi thích cái nào cũng, đằng nào cũng."
         ),
         VocabWord(
@@ -7804,7 +7804,7 @@ public final class VocabRepository {
             meaningVi: "Hơn nhiều, hơn hẳn (so với cái khác)",
             topicId: "food",
             lessonNumber: 12,
-            exampleJp: "ずっとが好きです。",
+            exampleJp: "ずっとが すきです。",
             exampleVi: "Tôi thích hơn nhiều, hơn hẳn."
         ),
         VocabWord(
@@ -7814,17 +7814,17 @@ public final class VocabRepository {
             meaningVi: "Lần đầu, đầu tiên",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "はじめてがあります。",
+            exampleJp: "はじめてが あります。",
             exampleVi: "Có lần đầu, đầu tiên."
         ),
         VocabWord(
             kanji: nil,
             kana: "でも",
-            romaji: "でmo",
+            romaji: "demo",
             meaningVi: "Nhưng",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "でもがあります。",
+            exampleJp: "でもが あります。",
             exampleVi: "Có nhưng."
         ),
         VocabWord(
@@ -7834,7 +7834,7 @@ public final class VocabRepository {
             meaningVi: "Tôi đã về đây (lời chào của người đi về nhà)",
             topicId: "family",
             lessonNumber: 12,
-            exampleJp: "ただいまがあります。",
+            exampleJp: "ただいまが あります。",
             exampleVi: "Có tôi đã về đây."
         ),
         VocabWord(
@@ -7844,17 +7844,17 @@ public final class VocabRepository {
             meaningVi: "Bạn về rồi đấy à (Lời chào của người ở nhà với người đi về)",
             topicId: "family",
             lessonNumber: 12,
-            exampleJp: "日本の冬はおかえりなさいです。",
+            exampleJp: "にほんの ふゆは おかえりなさいです。",
             exampleVi: "Mùa đông ở Nhật bạn về rồi đấy à."
         ),
         VocabWord(
             kanji: nil,
             kana: "すごいですね。",
-            romaji: "sugoiでsune.",
+            romaji: "sugoidesune.",
             meaningVi: "Siêu quá nhỉ, kinh quá nhỉ!",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "すごいですね。があります。",
+            exampleJp: "すごいですね。が あります。",
             exampleVi: "Có siêu quá nhỉ, kinh quá nhỉ!."
         ),
         VocabWord(
@@ -7864,7 +7864,7 @@ public final class VocabRepository {
             meaningVi: "Lễ hội Gion",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "ぎおんまつりがあります。",
+            exampleJp: "ぎおんまつりが あります。",
             exampleVi: "Có lễ hội gion."
         ),
         VocabWord(
@@ -7874,7 +7874,7 @@ public final class VocabRepository {
             meaningVi: "Hồng Kông",
             topicId: "family",
             lessonNumber: 12,
-            exampleJp: "ホンコンがあります。",
+            exampleJp: "ホンコンが あります。",
             exampleVi: "Có hồng kông."
         ),
         VocabWord(
@@ -7884,7 +7884,7 @@ public final class VocabRepository {
             meaningVi: "Singapore",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "シンガポールへ行きます。",
+            exampleJp: "シンガポールへ いきます。",
             exampleVi: "Tôi đi đến singapore."
         ),
         VocabWord(
@@ -7894,7 +7894,7 @@ public final class VocabRepository {
             meaningVi: "(Tên Cửa hàng) Mainichi",
             topicId: "travel",
             lessonNumber: 12,
-            exampleJp: "まいにちやがあります。",
+            exampleJp: "まいにちやが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -7904,7 +7904,7 @@ public final class VocabRepository {
             meaningVi: "ストア (Tên Cửa hàng) ABC",
             topicId: "travel",
             lessonNumber: 12,
-            exampleJp: "ABCがあります。",
+            exampleJp: "ABCが あります。",
             exampleVi: "Có ストア."
         ),
         VocabWord(
@@ -7914,7 +7914,7 @@ public final class VocabRepository {
             meaningVi: "Nhật Bản",
             topicId: "greeting",
             lessonNumber: 12,
-            exampleJp: "ジャパンがあります。",
+            exampleJp: "ジャパンが あります。",
             exampleVi: "Có nhật bản."
         )
     ]
@@ -7922,23 +7922,23 @@ public final class VocabRepository {
     // MARK: - Bài 13 (77 từ)
     public static let lesson13Words: [VocabWord] = [
         VocabWord(
-            kanji: "遊びます",
+            kanji: nil,
             kana: "あそびます",
             romaji: "asobimasu",
             meaningVi: "Chơi, đi chơi",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "毎日 遊びます。",
+            exampleJp: "まいにち あそびます。",
             exampleVi: "Hằng ngày tôi chơi, đi chơi."
         ),
         VocabWord(
-            kanji: "送ります",
+            kanji: nil,
             kana: "おくります",
             romaji: "okurimasu",
             meaningVi: "Gửi [hàng, bưu kiện]",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "毎日 送ります。",
+            exampleJp: "まいにち おくります。",
             exampleVi: "Hằng ngày tôi gửi [hàng, bưu kiện]."
         ),
         VocabWord(
@@ -7948,7 +7948,7 @@ public final class VocabRepository {
             meaningVi: "「荷",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "「荷があります。",
+            exampleJp: "「荷が あります。",
             exampleVi: "Có 「荷."
         ),
         VocabWord(
@@ -7958,7 +7958,7 @@ public final class VocabRepository {
             meaningVi: "物",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "物があります。",
+            exampleJp: "物が あります。",
             exampleVi: "Có 物."
         ),
         VocabWord(
@@ -7968,7 +7968,7 @@ public final class VocabRepository {
             meaningVi: "もつ",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "もつがあります。",
+            exampleJp: "もつが あります。",
             exampleVi: "Có もつ."
         ),
         VocabWord(
@@ -7978,57 +7978,57 @@ public final class VocabRepository {
             meaningVi: "Gửi hàng hóa",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "を～」があります。",
+            exampleJp: "を～」が あります。",
             exampleVi: "Có gửi hàng hóa."
         ),
         VocabWord(
-            kanji: "変えます",
+            kanji: nil,
             kana: "かえます",
             romaji: "kaemasu",
             meaningVi: "Đổi, thay",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "毎日 変えます。",
+            exampleJp: "まいにち かえます。",
             exampleVi: "Hằng ngày tôi đổi, thay."
         ),
         VocabWord(
-            kanji: "泳ぎます",
+            kanji: nil,
             kana: "およぎます",
             romaji: "oyogimasu",
             meaningVi: "Bơi lội",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "毎日 泳ぎます。",
+            exampleJp: "まいにち およぎます。",
             exampleVi: "Hằng ngày tôi bơi lội."
         ),
         VocabWord(
-            kanji: "迎えます",
+            kanji: nil,
             kana: "むかえます",
             romaji: "mukaemasu",
             meaningVi: "Đón",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "毎日 迎えます。",
+            exampleJp: "まいにち むかえます。",
             exampleVi: "Hằng ngày tôi đón."
         ),
         VocabWord(
-            kanji: "疲れます",
+            kanji: nil,
             kana: "つかれます",
             romaji: "tsukaremasu",
             meaningVi: "Mệt mỏi",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "毎日 疲れます。",
+            exampleJp: "まいにち つかれます。",
             exampleVi: "Hằng ngày tôi mệt mỏi."
         ),
         VocabWord(
-            kanji: "出します",
+            kanji: nil,
             kana: "だします",
             romaji: "dashimasu",
             meaningVi: "Gửi [thư], nộp [báo cáo, bài tập…]",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "毎日 出します。",
+            exampleJp: "まいにち だします。",
             exampleVi: "Hằng ngày tôi gửi [thư], nộp [báo cáo, bài tập…]."
         ),
         VocabWord(
@@ -8038,7 +8038,7 @@ public final class VocabRepository {
             meaningVi: "「手紙",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "「手紙があります。",
+            exampleJp: "「手紙が あります。",
             exampleVi: "Có 「手紙."
         ),
         VocabWord(
@@ -8048,7 +8048,7 @@ public final class VocabRepository {
             meaningVi: "てがみ",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "てがみがあります。",
+            exampleJp: "てがみが あります。",
             exampleVi: "Có てがみ."
         ),
         VocabWord(
@@ -8058,17 +8058,17 @@ public final class VocabRepository {
             meaningVi: "Gửi thư",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "を～」があります。",
+            exampleJp: "を～」が あります。",
             exampleVi: "Có gửi thư."
         ),
         VocabWord(
-            kanji: "宿題",
+            kanji: nil,
             kana: "「",
             romaji: "\"",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "宿題があります。",
+            exampleJp: "「が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -8078,7 +8078,7 @@ public final class VocabRepository {
             meaningVi: "しゅくだい",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "日本の冬はしゅくだいです。",
+            exampleJp: "にほんの ふゆは しゅくだいです。",
             exampleVi: "Mùa đông ở Nhật しゅくだい."
         ),
         VocabWord(
@@ -8088,47 +8088,47 @@ public final class VocabRepository {
             meaningVi: "Nộp bài tập về nhà",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "を～」があります。",
+            exampleJp: "を～」が あります。",
             exampleVi: "Có nộp bài tập về nhà."
         ),
         VocabWord(
-            kanji: "結婚します",
+            kanji: nil,
             kana: "けっこんします",
             romaji: "kekkonshimasu",
             meaningVi: "Lấy vợ, lấy chồng, cưới, lập gia đình",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "毎日 結婚します。",
+            exampleJp: "まいにち けっこんします。",
             exampleVi: "Hằng ngày tôi lấy vợ, lấy chồng, cưới, lập gia đình."
         ),
         VocabWord(
-            kanji: "買い物します",
+            kanji: nil,
             kana: "かいものします",
             romaji: "Mua",
             meaningVi: "hàng, sắm đồ",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "スーパーでパンを買います。",
+            exampleJp: "スーパーで パンを かいます。",
             exampleVi: "Tôi mua bánh mì ở siêu thị."
         ),
         VocabWord(
-            kanji: "食事します",
+            kanji: nil,
             kana: "しょくじします",
             romaji: "shokujishimasu",
             meaningVi: "Ăn cơm",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "毎日 食事します。",
+            exampleJp: "まいにち しょくじします。",
             exampleVi: "Hằng ngày tôi ăn cơm."
         ),
         VocabWord(
-            kanji: "散歩します",
+            kanji: nil,
             kana: "さんぽします",
             romaji: "sanposhimasu",
             meaningVi: "Đi bộ [trong công viên]",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "毎日 散歩します。",
+            exampleJp: "まいにち さんぽします。",
             exampleVi: "Hằng ngày tôi đi bộ [trong công viên]."
         ),
         VocabWord(
@@ -8138,18 +8138,18 @@ public final class VocabRepository {
             meaningVi: "Đi bộ trong công viên",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "「公園を～」へ行きます。",
+            exampleJp: "「公園を～」へ いきます。",
             exampleVi: "Tôi đi đến đi bộ trong công viên."
         ),
         VocabWord(
-            kanji: "見物します",
+            kanji: nil,
             kana: "けんぶつします",
             romaji: "Tham",
             meaningVi: "quan, xem [phố]",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "映画を見ます。",
-            exampleVi: "Tôi xem phim."
+            exampleJp: "まいにち けんぶつします。",
+            exampleVi: "Hằng ngày tôi quan, xem [phố]."
         ),
         VocabWord(
             kanji: nil,
@@ -8158,18 +8158,18 @@ public final class VocabRepository {
             meaningVi: "phố",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "「町を～」があります。",
+            exampleJp: "「町を～」が あります。",
             exampleVi: "Có phố."
         ),
         VocabWord(
-            kanji: "見学します",
+            kanji: nil,
             kana: "けんがくします",
             romaji: "Tham",
             meaningVi: "quan, kiến tập [ở nhà máy]",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "映画を見ます。",
-            exampleVi: "Tôi xem phim."
+            exampleJp: "まいにち けんがくします。",
+            exampleVi: "Hằng ngày tôi quan, kiến tập [ở nhà máy]."
         ),
         VocabWord(
             kanji: nil,
@@ -8178,17 +8178,17 @@ public final class VocabRepository {
             meaningVi: "Kiến tập ở nhà máy",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "「工場を～」があります。",
+            exampleJp: "「工場を～」が あります。",
             exampleVi: "Có kiến tập ở nhà máy."
         ),
         VocabWord(
-            kanji: "入ります",
+            kanji: nil,
             kana: "はいります",
             romaji: "wairimasu",
             meaningVi: "Vào [phòng]",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "毎日 入ります。",
+            exampleJp: "まいにち はいります。",
             exampleVi: "Hằng ngày tôi vào [phòng]."
         ),
         VocabWord(
@@ -8198,17 +8198,17 @@ public final class VocabRepository {
             meaningVi: "Vào phòng",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "「部屋に～」へ行きます。",
+            exampleJp: "「部屋に～」へ いきます。",
             exampleVi: "Tôi đi đến vào phòng."
         ),
         VocabWord(
-            kanji: "出ます",
+            kanji: nil,
             kana: "でます",
             romaji: "Ra",
             meaningVi: "khỏi, rời [phòng]",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "毎日 出ます。",
+            exampleJp: "まいにち でます。",
             exampleVi: "Hằng ngày tôi khỏi, rời [phòng]."
         ),
         VocabWord(
@@ -8218,57 +8218,57 @@ public final class VocabRepository {
             meaningVi: "Rời khỏi phòng",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "「へやを～」へ行きます。",
+            exampleJp: "「へやを～」へ いきます。",
             exampleVi: "Tôi đi đến rời khỏi phòng."
         ),
         VocabWord(
-            kanji: "大変（な）",
+            kanji: nil,
             kana: "たいへん（な）",
             romaji: "taihen（na）",
             meaningVi: "Vất vả",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "大変（な）があります。",
+            exampleJp: "たいへん（な）が あります。",
             exampleVi: "Có vất vả."
         ),
         VocabWord(
-            kanji: "欲しい",
+            kanji: nil,
             kana: "ほしい",
             romaji: "hoshii",
             meaningVi: "Muốn có (cái gì)",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "日本の冬は欲しいです。",
+            exampleJp: "にほんの ふゆは ほしいです。",
             exampleVi: "Mùa đông ở Nhật muốn có."
         ),
         VocabWord(
-            kanji: "寂しい",
+            kanji: nil,
             kana: "さびしい",
             romaji: "sabishii",
             meaningVi: "Buồn, cô đơn",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "日本の冬は寂しいです。",
+            exampleJp: "にほんの ふゆは さびしいです。",
             exampleVi: "Mùa đông ở Nhật buồn, cô đơn."
         ),
         VocabWord(
-            kanji: "広い",
+            kanji: nil,
             kana: "ひろい",
             romaji: "hiroi",
             meaningVi: "Rộng, rộng rãi",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "日本の冬は広いです。",
+            exampleJp: "にほんの ふゆは ひろいです。",
             exampleVi: "Mùa đông ở Nhật rộng, rộng rãi."
         ),
         VocabWord(
-            kanji: "狭い",
+            kanji: nil,
             kana: "せまい",
             romaji: "semai",
             meaningVi: "Chật, chật hẹp",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "日本の冬は狭いです。",
+            exampleJp: "にほんの ふゆは せまいです。",
             exampleVi: "Mùa đông ở Nhật chật, chật hẹp."
         ),
         VocabWord(
@@ -8278,7 +8278,7 @@ public final class VocabRepository {
             meaningVi: "Máy radio cát xét",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "ラジカセが好きです。",
+            exampleJp: "ラジカセが すきです。",
             exampleVi: "Tôi thích máy radio cát xét."
         ),
         VocabWord(
@@ -8288,27 +8288,27 @@ public final class VocabRepository {
             meaningVi: "Giàn máy nghe nhạc",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "ステレオがあります。",
+            exampleJp: "ステレオが あります。",
             exampleVi: "Có giàn máy nghe nhạc."
         ),
         VocabWord(
-            kanji: "お土産",
+            kanji: nil,
             kana: "おみやげ",
             romaji: "omiyage",
             meaningVi: "Quà lưu niệm",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "お土産があります。",
+            exampleJp: "おみやげが あります。",
             exampleVi: "Có quà lưu niệm."
         ),
         VocabWord(
-            kanji: "市役所",
+            kanji: nil,
             kana: "しやくしょ",
             romaji: "shiyakusho",
             meaningVi: "Tòa thị chính, ủy ban nhân dân",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "市役所があります。",
+            exampleJp: "しやくしょが あります。",
             exampleVi: "Có tòa thị chính, ủy ban nhân dân."
         ),
         VocabWord(
@@ -8318,37 +8318,37 @@ public final class VocabRepository {
             meaningVi: "Bể bơi",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "プールがあります。",
+            exampleJp: "プールが あります。",
             exampleVi: "Có bể bơi."
         ),
         VocabWord(
-            kanji: "経済",
+            kanji: nil,
             kana: "けいざい",
             romaji: "Kinh",
             meaningVi: "tế",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "日本の冬は経済です。",
+            exampleJp: "にほんの ふゆは けいざいです。",
             exampleVi: "Mùa đông ở Nhật tế."
         ),
         VocabWord(
-            kanji: "美術",
+            kanji: nil,
             kana: "びじゅつ",
             romaji: "bijutsu",
             meaningVi: "Mỹ thuật",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "美術があります。",
+            exampleJp: "びじゅつが あります。",
             exampleVi: "Có mỹ thuật."
         ),
         VocabWord(
-            kanji: "釣り",
+            kanji: nil,
             kana: "つり",
             romaji: "tsuri",
             meaningVi: "Việc câu cá (danh từ)",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "釣りが好きです。",
+            exampleJp: "つりが すきです。",
             exampleVi: "Tôi thích việc câu cá."
         ),
         VocabWord(
@@ -8358,7 +8358,7 @@ public final class VocabRepository {
             meaningVi: "Câu cá",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "「～をします」が好きです。",
+            exampleJp: "「～をします」が すきです。",
             exampleVi: "Tôi thích câu cá."
         ),
         VocabWord(
@@ -8368,7 +8368,7 @@ public final class VocabRepository {
             meaningVi: "Việc trượt tuyết (danh từ)",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "スキーがあります。",
+            exampleJp: "スキーが あります。",
             exampleVi: "Có việc trượt tuyết."
         ),
         VocabWord(
@@ -8378,17 +8378,17 @@ public final class VocabRepository {
             meaningVi: "Trượt tuyết",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "「～をします」があります。",
+            exampleJp: "「～をします」が あります。",
             exampleVi: "Có trượt tuyết."
         ),
         VocabWord(
-            kanji: "会議",
+            kanji: nil,
             kana: "かいぎ",
             romaji: "kaigi",
             meaningVi: "Buổi họp, hội nghị",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "会議があります。",
+            exampleJp: "かいぎが あります。",
             exampleVi: "Có buổi họp, hội nghị."
         ),
         VocabWord(
@@ -8398,17 +8398,17 @@ public final class VocabRepository {
             meaningVi: "Tổ chức hội nghị",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "「～をします」があります。",
+            exampleJp: "「～をします」が あります。",
             exampleVi: "Có tổ chức hội nghị."
         ),
         VocabWord(
-            kanji: "登録",
+            kanji: nil,
             kana: "とうろく",
             romaji: "touroku",
             meaningVi: "Sự đăng ký (danh từ)",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "登録があります。",
+            exampleJp: "とうろくが あります。",
             exampleVi: "Có sự đăng ký."
         ),
         VocabWord(
@@ -8418,37 +8418,37 @@ public final class VocabRepository {
             meaningVi: "Đăng ký",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "「～をします」があります。",
+            exampleJp: "「～をします」が あります。",
             exampleVi: "Có đăng ký."
         ),
         VocabWord(
-            kanji: "週末",
+            kanji: nil,
             kana: "しゅうまつ",
             romaji: "shuumatsu",
             meaningVi: "Cuối tuần",
             topicId: "time",
             lessonNumber: 13,
-            exampleJp: "週末に勉強します。",
+            exampleJp: "しゅうまつに べんきょうします。",
             exampleVi: "Tôi học vào cuối tuần."
         ),
         VocabWord(
-            kanji: "何時も",
+            kanji: nil,
             kana: "いつも",
             romaji: "itsumo",
             meaningVi: "Luôn luôn, luôn",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "何時もがあります。",
+            exampleJp: "いつもが あります。",
             exampleVi: "Có luôn luôn, luôn."
         ),
         VocabWord(
-            kanji: "時々",
+            kanji: nil,
             kana: "ときどき",
             romaji: "tokidoki",
             meaningVi: "Thỉnh thoảng",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "時々があります。",
+            exampleJp: "ときどきが あります。",
             exampleVi: "Có thỉnh thoảng."
         ),
         VocabWord(
@@ -8458,7 +8458,7 @@ public final class VocabRepository {
             meaningVi: "~ khoảng chừng (về thời gian)",
             topicId: "travel",
             lessonNumber: 13,
-            exampleJp: "～ごろがあります。",
+            exampleJp: "～ごろが あります。",
             exampleVi: "Có ~ khoảng chừng."
         ),
         VocabWord(
@@ -8468,37 +8468,37 @@ public final class VocabRepository {
             meaningVi: "Nơi nào đó",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "どこかがあります。",
+            exampleJp: "どこかが あります。",
             exampleVi: "Có nơi nào đó."
         ),
         VocabWord(
-            kanji: "何か",
+            kanji: nil,
             kana: "なにか",
             romaji: "nanika",
             meaningVi: "Cái gì đó",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "何かが好きです。",
+            exampleJp: "なにかが すきです。",
             exampleVi: "Tôi thích cái gì đó."
         ),
         VocabWord(
             kanji: nil,
             kana: "いいてんきですね。",
-            romaji: "iitenkiでsune.",
+            romaji: "iitenkidesune.",
             meaningVi: "Trời đẹp quá nhỉ.",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "いいてんきですね。があります。",
+            exampleJp: "いいてんきですね。が あります。",
             exampleVi: "Có trời đẹp quá nhỉ.."
         ),
         VocabWord(
             kanji: nil,
             kana: "そうですね。",
-            romaji: "souでsune.",
+            romaji: "soudesune.",
             meaningVi: "Ừ nhỉ. (cách trả lời đồng ý đối với ý kiến của người ta)",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "そうですね。が好きです。",
+            exampleJp: "そうですね。が すきです。",
             exampleVi: "Tôi thích ừ nhỉ.."
         ),
         VocabWord(
@@ -8508,7 +8508,7 @@ public final class VocabRepository {
             meaningVi: "すきます。 Đói bụng",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "おなかががあります。",
+            exampleJp: "おなかがが あります。",
             exampleVi: "Có すきます。 đói bụng."
         ),
         VocabWord(
@@ -8518,7 +8518,7 @@ public final class VocabRepository {
             meaningVi: "いっぱいです。 No bụng",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "おなかががあります。",
+            exampleJp: "おなかがが あります。",
             exampleVi: "Có いっぱいです。 no bụng."
         ),
         VocabWord(
@@ -8528,7 +8528,7 @@ public final class VocabRepository {
             meaningVi: "かわきます。 Khát nước",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "のどがが好きです。",
+            exampleJp: "のどがが すきです。",
             exampleVi: "Tôi thích かわきます。 khát nước."
         ),
         VocabWord(
@@ -8538,17 +8538,17 @@ public final class VocabRepository {
             meaningVi: "Ừ, làm thế đi. (Dùng khi nhất trí với người đề nghị làm cái gì đó.)",
             topicId: "family",
             lessonNumber: 13,
-            exampleJp: "そうしましょう。が好きです。",
+            exampleJp: "そうしましょう。が すきです。",
             exampleVi: "Tôi thích ừ, làm thế đi.."
         ),
         VocabWord(
-            kanji: "注文",
+            kanji: nil,
             kana: "ご",
             romaji: "go",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "注文があります。",
+            exampleJp: "ごが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -8558,7 +8558,7 @@ public final class VocabRepository {
             meaningVi: "ちゅうもん",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "ちゅうもんがあります。",
+            exampleJp: "ちゅうもんが あります。",
             exampleVi: "Có ちゅうもん."
         ),
         VocabWord(
@@ -8568,7 +8568,7 @@ public final class VocabRepository {
             meaningVi: "Quý khách gọi món gì ạ?",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "は？があります。",
+            exampleJp: "は？が あります。",
             exampleVi: "Có quý khách gọi món gì ạ?."
         ),
         VocabWord(
@@ -8578,7 +8578,7 @@ public final class VocabRepository {
             meaningVi: "定食",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "定食があります。",
+            exampleJp: "定食が あります。",
             exampleVi: "Có 定食."
         ),
         VocabWord(
@@ -8588,7 +8588,7 @@ public final class VocabRepository {
             meaningVi: "Suất ăn cố định",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "ていしょくがあります。",
+            exampleJp: "ていしょくが あります。",
             exampleVi: "Có suất ăn cố định."
         ),
         VocabWord(
@@ -8598,7 +8598,7 @@ public final class VocabRepository {
             meaningVi: "牛",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "牛があります。",
+            exampleJp: "牛が あります。",
             exampleVi: "Có 牛."
         ),
         VocabWord(
@@ -8608,7 +8608,7 @@ public final class VocabRepository {
             meaningVi: "ぎゅう",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "ぎゅうがあります。",
+            exampleJp: "ぎゅうが あります。",
             exampleVi: "Có ぎゅう."
         ),
         VocabWord(
@@ -8618,17 +8618,17 @@ public final class VocabRepository {
             meaningVi: "Món gyudon (món cơm trên là thịt bò nấu kèm với mấy lát gừng) 「 少々",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "どんが好きです。",
+            exampleJp: "どんが すきです。",
             exampleVi: "Tôi thích món gyudon."
         ),
         VocabWord(
-            kanji: "」お待",
+            kanji: nil,
             kana: "しょうしょう",
             romaji: "shoushou",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "」お待があります。",
+            exampleJp: "しょうしょうが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -8638,7 +8638,7 @@ public final class VocabRepository {
             meaningVi: "ま",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "まがあります。",
+            exampleJp: "まが あります。",
             exampleVi: "Có ま."
         ),
         VocabWord(
@@ -8648,7 +8648,7 @@ public final class VocabRepository {
             meaningVi: "chờ một chút ạ.",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "ちください。があります。",
+            exampleJp: "ちください。が あります。",
             exampleVi: "Có chờ một chút ạ.."
         ),
         VocabWord(
@@ -8658,7 +8658,7 @@ public final class VocabRepository {
             meaningVi: "別々",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "別々があります。",
+            exampleJp: "別々が あります。",
             exampleVi: "Có 別々."
         ),
         VocabWord(
@@ -8668,7 +8668,7 @@ public final class VocabRepository {
             meaningVi: "べつべつ",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "べつべつがあります。",
+            exampleJp: "べつべつが あります。",
             exampleVi: "Có べつべつ."
         ),
         VocabWord(
@@ -8678,7 +8678,7 @@ public final class VocabRepository {
             meaningVi: "Riêng rẽ, từng phần",
             topicId: "greeting",
             lessonNumber: 13,
-            exampleJp: "にがあります。",
+            exampleJp: "にが あります。",
             exampleVi: "Có riêng rẽ, từng phần."
         ),
         VocabWord(
@@ -8688,7 +8688,7 @@ public final class VocabRepository {
             meaningVi: "Nước Nga",
             topicId: "food",
             lessonNumber: 13,
-            exampleJp: "ロシアが好きです。",
+            exampleJp: "ロシアが すきです。",
             exampleVi: "Tôi thích nước nga."
         )
     ]
@@ -8696,103 +8696,103 @@ public final class VocabRepository {
     // MARK: - Bài 14 (74 từ)
     public static let lesson14Words: [VocabWord] = [
         VocabWord(
-            kanji: "呼びます",
+            kanji: nil,
             kana: "よびます",
             romaji: "yobimasu",
             meaningVi: "Gọi",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 呼びます。",
+            exampleJp: "まいにち よびます。",
             exampleVi: "Hằng ngày tôi gọi."
         ),
         VocabWord(
-            kanji: "急ぎます",
+            kanji: nil,
             kana: "いそぎます",
             romaji: "isogimasu",
             meaningVi: "Vội vàng, nhanh",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "毎日 急ぎます。",
+            exampleJp: "まいにち いそぎます。",
             exampleVi: "Hằng ngày tôi vội vàng, nhanh."
         ),
         VocabWord(
-            kanji: "待ちます",
+            kanji: nil,
             kana: "まちます",
             romaji: "machimasu",
             meaningVi: "Chờ, đợi",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 待ちます。",
+            exampleJp: "まいにち まちます。",
             exampleVi: "Hằng ngày tôi chờ, đợi."
         ),
         VocabWord(
-            kanji: "取ります",
+            kanji: nil,
             kana: "とります",
             romaji: "torimasu",
             meaningVi: "Cầm, lấy",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 取ります。",
+            exampleJp: "まいにち とります。",
             exampleVi: "Hằng ngày tôi cầm, lấy."
         ),
         VocabWord(
-            kanji: "手伝います",
+            kanji: nil,
             kana: "てつだいます",
             romaji: "tetsudaimasu",
             meaningVi: "Giúp, giúp đỡ, làm đỡ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 手伝います。",
+            exampleJp: "まいにち てつだいます。",
             exampleVi: "Hằng ngày tôi giúp, giúp đỡ, làm đỡ."
         ),
         VocabWord(
-            kanji: "言います",
+            kanji: nil,
             kana: "いいます",
             romaji: "iimasu",
             meaningVi: "Nói",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 言います。",
+            exampleJp: "まいにち いいます。",
             exampleVi: "Hằng ngày tôi nói."
         ),
         VocabWord(
-            kanji: "話します",
+            kanji: nil,
             kana: "はなします",
             romaji: "wanashimasu",
             meaningVi: "Kể, bảo, nói chuyện",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 話します。",
+            exampleJp: "まいにち はなします。",
             exampleVi: "Hằng ngày tôi kể, bảo, nói chuyện."
         ),
         VocabWord(
-            kanji: "覚えます",
+            kanji: nil,
             kana: "おぼえます",
             romaji: "oboemasu",
             meaningVi: "Nhớ, thuộc",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 覚えます。",
+            exampleJp: "まいにち おぼえます。",
             exampleVi: "Hằng ngày tôi nhớ, thuộc."
         ),
         VocabWord(
-            kanji: "教えます",
+            kanji: nil,
             kana: "おしえます",
             romaji: "Cho",
             meaningVi: "biết, dạy, chỉ bảo",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 教えます。",
+            exampleJp: "まいにち おしえます。",
             exampleVi: "Hằng ngày tôi biết, dạy, chỉ bảo."
         ),
         VocabWord(
-            kanji: "住所",
+            kanji: nil,
             kana: "「",
             romaji: "\"",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "住所があります。",
+            exampleJp: "「が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -8802,7 +8802,7 @@ public final class VocabRepository {
             meaningVi: "じゅうしょ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "じゅうしょがあります。",
+            exampleJp: "じゅうしょが あります。",
             exampleVi: "Có じゅうしょ."
         ),
         VocabWord(
@@ -8812,27 +8812,27 @@ public final class VocabRepository {
             meaningVi: "biết địa chỉ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "を～」があります。",
+            exampleJp: "を～」が あります。",
             exampleVi: "Có biết địa chỉ."
         ),
         VocabWord(
-            kanji: "見せます",
+            kanji: nil,
             kana: "みせます",
             romaji: "Cho",
             meaningVi: "xem",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "映画を見ます。",
+            exampleJp: "えいがを みます。",
             exampleVi: "Tôi xem phim."
         ),
         VocabWord(
-            kanji: "降ります",
+            kanji: nil,
             kana: "ふります",
             romaji: "furimasu",
             meaningVi: "[mưa, tuyết] rơi",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 降ります。",
+            exampleJp: "まいにち ふります。",
             exampleVi: "Hằng ngày tôi [mưa, tuyết] rơi."
         ),
         VocabWord(
@@ -8842,7 +8842,7 @@ public final class VocabRepository {
             meaningVi: "「雨",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "「雨があります。",
+            exampleJp: "「雨が あります。",
             exampleVi: "Có 「雨."
         ),
         VocabWord(
@@ -8852,7 +8852,7 @@ public final class VocabRepository {
             meaningVi: "あめ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "あめがあります。",
+            exampleJp: "あめが あります。",
             exampleVi: "Có あめ."
         ),
         VocabWord(
@@ -8862,7 +8862,7 @@ public final class VocabRepository {
             meaningVi: "Mưa rơi",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "が～」があります。",
+            exampleJp: "が～」が あります。",
             exampleVi: "Có mưa rơi."
         ),
         VocabWord(
@@ -8872,57 +8872,57 @@ public final class VocabRepository {
             meaningVi: "Bật (tivi, đài, máy tính…)",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 つけます。",
+            exampleJp: "まいにち つけます。",
             exampleVi: "Hằng ngày tôi bật."
         ),
         VocabWord(
-            kanji: "消します",
+            kanji: nil,
             kana: "けします",
             romaji: "keshimasu",
             meaningVi: "Tắt (tivi, đài, máy tính…)",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 消します。",
+            exampleJp: "まいにち けします。",
             exampleVi: "Hằng ngày tôi tắt."
         ),
         VocabWord(
-            kanji: "開けます",
+            kanji: nil,
             kana: "あけます",
             romaji: "akemasu",
             meaningVi: "Mở (cửa)",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 開けます。",
+            exampleJp: "まいにち あけます。",
             exampleVi: "Hằng ngày tôi mở."
         ),
         VocabWord(
-            kanji: "閉めます",
+            kanji: nil,
             kana: "しめます",
             romaji: "shimemasu",
             meaningVi: "Đóng (cửa)",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 閉めます。",
+            exampleJp: "まいにち しめます。",
             exampleVi: "Hằng ngày tôi đóng."
         ),
         VocabWord(
-            kanji: "止めます",
+            kanji: nil,
             kana: "とめます",
             romaji: "tomemasu",
             meaningVi: "Ngừng, dừng lại, đỗ (xe)",
             topicId: "travel",
             lessonNumber: 14,
-            exampleJp: "毎日 止めます。",
+            exampleJp: "まいにち とめます。",
             exampleVi: "Hằng ngày tôi ngừng, dừng lại, đỗ."
         ),
         VocabWord(
-            kanji: "曲がります",
+            kanji: nil,
             kana: "まがります",
             romaji: "magarimasu",
             meaningVi: "Rẽ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 曲がります。",
+            exampleJp: "まいにち まがります。",
             exampleVi: "Hằng ngày tôi rẽ."
         ),
         VocabWord(
@@ -8932,7 +8932,7 @@ public final class VocabRepository {
             meaningVi: "「右",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "「右があります。",
+            exampleJp: "「右が あります。",
             exampleVi: "Có 「右."
         ),
         VocabWord(
@@ -8942,7 +8942,7 @@ public final class VocabRepository {
             meaningVi: "みぎ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "みぎがあります。",
+            exampleJp: "みぎが あります。",
             exampleVi: "Có みぎ."
         ),
         VocabWord(
@@ -8952,27 +8952,27 @@ public final class VocabRepository {
             meaningVi: "Rẽ phải",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "へ～」があります。",
+            exampleJp: "へ～」が あります。",
             exampleVi: "Có rẽ phải."
         ),
         VocabWord(
-            kanji: "持ちます",
+            kanji: nil,
             kana: "もちます",
             romaji: "mochimasu",
             meaningVi: "Cầm, nắm, mang",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 持ちます。",
+            exampleJp: "まいにち もちます。",
             exampleVi: "Hằng ngày tôi cầm, nắm, mang."
         ),
         VocabWord(
-            kanji: "始めます",
+            kanji: nil,
             kana: "はじめます",
             romaji: "wajimemasu",
             meaningVi: "Bắt đầu",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 始めます。",
+            exampleJp: "まいにち はじめます。",
             exampleVi: "Hằng ngày tôi bắt đầu."
         ),
         VocabWord(
@@ -8982,77 +8982,77 @@ public final class VocabRepository {
             meaningVi: "Phô tô",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "毎日 コピーします。",
+            exampleJp: "まいにち コピーします。",
             exampleVi: "Hằng ngày tôi phô tô."
         ),
         VocabWord(
-            kanji: "言葉",
+            kanji: nil,
             kana: "ことば",
             romaji: "kotoba",
             meaningVi: "Lời, tiếng nói, từ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "言葉があります。",
+            exampleJp: "ことばが あります。",
             exampleVi: "Có lời, tiếng nói, từ."
         ),
         VocabWord(
-            kanji: "名前",
+            kanji: nil,
             kana: "なまえ",
             romaji: "namae",
             meaningVi: "Tên",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "名前があります。",
+            exampleJp: "なまえが あります。",
             exampleVi: "Có tên."
         ),
         VocabWord(
-            kanji: "住所",
+            kanji: nil,
             kana: "じゅうしょ",
             romaji: "juusho",
             meaningVi: "Địa chỉ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "住所があります。",
+            exampleJp: "じゅうしょが あります。",
             exampleVi: "Có địa chỉ."
         ),
         VocabWord(
-            kanji: "塩",
+            kanji: nil,
             kana: "しお",
             romaji: "shio",
             meaningVi: "Muối",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "塩があります。",
+            exampleJp: "しおが あります。",
             exampleVi: "Có muối."
         ),
         VocabWord(
-            kanji: "砂糖",
+            kanji: nil,
             kana: "さとう",
             romaji: "satou",
             meaningVi: "Đường",
             topicId: "travel",
             lessonNumber: 14,
-            exampleJp: "砂糖があります。",
+            exampleJp: "さとうが あります。",
             exampleVi: "Có đường."
         ),
         VocabWord(
-            kanji: "傘",
+            kanji: nil,
             kana: "かさ",
             romaji: "kasa",
             meaningVi: "Ô, dù",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "傘があります。",
+            exampleJp: "かさが あります。",
             exampleVi: "Có ô, dù."
         ),
         VocabWord(
-            kanji: "地図",
+            kanji: nil,
             kana: "ちず",
             romaji: "chizu",
             meaningVi: "Bản đồ",
             topicId: "travel",
             lessonNumber: 14,
-            exampleJp: "地図があります。",
+            exampleJp: "ちずが あります。",
             exampleVi: "Có bản đồ."
         ),
         VocabWord(
@@ -9062,7 +9062,7 @@ public final class VocabRepository {
             meaningVi: "Máy lạnh, máy điều hòa",
             topicId: "travel",
             lessonNumber: 14,
-            exampleJp: "エアコンがあります。",
+            exampleJp: "エアコンが あります。",
             exampleVi: "Có máy lạnh, máy điều hòa."
         ),
         VocabWord(
@@ -9072,7 +9072,7 @@ public final class VocabRepository {
             meaningVi: "Máy chữ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "タイプがあります。",
+            exampleJp: "タイプが あります。",
             exampleVi: "Có máy chữ."
         ),
         VocabWord(
@@ -9082,47 +9082,47 @@ public final class VocabRepository {
             meaningVi: "Máy chữ điện tử",
             topicId: "travel",
             lessonNumber: 14,
-            exampleJp: "ワープロがあります。",
+            exampleJp: "ワープロが あります。",
             exampleVi: "Có máy chữ điện tử."
         ),
         VocabWord(
-            kanji: "～方",
+            kanji: nil,
             kana: "～かた",
             romaji: "～kata",
             meaningVi: "~ cách",
             topicId: "food",
             lessonNumber: 14,
-            exampleJp: "～方が好きです。",
+            exampleJp: "～かたが すきです。",
             exampleVi: "Tôi thích ~ cách."
         ),
         VocabWord(
-            kanji: "話し方",
+            kanji: nil,
             kana: "はなしかた",
             romaji: "wanashikata",
             meaningVi: "Cách nói",
             topicId: "food",
             lessonNumber: 14,
-            exampleJp: "話し方が好きです。",
+            exampleJp: "はなしかたが すきです。",
             exampleVi: "Tôi thích cách nói."
         ),
         VocabWord(
-            kanji: "書き方",
+            kanji: nil,
             kana: "かきかた",
             romaji: "kakikata",
             meaningVi: "Cách viết",
             topicId: "food",
             lessonNumber: 14,
-            exampleJp: "書き方が好きです。",
+            exampleJp: "かきかたが すきです。",
             exampleVi: "Tôi thích cách viết."
         ),
         VocabWord(
-            kanji: "読み方",
+            kanji: nil,
             kana: "よみかた",
             romaji: "yomikata",
             meaningVi: "Cách đọc",
             topicId: "food",
             lessonNumber: 14,
-            exampleJp: "読み方が好きです。",
+            exampleJp: "よみかたが すきです。",
             exampleVi: "Tôi thích cách đọc."
         ),
         VocabWord(
@@ -9132,7 +9132,7 @@ public final class VocabRepository {
             meaningVi: "Từ từ, thong thả, chậm",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "ゆっくりがあります。",
+            exampleJp: "ゆっくりが あります。",
             exampleVi: "Có từ từ, thong thả, chậm."
         ),
         VocabWord(
@@ -9142,7 +9142,7 @@ public final class VocabRepository {
             meaningVi: "いちど もう一度 Một lần nữa, lại",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "もうがあります。",
+            exampleJp: "もうが あります。",
             exampleVi: "Có いちど もう一度 một lần nữa, lại."
         ),
         VocabWord(
@@ -9152,7 +9152,7 @@ public final class VocabRepository {
             meaningVi: "Lại, nữa",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "またがあります。",
+            exampleJp: "またが あります。",
             exampleVi: "Có lại, nữa."
         ),
         VocabWord(
@@ -9162,7 +9162,7 @@ public final class VocabRepository {
             meaningVi: "すこし もう少し Một chút nữa",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "もうがあります。",
+            exampleJp: "もうが あります。",
             exampleVi: "Có すこし もう少し một chút nữa."
         ),
         VocabWord(
@@ -9172,7 +9172,7 @@ public final class VocabRepository {
             meaningVi: "lập tức",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "すぐがあります。",
+            exampleJp: "すぐが あります。",
             exampleVi: "Có lập tức."
         ),
         VocabWord(
@@ -9182,17 +9182,17 @@ public final class VocabRepository {
             meaningVi: "đây, sau đó",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "あとでがあります。",
+            exampleJp: "あとでが あります。",
             exampleVi: "Có đây, sau đó."
         ),
         VocabWord(
             kanji: nil,
             kana: "さあ、いいですよ。",
-            romaji: "saa, iiでsuyo.",
+            romaji: "saa, iidesuyo.",
             meaningVi: "Được đấy. Tất nhiên rồi (sử dụng khi cổ vũ, khích lệ một hành động nào đó)",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "さあ、いいですよ。があります。",
+            exampleJp: "さあ、いいですよ。が あります。",
             exampleVi: "Có được đấy. tất nhiên rồi."
         ),
         VocabWord(
@@ -9202,7 +9202,7 @@ public final class VocabRepository {
             meaningVi: "Ồ! (dùng khi ngạc nhiên hoặc nghi ngờ) 「安",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "あれ？があります。",
+            exampleJp: "あれ？が あります。",
             exampleVi: "Có ồ!."
         ),
         VocabWord(
@@ -9212,7 +9212,7 @@ public final class VocabRepository {
             meaningVi: "やす",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "やすがあります。",
+            exampleJp: "やすが あります。",
             exampleVi: "Có やす."
         ),
         VocabWord(
@@ -9222,7 +9222,7 @@ public final class VocabRepository {
             meaningVi: "いの」はありませんか。",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "いの」はありませんか。があります。",
+            exampleJp: "いの」はありませんか。が あります。",
             exampleVi: "Có いの」はありませんか。."
         ),
         VocabWord(
@@ -9232,7 +9232,7 @@ public final class VocabRepository {
             meaningVi: "いかがですか。 Có [loại rẻ] không? Loại này thế nào?",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "こちらはがあります。",
+            exampleJp: "こちらはが あります。",
             exampleVi: "Có いかがですか。 có [loại rẻ] không? loại này thế nào?."
         ),
         VocabWord(
@@ -9242,17 +9242,17 @@ public final class VocabRepository {
             meaningVi: "Chà… (tiếng thốt ra khi đang suy nghĩ mà chưa quyết định) 「どうも」すみません。",
             topicId: "travel",
             lessonNumber: 14,
-            exampleJp: "ううん．．．があります。",
+            exampleJp: "ううん．．．が あります。",
             exampleVi: "Có chà…."
         ),
         VocabWord(
-            kanji: "来",
+            kanji: nil,
             kana: "また",
             romaji: "mata",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "来があります。",
+            exampleJp: "またが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -9262,7 +9262,7 @@ public final class VocabRepository {
             meaningVi: "き",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "きがあります。",
+            exampleJp: "きが あります。",
             exampleVi: "Có き."
         ),
         VocabWord(
@@ -9272,7 +9272,7 @@ public final class VocabRepository {
             meaningVi: "[Rất] xin lỗi. Tôi sẽ lại đến.",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "ます。があります。",
+            exampleJp: "ます。が あります。",
             exampleVi: "Có [rất] xin lỗi. tôi sẽ lại đến.."
         ),
         VocabWord(
@@ -9282,7 +9282,7 @@ public final class VocabRepository {
             meaningVi: "信号",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "信号があります。",
+            exampleJp: "信号が あります。",
             exampleVi: "Có 信号."
         ),
         VocabWord(
@@ -9292,7 +9292,7 @@ public final class VocabRepository {
             meaningVi: "しんごう",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "しんごうがあります。",
+            exampleJp: "しんごうが あります。",
             exampleVi: "Có しんごう."
         ),
         VocabWord(
@@ -9302,7 +9302,7 @@ public final class VocabRepository {
             meaningVi: "を右",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "を右があります。",
+            exampleJp: "を右が あります。",
             exampleVi: "Có を右."
         ),
         VocabWord(
@@ -9312,7 +9312,7 @@ public final class VocabRepository {
             meaningVi: "みぎ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "みぎがあります。",
+            exampleJp: "みぎが あります。",
             exampleVi: "Có みぎ."
         ),
         VocabWord(
@@ -9322,7 +9322,7 @@ public final class VocabRepository {
             meaningVi: "へ曲",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "へ曲があります。",
+            exampleJp: "へ曲が あります。",
             exampleVi: "Có へ曲."
         ),
         VocabWord(
@@ -9332,7 +9332,7 @@ public final class VocabRepository {
             meaningVi: "ま",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "まがあります。",
+            exampleJp: "まが あります。",
             exampleVi: "Có ま."
         ),
         VocabWord(
@@ -9342,7 +9342,7 @@ public final class VocabRepository {
             meaningVi: "Hãy rẽ phải ở chỗ đèn giao thông.",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "がってください。があります。",
+            exampleJp: "がってください。が あります。",
             exampleVi: "Có hãy rẽ phải ở chỗ đèn giao thông.."
         ),
         VocabWord(
@@ -9352,17 +9352,17 @@ public final class VocabRepository {
             meaningVi: "Thẳng",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "まっすぐがあります。",
+            exampleJp: "まっすぐが あります。",
             exampleVi: "Có thẳng."
         ),
         VocabWord(
-            kanji: "お願",
+            kanji: nil,
             kana: "これで",
-            romaji: "koreで",
+            romaji: "korede",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "お願があります。",
+            exampleJp: "これでが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -9372,7 +9372,7 @@ public final class VocabRepository {
             meaningVi: "ねが",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "ねががあります。",
+            exampleJp: "ねがが あります。",
             exampleVi: "Có ねが."
         ),
         VocabWord(
@@ -9382,7 +9382,7 @@ public final class VocabRepository {
             meaningVi: "anh giúp cho như thế nhé.",
             topicId: "family",
             lessonNumber: 14,
-            exampleJp: "いします。があります。",
+            exampleJp: "いします。が あります。",
             exampleVi: "Có anh giúp cho như thế nhé.."
         ),
         VocabWord(
@@ -9392,7 +9392,7 @@ public final class VocabRepository {
             meaningVi: "お釣",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "お釣があります。",
+            exampleJp: "お釣が あります。",
             exampleVi: "Có お釣."
         ),
         VocabWord(
@@ -9402,7 +9402,7 @@ public final class VocabRepository {
             meaningVi: "つ",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "つがあります。",
+            exampleJp: "つが あります。",
             exampleVi: "Có つ."
         ),
         VocabWord(
@@ -9412,7 +9412,7 @@ public final class VocabRepository {
             meaningVi: "Tiền thừa, tiền trả lại",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "りがあります。",
+            exampleJp: "りが あります。",
             exampleVi: "Có tiền thừa, tiền trả lại."
         ),
         VocabWord(
@@ -9422,7 +9422,7 @@ public final class VocabRepository {
             meaningVi: "梅田",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "梅田があります。",
+            exampleJp: "梅田が あります。",
             exampleVi: "Có 梅田."
         ),
         VocabWord(
@@ -9432,7 +9432,7 @@ public final class VocabRepository {
             meaningVi: "Tên 1 thị trấn ở Osaka",
             topicId: "greeting",
             lessonNumber: 14,
-            exampleJp: "うめだがあります。",
+            exampleJp: "うめだが あります。",
             exampleVi: "Có tên 1 thị trấn ở osaka."
         )
     ]
@@ -9440,24 +9440,24 @@ public final class VocabRepository {
     // MARK: - Bài 15 (40 từ)
     public static let lesson15Words: [VocabWord] = [
         VocabWord(
-            kanji: "使います",
+            kanji: nil,
             kana: "つかいます",
             romaji: "tsukaimasu",
             meaningVi: "Dùng, sử dụng",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "スーパーでパンを買います。",
+            exampleJp: "スーパーで パンを かいます。",
             exampleVi: "Tôi mua bánh mì ở siêu thị."
         ),
         VocabWord(
-            kanji: "座ります",
+            kanji: nil,
             kana: "すわります",
             romaji: "suwarimasu",
             meaningVi: "Ngồi [vào ghế]",
             topicId: "travel",
             lessonNumber: 15,
-            exampleJp: "毎日 座ります。",
-            exampleVi: "Hằng ngày tôi ngồi [vào ghế]."
+            exampleJp: "いすに すわります。",
+            exampleVi: "Tôi ngồi vào ghế."
         ),
         VocabWord(
             kanji: nil,
@@ -9466,7 +9466,7 @@ public final class VocabRepository {
             meaningVi: "「椅子",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "「椅子があります。",
+            exampleJp: "「椅子が あります。",
             exampleVi: "Có 「椅子."
         ),
         VocabWord(
@@ -9476,7 +9476,7 @@ public final class VocabRepository {
             meaningVi: "いす",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "いすがあります。",
+            exampleJp: "いすが あります。",
             exampleVi: "Có いす."
         ),
         VocabWord(
@@ -9486,127 +9486,127 @@ public final class VocabRepository {
             meaningVi: "Ngồi vào ghế",
             topicId: "travel",
             lessonNumber: 15,
-            exampleJp: "に～」があります。",
+            exampleJp: "に～」が あります。",
             exampleVi: "Có ngồi vào ghế."
         ),
         VocabWord(
-            kanji: "立ちます",
+            kanji: nil,
             kana: "たちます",
             romaji: "tachimasu",
             meaningVi: "Đứng",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 立ちます。",
-            exampleVi: "Hằng ngày tôi đứng."
+            exampleJp: "ここに たちます。",
+            exampleVi: "Tôi đứng ở đây."
         ),
         VocabWord(
-            kanji: "置きます",
+            kanji: nil,
             kana: "おきます",
             romaji: "okimasu",
             meaningVi: "Đặt, để",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "作ります／造ります",
+            kanji: nil,
             kana: "つくります",
             romaji: "tsukurimasu",
             meaningVi: "Làm, chế tạo",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 作ります／造ります。",
+            exampleJp: "まいにち つくります。",
             exampleVi: "Hằng ngày tôi làm, chế tạo."
         ),
         VocabWord(
-            kanji: "売ります",
+            kanji: nil,
             kana: "うります",
             romaji: "urimasu",
             meaningVi: "Bán",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 売ります。",
+            exampleJp: "まいにち うります。",
             exampleVi: "Hằng ngày tôi bán."
         ),
         VocabWord(
-            kanji: "知ります",
+            kanji: nil,
             kana: "しります",
             romaji: "shirimasu",
             meaningVi: "Biết",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 知ります。",
+            exampleJp: "まいにち しります。",
             exampleVi: "Hằng ngày tôi biết."
         ),
         VocabWord(
-            kanji: "持ちます",
+            kanji: nil,
             kana: "もちます",
             romaji: "mochimasu",
             meaningVi: "Cầm, nắm, mang",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 持ちます。",
+            exampleJp: "まいにち もちます。",
             exampleVi: "Hằng ngày tôi cầm, nắm, mang."
         ),
         VocabWord(
-            kanji: "住みます",
+            kanji: nil,
             kana: "すみます",
             romaji: "sumimasu",
             meaningVi: "Cư trú, sống, ở",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "映画を見ます。",
+            exampleJp: "えいがを みます。",
             exampleVi: "Tôi xem phim."
         ),
         VocabWord(
-            kanji: "研究します",
+            kanji: nil,
             kana: "けんきゅうします",
             romaji: "kenkyuushimasu",
             meaningVi: "Nghiên cứu",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "音楽を聞きます。",
+            exampleJp: "おんがくを ききます。",
             exampleVi: "Tôi nghe nhạc."
         ),
         VocabWord(
-            kanji: "知っています",
+            kanji: nil,
             kana: "しっています",
             romaji: "shitteimasu",
             meaningVi: "Biết",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 知っています。",
+            exampleJp: "まいにち しっています。",
             exampleVi: "Hằng ngày tôi biết."
         ),
         VocabWord(
-            kanji: "持っています",
+            kanji: nil,
             kana: "もっています",
             romaji: "motteimasu",
             meaningVi: "Có, mang, đang cầm, đang nắm",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 持っています。",
+            exampleJp: "まいにち もっています。",
             exampleVi: "Hằng ngày tôi có, mang, đang cầm, đang nắm."
         ),
         VocabWord(
-            kanji: "住んでいます",
+            kanji: nil,
             kana: "すんでいます",
-            romaji: "sunでimasu",
+            romaji: "sundeimasu",
             meaningVi: "Sống, sinh sống [ở Tokyo]",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 住んでいます。",
+            exampleJp: "まいにち すんでいます。",
             exampleVi: "Hằng ngày tôi sống, sinh sống [ở tokyo]."
         ),
         VocabWord(
-            kanji: "東京",
+            kanji: nil,
             kana: "「",
             romaji: "\"",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "東京があります。",
+            exampleJp: "「が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -9616,7 +9616,7 @@ public final class VocabRepository {
             meaningVi: "とうきょう",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "とうきょうがあります。",
+            exampleJp: "とうきょうが あります。",
             exampleVi: "Có とうきょう."
         ),
         VocabWord(
@@ -9626,37 +9626,37 @@ public final class VocabRepository {
             meaningVi: "Sống ở Tokyo",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "に～」があります。",
+            exampleJp: "に～」が あります。",
             exampleVi: "Có sống ở tokyo."
         ),
         VocabWord(
-            kanji: "禁煙",
+            kanji: nil,
             kana: "きんえん",
             romaji: "kinen",
             meaningVi: "Cấm hút thuốc lá",
             topicId: "food",
             lessonNumber: 15,
-            exampleJp: "禁煙があります。",
+            exampleJp: "きんえんが あります。",
             exampleVi: "Có cấm hút thuốc lá."
         ),
         VocabWord(
-            kanji: "製品",
+            kanji: nil,
             kana: "せいひん",
             romaji: "seihin",
             meaningVi: "Sản phẩm, hàng",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "製品があります。",
+            exampleJp: "せいひんが あります。",
             exampleVi: "Có sản phẩm, hàng."
         ),
         VocabWord(
-            kanji: "石鹸",
+            kanji: nil,
             kana: "せっけん",
             romaji: "sekken",
             meaningVi: "Xà phòng",
             topicId: "travel",
             lessonNumber: 15,
-            exampleJp: "石鹸へ行きます。",
+            exampleJp: "せっけんへ いきます。",
             exampleVi: "Tôi đi đến xà phòng."
         ),
         VocabWord(
@@ -9666,17 +9666,17 @@ public final class VocabRepository {
             meaningVi: "Khăn lau, khăn mặt",
             topicId: "food",
             lessonNumber: 15,
-            exampleJp: "タオルがあります。",
+            exampleJp: "タオルが あります。",
             exampleVi: "Có khăn lau, khăn mặt."
         ),
         VocabWord(
-            kanji: "資料",
+            kanji: nil,
             kana: "しりょう",
             romaji: "shiryou",
             meaningVi: "Tài liệu, nguyên liệu",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "資料があります。",
+            exampleJp: "しりょうが あります。",
             exampleVi: "Có tài liệu, nguyên liệu."
         ),
         VocabWord(
@@ -9686,27 +9686,27 @@ public final class VocabRepository {
             meaningVi: "Cát ta lô",
             topicId: "food",
             lessonNumber: 15,
-            exampleJp: "カタログが好きです。",
+            exampleJp: "カタログが すきです。",
             exampleVi: "Tôi thích cát ta lô."
         ),
         VocabWord(
-            kanji: "時刻表",
+            kanji: nil,
             kana: "じこくひょう",
             romaji: "jikokuhyou",
             meaningVi: "Thời gian biểu",
             topicId: "time",
             lessonNumber: 15,
-            exampleJp: "時刻表があります。",
+            exampleJp: "じこくひょうが あります。",
             exampleVi: "Có thời gian biểu."
         ),
         VocabWord(
-            kanji: "服",
+            kanji: nil,
             kana: "ふく",
             romaji: "fuku",
             meaningVi: "Quần áo",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "服があります。",
+            exampleJp: "ふくが あります。",
             exampleVi: "Có quần áo."
         ),
         VocabWord(
@@ -9716,7 +9716,7 @@ public final class VocabRepository {
             meaningVi: "Phần mềm",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "ソフトがあります。",
+            exampleJp: "ソフトが あります。",
             exampleVi: "Có phần mềm."
         ),
         VocabWord(
@@ -9726,97 +9726,97 @@ public final class VocabRepository {
             meaningVi: "Đại lý bán vé, phòng bán vé",
             topicId: "travel",
             lessonNumber: 15,
-            exampleJp: "プレイガイドへ行きます。",
+            exampleJp: "プレイガイドへ いきます。",
             exampleVi: "Tôi đi đến đại lý bán vé, phòng bán vé."
         ),
         VocabWord(
-            kanji: "独身",
+            kanji: nil,
             kana: "どくしん",
             romaji: "dokushin",
             meaningVi: "Độc thân",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "独身があります。",
+            exampleJp: "どくしんが あります。",
             exampleVi: "Có độc thân."
         ),
         VocabWord(
-            kanji: "歯医者",
+            kanji: nil,
             kana: "はいしゃ",
             romaji: "Nha",
             meaningVi: "sĩ",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "歯医者があります。",
+            exampleJp: "はいしゃが あります。",
             exampleVi: "Có sĩ."
         ),
         VocabWord(
-            kanji: "床屋",
+            kanji: nil,
             kana: "とこや",
             romaji: "tokoya",
             meaningVi: "Cửa hàng cắt tóc",
             topicId: "family",
             lessonNumber: 15,
-            exampleJp: "床屋があります。",
+            exampleJp: "とこやが あります。",
             exampleVi: "Có cửa hàng cắt tóc."
         ),
         VocabWord(
-            kanji: "上の「妹」",
+            kanji: nil,
             kana: "うえの「いもうと」",
             romaji: "ueno\"imouto\"",
             meaningVi: "[em gái] lớn",
             topicId: "family",
             lessonNumber: 15,
-            exampleJp: "上の「妹」があります。",
+            exampleJp: "うえの「いもうと」が あります。",
             exampleVi: "Có [em gái] lớn."
         ),
         VocabWord(
-            kanji: "下の「妹」",
+            kanji: nil,
             kana: "したの「いもうと」",
             romaji: "shitano\"imouto\"",
             meaningVi: "[em gái] nhỏ",
             topicId: "family",
             lessonNumber: 15,
-            exampleJp: "下の「妹」があります。",
+            exampleJp: "したの「いもうと」が あります。",
             exampleVi: "Có [em gái] nhỏ."
         ),
         VocabWord(
-            kanji: "特に",
+            kanji: nil,
             kana: "とくに",
             romaji: "tokuni",
             meaningVi: "Đặc biệt là",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "特にがあります。",
+            exampleJp: "とくにが あります。",
             exampleVi: "Có đặc biệt là."
         ),
         VocabWord(
-            kanji: "思い出します",
+            kanji: nil,
             kana: "おもいだします",
             romaji: "omoidashimasu",
             meaningVi: "Nhớ lại",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "毎日 思い出します。",
+            exampleJp: "まいにち おもいだします。",
             exampleVi: "Hằng ngày tôi nhớ lại."
         ),
         VocabWord(
-            kanji: "ご家族",
+            kanji: nil,
             kana: "ごかぞく",
             romaji: "Gia",
             meaningVi: "đình (gia đình của người khác)",
             topicId: "family",
             lessonNumber: 15,
-            exampleJp: "ご家族があります。",
+            exampleJp: "ごかぞくが あります。",
             exampleVi: "Có đình."
         ),
         VocabWord(
-            kanji: "高校",
+            kanji: nil,
             kana: "こうこう",
             romaji: "koukou",
             meaningVi: "Trường trung học phổ thông",
             topicId: "family",
             lessonNumber: 15,
-            exampleJp: "高校へ行きます。",
+            exampleJp: "こうこうへ いきます。",
             exampleVi: "Tôi đi đến trường trung học phổ thông."
         ),
         VocabWord(
@@ -9826,7 +9826,7 @@ public final class VocabRepository {
             meaningVi: "日本橋",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "日本橋があります。",
+            exampleJp: "日本橋が あります。",
             exampleVi: "Có 日本橋."
         ),
         VocabWord(
@@ -9836,7 +9836,7 @@ public final class VocabRepository {
             meaningVi: "Tên 1 quận mua sắm ở Osaka",
             topicId: "greeting",
             lessonNumber: 15,
-            exampleJp: "にほんばしがあります。",
+            exampleJp: "にほんばしが あります。",
             exampleVi: "Có tên 1 quận mua sắm ở osaka."
         )
     ]
@@ -9844,23 +9844,23 @@ public final class VocabRepository {
     // MARK: - Bài 16 (89 từ)
     public static let lesson16Words: [VocabWord] = [
         VocabWord(
-            kanji: "歩きます",
+            kanji: nil,
             kana: "あるきます",
             romaji: "arukimasu",
             meaningVi: "Đi bộ, bước đi",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "乗ります",
+            kanji: nil,
             kana: "のります",
             romaji: "norimasu",
             meaningVi: "Lên, đi [tàu điện]",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "毎日 乗ります。",
+            exampleJp: "まいにち のります。",
             exampleVi: "Hằng ngày tôi lên, đi [tàu điện]."
         ),
         VocabWord(
@@ -9870,17 +9870,17 @@ public final class VocabRepository {
             meaningVi: "「電車",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "「電車があります。",
+            exampleJp: "「電車が あります。",
             exampleVi: "Có 「電車."
         ),
         VocabWord(
             kanji: nil,
             kana: "でんしゃ",
-            romaji: "でnsha",
+            romaji: "densha",
             meaningVi: "でんしゃ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "でんしゃがあります。",
+            exampleJp: "でんしゃが あります。",
             exampleVi: "Có でんしゃ."
         ),
         VocabWord(
@@ -9890,17 +9890,17 @@ public final class VocabRepository {
             meaningVi: "Lên tàu điện",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "に～」があります。",
+            exampleJp: "に～」が あります。",
             exampleVi: "Có lên tàu điện."
         ),
         VocabWord(
-            kanji: "降ります",
+            kanji: nil,
             kana: "おります",
             romaji: "orimasu",
             meaningVi: "Xuống [khỏi tàu điện]",
             topicId: "food",
             lessonNumber: 16,
-            exampleJp: "毎日 降ります。",
+            exampleJp: "まいにち おります。",
             exampleVi: "Hằng ngày tôi xuống [khỏi tàu điện]."
         ),
         VocabWord(
@@ -9910,17 +9910,17 @@ public final class VocabRepository {
             meaningVi: "「電車",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "「電車があります。",
+            exampleJp: "「電車が あります。",
             exampleVi: "Có 「電車."
         ),
         VocabWord(
             kanji: nil,
             kana: "でんしゃ",
-            romaji: "でnsha",
+            romaji: "densha",
             meaningVi: "でんしゃ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "でんしゃがあります。",
+            exampleJp: "でんしゃが あります。",
             exampleVi: "Có でんしゃ."
         ),
         VocabWord(
@@ -9930,47 +9930,47 @@ public final class VocabRepository {
             meaningVi: "Xuống khỏi tàu điện",
             topicId: "food",
             lessonNumber: 16,
-            exampleJp: "を～」があります。",
+            exampleJp: "を～」が あります。",
             exampleVi: "Có xuống khỏi tàu điện."
         ),
         VocabWord(
-            kanji: "乗り換えます",
+            kanji: nil,
             kana: "のりかえます",
             romaji: "norikaemasu",
             meaningVi: "Thay, đổi (tàu điện…)",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "毎日 乗り換えます。",
+            exampleJp: "まいにち のりかえます。",
             exampleVi: "Hằng ngày tôi thay, đổi."
         ),
         VocabWord(
-            kanji: "食事します",
+            kanji: nil,
             kana: "しょくじします",
             romaji: "shokujishimasu",
             meaningVi: "Ăn cơm, ăn uống",
             topicId: "food",
             lessonNumber: 16,
-            exampleJp: "毎日 食事します。",
+            exampleJp: "まいにち しょくじします。",
             exampleVi: "Hằng ngày tôi ăn cơm, ăn uống."
         ),
         VocabWord(
-            kanji: "洗います",
+            kanji: nil,
             kana: "あらいます",
             romaji: "araimasu",
             meaningVi: "Rửa, tắm rửa, giặt",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "毎日 洗います。",
+            exampleJp: "まいにち あらいます。",
             exampleVi: "Hằng ngày tôi rửa, tắm rửa, giặt."
         ),
         VocabWord(
-            kanji: "浴びます",
+            kanji: nil,
             kana: "あびます",
             romaji: "abimasu",
             meaningVi: "Tắm [bằng vòi hoa sen], giội nước, tưới nước",
             topicId: "food",
             lessonNumber: 16,
-            exampleJp: "毎日 浴びます。",
+            exampleJp: "まいにち あびます。",
             exampleVi: "Hằng ngày tôi tắm [bằng vòi hoa sen], giội nước, tưới nước."
         ),
         VocabWord(
@@ -9980,37 +9980,37 @@ public final class VocabRepository {
             meaningVi: "Tắm vòi tắm hoa sen",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "「シャワーを～」があります。",
+            exampleJp: "「シャワーを～」が あります。",
             exampleVi: "Có tắm vòi tắm hoa sen."
         ),
         VocabWord(
-            kanji: "入れます",
+            kanji: nil,
             kana: "いれます",
             romaji: "Cho",
             meaningVi: "vào, lồng vào",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "毎日 入れます。",
+            exampleJp: "まいにち いれます。",
             exampleVi: "Hằng ngày tôi vào, lồng vào."
         ),
         VocabWord(
-            kanji: "出します",
+            kanji: nil,
             kana: "だします",
             romaji: "dashimasu",
             meaningVi: "Lấy ra, đưa ra, nộp (báo cáo)",
             topicId: "food",
             lessonNumber: 16,
-            exampleJp: "毎日 出します。",
+            exampleJp: "まいにち だします。",
             exampleVi: "Hằng ngày tôi lấy ra, đưa ra, nộp."
         ),
         VocabWord(
-            kanji: "入ります",
+            kanji: nil,
             kana: "はいります",
             romaji: "wairimasu",
             meaningVi: "Vào (trường)",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "毎日 入ります。",
+            exampleJp: "まいにち はいります。",
             exampleVi: "Hằng ngày tôi vào."
         ),
         VocabWord(
@@ -10020,7 +10020,7 @@ public final class VocabRepository {
             meaningVi: "「大学",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "「大学があります。",
+            exampleJp: "「大学が あります。",
             exampleVi: "Có 「大学."
         ),
         VocabWord(
@@ -10030,7 +10030,7 @@ public final class VocabRepository {
             meaningVi: "だいがく",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "だいがくがあります。",
+            exampleJp: "だいがくが あります。",
             exampleVi: "Có だいがく."
         ),
         VocabWord(
@@ -10040,17 +10040,17 @@ public final class VocabRepository {
             meaningVi: "Vào đại học",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "に～」があります。",
+            exampleJp: "に～」が あります。",
             exampleVi: "Có vào đại học."
         ),
         VocabWord(
-            kanji: "出ます",
+            kanji: nil,
             kana: "でます",
-            romaji: "でmasu",
+            romaji: "demasu",
             meaningVi: "Ra, ra khỏi, tốt nghiệp",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "毎日 出ます。",
+            exampleJp: "まいにち でます。",
             exampleVi: "Hằng ngày tôi ra, ra khỏi, tốt nghiệp."
         ),
         VocabWord(
@@ -10060,7 +10060,7 @@ public final class VocabRepository {
             meaningVi: "「大学",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "「大学があります。",
+            exampleJp: "「大学が あります。",
             exampleVi: "Có 「大学."
         ),
         VocabWord(
@@ -10070,7 +10070,7 @@ public final class VocabRepository {
             meaningVi: "だいがく",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "だいがくがあります。",
+            exampleJp: "だいがくが あります。",
             exampleVi: "Có だいがく."
         ),
         VocabWord(
@@ -10080,17 +10080,17 @@ public final class VocabRepository {
             meaningVi: "trường",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "を～」へ行きます。",
+            exampleJp: "を～」へ いきます。",
             exampleVi: "Tôi đi đến trường."
         ),
         VocabWord(
-            kanji: "辞めます",
+            kanji: nil,
             kana: "やめます",
             romaji: "yamemasu",
             meaningVi: "Nghỉ, thôi (việc)",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "毎日 辞めます。",
+            exampleJp: "まいにち やめます。",
             exampleVi: "Hằng ngày tôi nghỉ, thôi."
         ),
         VocabWord(
@@ -10100,7 +10100,7 @@ public final class VocabRepository {
             meaningVi: "「会社",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "「会社があります。",
+            exampleJp: "「会社が あります。",
             exampleVi: "Có 「会社."
         ),
         VocabWord(
@@ -10110,7 +10110,7 @@ public final class VocabRepository {
             meaningVi: "かいしゃ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "かいしゃがあります。",
+            exampleJp: "かいしゃが あります。",
             exampleVi: "Có かいしゃ."
         ),
         VocabWord(
@@ -10120,108 +10120,108 @@ public final class VocabRepository {
             meaningVi: "Thôi việc",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "を～」があります。",
+            exampleJp: "を～」が あります。",
             exampleVi: "Có thôi việc."
         ),
         VocabWord(
-            kanji: "押します",
+            kanji: nil,
             kana: "おします",
             romaji: "oshimasu",
             meaningVi: "Ấn, đẩy",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "毎日 押します。",
+            exampleJp: "まいにち おします。",
             exampleVi: "Hằng ngày tôi ấn, đẩy."
         ),
         VocabWord(
-            kanji: "長い",
+            kanji: nil,
             kana: "ながい",
             romaji: "nagai",
             meaningVi: "Dài, lâu",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は長いです。",
+            exampleJp: "にほんの ふゆは ながいです。",
             exampleVi: "Mùa đông ở Nhật dài, lâu."
         ),
         VocabWord(
-            kanji: "短い",
+            kanji: nil,
             kana: "みじかい",
             romaji: "mijikai",
             meaningVi: "Ngắn",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は短いです。",
-            exampleVi: "Mùa đông ở Nhật ngắn."
+            exampleJp: "みじかいが あります。",
+            exampleVi: "Có ngắn."
         ),
         VocabWord(
-            kanji: "重い",
+            kanji: nil,
             kana: "おもい",
             romaji: "omoi",
             meaningVi: "Nặng",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は重いです。",
+            exampleJp: "にほんの ふゆは おもいです。",
             exampleVi: "Mùa đông ở Nhật nặng."
         ),
         VocabWord(
-            kanji: "軽い",
+            kanji: nil,
             kana: "かるい",
             romaji: "karui",
             meaningVi: "Nhẹ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は軽いです。",
+            exampleJp: "にほんの ふゆは かるいです。",
             exampleVi: "Mùa đông ở Nhật nhẹ."
         ),
         VocabWord(
-            kanji: "広い",
+            kanji: nil,
             kana: "ひろい",
             romaji: "hiroi",
             meaningVi: "Rộng, thoáng",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は広いです。",
+            exampleJp: "にほんの ふゆは ひろいです。",
             exampleVi: "Mùa đông ở Nhật rộng, thoáng."
         ),
         VocabWord(
-            kanji: "狭い",
+            kanji: nil,
             kana: "せまい",
             romaji: "semai",
             meaningVi: "Hẹp, chật",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は狭いです。",
+            exampleJp: "にほんの ふゆは せまいです。",
             exampleVi: "Mùa đông ở Nhật hẹp, chật."
         ),
         VocabWord(
-            kanji: "明るい",
+            kanji: nil,
             kana: "あかるい",
             romaji: "akarui",
             meaningVi: "Sáng, sáng sủa",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は明るいです。",
+            exampleJp: "にほんの ふゆは あかるいです。",
             exampleVi: "Mùa đông ở Nhật sáng, sáng sủa."
         ),
         VocabWord(
-            kanji: "暗い",
+            kanji: nil,
             kana: "くらい",
             romaji: "kurai",
             meaningVi: "Tối, mù mịt",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は暗いです。",
+            exampleJp: "にほんの ふゆは くらいです。",
             exampleVi: "Mùa đông ở Nhật tối, mù mịt."
         ),
         VocabWord(
-            kanji: "若い",
+            kanji: nil,
             kana: "わかい",
             romaji: "wakai",
             meaningVi: "Trẻ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "日本の冬は若いです。",
-            exampleVi: "Mùa đông ở Nhật trẻ."
+            exampleJp: "わかいが あります。",
+            exampleVi: "Có trẻ."
         ),
         VocabWord(
             kanji: nil,
@@ -10230,7 +10230,7 @@ public final class VocabRepository {
             meaningVi: "たかい 背が 高い Cao (chiều cao của người)",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "せがに勉強します。",
+            exampleJp: "せがに べんきょうします。",
             exampleVi: "Tôi học vào たかい 背が 高い cao."
         ),
         VocabWord(
@@ -10240,107 +10240,107 @@ public final class VocabRepository {
             meaningVi: "いい 頭が いい Thông minh",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "あたまががあります。",
+            exampleJp: "あたまがが あります。",
             exampleVi: "Có いい 頭が いい thông minh."
         ),
         VocabWord(
-            kanji: "体",
+            kanji: nil,
             kana: "からだ",
             romaji: "karada",
             meaningVi: "Thân thể",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "体があります。",
+            exampleJp: "からだが あります。",
             exampleVi: "Có thân thể."
         ),
         VocabWord(
-            kanji: "顔",
+            kanji: nil,
             kana: "かお",
             romaji: "kao",
             meaningVi: "Mặt",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "顔があります。",
+            exampleJp: "かおが あります。",
             exampleVi: "Có mặt."
         ),
         VocabWord(
-            kanji: "目",
+            kanji: nil,
             kana: "め",
             romaji: "me",
             meaningVi: "Mắt",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "目があります。",
+            exampleJp: "めが あります。",
             exampleVi: "Có mắt."
         ),
         VocabWord(
-            kanji: "鼻",
+            kanji: nil,
             kana: "はな",
             romaji: "wana",
             meaningVi: "Mũi",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "鼻があります。",
+            exampleJp: "はなが あります。",
             exampleVi: "Có mũi."
         ),
         VocabWord(
-            kanji: "口",
+            kanji: nil,
             kana: "くち",
             romaji: "kuchi",
             meaningVi: "Miệng",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "口があります。",
+            exampleJp: "くちが あります。",
             exampleVi: "Có miệng."
         ),
         VocabWord(
-            kanji: "耳",
+            kanji: nil,
             kana: "みみ",
             romaji: "mimi",
             meaningVi: "Tai",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "耳があります。",
+            exampleJp: "みみが あります。",
             exampleVi: "Có tai."
         ),
         VocabWord(
-            kanji: "歯",
+            kanji: nil,
             kana: "は",
             romaji: "wa",
             meaningVi: "Răng",
             topicId: "food",
             lessonNumber: 16,
-            exampleJp: "歯があります。",
+            exampleJp: "はが あります。",
             exampleVi: "Có răng."
         ),
         VocabWord(
-            kanji: "髪",
+            kanji: nil,
             kana: "かみ",
             romaji: "kami",
             meaningVi: "Tóc",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "髪があります。",
+            exampleJp: "かみが あります。",
             exampleVi: "Có tóc."
         ),
         VocabWord(
-            kanji: "手",
+            kanji: nil,
             kana: "て",
             romaji: "te",
             meaningVi: "Tay",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "手があります。",
+            exampleJp: "てが あります。",
             exampleVi: "Có tay."
         ),
         VocabWord(
-            kanji: "足",
+            kanji: nil,
             kana: "あし",
             romaji: "ashi",
             meaningVi: "Chân",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "足があります。",
+            exampleJp: "あしが あります。",
             exampleVi: "Có chân."
         ),
         VocabWord(
@@ -10350,7 +10350,7 @@ public final class VocabRepository {
             meaningVi: "Bụng",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "おなかがあります。",
+            exampleJp: "おなかが あります。",
             exampleVi: "Có bụng."
         ),
         VocabWord(
@@ -10360,7 +10360,7 @@ public final class VocabRepository {
             meaningVi: "Hương sen, vòi hoa sen",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "シャワーがあります。",
+            exampleJp: "シャワーが あります。",
             exampleVi: "Có hương sen, vòi hoa sen."
         ),
         VocabWord(
@@ -10370,7 +10370,7 @@ public final class VocabRepository {
             meaningVi: "(thịt bò băm viên)",
             topicId: "food",
             lessonNumber: 16,
-            exampleJp: "ハンバーグが好きです。",
+            exampleJp: "ハンバーグが すきです。",
             exampleVi: "Tôi thích ."
         ),
         VocabWord(
@@ -10380,7 +10380,7 @@ public final class VocabRepository {
             meaningVi: "Dịch vụ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "サービスがあります。",
+            exampleJp: "サービスが あります。",
             exampleVi: "Có dịch vụ."
         ),
         VocabWord(
@@ -10390,7 +10390,7 @@ public final class VocabRepository {
             meaningVi: "Việc chạy bộ (danh từ)",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "ジョギングがあります。",
+            exampleJp: "ジョギングが あります。",
             exampleVi: "Có việc chạy bộ."
         ),
         VocabWord(
@@ -10400,47 +10400,47 @@ public final class VocabRepository {
             meaningVi: "Chạy bộ",
             topicId: "travel",
             lessonNumber: 16,
-            exampleJp: "「～をします」があります。",
+            exampleJp: "「～をします」が あります。",
             exampleVi: "Có chạy bộ."
         ),
         VocabWord(
-            kanji: "緑",
+            kanji: nil,
             kana: "みどり",
             romaji: "midori",
             meaningVi: "Màu xanh lá cây 「お」てら 「お」寺 Chùa",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "緑があります。",
+            exampleJp: "みどりが あります。",
             exampleVi: "Có màu xanh lá cây 「お」てら 「お」寺 chùa."
         ),
         VocabWord(
-            kanji: "神社",
+            kanji: nil,
             kana: "じんじゃ",
             romaji: "jinja",
             meaningVi: "Đền",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "神社があります。",
+            exampleJp: "じんじゃが あります。",
             exampleVi: "Có đền."
         ),
         VocabWord(
-            kanji: "留学生",
+            kanji: nil,
             kana: "りゅうがくせい",
             romaji: "Du",
             meaningVi: "học sinh",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "日本の冬は留学生です。",
+            exampleJp: "にほんの ふゆは りゅうがくせいです。",
             exampleVi: "Mùa đông ở Nhật học sinh."
         ),
         VocabWord(
-            kanji: "～番",
+            kanji: nil,
             kana: "～ばん",
             romaji: "～ban",
             meaningVi: "Số ～",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "～番があります。",
+            exampleJp: "～ばんが あります。",
             exampleVi: "Có số ～."
         ),
         VocabWord(
@@ -10450,7 +10450,7 @@ public final class VocabRepository {
             meaningVi: "~ nào",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "どのがあります。",
+            exampleJp: "どのが あります。",
             exampleVi: "Có ~ nào."
         ),
         VocabWord(
@@ -10460,17 +10460,17 @@ public final class VocabRepository {
             meaningVi: "Làm thế nào",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "どうやってがあります。",
+            exampleJp: "どうやってが あります。",
             exampleVi: "Có làm thế nào."
         ),
         VocabWord(
-            kanji: "色々",
+            kanji: nil,
             kana: "いろいろ",
             romaji: "iroiro",
             meaningVi: "Nhiều thứ khác nhau",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "色々があります。",
+            exampleJp: "いろいろが あります。",
             exampleVi: "Có nhiều thứ khác nhau."
         ),
         VocabWord(
@@ -10480,17 +10480,17 @@ public final class VocabRepository {
             meaningVi: "Gần, khoảng chừng (về thời gian) 「いいえ、」まだまだです。 Không tôi vẫn còn kém lắm (cách nói khiêm tốn)",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "～ごろが好きです。",
+            exampleJp: "～ごろが すきです。",
             exampleVi: "Tôi thích gần, khoảng chừng."
         ),
         VocabWord(
             kanji: nil,
             kana: "なんでも",
-            romaji: "nanでmo",
+            romaji: "nandemo",
             meaningVi: "いいです。 Cái gì cũng được. Thế nào cũng được.",
             topicId: "food",
             lessonNumber: 16,
-            exampleJp: "なんでもが好きです。",
+            exampleJp: "なんでもが すきです。",
             exampleVi: "Tôi thích いいです。 cái gì cũng được. thế nào cũng được.."
         ),
         VocabWord(
@@ -10500,7 +10500,7 @@ public final class VocabRepository {
             meaningVi: "しますか。 Bạn muốn (ăn, uống) gì? 「それ」に します。 Tôi chọn [món đấy].",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "なんにがあります。",
+            exampleJp: "なんにが あります。",
             exampleVi: "Có しますか。 bạn muốn."
         ),
         VocabWord(
@@ -10510,7 +10510,7 @@ public final class VocabRepository {
             meaningVi: "À… (khi ngừng để suy nghĩ và nói tiếp)",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "ええと．．．があります。",
+            exampleJp: "ええと．．．が あります。",
             exampleVi: "Có à…."
         ),
         VocabWord(
@@ -10520,7 +10520,7 @@ public final class VocabRepository {
             meaningVi: "お引",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "お引があります。",
+            exampleJp: "お引が あります。",
             exampleVi: "Có お引."
         ),
         VocabWord(
@@ -10530,7 +10530,7 @@ public final class VocabRepository {
             meaningVi: "ひ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "ひがあります。",
+            exampleJp: "ひが あります。",
             exampleVi: "Có ひ."
         ),
         VocabWord(
@@ -10540,7 +10540,7 @@ public final class VocabRepository {
             meaningVi: "き出",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "き出があります。",
+            exampleJp: "き出が あります。",
             exampleVi: "Có き出."
         ),
         VocabWord(
@@ -10550,17 +10550,17 @@ public final class VocabRepository {
             meaningVi: "だ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "だがあります。",
+            exampleJp: "だが あります。",
             exampleVi: "Có だ."
         ),
         VocabWord(
             kanji: nil,
             kana: "しですか。",
-            romaji: "shiでsuka.",
+            romaji: "shidesuka.",
             meaningVi: "(Ngài) Rút tiền ạ?",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "しですか。があります。",
+            exampleJp: "しですか。が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -10570,7 +10570,7 @@ public final class VocabRepository {
             meaningVi: "Trước tiên, trước hết",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "まずがあります。",
+            exampleJp: "まずが あります。",
             exampleVi: "Có trước tiên, trước hết."
         ),
         VocabWord(
@@ -10580,7 +10580,7 @@ public final class VocabRepository {
             meaningVi: "Thẻ ATM",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "キャッシュカードがあります。",
+            exampleJp: "キャッシュカードが あります。",
             exampleVi: "Có thẻ atm."
         ),
         VocabWord(
@@ -10590,7 +10590,7 @@ public final class VocabRepository {
             meaningVi: "暗証番号",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "暗証番号があります。",
+            exampleJp: "暗証番号が あります。",
             exampleVi: "Có 暗証番号."
         ),
         VocabWord(
@@ -10600,7 +10600,7 @@ public final class VocabRepository {
             meaningVi: "Mã Pin",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "あんしょうばんごうがあります。",
+            exampleJp: "あんしょうばんごうが あります。",
             exampleVi: "Có mã pin."
         ),
         VocabWord(
@@ -10610,7 +10610,7 @@ public final class VocabRepository {
             meaningVi: "次",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "次があります。",
+            exampleJp: "次が あります。",
             exampleVi: "Có 次."
         ),
         VocabWord(
@@ -10620,7 +10620,7 @@ public final class VocabRepository {
             meaningVi: "つぎ",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "つぎがあります。",
+            exampleJp: "つぎが あります。",
             exampleVi: "Có つぎ."
         ),
         VocabWord(
@@ -10630,7 +10630,7 @@ public final class VocabRepository {
             meaningVi: "Tiếp theo",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "にがあります。",
+            exampleJp: "にが あります。",
             exampleVi: "Có tiếp theo."
         ),
         VocabWord(
@@ -10640,7 +10640,7 @@ public final class VocabRepository {
             meaningVi: "金額",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "金額があります。",
+            exampleJp: "金額が あります。",
             exampleVi: "Có 金額."
         ),
         VocabWord(
@@ -10650,7 +10650,7 @@ public final class VocabRepository {
             meaningVi: "Số tiền",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "きんがくがあります。",
+            exampleJp: "きんがくが あります。",
             exampleVi: "Có số tiền."
         ),
         VocabWord(
@@ -10660,7 +10660,7 @@ public final class VocabRepository {
             meaningVi: "確認",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "確認があります。",
+            exampleJp: "確認が あります。",
             exampleVi: "Có 確認."
         ),
         VocabWord(
@@ -10670,7 +10670,7 @@ public final class VocabRepository {
             meaningVi: "「～します」 Sự xác nhận (danh từ) [Xác nhận]",
             topicId: "family",
             lessonNumber: 16,
-            exampleJp: "かくにんがあります。",
+            exampleJp: "かくにんが あります。",
             exampleVi: "Có 「～します」 sự xác nhận."
         ),
         VocabWord(
@@ -10680,7 +10680,7 @@ public final class VocabRepository {
             meaningVi: "Nút, cúc áo",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "ボタンがあります。",
+            exampleJp: "ボタンが あります。",
             exampleVi: "Có nút, cúc áo."
         ),
         VocabWord(
@@ -10690,7 +10690,7 @@ public final class VocabRepository {
             meaningVi: "Asia/Châu Á",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "アジアがあります。",
+            exampleJp: "アジアが あります。",
             exampleVi: "Có asia/châu á."
         ),
         VocabWord(
@@ -10700,7 +10700,7 @@ public final class VocabRepository {
             meaningVi: "(Indonesia)",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "バンドンがあります。",
+            exampleJp: "バンドンが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -10710,7 +10710,7 @@ public final class VocabRepository {
             meaningVi: "(Mexico)",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "ベラクルスがあります。",
+            exampleJp: "ベラクルスが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -10720,7 +10720,7 @@ public final class VocabRepository {
             meaningVi: "(Đức)",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "フランケンがあります。",
+            exampleJp: "フランケンが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -10730,7 +10730,7 @@ public final class VocabRepository {
             meaningVi: "Huế",
             topicId: "greeting",
             lessonNumber: 16,
-            exampleJp: "フエがあります。",
+            exampleJp: "フエが あります。",
             exampleVi: "Có huế."
         )
     ]
@@ -10738,43 +10738,43 @@ public final class VocabRepository {
     // MARK: - Bài 17 (52 từ)
     public static let lesson17Words: [VocabWord] = [
         VocabWord(
-            kanji: "忘れます",
+            kanji: nil,
             kana: "わすれます",
             romaji: "wasuremasu",
             meaningVi: "Quên",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "毎日 忘れます。",
+            exampleJp: "まいにち わすれます。",
             exampleVi: "Hằng ngày tôi quên."
         ),
         VocabWord(
-            kanji: "無くします",
+            kanji: nil,
             kana: "なくします",
             romaji: "nakushimasu",
             meaningVi: "Đánh mất",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "毎日 無くします。",
+            exampleJp: "まいにち なくします。",
             exampleVi: "Hằng ngày tôi đánh mất."
         ),
         VocabWord(
-            kanji: "心配します",
+            kanji: nil,
             kana: "しんぱいします",
             romaji: "shinpaishimasu",
             meaningVi: "Lo, lo lắng",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "毎日 心配します。",
+            exampleJp: "まいにち しんぱいします。",
             exampleVi: "Hằng ngày tôi lo, lo lắng."
         ),
         VocabWord(
-            kanji: "気をつけます",
+            kanji: nil,
             kana: "きをつけます",
             romaji: "kiotsukemasu",
             meaningVi: "Chú ý, cẩn thận, cảnh giác [với xe ô tô]",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "音楽を聞きます。",
+            exampleJp: "おんがくを ききます。",
             exampleVi: "Tôi nghe nhạc."
         ),
         VocabWord(
@@ -10784,57 +10784,57 @@ public final class VocabRepository {
             meaningVi: "Cẩn thận với xe ô tô",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "「車に～」があります。",
+            exampleJp: "「車に～」が あります。",
             exampleVi: "Có cẩn thận với xe ô tô."
         ),
         VocabWord(
-            kanji: "止めます",
+            kanji: nil,
             kana: "とめます",
             romaji: "tomemasu",
             meaningVi: "Ngừng, dừng lại, đỗ (xe)",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "毎日 止めます。",
+            exampleJp: "まいにち とめます。",
             exampleVi: "Hằng ngày tôi ngừng, dừng lại, đỗ."
         ),
         VocabWord(
-            kanji: "返します",
+            kanji: nil,
             kana: "かえします",
             romaji: "kaeshimasu",
             meaningVi: "Trả lại",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "毎日 返します。",
+            exampleJp: "まいにち かえします。",
             exampleVi: "Hằng ngày tôi trả lại."
         ),
         VocabWord(
-            kanji: "払います",
+            kanji: nil,
             kana: "はらいます",
             romaji: "waraimasu",
             meaningVi: "Trả, nộp tiền, đóng tiền",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "毎日 払います。",
+            exampleJp: "まいにち はらいます。",
             exampleVi: "Hằng ngày tôi trả, nộp tiền, đóng tiền."
         ),
         VocabWord(
-            kanji: "脱ぎます",
+            kanji: nil,
             kana: "ぬぎます",
             romaji: "nugimasu",
             meaningVi: "Cởi (quần áo, giầy…)",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "毎日 脱ぎます。",
+            exampleJp: "まいにち ぬぎます。",
             exampleVi: "Hằng ngày tôi cởi."
         ),
         VocabWord(
-            kanji: "触ります",
+            kanji: nil,
             kana: "さわります",
             romaji: "sawarimasu",
             meaningVi: "Sờ, ,mó tay, chạm tay [vào máy]",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "毎日 触ります。",
+            exampleJp: "まいにち さわります。",
             exampleVi: "Hằng ngày tôi sờ, ,mó tay, chạm tay [vào máy]."
         ),
         VocabWord(
@@ -10844,7 +10844,7 @@ public final class VocabRepository {
             meaningVi: "「機",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "「機があります。",
+            exampleJp: "「機が あります。",
             exampleVi: "Có 「機."
         ),
         VocabWord(
@@ -10854,7 +10854,7 @@ public final class VocabRepository {
             meaningVi: "き",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "きがあります。",
+            exampleJp: "きが あります。",
             exampleVi: "Có き."
         ),
         VocabWord(
@@ -10864,7 +10864,7 @@ public final class VocabRepository {
             meaningVi: "械",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "械があります。",
+            exampleJp: "械が あります。",
             exampleVi: "Có 械."
         ),
         VocabWord(
@@ -10874,8 +10874,8 @@ public final class VocabRepository {
             meaningVi: "かい",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "日本の冬はかいです。",
-            exampleVi: "Mùa đông ở Nhật かい."
+            exampleJp: "かいが あります。",
+            exampleVi: "Có かい."
         ),
         VocabWord(
             kanji: nil,
@@ -10884,78 +10884,78 @@ public final class VocabRepository {
             meaningVi: "Chạm vào máy",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "に～」があります。",
+            exampleJp: "に～」が あります。",
             exampleVi: "Có chạm vào máy."
         ),
         VocabWord(
-            kanji: "出かけます",
+            kanji: nil,
             kana: "でかけます",
-            romaji: "でkakemasu",
+            romaji: "dekakemasu",
             meaningVi: "Đi ra ngoài",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "毎日 出かけます。",
+            exampleJp: "まいにち でかけます。",
             exampleVi: "Hằng ngày tôi đi ra ngoài."
         ),
         VocabWord(
-            kanji: "持って行きます",
+            kanji: nil,
             kana: "もっていきます",
             romaji: "motteikimasu",
             meaningVi: "Đem (cái gì) đi",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "学校へ行きます。",
+            exampleJp: "がっこうへ いきます。",
             exampleVi: "Tôi đi đến trường."
         ),
         VocabWord(
-            kanji: "持って来ます",
+            kanji: nil,
             kana: "もってきます",
             romaji: "Mang",
             meaningVi: "(cái gì) đến",
             topicId: "food",
             lessonNumber: 17,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "残業します",
+            kanji: nil,
             kana: "ざんぎょうします",
             romaji: "zangyoushimasu",
             meaningVi: "Làm thêm",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "毎日 残業します。",
+            exampleJp: "まいにち ざんぎょうします。",
             exampleVi: "Hằng ngày tôi làm thêm."
         ),
         VocabWord(
-            kanji: "出張します",
+            kanji: nil,
             kana: "しゅっちょうします",
             romaji: "shutchoushimasu",
             meaningVi: "Đi công tác",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "毎日 出張します。",
+            exampleJp: "まいにち しゅっちょうします。",
             exampleVi: "Hằng ngày tôi đi công tác."
         ),
         VocabWord(
-            kanji: "大切「な」",
+            kanji: nil,
             kana: "たいせつ「な」",
             romaji: "Quan",
             meaningVi: "trọng, quý giá",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "この町は大切です。",
-            exampleVi: "Thành phố này trọng, quý giá."
+            exampleJp: "この まちは たいせつです。",
+            exampleVi: "Thị trấn này trọng, quý giá."
         ),
         VocabWord(
-            kanji: "大丈夫「な」",
+            kanji: nil,
             kana: "だいじょうぶ「な」",
             romaji: "daijoubu\"na\"",
             meaningVi: "Bền, chắc, khỏe",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "この町は大丈夫です。",
-            exampleVi: "Thành phố này bền, chắc, khỏe."
+            exampleJp: "この まちは だいじょうぶです。",
+            exampleVi: "Thị trấn này bền, chắc, khỏe."
         ),
         VocabWord(
             kanji: nil,
@@ -10964,27 +10964,27 @@ public final class VocabRepository {
             meaningVi: "Tuyệt vời, cực kỳ, giỏi",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "日本の冬はすごいです。",
+            exampleJp: "にほんの ふゆは すごいです。",
             exampleVi: "Mùa đông ở Nhật tuyệt vời, cực kỳ, giỏi."
         ),
         VocabWord(
-            kanji: "危ない",
+            kanji: nil,
             kana: "あぶない",
             romaji: "Nguy",
             meaningVi: "hiểm",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "日本の冬は危ないです。",
+            exampleJp: "にほんの ふゆは あぶないです。",
             exampleVi: "Mùa đông ở Nhật hiểm."
         ),
         VocabWord(
-            kanji: "音",
+            kanji: nil,
             kana: "おと",
             romaji: "oto",
             meaningVi: "Tiếng động, âm thanh",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "音があります。",
+            exampleJp: "おとが あります。",
             exampleVi: "Có tiếng động, âm thanh."
         ),
         VocabWord(
@@ -10994,17 +10994,17 @@ public final class VocabRepository {
             meaningVi: "Người máy",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "ロボットがあります。",
+            exampleJp: "ロボットが あります。",
             exampleVi: "Có người máy."
         ),
         VocabWord(
-            kanji: "許可",
+            kanji: nil,
             kana: "きょか",
             romaji: "kyoka",
             meaningVi: "Sự cho phép (danh từ)",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "許可があります。",
+            exampleJp: "きょかが あります。",
             exampleVi: "Có sự cho phép."
         ),
         VocabWord(
@@ -11014,7 +11014,7 @@ public final class VocabRepository {
             meaningVi: "Công tắc điện, cái chuyển mạch",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "スイッチが好きです。",
+            exampleJp: "スイッチが すきです。",
             exampleVi: "Tôi thích công tắc điện, cái chuyển mạch."
         ),
         VocabWord(
@@ -11024,7 +11024,7 @@ public final class VocabRepository {
             meaningVi: "Máy điều hòa, máy lạnh",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "クーラーがあります。",
+            exampleJp: "クーラーが あります。",
             exampleVi: "Có máy điều hòa, máy lạnh."
         ),
         VocabWord(
@@ -11034,57 +11034,57 @@ public final class VocabRepository {
             meaningVi: "Máy điều hòa, lò sưởi",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "ヒーターがあります。",
+            exampleJp: "ヒーターが あります。",
             exampleVi: "Có máy điều hòa, lò sưởi."
         ),
         VocabWord(
-            kanji: "問題",
+            kanji: nil,
             kana: "もんだい",
             romaji: "mondai",
             meaningVi: "Câu hỏi, vấn đề",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "日本の冬は問題です。",
+            exampleJp: "にほんの ふゆは もんだいです。",
             exampleVi: "Mùa đông ở Nhật câu hỏi, vấn đề."
         ),
         VocabWord(
-            kanji: "答え",
+            kanji: nil,
             kana: "こたえ",
             romaji: "kotae",
             meaningVi: "Câu trả lời",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "答えがあります。",
+            exampleJp: "こたえが あります。",
             exampleVi: "Có câu trả lời."
         ),
         VocabWord(
-            kanji: "禁煙",
+            kanji: nil,
             kana: "きんえん",
             romaji: "kinen",
             meaningVi: "Cấm hút thuốc lá 「けんこう」ほけんしょう 「健康」保険証 Giấy bảo hiểm [sức khỏe]",
             topicId: "food",
             lessonNumber: 17,
-            exampleJp: "禁煙があります。",
+            exampleJp: "きんえんが あります。",
             exampleVi: "Có cấm hút thuốc lá 「けんこう」ほけんしょう 「健康」保険証 giấy bảo hiểm [sức khỏe]."
         ),
         VocabWord(
-            kanji: "風邪",
+            kanji: nil,
             kana: "かぜ",
             romaji: "kaze",
             meaningVi: "Cảm cúm",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "風邪があります。",
+            exampleJp: "かぜが あります。",
             exampleVi: "Có cảm cúm."
         ),
         VocabWord(
-            kanji: "熱",
+            kanji: nil,
             kana: "ねつ",
             romaji: "netsu",
             meaningVi: "Sốt 「お」ふろ 「お」風呂 Bồn tắm",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "熱があります。",
+            exampleJp: "ねつが あります。",
             exampleVi: "Có sốt 「お」ふろ 「お」風呂 bồn tắm."
         ),
         VocabWord(
@@ -11094,7 +11094,7 @@ public final class VocabRepository {
             meaningVi: "「お」風呂",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "「お」風呂があります。",
+            exampleJp: "「お」風呂が あります。",
             exampleVi: "Có 「お」風呂."
         ),
         VocabWord(
@@ -11104,17 +11104,17 @@ public final class VocabRepository {
             meaningVi: "ふろ",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "ふろがあります。",
+            exampleJp: "ふろが あります。",
             exampleVi: "Có ふろ."
         ),
         VocabWord(
-            kanji: "入",
+            kanji: nil,
             kana: "に",
             romaji: "ni",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "入があります。",
+            exampleJp: "にが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -11124,7 +11124,7 @@ public final class VocabRepository {
             meaningVi: "はい",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "日本の冬ははいです。",
+            exampleJp: "にほんの ふゆは はいです。",
             exampleVi: "Mùa đông ở Nhật はい."
         ),
         VocabWord(
@@ -11134,57 +11134,57 @@ public final class VocabRepository {
             meaningVi: "Đi tắm",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "るがあります。",
+            exampleJp: "るが あります。",
             exampleVi: "Có đi tắm."
         ),
         VocabWord(
-            kanji: "上着",
+            kanji: nil,
             kana: "うわぎ",
             romaji: "uwagi",
             meaningVi: "Áo khoác",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "上着があります。",
+            exampleJp: "うわぎが あります。",
             exampleVi: "Có áo khoác."
         ),
         VocabWord(
-            kanji: "下着",
+            kanji: nil,
             kana: "したぎ",
             romaji: "shitagi",
             meaningVi: "Đồ lót",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "下着があります。",
+            exampleJp: "したぎが あります。",
             exampleVi: "Có đồ lót."
         ),
         VocabWord(
             kanji: nil,
             kana: "～までに",
-            romaji: "～maでni",
+            romaji: "～madeni",
             meaningVi: "Đến khi ~, đến ~ (chỉ thời hạn)",
             topicId: "travel",
             lessonNumber: 17,
-            exampleJp: "～までにがあります。",
+            exampleJp: "～までにが あります。",
             exampleVi: "Có đến khi ~, đến ~."
         ),
         VocabWord(
             kanji: nil,
             kana: "ですから",
-            romaji: "でsukara",
+            romaji: "desukara",
             meaningVi: "Vì vậy, cho nên (đứng đầu câu)",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "ですからがあります。",
+            exampleJp: "ですからが あります。",
             exampleVi: "Có vì vậy, cho nên."
         ),
         VocabWord(
             kanji: nil,
             kana: "だめです。",
-            romaji: "dameでsu.",
+            romaji: "damedesu.",
             meaningVi: "Không được",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "だめです。があります。",
+            exampleJp: "だめです。が あります。",
             exampleVi: "Có không được."
         ),
         VocabWord(
@@ -11194,7 +11194,7 @@ public final class VocabRepository {
             meaningVi: "Có chuyện gì vậy? Sao vậy? 「～が」痛",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "どうしましたか。があります。",
+            exampleJp: "どうしましたか。が あります。",
             exampleVi: "Có có chuyện gì vậy? sao vậy? 「～が」痛."
         ),
         VocabWord(
@@ -11204,17 +11204,17 @@ public final class VocabRepository {
             meaningVi: "いた",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "いたがあります。",
+            exampleJp: "いたが あります。",
             exampleVi: "Có いた."
         ),
         VocabWord(
             kanji: nil,
             kana: "いです。",
-            romaji: "iでsu.",
+            romaji: "idesu.",
             meaningVi: "Đau [ ～]",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "いです。があります。",
+            exampleJp: "いです。が あります。",
             exampleVi: "Có đau [ ～]."
         ),
         VocabWord(
@@ -11224,7 +11224,7 @@ public final class VocabRepository {
             meaningVi: "Họng",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "のどがあります。",
+            exampleJp: "のどが あります。",
             exampleVi: "Có họng."
         ),
         VocabWord(
@@ -11234,7 +11234,7 @@ public final class VocabRepository {
             meaningVi: "お大事",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "お大事があります。",
+            exampleJp: "お大事が あります。",
             exampleVi: "Có お大事."
         ),
         VocabWord(
@@ -11244,7 +11244,7 @@ public final class VocabRepository {
             meaningVi: "だいじ",
             topicId: "greeting",
             lessonNumber: 17,
-            exampleJp: "だいじがあります。",
+            exampleJp: "だいじが あります。",
             exampleVi: "Có だいじ."
         ),
         VocabWord(
@@ -11254,7 +11254,7 @@ public final class VocabRepository {
             meaningVi: "chóng bình phục nhé! (dùng để chúc người ốm chóng khỏi)",
             topicId: "family",
             lessonNumber: 17,
-            exampleJp: "に。があります。",
+            exampleJp: "に。が あります。",
             exampleVi: "Có chóng bình phục nhé!."
         )
     ]
@@ -11264,31 +11264,31 @@ public final class VocabRepository {
         VocabWord(
             kanji: nil,
             kana: "できます",
-            romaji: "でkimasu",
+            romaji: "dekimasu",
             meaningVi: "Có thể, được, có khả năng",
             topicId: "food",
             lessonNumber: 18,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "歌います",
+            kanji: nil,
             kana: "うたいます",
             romaji: "utaimasu",
             meaningVi: "Hát",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 歌います。",
+            exampleJp: "まいにち うたいます。",
             exampleVi: "Hằng ngày tôi hát."
         ),
         VocabWord(
-            kanji: "弾きます",
+            kanji: nil,
             kana: "ひきます",
             romaji: "hikimasu",
             meaningVi: "Chơi [đàn pianô]",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
@@ -11298,137 +11298,137 @@ public final class VocabRepository {
             meaningVi: "Chơi đàn piano",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "「ピアノを～」があります。",
+            exampleJp: "「ピアノを～」が あります。",
             exampleVi: "Có chơi đàn piano."
         ),
         VocabWord(
-            kanji: "泳ぎます",
+            kanji: nil,
             kana: "およぎます",
             romaji: "oyogimasu",
             meaningVi: "Bơi",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 泳ぎます。",
+            exampleJp: "まいにち およぎます。",
             exampleVi: "Hằng ngày tôi bơi."
         ),
         VocabWord(
-            kanji: "直します",
+            kanji: nil,
             kana: "なおします",
             romaji: "naoshimasu",
             meaningVi: "Sửa, chữa",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 直します。",
+            exampleJp: "まいにち なおします。",
             exampleVi: "Hằng ngày tôi sửa, chữa."
         ),
         VocabWord(
-            kanji: "運転します",
+            kanji: nil,
             kana: "うんてんします",
             romaji: "untenshimasu",
             meaningVi: "Lái (xe), điều khiển",
             topicId: "travel",
             lessonNumber: 18,
-            exampleJp: "毎日 運転します。",
+            exampleJp: "まいにち うんてんします。",
             exampleVi: "Hằng ngày tôi lái."
         ),
         VocabWord(
-            kanji: "練習します",
+            kanji: nil,
             kana: "れんしゅうします",
             romaji: "renshuushimasu",
             meaningVi: "Tập, luyên tập",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 練習します。",
+            exampleJp: "まいにち れんしゅうします。",
             exampleVi: "Hằng ngày tôi tập, luyên tập."
         ),
         VocabWord(
-            kanji: "始めます",
+            kanji: nil,
             kana: "はじめます",
             romaji: "wajimemasu",
             meaningVi: "Bắt đầu",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 始めます。",
+            exampleJp: "まいにち はじめます。",
             exampleVi: "Hằng ngày tôi bắt đầu."
         ),
         VocabWord(
-            kanji: "洗います",
+            kanji: nil,
             kana: "あらいます",
             romaji: "araimasu",
             meaningVi: "Rửa, giặt",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 洗います。",
+            exampleJp: "まいにち あらいます。",
             exampleVi: "Hằng ngày tôi rửa, giặt."
         ),
         VocabWord(
-            kanji: "集めます",
+            kanji: nil,
             kana: "あつめます",
             romaji: "atsumemasu",
             meaningVi: "Tập trung, tập hợp",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 集めます。",
+            exampleJp: "まいにち あつめます。",
             exampleVi: "Hằng ngày tôi tập trung, tập hợp."
         ),
         VocabWord(
-            kanji: "捨てます",
+            kanji: nil,
             kana: "すてます",
             romaji: "sutemasu",
             meaningVi: "Vứt đi, bỏ đi",
             topicId: "travel",
             lessonNumber: 18,
-            exampleJp: "毎日 捨てます。",
+            exampleJp: "まいにち すてます。",
             exampleVi: "Hằng ngày tôi vứt đi, bỏ đi."
         ),
         VocabWord(
-            kanji: "換えます",
+            kanji: nil,
             kana: "かえます",
             romaji: "Trao",
             meaningVi: "đổi, đổi",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 換えます。",
+            exampleJp: "まいにち かえます。",
             exampleVi: "Hằng ngày tôi đổi, đổi."
         ),
         VocabWord(
-            kanji: "予約します",
+            kanji: nil,
             kana: "よやくします",
             romaji: "yoyakushimasu",
             meaningVi: "Đặt chỗ, đặt trước",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "毎日 予約します。",
+            exampleJp: "まいにち よやくします。",
             exampleVi: "Hằng ngày tôi đặt chỗ, đặt trước."
         ),
         VocabWord(
-            kanji: "簡単「な」",
+            kanji: nil,
             kana: "かんたん「な」",
             romaji: "kantan\"na\"",
             meaningVi: "Dễ, đơn giản",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "この町は簡単です。",
-            exampleVi: "Thành phố này dễ, đơn giản."
+            exampleJp: "この まちは かんたんです。",
+            exampleVi: "Thị trấn này dễ, đơn giản."
         ),
         VocabWord(
-            kanji: "故障",
+            kanji: nil,
             kana: "こしょう",
             romaji: "koshou",
             meaningVi: "Hỏng hóc, trục trặc",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "故障があります。",
+            exampleJp: "こしょうが あります。",
             exampleVi: "Có hỏng hóc, trục trặc."
         ),
         VocabWord(
-            kanji: "趣味",
+            kanji: nil,
             kana: "しゅみ",
             romaji: "shumi",
             meaningVi: "Sở thích",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "趣味があります。",
+            exampleJp: "しゅみが あります。",
             exampleVi: "Có sở thích."
         ),
         VocabWord(
@@ -11438,7 +11438,7 @@ public final class VocabRepository {
             meaningVi: "Trượt tuyết",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "スキーがあります。",
+            exampleJp: "スキーが あります。",
             exampleVi: "Có trượt tuyết."
         ),
         VocabWord(
@@ -11448,37 +11448,37 @@ public final class VocabRepository {
             meaningVi: "Mét",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "メートルがあります。",
+            exampleJp: "メートルが あります。",
             exampleVi: "Có mét."
         ),
         VocabWord(
-            kanji: "国際",
+            kanji: nil,
             kana: "こくさい",
             romaji: "kokusai",
             meaningVi: "Quốc tế",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "日本の冬は国際です。",
+            exampleJp: "にほんの ふゆは こくさいです。",
             exampleVi: "Mùa đông ở Nhật quốc tế."
         ),
         VocabWord(
-            kanji: "現金",
+            kanji: nil,
             kana: "げんきん",
             romaji: "genkin",
             meaningVi: "Tiền mặt",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "現金があります。",
+            exampleJp: "げんきんが あります。",
             exampleVi: "Có tiền mặt."
         ),
         VocabWord(
-            kanji: "日記",
+            kanji: nil,
             kana: "にっき",
             romaji: "nikki",
             meaningVi: "Nhật ký 「お」いのり 「お」祈り Sự cầu chúc",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "日記があります。",
+            exampleJp: "にっきが あります。",
             exampleVi: "Có nhật ký 「お」いのり 「お」祈り sự cầu chúc."
         ),
         VocabWord(
@@ -11488,47 +11488,47 @@ public final class VocabRepository {
             meaningVi: "します」 Cầu chúc",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "「～をがあります。",
+            exampleJp: "「～をが あります。",
             exampleVi: "Có します」 cầu chúc."
         ),
         VocabWord(
-            kanji: "課長",
+            kanji: nil,
             kana: "かちょう",
             romaji: "kachou",
             meaningVi: "Trưởng bộ phận, trưởng ban",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "課長があります。",
+            exampleJp: "かちょうが あります。",
             exampleVi: "Có trưởng bộ phận, trưởng ban."
         ),
         VocabWord(
-            kanji: "部長",
+            kanji: nil,
             kana: "ぶちょう",
             romaji: "buchou",
             meaningVi: "Trưởng phòng",
             topicId: "travel",
             lessonNumber: 18,
-            exampleJp: "部長へ行きます。",
+            exampleJp: "ぶちょうへ いきます。",
             exampleVi: "Tôi đi đến trưởng phòng."
         ),
         VocabWord(
-            kanji: "社長",
+            kanji: nil,
             kana: "しゃちょう",
             romaji: "shachou",
             meaningVi: "Giám đốc, chủ tịch",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "社長があります。",
+            exampleJp: "しゃちょうが あります。",
             exampleVi: "Có giám đốc, chủ tịch."
         ),
         VocabWord(
-            kanji: "大丈夫です。",
+            kanji: nil,
             kana: "だいじょうぶです。",
-            romaji: "daijoubuでsu.",
+            romaji: "daijoubudesu.",
             meaningVi: "Không hề gì. Không sao đâu.",
             topicId: "family",
             lessonNumber: 18,
-            exampleJp: "大丈夫です。があります。",
+            exampleJp: "だいじょうぶです。が あります。",
             exampleVi: "Có không hề gì. không sao đâu.."
         ),
         VocabWord(
@@ -11538,7 +11538,7 @@ public final class VocabRepository {
             meaningVi: "だめです。 Vẫn còn chưa được (câu nói khiêm tốn)",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "まだまだがあります。",
+            exampleJp: "まだまだが あります。",
             exampleVi: "Có だめです。 vẫn còn chưa được."
         ),
         VocabWord(
@@ -11548,17 +11548,17 @@ public final class VocabRepository {
             meaningVi: "Tôi còn phải cố gắng [tập] hơn nữa.",
             topicId: "family",
             lessonNumber: 18,
-            exampleJp: "もっと「練習し」ないと…があります。",
+            exampleJp: "もっと「練習し」ないと…が あります。",
             exampleVi: "Có tôi còn phải cố gắng [tập] hơn nữa.."
         ),
         VocabWord(
-            kanji: "動物",
+            kanji: nil,
             kana: "どうぶつ",
             romaji: "doubutsu",
             meaningVi: "Động vật",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "動物があります。",
+            exampleJp: "どうぶつが あります。",
             exampleVi: "Có động vật."
         ),
         VocabWord(
@@ -11568,17 +11568,17 @@ public final class VocabRepository {
             meaningVi: "Thật á! (dùng khi biểu lộ sự ngạc nhiên)",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "へえがあります。",
+            exampleJp: "へえが あります。",
             exampleVi: "Có thật á!."
         ),
         VocabWord(
-            kanji: "面白",
+            kanji: nil,
             kana: "それは",
             romaji: "sorewa",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "面白があります。",
+            exampleJp: "それはが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -11588,7 +11588,7 @@ public final class VocabRepository {
             meaningVi: "おもしろ",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "おもしろがあります。",
+            exampleJp: "おもしろが あります。",
             exampleVi: "Có おもしろ."
         ),
         VocabWord(
@@ -11598,7 +11598,7 @@ public final class VocabRepository {
             meaningVi: "Ôi hay quá nhỉ!",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "いね。があります。",
+            exampleJp: "いね。が あります。",
             exampleVi: "Có ôi hay quá nhỉ!."
         ),
         VocabWord(
@@ -11608,37 +11608,37 @@ public final class VocabRepository {
             meaningVi: "Mãi mà (dùng với động từ ở dạng phủ định)",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "なかなかがあります。",
+            exampleJp: "なかなかが あります。",
             exampleVi: "Có mãi mà."
         ),
         VocabWord(
-            kanji: "牧場",
+            kanji: nil,
             kana: "ぼくじょう",
             romaji: "bokujou",
             meaningVi: "Trại nuôi gia súc",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "牧場があります。",
+            exampleJp: "ぼくじょうが あります。",
             exampleVi: "Có trại nuôi gia súc."
         ),
         VocabWord(
             kanji: nil,
             kana: "ほんとうですか。",
-            romaji: "hontouでsuka.",
+            romaji: "hontoudesuka.",
             meaningVi: "Thật sao?",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "ほんとうですか。があります。",
+            exampleJp: "ほんとうですか。が あります。",
             exampleVi: "Có thật sao?."
         ),
         VocabWord(
-            kanji: "是非",
+            kanji: nil,
             kana: "ぜひ",
             romaji: "zehi",
             meaningVi: "Bằng mọi cách, nhất định",
             topicId: "food",
             lessonNumber: 18,
-            exampleJp: "是非が好きです。",
+            exampleJp: "ぜひが すきです。",
             exampleVi: "Tôi thích bằng mọi cách, nhất định."
         ),
         VocabWord(
@@ -11648,7 +11648,7 @@ public final class VocabRepository {
             meaningVi: "nhạc The Beatles",
             topicId: "greeting",
             lessonNumber: 18,
-            exampleJp: "ビートルズがあります。",
+            exampleJp: "ビートルズが あります。",
             exampleVi: "Có nhạc the beatles."
         )
     ]
@@ -11656,33 +11656,33 @@ public final class VocabRepository {
     // MARK: - Bài 19 (38 từ)
     public static let lesson19Words: [VocabWord] = [
         VocabWord(
-            kanji: "掃除します",
+            kanji: nil,
             kana: "そうじします",
             romaji: "soujishimasu",
             meaningVi: "Quét, quét dọn, làm vệ sinh",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "毎日 掃除します。",
+            exampleJp: "まいにち そうじします。",
             exampleVi: "Hằng ngày tôi quét, quét dọn, làm vệ sinh."
         ),
         VocabWord(
-            kanji: "洗濯します",
+            kanji: nil,
             kana: "せんたくします",
             romaji: "sentakushimasu",
             meaningVi: "Giặt (quần áo)",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "毎日 洗濯します。",
+            exampleJp: "まいにち せんたくします。",
             exampleVi: "Hằng ngày tôi giặt."
         ),
         VocabWord(
-            kanji: "泊まります",
+            kanji: nil,
             kana: "とまります",
             romaji: "tomarimasu",
             meaningVi: "Ngủ trọ, nghỉ [ở khách sạn]",
             topicId: "travel",
             lessonNumber: 19,
-            exampleJp: "毎日 泊まります。",
+            exampleJp: "まいにち とまります。",
             exampleVi: "Hằng ngày tôi ngủ trọ, nghỉ [ở khách sạn]."
         ),
         VocabWord(
@@ -11692,7 +11692,7 @@ public final class VocabRepository {
             meaningVi: "Nghỉ ở khách sạn",
             topicId: "travel",
             lessonNumber: 19,
-            exampleJp: "「ホテルに～」があります。",
+            exampleJp: "「ホテルに～」が あります。",
             exampleVi: "Có nghỉ ở khách sạn."
         ),
         VocabWord(
@@ -11702,17 +11702,17 @@ public final class VocabRepository {
             meaningVi: "Trở nên, trở thành",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "毎日 なります。",
+            exampleJp: "まいにち なります。",
             exampleVi: "Hằng ngày tôi trở nên, trở thành."
         ),
         VocabWord(
-            kanji: "登ります",
+            kanji: nil,
             kana: "のぼります",
             romaji: "noborimasu",
             meaningVi: "Trèo, leo (núi)",
             topicId: "travel",
             lessonNumber: 19,
-            exampleJp: "毎日 登ります。",
+            exampleJp: "まいにち のぼります。",
             exampleVi: "Hằng ngày tôi trèo, leo."
         ),
         VocabWord(
@@ -11722,7 +11722,7 @@ public final class VocabRepository {
             meaningVi: "「山",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "「山があります。",
+            exampleJp: "「山が あります。",
             exampleVi: "Có 「山."
         ),
         VocabWord(
@@ -11732,7 +11732,7 @@ public final class VocabRepository {
             meaningVi: "やま",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "やまがあります。",
+            exampleJp: "やまが あります。",
             exampleVi: "Có やま."
         ),
         VocabWord(
@@ -11742,47 +11742,47 @@ public final class VocabRepository {
             meaningVi: "núi",
             topicId: "travel",
             lessonNumber: 19,
-            exampleJp: "に～」があります。",
+            exampleJp: "に～」が あります。",
             exampleVi: "Có núi."
         ),
         VocabWord(
-            kanji: "眠い",
+            kanji: nil,
             kana: "ねむい",
             romaji: "nemui",
             meaningVi: "Buồn ngủ",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "日本の冬は眠いです。",
+            exampleJp: "にほんの ふゆは ねむいです。",
             exampleVi: "Mùa đông ở Nhật buồn ngủ."
         ),
         VocabWord(
-            kanji: "強い",
+            kanji: nil,
             kana: "つよい",
             romaji: "tsuyoi",
             meaningVi: "Mạnh, khỏe",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "日本の冬は強いです。",
+            exampleJp: "にほんの ふゆは つよいです。",
             exampleVi: "Mùa đông ở Nhật mạnh, khỏe."
         ),
         VocabWord(
-            kanji: "弱い",
+            kanji: nil,
             kana: "よわい",
             romaji: "yowai",
             meaningVi: "Yếu",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "日本の冬は弱いです。",
+            exampleJp: "にほんの ふゆは よわいです。",
             exampleVi: "Mùa đông ở Nhật yếu."
         ),
         VocabWord(
-            kanji: "調子",
+            kanji: nil,
             kana: "ちょうし",
             romaji: "choushi",
             meaningVi: "Tình trạng, sức khỏe",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "調子があります。",
+            exampleJp: "ちょうしが あります。",
             exampleVi: "Có tình trạng, sức khỏe."
         ),
         VocabWord(
@@ -11792,7 +11792,7 @@ public final class VocabRepository {
             meaningVi: "いい 調子が いい Sức khỏe tốt",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "ちょうしががあります。",
+            exampleJp: "ちょうしがが あります。",
             exampleVi: "Có いい 調子が いい sức khỏe tốt."
         ),
         VocabWord(
@@ -11802,7 +11802,7 @@ public final class VocabRepository {
             meaningVi: "わるい 調子が 悪い Sức khỏe yếu",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "ちょうしががあります。",
+            exampleJp: "ちょうしがが あります。",
             exampleVi: "Có わるい 調子が 悪い sức khỏe yếu."
         ),
         VocabWord(
@@ -11812,7 +11812,7 @@ public final class VocabRepository {
             meaningVi: "Gôn",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "ゴルフがあります。",
+            exampleJp: "ゴルフが あります。",
             exampleVi: "Có gôn."
         ),
         VocabWord(
@@ -11822,17 +11822,17 @@ public final class VocabRepository {
             meaningVi: "Chơi gôn",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "「～をします」があります。",
+            exampleJp: "「～をします」が あります。",
             exampleVi: "Có chơi gôn."
         ),
         VocabWord(
-            kanji: "相撲",
+            kanji: nil,
             kana: "すもう",
             romaji: "sumou",
             meaningVi: "Môn võ Sư mô của Nhật",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "相撲があります。",
+            exampleJp: "すもうが あります。",
             exampleVi: "Có môn võ sư mô của nhật."
         ),
         VocabWord(
@@ -11842,7 +11842,7 @@ public final class VocabRepository {
             meaningVi: "Trò chơi bắn đạn pachinko",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "パチンコがあります。",
+            exampleJp: "パチンコが あります。",
             exampleVi: "Có trò chơi bắn đạn pachinko."
         ),
         VocabWord(
@@ -11852,17 +11852,17 @@ public final class VocabRepository {
             meaningVi: "Chơi pachinko",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "「～をします」があります。",
+            exampleJp: "「～をします」が あります。",
             exampleVi: "Có chơi pachinko."
         ),
         VocabWord(
-            kanji: "お茶",
+            kanji: nil,
             kana: "おちゃ",
             romaji: "ocha",
             meaningVi: "Trà, trà đạo",
             topicId: "food",
             lessonNumber: 19,
-            exampleJp: "お茶が好きです。",
+            exampleJp: "おちゃが すきです。",
             exampleVi: "Tôi thích trà, trà đạo."
         ),
         VocabWord(
@@ -11872,7 +11872,7 @@ public final class VocabRepository {
             meaningVi: "「～を習",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "「～を習があります。",
+            exampleJp: "「～を習が あります。",
             exampleVi: "Có 「～を習."
         ),
         VocabWord(
@@ -11882,7 +11882,7 @@ public final class VocabRepository {
             meaningVi: "なら",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "ならがあります。",
+            exampleJp: "ならが あります。",
             exampleVi: "Có なら."
         ),
         VocabWord(
@@ -11892,37 +11892,37 @@ public final class VocabRepository {
             meaningVi: "Học trà đạo",
             topicId: "food",
             lessonNumber: 19,
-            exampleJp: "います」が好きです。",
+            exampleJp: "います」が すきです。",
             exampleVi: "Tôi thích học trà đạo."
         ),
         VocabWord(
-            kanji: "一度",
+            kanji: nil,
             kana: "いちど",
             romaji: "ichido",
             meaningVi: "Một lần",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "一度があります。",
+            exampleJp: "いちどが あります。",
             exampleVi: "Có một lần."
         ),
         VocabWord(
-            kanji: "一度も",
+            kanji: nil,
             kana: "いちども",
             romaji: "ichidomo",
             meaningVi: "Một lần cũng không (dùng với thể phủ định)",
             topicId: "family",
             lessonNumber: 19,
-            exampleJp: "一度もがあります。",
+            exampleJp: "いちどもが あります。",
             exampleVi: "Có một lần cũng không."
         ),
         VocabWord(
-            kanji: "初めて",
+            kanji: nil,
             kana: "はじめて",
             romaji: "wajimete",
             meaningVi: "Lần đầu tiên",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "初めてがあります。",
+            exampleJp: "はじめてが あります。",
             exampleVi: "Có lần đầu tiên."
         ),
         VocabWord(
@@ -11932,7 +11932,7 @@ public final class VocabRepository {
             meaningVi: "Dần dần",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "だんだんがあります。",
+            exampleJp: "だんだんが あります。",
             exampleVi: "Có dần dần."
         ),
         VocabWord(
@@ -11942,37 +11942,37 @@ public final class VocabRepository {
             meaningVi: "Sắp",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "もうすぐがあります。",
+            exampleJp: "もうすぐが あります。",
             exampleVi: "Có sắp."
         ),
         VocabWord(
             kanji: nil,
             kana: "おかげさまで。",
-            romaji: "okagesamaで.",
+            romaji: "okagesamade.",
             meaningVi: "Cảm ơn. Nhờ trời.",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "おかげさまで。があります。",
+            exampleJp: "おかげさまで。が あります。",
             exampleVi: "Có cảm ơn. nhờ trời.."
         ),
         VocabWord(
-            kanji: "乾杯",
+            kanji: nil,
             kana: "かんぱい",
             romaji: "kanpai",
             meaningVi: "Cạn ly",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "日本の冬は乾杯です。",
+            exampleJp: "にほんの ふゆは かんぱいです。",
             exampleVi: "Mùa đông ở Nhật cạn ly."
         ),
         VocabWord(
-            kanji: "実は",
+            kanji: nil,
             kana: "じつは",
             romaji: "jitsuwa",
             meaningVi: "Sự thật là, thật ra là",
             topicId: "travel",
             lessonNumber: 19,
-            exampleJp: "実はがあります。",
+            exampleJp: "じつはが あります。",
             exampleVi: "Có sự thật là, thật ra là."
         ),
         VocabWord(
@@ -11982,17 +11982,17 @@ public final class VocabRepository {
             meaningVi: "Việc ăn kiêng",
             topicId: "food",
             lessonNumber: 19,
-            exampleJp: "ダイエットがあります。",
+            exampleJp: "ダイエットが あります。",
             exampleVi: "Có việc ăn kiêng."
         ),
         VocabWord(
-            kanji: "何回も",
+            kanji: nil,
             kana: "なんかいも",
             romaji: "nankaimo",
             meaningVi: "Nhiều lần",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "何回もがあります。",
+            exampleJp: "なんかいもが あります。",
             exampleVi: "Có nhiều lần."
         ),
         VocabWord(
@@ -12002,18 +12002,18 @@ public final class VocabRepository {
             meaningVi: "nhiên, nhưng (đứng đầu câu)",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "しかしがあります。",
+            exampleJp: "しかしが あります。",
             exampleVi: "Có nhiên, nhưng."
         ),
         VocabWord(
-            kanji: "無理「な」",
+            kanji: nil,
             kana: "むり「な」",
             romaji: "muri\"na\"",
             meaningVi: "Vô lý, không thể",
             topicId: "family",
             lessonNumber: 19,
-            exampleJp: "この町は無理です。",
-            exampleVi: "Thành phố này vô lý, không thể."
+            exampleJp: "この まちは むりです。",
+            exampleVi: "Thị trấn này vô lý, không thể."
         ),
         VocabWord(
             kanji: nil,
@@ -12022,7 +12022,7 @@ public final class VocabRepository {
             meaningVi: "いい Tốt cho sức khỏe",
             topicId: "greeting",
             lessonNumber: 19,
-            exampleJp: "体にがあります。",
+            exampleJp: "体にが あります。",
             exampleVi: "Có いい tốt cho sức khỏe."
         ),
         VocabWord(
@@ -12032,7 +12032,7 @@ public final class VocabRepository {
             meaningVi: "Bánh ngọt",
             topicId: "food",
             lessonNumber: 19,
-            exampleJp: "ケーキが好きです。",
+            exampleJp: "ケーキが すきです。",
             exampleVi: "Tôi thích bánh ngọt."
         )
     ]
@@ -12040,13 +12040,13 @@ public final class VocabRepository {
     // MARK: - Bài 20 (39 từ)
     public static let lesson20Words: [VocabWord] = [
         VocabWord(
-            kanji: "要ります",
+            kanji: nil,
             kana: "いります",
             romaji: "irimasu",
             meaningVi: "Cần, cần có [từ điển]",
             topicId: "travel",
             lessonNumber: 20,
-            exampleJp: "毎日 要ります。",
+            exampleJp: "まいにち いります。",
             exampleVi: "Hằng ngày tôi cần, cần có [từ điển]."
         ),
         VocabWord(
@@ -12056,7 +12056,7 @@ public final class VocabRepository {
             meaningVi: "「辞",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "「辞があります。",
+            exampleJp: "「辞が あります。",
             exampleVi: "Có 「辞."
         ),
         VocabWord(
@@ -12066,7 +12066,7 @@ public final class VocabRepository {
             meaningVi: "じ",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "じがあります。",
+            exampleJp: "じが あります。",
             exampleVi: "Có じ."
         ),
         VocabWord(
@@ -12076,7 +12076,7 @@ public final class VocabRepository {
             meaningVi: "書",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "書があります。",
+            exampleJp: "書が あります。",
             exampleVi: "Có 書."
         ),
         VocabWord(
@@ -12086,7 +12086,7 @@ public final class VocabRepository {
             meaningVi: "しょ",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "しょがあります。",
+            exampleJp: "しょが あります。",
             exampleVi: "Có しょ."
         ),
         VocabWord(
@@ -12096,47 +12096,47 @@ public final class VocabRepository {
             meaningVi: "Cần từ điển",
             topicId: "travel",
             lessonNumber: 20,
-            exampleJp: "が」があります。",
+            exampleJp: "が」が あります。",
             exampleVi: "Có cần từ điển."
         ),
         VocabWord(
-            kanji: "調べます",
+            kanji: nil,
             kana: "しらべます",
             romaji: "shirabemasu",
             meaningVi: "Nghiên cứu, kiểm tra, điều tra",
             topicId: "travel",
             lessonNumber: 20,
-            exampleJp: "毎日 調べます。",
+            exampleJp: "まいにち しらべます。",
             exampleVi: "Hằng ngày tôi nghiên cứu, kiểm tra, điều tra."
         ),
         VocabWord(
-            kanji: "電話します",
+            kanji: nil,
             kana: "でんわします",
-            romaji: "でnwashimasu",
+            romaji: "denwashimasu",
             meaningVi: "Gọi điện thoại",
             topicId: "travel",
             lessonNumber: 20,
-            exampleJp: "毎日 電話します。",
+            exampleJp: "まいにち でんわします。",
             exampleVi: "Hằng ngày tôi gọi điện thoại."
         ),
         VocabWord(
-            kanji: "僕",
+            kanji: nil,
             kana: "ぼく",
             romaji: "boku",
             meaningVi: "Mình, tớ (từ thay cho “watashi”, đàn ông tự xưng một cách tự nhiên trong không khí thân mật với nhau)",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "僕が好きです。",
+            exampleJp: "ぼくが すきです。",
             exampleVi: "Tôi thích mình, tớ."
         ),
         VocabWord(
-            kanji: "君",
+            kanji: nil,
             kana: "きみ",
             romaji: "kimi",
             meaningVi: "Cậu (thay cho “anata”, đàn ông gọi bạn một cách tự nhiên và thân mật)",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "君が好きです。",
+            exampleJp: "きみが すきです。",
             exampleVi: "Tôi thích cậu."
         ),
         VocabWord(
@@ -12146,7 +12146,7 @@ public final class VocabRepository {
             meaningVi: "Em~, cậu ~ (từ thay cho “san”, dùng chỉ với đàn ông trong không khí tự nhiên thân mật)",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "～くんがあります。",
+            exampleJp: "～くんが あります。",
             exampleVi: "Có em~, cậu ~."
         ),
         VocabWord(
@@ -12156,7 +12156,7 @@ public final class VocabRepository {
             meaningVi: "Ừ (cách nói tự nhiên, thân mật của “hai”)",
             topicId: "food",
             lessonNumber: 20,
-            exampleJp: "うんが好きです。",
+            exampleJp: "うんが すきです。",
             exampleVi: "Tôi thích ừ."
         ),
         VocabWord(
@@ -12166,7 +12166,7 @@ public final class VocabRepository {
             meaningVi: "Không (cách nói tự nhiên, thân mật của “iie”)",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "ううんが好きです。",
+            exampleJp: "ううんが すきです。",
             exampleVi: "Tôi thích không."
         ),
         VocabWord(
@@ -12176,7 +12176,7 @@ public final class VocabRepository {
             meaningVi: "Đằng này (cách nói tự nhiên, thân mật của “kochira”)",
             topicId: "food",
             lessonNumber: 20,
-            exampleJp: "こっちが好きです。",
+            exampleJp: "こっちが すきです。",
             exampleVi: "Tôi thích đằng này."
         ),
         VocabWord(
@@ -12186,7 +12186,7 @@ public final class VocabRepository {
             meaningVi: "Đằng đó (cách nói tự nhiên của, thân mật “sochira”)",
             topicId: "food",
             lessonNumber: 20,
-            exampleJp: "そっちが好きです。",
+            exampleJp: "そっちが すきです。",
             exampleVi: "Tôi thích đằng đó."
         ),
         VocabWord(
@@ -12196,7 +12196,7 @@ public final class VocabRepository {
             meaningVi: "Đằng kia (cách nói tự nhiên, thân mật của “achira”)",
             topicId: "food",
             lessonNumber: 20,
-            exampleJp: "あっちが好きです。",
+            exampleJp: "あっちが すきです。",
             exampleVi: "Tôi thích đằng kia."
         ),
         VocabWord(
@@ -12206,17 +12206,17 @@ public final class VocabRepository {
             meaningVi: "Đằng nào, phía nào (cách nói tự nhiên, thân mật của “dochira”)",
             topicId: "food",
             lessonNumber: 20,
-            exampleJp: "どっちが好きです。",
+            exampleJp: "どっちが すきです。",
             exampleVi: "Tôi thích đằng nào, phía nào."
         ),
         VocabWord(
-            kanji: "場所",
+            kanji: nil,
             kana: "ばしょ",
             romaji: "basho",
             meaningVi: "Chỗ, địa điểm",
             topicId: "travel",
             lessonNumber: 20,
-            exampleJp: "場所があります。",
+            exampleJp: "ばしょが あります。",
             exampleVi: "Có chỗ, địa điểm."
         ),
         VocabWord(
@@ -12226,37 +12226,37 @@ public final class VocabRepository {
             meaningVi: "Nhân viên công ty, cán bộ, người làm công ăn lương",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "サラリーマンが好きです。",
+            exampleJp: "サラリーマンが すきです。",
             exampleVi: "Tôi thích nhân viên công ty, cán bộ, người làm công ăn lương."
         ),
         VocabWord(
-            kanji: "言葉",
+            kanji: nil,
             kana: "ことば",
             romaji: "kotoba",
             meaningVi: "Từ, từ ngữ, từ vựng",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "言葉があります。",
+            exampleJp: "ことばが あります。",
             exampleVi: "Có từ, từ ngữ, từ vựng."
         ),
         VocabWord(
-            kanji: "物価",
+            kanji: nil,
             kana: "ぶっか",
             romaji: "bukka",
             meaningVi: "Giá cả, vật giá",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "物価があります。",
+            exampleJp: "ぶっかが あります。",
             exampleVi: "Có giá cả, vật giá."
         ),
         VocabWord(
-            kanji: "着物",
+            kanji: nil,
             kana: "きもの",
             romaji: "Kimono",
             meaningVi: "(trang phục truyền thống của Nhật Bản)",
             topicId: "travel",
             lessonNumber: 20,
-            exampleJp: "着物があります。",
+            exampleJp: "きものが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -12266,47 +12266,47 @@ public final class VocabRepository {
             meaningVi: "Visa, hộ chiếu",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "ビザがあります。",
+            exampleJp: "ビザが あります。",
             exampleVi: "Có visa, hộ chiếu."
         ),
         VocabWord(
-            kanji: "初め",
+            kanji: nil,
             kana: "はじめ",
             romaji: "wajime",
             meaningVi: "Đầu tiên, lúc đầu",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "初めがあります。",
+            exampleJp: "はじめが あります。",
             exampleVi: "Có đầu tiên, lúc đầu."
         ),
         VocabWord(
-            kanji: "終わり",
+            kanji: nil,
             kana: "おわり",
             romaji: "owari",
             meaningVi: "Kết thúc, cuối",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "終わりがあります。",
+            exampleJp: "おわりが あります。",
             exampleVi: "Có kết thúc, cuối."
         ),
         VocabWord(
-            kanji: "この間",
+            kanji: nil,
             kana: "このあいだ",
             romaji: "konoaida",
             meaningVi: "Mấy hôm gần đây, mấy hôm trước",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "この間があります。",
+            exampleJp: "このあいだが あります。",
             exampleVi: "Có mấy hôm gần đây, mấy hôm trước."
         ),
         VocabWord(
-            kanji: "皆で",
+            kanji: nil,
             kana: "みんなで",
-            romaji: "minnaで",
+            romaji: "minnade",
             meaningVi: "Tất cả mọi người",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "皆でがあります。",
+            exampleJp: "みんなでが あります。",
             exampleVi: "Có tất cả mọi người."
         ),
         VocabWord(
@@ -12316,7 +12316,7 @@ public final class VocabRepository {
             meaningVi: "Nhưng (dạng thông thường của “ga”)",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "～けどへ行きます。",
+            exampleJp: "～けどへ いきます。",
             exampleVi: "Tôi đi đến nhưng."
         ),
         VocabWord(
@@ -12326,7 +12326,7 @@ public final class VocabRepository {
             meaningVi: "待",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "待があります。",
+            exampleJp: "待が あります。",
             exampleVi: "Có 待."
         ),
         VocabWord(
@@ -12336,7 +12336,7 @@ public final class VocabRepository {
             meaningVi: "ま",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "まがあります。",
+            exampleJp: "まが あります。",
             exampleVi: "Có ま."
         ),
         VocabWord(
@@ -12346,7 +12346,7 @@ public final class VocabRepository {
             meaningVi: "Tớ chờ cậu nhé. Mình sẽ chờ đấy!",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "っているよ。があります。",
+            exampleJp: "っているよ。が あります。",
             exampleVi: "Có tớ chờ cậu nhé. mình sẽ chờ đấy!."
         ),
         VocabWord(
@@ -12356,7 +12356,7 @@ public final class VocabRepository {
             meaningVi: "国",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "国があります。",
+            exampleJp: "国が あります。",
             exampleVi: "Có 国."
         ),
         VocabWord(
@@ -12366,17 +12366,17 @@ public final class VocabRepository {
             meaningVi: "くに",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "くにがあります。",
+            exampleJp: "くにが あります。",
             exampleVi: "Có くに."
         ),
         VocabWord(
-            kanji: "帰",
+            kanji: nil,
             kana: "へ",
             romaji: "e",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "帰があります。",
+            exampleJp: "へが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -12386,7 +12386,7 @@ public final class VocabRepository {
             meaningVi: "かえ",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "かえがあります。",
+            exampleJp: "かえが あります。",
             exampleVi: "Có かえ."
         ),
         VocabWord(
@@ -12396,7 +12396,7 @@ public final class VocabRepository {
             meaningVi: "Bạn về nước à?",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "るの？が好きです。",
+            exampleJp: "るの？が すきです。",
             exampleVi: "Tôi thích bạn về nước à?."
         ),
         VocabWord(
@@ -12406,7 +12406,7 @@ public final class VocabRepository {
             meaningVi: "するの？ Bạn thì thế nào?",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "どうがあります。",
+            exampleJp: "どうが あります。",
             exampleVi: "Có するの？ bạn thì thế nào?."
         ),
         VocabWord(
@@ -12416,7 +12416,7 @@ public final class VocabRepository {
             meaningVi: "しようかな。 Mình sẽ thế nào à?",
             topicId: "greeting",
             lessonNumber: 20,
-            exampleJp: "どうがあります。",
+            exampleJp: "どうが あります。",
             exampleVi: "Có しようかな。 mình sẽ thế nào à?."
         ),
         VocabWord(
@@ -12426,7 +12426,7 @@ public final class VocabRepository {
             meaningVi: "Nếu bạn thích, nếu được, nếu ổn",
             topicId: "family",
             lessonNumber: 20,
-            exampleJp: "よかったらがあります。",
+            exampleJp: "よかったらが あります。",
             exampleVi: "Có nếu bạn thích, nếu được, nếu ổn."
         )
     ]
@@ -12434,23 +12434,23 @@ public final class VocabRepository {
     // MARK: - Bài 21 (53 từ)
     public static let lesson21Words: [VocabWord] = [
         VocabWord(
-            kanji: "思います",
+            kanji: nil,
             kana: "おもいます",
             romaji: "omoimasu",
-            meaningVi: "Nghĩ, nghĩ rằng, cho rằng (Nhóm Ⅰ, 思います、思う、思って)",
+            meaningVi: "Nghĩ, nghĩ rằng, cho rằng (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "毎日 思います。",
+            exampleJp: "まいにち おもいます。",
             exampleVi: "Hằng ngày tôi nghĩ, nghĩ rằng, cho rằng."
         ),
         VocabWord(
-            kanji: "言います",
+            kanji: nil,
             kana: "いいます",
             romaji: "iimasu",
-            meaningVi: "Nói (Nhóm Ⅰ, 言います、言う、言って)",
+            meaningVi: "Nói (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "毎日 言います。",
+            exampleJp: "まいにち いいます。",
             exampleVi: "Hằng ngày tôi nói."
         ),
         VocabWord(
@@ -12460,7 +12460,7 @@ public final class VocabRepository {
             meaningVi: "たちます【Ⅰ】 《役に 立ちます、役に立つ、",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "やくにがあります。",
+            exampleJp: "やくにが あります。",
             exampleVi: "Có たちます【ⅰ】 《役に 立ちます、役に立つ、."
         ),
         VocabWord(
@@ -12470,107 +12470,107 @@ public final class VocabRepository {
             meaningVi: "Có ích, có lợi",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "役に立って》があります。",
+            exampleJp: "役に立って》が あります。",
             exampleVi: "Có có ích, có lợi."
         ),
         VocabWord(
-            kanji: "便利",
+            kanji: nil,
             kana: "べんり",
             romaji: "benri",
             meaningVi: "Tiệ n lợ i",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "便利があります。",
+            exampleJp: "べんりが あります。",
             exampleVi: "Có tiệ n lợ i."
         ),
         VocabWord(
-            kanji: "不便「な」",
+            kanji: nil,
             kana: "ふべん「な」",
             romaji: "fuben\"na\"",
             meaningVi: "Không tiện, bất tiện",
             topicId: "family",
             lessonNumber: 21,
-            exampleJp: "この町は不便です。",
-            exampleVi: "Thành phố này không tiện, bất tiện."
+            exampleJp: "この まちは ふべんです。",
+            exampleVi: "Thị trấn này không tiện, bất tiện."
         ),
         VocabWord(
-            kanji: "同じ",
+            kanji: nil,
             kana: "おなじ",
             romaji: "onaji",
             meaningVi: "Giống, giống nhau, chung",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "同じがあります。",
+            exampleJp: "おなじが あります。",
             exampleVi: "Có giống, giống nhau, chung."
         ),
         VocabWord(
-            kanji: "研修旅行",
+            kanji: nil,
             kana: "けんしゅうりょこう",
             romaji: "kenshuuryokou",
             meaningVi: "Chuyến du lịch thực tập",
             topicId: "travel",
             lessonNumber: 21,
-            exampleJp: "研修旅行があります。",
+            exampleJp: "けんしゅうりょこうが あります。",
             exampleVi: "Có chuyến du lịch thực tập."
         ),
         VocabWord(
-            kanji: "意見",
+            kanji: nil,
             kana: "いけん",
             romaji: "iken",
             meaningVi: "Ý kiến",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "意見があります。",
+            exampleJp: "いけんが あります。",
             exampleVi: "Có ý kiến."
         ),
         VocabWord(
-            kanji: "会議",
+            kanji: nil,
             kana: "かいぎ",
             romaji: "kaigi",
             meaningVi: "Cuộ c họ p",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "会議があります。",
+            exampleJp: "かいぎが あります。",
             exampleVi: "Có cuộ c họ p."
         ),
         VocabWord(
-            kanji: "質問",
+            kanji: nil,
             kana: "しつもん",
             romaji: "shitsumon",
             meaningVi: "Câu hỏ i",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "質問があります。",
+            exampleJp: "しつもんが あります。",
             exampleVi: "Có câu hỏ i."
         ),
         VocabWord(
-            kanji: "技術",
+            kanji: nil,
             kana: "ぎじゅつ",
             romaji: "gijutsu",
             meaningVi: "Kỹ thuật",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "技術があります。",
+            exampleJp: "ぎじゅつが あります。",
             exampleVi: "Có kỹ thuật."
         ),
         VocabWord(
-            kanji: "交通",
+            kanji: nil,
             kana: "こうつう",
             romaji: "Giao",
             meaningVi: "thông",
             topicId: "family",
             lessonNumber: 21,
-            exampleJp: "交通があります。",
+            exampleJp: "こうつうが あります。",
             exampleVi: "Có thông."
         ),
         VocabWord(
-            kanji: "最近",
+            kanji: nil,
             kana: "さいきん",
             romaji: "saikin",
             meaningVi: "Gần đây",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "最近があります。",
+            exampleJp: "さいきんが あります。",
             exampleVi: "Có gần đây."
         ),
         VocabWord(
@@ -12580,7 +12580,7 @@ public final class VocabRepository {
             meaningVi: "Có lẽ",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "たぶんがあります。",
+            exampleJp: "たぶんが あります。",
             exampleVi: "Có có lẽ."
         ),
         VocabWord(
@@ -12590,17 +12590,17 @@ public final class VocabRepository {
             meaningVi: "Chắc chắn",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "きっとがあります。",
+            exampleJp: "きっとが あります。",
             exampleVi: "Có chắc chắn."
         ),
         VocabWord(
-            kanji: "本当に",
+            kanji: nil,
             kana: "ほんとうに",
             romaji: "hontouni",
             meaningVi: "Thật là, quả thật, đúng là",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "本当にがあります。",
+            exampleJp: "ほんとうにが あります。",
             exampleVi: "Có thật là, quả thật, đúng là."
         ),
         VocabWord(
@@ -12610,7 +12610,7 @@ public final class VocabRepository {
             meaningVi: "đến mức ~ như thế (đi với dạng phủ định)",
             topicId: "travel",
             lessonNumber: 21,
-            exampleJp: "そんなにがあります。",
+            exampleJp: "そんなにが あります。",
             exampleVi: "Có đến mức ~ như thế."
         ),
         VocabWord(
@@ -12620,17 +12620,17 @@ public final class VocabRepository {
             meaningVi: "ついて Về",
             topicId: "travel",
             lessonNumber: 21,
-            exampleJp: "～にがあります。",
+            exampleJp: "～にが あります。",
             exampleVi: "Có ついて về."
         ),
         VocabWord(
-            kanji: "他の～",
+            kanji: nil,
             kana: "ほかの～",
             romaji: "hokano～",
             meaningVi: "~ khác",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "他の～があります。",
+            exampleJp: "ほかの～が あります。",
             exampleVi: "Có ~ khác."
         ),
         VocabWord(
@@ -12640,7 +12640,7 @@ public final class VocabRepository {
             meaningVi: "Nhưng mà 「日本",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "けれどもがあります。",
+            exampleJp: "けれどもが あります。",
             exampleVi: "Có nhưng mà 「日本."
         ),
         VocabWord(
@@ -12650,7 +12650,7 @@ public final class VocabRepository {
             meaningVi: "にほん",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "にほんがあります。",
+            exampleJp: "にほんが あります。",
             exampleVi: "Có にほん."
         ),
         VocabWord(
@@ -12660,7 +12660,7 @@ public final class VocabRepository {
             meaningVi: "は」技術",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "は」技術があります。",
+            exampleJp: "は」技術が あります。",
             exampleVi: "Có は」技術."
         ),
         VocabWord(
@@ -12670,17 +12670,17 @@ public final class VocabRepository {
             meaningVi: "ぎじゅつ",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "ぎじゅつがあります。",
+            exampleJp: "ぎじゅつが あります。",
             exampleVi: "Có ぎじゅつ."
         ),
         VocabWord(
-            kanji: "進",
+            kanji: nil,
             kana: "が",
             romaji: "ga",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "進があります。",
+            exampleJp: "がが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -12690,68 +12690,68 @@ public final class VocabRepository {
             meaningVi: "すす",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "すすがあります。",
+            exampleJp: "すすが あります。",
             exampleVi: "Có すす."
         ),
         VocabWord(
             kanji: nil,
             kana: "んでいます。",
-            romaji: "nでimasu.",
+            romaji: "ndeimasu.",
             meaningVi: "[Nhật Bản] tiên tiến về kỹ thuật. [Ở Nhật Bản] kỹ thuật phát triển (cao) Từ vự ng tham khả o",
             topicId: "travel",
             lessonNumber: 21,
-            exampleJp: "んでいます。があります。",
+            exampleJp: "んでいます。が あります。",
             exampleVi: "Có [nhật bản] tiên tiến về kỹ thuật. [ở nhật bản] kỹ thuật phát triển."
         ),
         VocabWord(
-            kanji: "勝ちます",
+            kanji: nil,
             kana: "かちます",
             romaji: "kachimasu",
-            meaningVi: "Thắng, chiến thắng (Nhóm Ⅰ, 勝ちます、勝つ、勝って)",
+            meaningVi: "Thắng, chiến thắng (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "毎日 勝ちます。",
+            exampleJp: "まいにち かちます。",
             exampleVi: "Hằng ngày tôi thắng, chiến thắng."
         ),
         VocabWord(
-            kanji: "足ります",
+            kanji: nil,
             kana: "たります",
             romaji: "tarimasu",
-            meaningVi: "Đủ, đầy đủ (Nhóm Ⅱ, 足ります、足りる、足りて)",
+            meaningVi: "Đủ, đầy đủ (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "毎日 足ります。",
+            exampleJp: "まいにち たります。",
             exampleVi: "Hằng ngày tôi đủ, đầy đủ."
         ),
         VocabWord(
-            kanji: "負けます",
+            kanji: nil,
             kana: "まけます",
             romaji: "makemasu",
-            meaningVi: "Thua, thất bại (Nhóm Ⅱ, 負けます、負ける、負けて)",
+            meaningVi: "Thua, thất bại (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "毎日 負けます。",
+            exampleJp: "まいにち まけます。",
             exampleVi: "Hằng ngày tôi thua, thất bại."
         ),
         VocabWord(
-            kanji: "質問《します、する、して》",
+            kanji: nil,
             kana: "しつもん",
             romaji: "shitsumon",
             meaningVi: "Câu hỏi, hỏi",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "質問《します、する、して》があります。",
+            exampleJp: "しつもんが あります。",
             exampleVi: "Có câu hỏi, hỏi."
         ),
         VocabWord(
-            kanji: "無駄「な」",
+            kanji: nil,
             kana: "むだ「な」",
             romaji: "muda\"na\"",
             meaningVi: "Phí, lãng phí",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "この町は無駄です。",
-            exampleVi: "Thành phố này phí, lãng phí."
+            exampleJp: "この まちは むだです。",
+            exampleVi: "Thị trấn này phí, lãng phí."
         ),
         VocabWord(
             kanji: nil,
@@ -12760,37 +12760,37 @@ public final class VocabRepository {
             meaningVi: "Tuyệt vời, khủng khiếp, kỳ diệu",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "日本の冬はすごいです。",
+            exampleJp: "にほんの ふゆは すごいです。",
             exampleVi: "Mùa đông ở Nhật tuyệt vời, khủng khiếp, kỳ diệu."
         ),
         VocabWord(
-            kanji: "首相",
+            kanji: nil,
             kana: "しゅしょう",
             romaji: "shushou",
             meaningVi: "Thủ tướng",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "首相があります。",
+            exampleJp: "しゅしょうが あります。",
             exampleVi: "Có thủ tướng."
         ),
         VocabWord(
-            kanji: "大統領",
+            kanji: nil,
             kana: "だいとうりょう",
             romaji: "daitouryou",
             meaningVi: "Tổng thống",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "大統領があります。",
+            exampleJp: "だいとうりょうが あります。",
             exampleVi: "Có tổng thống."
         ),
         VocabWord(
-            kanji: "政治",
+            kanji: nil,
             kana: "せいじ",
             romaji: "seiji",
             meaningVi: "Chính trị",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "政治があります。",
+            exampleJp: "せいじが あります。",
             exampleVi: "Có chính trị."
         ),
         VocabWord(
@@ -12800,7 +12800,7 @@ public final class VocabRepository {
             meaningVi: "Bản tin, tin tức",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "ニュースがあります。",
+            exampleJp: "ニュースが あります。",
             exampleVi: "Có bản tin, tin tức."
         ),
         VocabWord(
@@ -12810,17 +12810,17 @@ public final class VocabRepository {
             meaningVi: "「～をします」 Bài phát biểu, bài nói chuyện",
             topicId: "family",
             lessonNumber: 21,
-            exampleJp: "スピーチがあります。",
+            exampleJp: "スピーチが あります。",
             exampleVi: "Có 「～をします」 bài phát biểu, bài nói chuyện."
         ),
         VocabWord(
-            kanji: "試合",
+            kanji: nil,
             kana: "しあい",
             romaji: "shiai",
             meaningVi: "Trận đấu, trò chơi",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "日本の冬は試合です。",
+            exampleJp: "にほんの ふゆは しあいです。",
             exampleVi: "Mùa đông ở Nhật trận đấu, trò chơi."
         ),
         VocabWord(
@@ -12830,7 +12830,7 @@ public final class VocabRepository {
             meaningVi: "「～をします」 Làm thêm, làm partime 「お」はなし 「お」話「～をします」 Câu chuyện",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "アルバイトがあります。",
+            exampleJp: "アルバイトが あります。",
             exampleVi: "Có 「～をします」 làm thêm, làm partime 「お」はなし 「お」話「～をします」 câu chuyện."
         ),
         VocabWord(
@@ -12840,17 +12840,17 @@ public final class VocabRepository {
             meaningVi: "Sự hài hước, hóm hỉnh",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "ユーモアがあります。",
+            exampleJp: "ユーモアが あります。",
             exampleVi: "Có sự hài hước, hóm hỉnh."
         ),
         VocabWord(
             kanji: nil,
             kana: "デザイン",
-            romaji: "でzain",
+            romaji: "dezain",
             meaningVi: "Mẫu thiết kế",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "デザインがあります。",
+            exampleJp: "デザインが あります。",
             exampleVi: "Có mẫu thiết kế."
         ),
         VocabWord(
@@ -12860,7 +12860,7 @@ public final class VocabRepository {
             meaningVi: "Giờ cao điểm",
             topicId: "travel",
             lessonNumber: 21,
-            exampleJp: "ラッシュ（アワー）に勉強します。",
+            exampleJp: "ラッシュ（アワー）に べんきょうします。",
             exampleVi: "Tôi học vào giờ cao điểm."
         ),
         VocabWord(
@@ -12870,17 +12870,17 @@ public final class VocabRepository {
             meaningVi: "がありません。 Ko còn cách nào khác.",
             topicId: "food",
             lessonNumber: 21,
-            exampleJp: "しかたが好きです。",
+            exampleJp: "しかたが すきです。",
             exampleVi: "Tôi thích がありません。 ko còn cách nào khác.."
         ),
         VocabWord(
-            kanji: "飲",
+            kanji: nil,
             kana: "～でも",
-            romaji: "～でmo",
+            romaji: "～demo",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "飲があります。",
+            exampleJp: "～でもが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -12890,7 +12890,7 @@ public final class VocabRepository {
             meaningVi: "の",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "のがあります。",
+            exampleJp: "のが あります。",
             exampleVi: "Có の."
         ),
         VocabWord(
@@ -12900,7 +12900,7 @@ public final class VocabRepository {
             meaningVi: "Bạn có uống… không?",
             topicId: "family",
             lessonNumber: 21,
-            exampleJp: "みませんか。があります。",
+            exampleJp: "みませんか。が あります。",
             exampleVi: "Có bạn có uống… không?."
         ),
         VocabWord(
@@ -12910,7 +12910,7 @@ public final class VocabRepository {
             meaningVi: "ぜひ見",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "ぜひ見があります。",
+            exampleJp: "ぜひ見が あります。",
             exampleVi: "Có ぜひ見."
         ),
         VocabWord(
@@ -12920,7 +12920,7 @@ public final class VocabRepository {
             meaningVi: "み",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "みがあります。",
+            exampleJp: "みが あります。",
             exampleVi: "Có み."
         ),
         VocabWord(
@@ -12930,7 +12930,7 @@ public final class VocabRepository {
             meaningVi: "Nhất định tôi phải xem…",
             topicId: "family",
             lessonNumber: 21,
-            exampleJp: "ないと……。があります。",
+            exampleJp: "ないと……。が あります。",
             exampleVi: "Có nhất định tôi phải xem…."
         ),
         VocabWord(
@@ -12940,7 +12940,7 @@ public final class VocabRepository {
             meaningVi: "Đương nhiên, dĩ nhiên",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "もちろんがあります。",
+            exampleJp: "もちろんが あります。",
             exampleVi: "Có đương nhiên, dĩ nhiên."
         ),
         VocabWord(
@@ -12950,7 +12950,7 @@ public final class VocabRepository {
             meaningVi: "kangaroo",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "カンガルーへ行きます。",
+            exampleJp: "カンガルーへ いきます。",
             exampleVi: "Tôi đi đến kangaroo."
         ),
         VocabWord(
@@ -12960,7 +12960,7 @@ public final class VocabRepository {
             meaningVi: "Thuyền trưởng James Cook",
             topicId: "greeting",
             lessonNumber: 21,
-            exampleJp: "キャプテン・クックがあります。",
+            exampleJp: "キャプテン・クックが あります。",
             exampleVi: "Có thuyền trưởng james cook."
         )
     ]
@@ -12968,13 +12968,13 @@ public final class VocabRepository {
     // MARK: - Bài 22 (47 từ)
     public static let lesson22Words: [VocabWord] = [
         VocabWord(
-            kanji: "着ます",
+            kanji: nil,
             kana: "きます",
             romaji: "kimasu",
-            meaningVi: "Mặc [áo sơ mi…] (Nhóm Ⅰ, 着ます、着る、着て)",
+            meaningVi: "Mặc [áo sơ mi…] (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
@@ -12984,17 +12984,17 @@ public final class VocabRepository {
             meaningVi: "Mặc áo sơ mi",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "「シャツ／コートを～」があります。",
+            exampleJp: "「シャツ／コートを～」が あります。",
             exampleVi: "Có mặc áo sơ mi."
         ),
         VocabWord(
-            kanji: "履きます",
+            kanji: nil,
             kana: "はきます",
             romaji: "wakimasu",
-            meaningVi: "Đi [giày], mặc [quần] (Nhóm Ⅰ, 履きます、履く、履いて)",
+            meaningVi: "Đi [giày], mặc [quần] (Nhóm Ⅰ)",
             topicId: "travel",
             lessonNumber: 22,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
@@ -13004,17 +13004,17 @@ public final class VocabRepository {
             meaningVi: "Đi giày",
             topicId: "travel",
             lessonNumber: 22,
-            exampleJp: "「くつ／くつした／ずぼんを～」があります。",
+            exampleJp: "「くつ／くつした／ずぼんを～」が あります。",
             exampleVi: "Có đi giày."
         ),
         VocabWord(
-            kanji: "被ります",
+            kanji: nil,
             kana: "かぶります",
             romaji: "kaburimasu",
-            meaningVi: "Đội [mũ] (Nhóm Ⅰ, 被ります、被る、被って)",
+            meaningVi: "Đội [mũ] (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "毎日 被ります。",
+            exampleJp: "まいにち かぶります。",
             exampleVi: "Hằng ngày tôi đội [mũ]."
         ),
         VocabWord(
@@ -13024,17 +13024,17 @@ public final class VocabRepository {
             meaningVi: "Đội mũ",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "「ぼうしを～」があります。",
+            exampleJp: "「ぼうしを～」が あります。",
             exampleVi: "Có đội mũ."
         ),
         VocabWord(
-            kanji: "掛けます",
+            kanji: nil,
             kana: "かけます",
             romaji: "kakemasu",
-            meaningVi: "Đeo [kính] (Nhóm Ⅱ, 掛けます、掛ける、掛けて)",
+            meaningVi: "Đeo [kính] (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "毎日 掛けます。",
+            exampleJp: "まいにち かけます。",
             exampleVi: "Hằng ngày tôi đeo [kính]."
         ),
         VocabWord(
@@ -13044,7 +13044,7 @@ public final class VocabRepository {
             meaningVi: "Đeo kính",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "「めがねを～」があります。",
+            exampleJp: "「めがねを～」が あります。",
             exampleVi: "Có đeo kính."
         ),
         VocabWord(
@@ -13054,7 +13054,7 @@ public final class VocabRepository {
             meaningVi: "《持って行きます、持って行く、 (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "学校へ行きます。",
+            exampleJp: "がっこうへ いきます。",
             exampleVi: "Tôi đi đến trường."
         ),
         VocabWord(
@@ -13064,17 +13064,17 @@ public final class VocabRepository {
             meaningVi: "đi",
             topicId: "travel",
             lessonNumber: 22,
-            exampleJp: "持って行って》があります。",
+            exampleJp: "持って行って》が あります。",
             exampleVi: "Có đi."
         ),
         VocabWord(
-            kanji: "《持って来ます、持って来る、",
+            kanji: nil,
             kana: "もってきます【III】",
             romaji: "mottekimasu【III】",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "《持って来ます、持って来る、があります。",
+            exampleJp: "もってきます【III】が あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -13084,47 +13084,47 @@ public final class VocabRepository {
             meaningVi: "đến",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "持って来て》があります。",
+            exampleJp: "持って来て》が あります。",
             exampleVi: "Có đến."
         ),
         VocabWord(
-            kanji: "部品",
+            kanji: nil,
             kana: "ぶひん",
             romaji: "buhin",
             meaningVi: "Phụ tùng, linh kiện",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "部品があります。",
+            exampleJp: "ぶひんが あります。",
             exampleVi: "Có phụ tùng, linh kiện."
         ),
         VocabWord(
-            kanji: "服",
+            kanji: nil,
             kana: "ふく",
             romaji: "fuku",
             meaningVi: "Áo, quần áo",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "服があります。",
+            exampleJp: "ふくが あります。",
             exampleVi: "Có áo, quần áo."
         ),
         VocabWord(
-            kanji: "帽子",
+            kanji: nil,
             kana: "ぼうし",
             romaji: "boushi",
             meaningVi: "Mũ",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "帽子があります。",
+            exampleJp: "ぼうしが あります。",
             exampleVi: "Có mũ."
         ),
         VocabWord(
-            kanji: "眼鏡",
+            kanji: nil,
             kana: "めがね",
             romaji: "megane",
             meaningVi: "Kính",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "眼鏡があります。",
+            exampleJp: "めがねが あります。",
             exampleVi: "Có kính."
         ),
         VocabWord(
@@ -13134,7 +13134,7 @@ public final class VocabRepository {
             meaningVi: "Mũ bảo hiểm, mũ an toàn",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "ヘルメットがあります。",
+            exampleJp: "ヘルメットが あります。",
             exampleVi: "Có mũ bảo hiểm, mũ an toàn."
         ),
         VocabWord(
@@ -13144,7 +13144,7 @@ public final class VocabRepository {
             meaningVi: "Áp choàng ngoài, áo măng tô",
             topicId: "food",
             lessonNumber: 22,
-            exampleJp: "コートがあります。",
+            exampleJp: "コートが あります。",
             exampleVi: "Có áp choàng ngoài, áo măng tô."
         ),
         VocabWord(
@@ -13154,7 +13154,7 @@ public final class VocabRepository {
             meaningVi: "Bộ com lê",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "スーツがあります。",
+            exampleJp: "スーツが あります。",
             exampleVi: "Có bộ com lê."
         ),
         VocabWord(
@@ -13164,7 +13164,7 @@ public final class VocabRepository {
             meaningVi: "Áo len",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "セーターがあります。",
+            exampleJp: "セーターが あります。",
             exampleVi: "Có áo len."
         ),
         VocabWord(
@@ -13174,27 +13174,27 @@ public final class VocabRepository {
             meaningVi: "Nhà sản xuất",
             topicId: "travel",
             lessonNumber: 22,
-            exampleJp: "メーカーがあります。",
+            exampleJp: "メーカーが あります。",
             exampleVi: "Có nhà sản xuất."
         ),
         VocabWord(
-            kanji: "約束",
+            kanji: nil,
             kana: "やくそく",
             romaji: "yakusoku",
             meaningVi: "Lời hứa, hẹn",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "約束があります。",
+            exampleJp: "やくそくが あります。",
             exampleVi: "Có lời hứa, hẹn."
         ),
         VocabWord(
-            kanji: "今度",
+            kanji: nil,
             kana: "また",
             romaji: "mata",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "今度があります。",
+            exampleJp: "またが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -13204,7 +13204,7 @@ public final class VocabRepository {
             meaningVi: "こんど",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "こんどがあります。",
+            exampleJp: "こんどが あります。",
             exampleVi: "Có こんど."
         ),
         VocabWord(
@@ -13214,7 +13214,7 @@ public final class VocabRepository {
             meaningVi: "お願",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "お願があります。",
+            exampleJp: "お願が あります。",
             exampleVi: "Có お願."
         ),
         VocabWord(
@@ -13224,7 +13224,7 @@ public final class VocabRepository {
             meaningVi: "ねが",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "ねががあります。",
+            exampleJp: "ねがが あります。",
             exampleVi: "Có ねが."
         ),
         VocabWord(
@@ -13234,7 +13234,7 @@ public final class VocabRepository {
             meaningVi: "để lần khác (cách từ chối gián tiếp)",
             topicId: "food",
             lessonNumber: 22,
-            exampleJp: "いします。が好きです。",
+            exampleJp: "いします。が すきです。",
             exampleVi: "Tôi thích để lần khác."
         ),
         VocabWord(
@@ -13244,7 +13244,7 @@ public final class VocabRepository {
             meaningVi: "お先",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "お先があります。",
+            exampleJp: "お先が あります。",
             exampleVi: "Có お先."
         ),
         VocabWord(
@@ -13254,17 +13254,17 @@ public final class VocabRepository {
             meaningVi: "さき",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "さきがあります。",
+            exampleJp: "さきが あります。",
             exampleVi: "Có さき."
         ),
         VocabWord(
-            kanji: "失礼",
+            kanji: nil,
             kana: "に",
             romaji: "ni",
             meaningVi: "",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "失礼があります。",
+            exampleJp: "にが あります。",
             exampleVi: "Có ."
         ),
         VocabWord(
@@ -13274,7 +13274,7 @@ public final class VocabRepository {
             meaningVi: "しつれい",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "日本の冬はしつれいです。",
+            exampleJp: "にほんの ふゆは しつれいです。",
             exampleVi: "Mùa đông ở Nhật しつれい."
         ),
         VocabWord(
@@ -13284,7 +13284,7 @@ public final class VocabRepository {
             meaningVi: "phép tôi về trước (dùng khi về sớm hơn người khác)",
             topicId: "family",
             lessonNumber: 22,
-            exampleJp: "毎日 します。",
+            exampleJp: "まいにち します。",
             exampleVi: "Hằng ngày tôi phép tôi về trước."
         ),
         VocabWord(
@@ -13294,7 +13294,7 @@ public final class VocabRepository {
             meaningVi: "お疲",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "お疲があります。",
+            exampleJp: "お疲が あります。",
             exampleVi: "Có お疲."
         ),
         VocabWord(
@@ -13304,37 +13304,37 @@ public final class VocabRepository {
             meaningVi: "つか",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "つかがあります。",
+            exampleJp: "つかが あります。",
             exampleVi: "Có つか."
         ),
         VocabWord(
             kanji: nil,
             kana: "れさまでした。",
-            romaji: "resamaでshita.",
+            romaji: "resamadeshita.",
             meaningVi: "Cảm ơn nhé. Anh về nhé. (dùng khi người khác làm việc cho mình xong. Hoặc khi người cùng làm trong cơ quan về sớm hơn mình thì nói câu này để chào.) Từ vự ng tham khả o",
             topicId: "family",
             lessonNumber: 22,
-            exampleJp: "れさまでした。があります。",
+            exampleJp: "れさまでした。が あります。",
             exampleVi: "Có cảm ơn nhé. anh về nhé.."
         ),
         VocabWord(
-            kanji: "生まれます",
+            kanji: nil,
             kana: "うまれます",
             romaji: "umaremasu",
-            meaningVi: "Được sinh ra (Nhóm Ⅱ, 生まれます、生まれる、生まれて)",
+            meaningVi: "Được sinh ra (Nhóm Ⅱ)",
             topicId: "travel",
             lessonNumber: 22,
-            exampleJp: "毎日 生まれます。",
+            exampleJp: "まいにち うまれます。",
             exampleVi: "Hằng ngày tôi được sinh ra."
         ),
         VocabWord(
-            kanji: "家賃",
+            kanji: nil,
             kana: "やちん",
             romaji: "yachin",
             meaningVi: "Tiền thuê nhà",
             topicId: "travel",
             lessonNumber: 22,
-            exampleJp: "家賃があります。",
+            exampleJp: "やちんが あります。",
             exampleVi: "Có tiền thuê nhà."
         ),
         VocabWord(
@@ -13344,37 +13344,37 @@ public final class VocabRepository {
             meaningVi: "cư",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "アパートがあります。",
+            exampleJp: "アパートが あります。",
             exampleVi: "Có cư."
         ),
         VocabWord(
-            kanji: "和室",
+            kanji: nil,
             kana: "わしつ",
             romaji: "washitsu",
             meaningVi: "Phòng kiểu nhật",
             topicId: "travel",
             lessonNumber: 22,
-            exampleJp: "和室へ行きます。",
+            exampleJp: "わしつへ いきます。",
             exampleVi: "Tôi đi đến phòng kiểu nhật."
         ),
         VocabWord(
-            kanji: "押し入れ",
+            kanji: nil,
             kana: "おしいれ",
             romaji: "oshiire",
             meaningVi: "Tủ đựng quần áo kiểu Nhật",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "押し入れがあります。",
+            exampleJp: "おしいれが あります。",
             exampleVi: "Có tủ đựng quần áo kiểu nhật."
         ),
         VocabWord(
-            kanji: "布団",
+            kanji: nil,
             kana: "ふとん",
             romaji: "futon",
             meaningVi: "Chăn",
             topicId: "food",
             lessonNumber: 22,
-            exampleJp: "布団があります。",
+            exampleJp: "ふとんが あります。",
             exampleVi: "Có chăn."
         ),
         VocabWord(
@@ -13384,7 +13384,7 @@ public final class VocabRepository {
             meaningVi: "Nhà bếp kiêm phòng ăn",
             topicId: "food",
             lessonNumber: 22,
-            exampleJp: "ダイニングキッチンへ行きます。",
+            exampleJp: "ダイニングキッチンへ いきます。",
             exampleVi: "Tôi đi đến nhà bếp kiêm phòng ăn."
         ),
         VocabWord(
@@ -13394,17 +13394,17 @@ public final class VocabRepository {
             meaningVi: "Paris",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "パリがあります。",
+            exampleJp: "パリが あります。",
             exampleVi: "Có paris."
         ),
         VocabWord(
-            kanji: "万里の長城",
+            kanji: nil,
             kana: "ばんりのちょうじょう",
             romaji: "banrinochoujou",
             meaningVi: "Vạn lý trường thành",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "万里の長城へ行きます。",
+            exampleJp: "ばんりのちょうじょうへ いきます。",
             exampleVi: "Tôi đi đến vạn lý trường thành."
         ),
         VocabWord(
@@ -13414,7 +13414,7 @@ public final class VocabRepository {
             meaningVi: "レジャー白書",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "レジャー白書があります。",
+            exampleJp: "レジャー白書が あります。",
             exampleVi: "Có レジャー白書."
         ),
         VocabWord(
@@ -13424,7 +13424,7 @@ public final class VocabRepository {
             meaningVi: "Sách trắng giải trí",
             topicId: "greeting",
             lessonNumber: 22,
-            exampleJp: "はくしょがあります。",
+            exampleJp: "はくしょが あります。",
             exampleVi: "Có sách trắng giải trí."
         ),
         VocabWord(
@@ -13434,7 +13434,7 @@ public final class VocabRepository {
             meaningVi: "Để tôi xem đã.",
             topicId: "family",
             lessonNumber: 22,
-            exampleJp: "うーんがあります。",
+            exampleJp: "うーんが あります。",
             exampleVi: "Có để tôi xem đã.."
         )
     ]
@@ -13442,13 +13442,13 @@ public final class VocabRepository {
     // MARK: - Bài 23 (45 từ)
     public static let lesson23Words: [VocabWord] = [
         VocabWord(
-            kanji: "聞きます",
+            kanji: nil,
             kana: "ききます",
             romaji: "kikimasu",
-            meaningVi: "Hỏi (Nhóm Ⅰ, 聞きます、聞く、聞いて)",
+            meaningVi: "Hỏi (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
@@ -13458,37 +13458,37 @@ public final class VocabRepository {
             meaningVi: "Hỏi thầy cô giáo",
             topicId: "family",
             lessonNumber: 23,
-            exampleJp: "「先生に～」があります。",
+            exampleJp: "「先生に～」が あります。",
             exampleVi: "Có hỏi thầy cô giáo."
         ),
         VocabWord(
-            kanji: "押します",
+            kanji: nil,
             kana: "おします",
             romaji: "oshimasu",
-            meaningVi: "Đẩy, ép, ấn (Nhóm Ⅰ, 押します、押す、押して)",
+            meaningVi: "Đẩy, ép, ấn (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "毎日 押します。",
+            exampleJp: "まいにち おします。",
             exampleVi: "Hằng ngày tôi đẩy, ép, ấn."
         ),
         VocabWord(
-            kanji: "回します",
+            kanji: nil,
             kana: "まわします",
             romaji: "mawashimasu",
-            meaningVi: "Quay, vặn, xoay (Nhóm Ⅰ, 回します、回す、回して)",
+            meaningVi: "Quay, vặn, xoay (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "毎日 回します。",
+            exampleJp: "まいにち まわします。",
             exampleVi: "Hằng ngày tôi quay, vặn, xoay."
         ),
         VocabWord(
-            kanji: "動きます",
+            kanji: nil,
             kana: "うごきます",
             romaji: "ugokimasu",
-            meaningVi: "Chạy, vận hành (Nhóm Ⅰ, 動きます、動く、動いて)",
+            meaningVi: "Chạy, vận hành (Nhóm Ⅰ)",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
@@ -13498,17 +13498,17 @@ public final class VocabRepository {
             meaningVi: "[Máy] chạy, vận hành",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "きかいが～」があります。",
+            exampleJp: "きかいが～」が あります。",
             exampleVi: "Có [máy] chạy, vận hành."
         ),
         VocabWord(
-            kanji: "止まります",
+            kanji: nil,
             kana: "とまります",
             romaji: "tomarimasu",
-            meaningVi: "Ngừng, dừng lại (Nhóm Ⅰ, 止まります、止まる、止まって)",
+            meaningVi: "Ngừng, dừng lại (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "毎日 止まります。",
+            exampleJp: "まいにち とまります。",
             exampleVi: "Hằng ngày tôi ngừng, dừng lại."
         ),
         VocabWord(
@@ -13518,147 +13518,147 @@ public final class VocabRepository {
             meaningVi: "[Máy] ngừng, dừng lại",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "「きかいが～」があります。",
+            exampleJp: "「きかいが～」が あります。",
             exampleVi: "Có [máy] ngừng, dừng lại."
         ),
         VocabWord(
-            kanji: "出ます",
+            kanji: nil,
             kana: "でます",
-            romaji: "でmasu",
-            meaningVi: "Ra, chạy ra (Nhóm Ⅱ, 出ます、出る、出て)",
+            romaji: "demasu",
+            meaningVi: "Ra, chạy ra (Nhóm Ⅱ)",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "毎日 出ます。",
+            exampleJp: "まいにち でます。",
             exampleVi: "Hằng ngày tôi ra, chạy ra."
         ),
         VocabWord(
-            kanji: "「切符が～」",
+            kanji: nil,
             kana: "「きっぷが～」",
             romaji: "\"kippuga～\"",
             meaningVi: "Vé ra",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "「切符が～」があります。",
+            exampleJp: "「きっぷが～」が あります。",
             exampleVi: "Có vé ra."
         ),
         VocabWord(
-            kanji: "困ります",
+            kanji: nil,
             kana: "こまります",
             romaji: "komarimasu",
-            meaningVi: "Thắc mắc, không ổn, phiền, khó khăn (Nhóm Ⅰ, 困ります、困る、困って)",
+            meaningVi: "Thắc mắc, không ổn, phiền, khó khăn (Nhóm Ⅰ)",
             topicId: "family",
             lessonNumber: 23,
-            exampleJp: "毎日 困ります。",
+            exampleJp: "まいにち こまります。",
             exampleVi: "Hằng ngày tôi thắc mắc, không ổn, phiền, khó khăn."
         ),
         VocabWord(
-            kanji: "頑張ります",
+            kanji: nil,
             kana: "がんばります",
             romaji: "ganbarimasu",
-            meaningVi: "Gắng sức, cố gắng (Nhóm Ⅰ, 頑張ります、頑張る、頑張って)",
+            meaningVi: "Gắng sức, cố gắng (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "毎日 頑張ります。",
+            exampleJp: "まいにち がんばります。",
             exampleVi: "Hằng ngày tôi gắng sức, cố gắng."
         ),
         VocabWord(
-            kanji: "渡ります",
+            kanji: nil,
             kana: "わたります",
             romaji: "watarimasu",
-            meaningVi: "Sang, qua (Nhóm Ⅰ, 渡ります、渡る、渡って)",
+            meaningVi: "Sang, qua (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "毎日 渡ります。",
+            exampleJp: "まいにち わたります。",
             exampleVi: "Hằng ngày tôi sang, qua."
         ),
         VocabWord(
-            kanji: "「道を～」",
+            kanji: nil,
             kana: "「みちを～」",
             romaji: "\"michio～\"",
             meaningVi: "Sang, qua [đường]",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "「道を～」があります。",
+            exampleJp: "「みちを～」が あります。",
             exampleVi: "Có sang, qua [đường]."
         ),
         VocabWord(
-            kanji: "曲がります",
+            kanji: nil,
             kana: "まがります",
             romaji: "magarimasu",
-            meaningVi: "Rẽ, quẹo (Nhóm Ⅰ, 曲がります、曲がる、曲がって)",
+            meaningVi: "Rẽ, quẹo (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "毎日 曲がります。",
+            exampleJp: "まいにち まがります。",
             exampleVi: "Hằng ngày tôi rẽ, quẹo."
         ),
         VocabWord(
-            kanji: "「右へ～」",
+            kanji: nil,
             kana: "「みぎへ～」",
             romaji: "\"migihe～\"",
             meaningVi: "Rẽ, quẹo phải",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "「右へ～」があります。",
+            exampleJp: "「みぎへ～」が あります。",
             exampleVi: "Có rẽ, quẹo phải."
         ),
         VocabWord(
-            kanji: "調節（します、する、して）【Ⅲ】",
+            kanji: nil,
             kana: "ちょうせつ",
             romaji: "chousetsu",
             meaningVi: "Điều chỉnh",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "調節（します、する、して）【Ⅲ】があります。",
+            exampleJp: "ちょうせつが あります。",
             exampleVi: "Có điều chỉnh."
         ),
         VocabWord(
-            kanji: "悲しい",
+            kanji: nil,
             kana: "かなしい",
             romaji: "kanashii",
             meaningVi: "Buồn, đau khổ",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "日本の冬は悲しいです。",
+            exampleJp: "にほんの ふゆは かなしいです。",
             exampleVi: "Mùa đông ở Nhật buồn, đau khổ."
         ),
         VocabWord(
-            kanji: "嬉しい",
+            kanji: nil,
             kana: "うれしい",
             romaji: "ureshii",
             meaningVi: "Sướng, vui sướng",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "日本の冬は嬉しいです。",
+            exampleJp: "にほんの ふゆは うれしいです。",
             exampleVi: "Mùa đông ở Nhật sướng, vui sướng."
         ),
         VocabWord(
-            kanji: "寂しい",
+            kanji: nil,
             kana: "さびしい",
             romaji: "sabishii",
             meaningVi: "Lẻ loi, cô đơn, buồn",
             topicId: "family",
             lessonNumber: 23,
-            exampleJp: "日本の冬は寂しいです。",
+            exampleJp: "にほんの ふゆは さびしいです。",
             exampleVi: "Mùa đông ở Nhật lẻ loi, cô đơn, buồn."
         ),
         VocabWord(
-            kanji: "眠い",
+            kanji: nil,
             kana: "ねむい",
             romaji: "nemui",
             meaningVi: "Buồn ngủ",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "日本の冬は眠いです。",
+            exampleJp: "にほんの ふゆは ねむいです。",
             exampleVi: "Mùa đông ở Nhật buồn ngủ."
         ),
         VocabWord(
-            kanji: "意味",
+            kanji: nil,
             kana: "いみ",
             romaji: "imi",
             meaningVi: "Nghĩa, ý nghĩa 「せんえん」さつ 「千円」札 Tờ một nghìn Yên",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "意味があります。",
+            exampleJp: "いみが あります。",
             exampleVi: "Có nghĩa, ý nghĩa 「せんえん」さつ 「千円」札 tờ một nghìn yên."
         ),
         VocabWord(
@@ -13668,17 +13668,17 @@ public final class VocabRepository {
             meaningVi: "Tiền thừa",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "おつりがあります。",
+            exampleJp: "おつりが あります。",
             exampleVi: "Có tiền thừa."
         ),
         VocabWord(
-            kanji: "細かいお金",
+            kanji: nil,
             kana: "こまかいおかね",
             romaji: "komakaiokane",
             meaningVi: "Tiền lẻ",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "細かいお金があります。",
+            exampleJp: "こまかいおかねが あります。",
             exampleVi: "Có tiền lẻ."
         ),
         VocabWord(
@@ -13688,37 +13688,37 @@ public final class VocabRepository {
             meaningVi: "Nút, cúc, khuy",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "ボタンがあります。",
+            exampleJp: "ボタンが あります。",
             exampleVi: "Có nút, cúc, khuy."
         ),
         VocabWord(
-            kanji: "信号",
+            kanji: nil,
             kana: "しんごう",
             romaji: "shingou",
             meaningVi: "Đèn giao thông",
             topicId: "family",
             lessonNumber: 23,
-            exampleJp: "信号があります。",
+            exampleJp: "しんごうが あります。",
             exampleVi: "Có đèn giao thông."
         ),
         VocabWord(
-            kanji: "道",
+            kanji: nil,
             kana: "みち",
             romaji: "michi",
             meaningVi: "Đường",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "道があります。",
+            exampleJp: "みちが あります。",
             exampleVi: "Có đường."
         ),
         VocabWord(
-            kanji: "橋",
+            kanji: nil,
             kana: "はし",
             romaji: "washi",
             meaningVi: "Cầu",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "橋があります。",
+            exampleJp: "はしが あります。",
             exampleVi: "Có cầu."
         ),
         VocabWord(
@@ -13728,7 +13728,7 @@ public final class VocabRepository {
             meaningVi: "Thẳ ng",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "まっすぐがあります。",
+            exampleJp: "まっすぐが あります。",
             exampleVi: "Có thẳ ng."
         ),
         VocabWord(
@@ -13738,37 +13738,37 @@ public final class VocabRepository {
             meaningVi: "Thường, hay",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "よくがあります。",
+            exampleJp: "よくが あります。",
             exampleVi: "Có thường, hay."
         ),
         VocabWord(
-            kanji: "困ったな。",
+            kanji: nil,
             kana: "こまったな",
             romaji: "komattana",
             meaningVi: "Chết rồi! Gay quá!",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "困ったな。へ行きます。",
+            exampleJp: "こまったなへ いきます。",
             exampleVi: "Tôi đi đến chết rồi! gay quá!."
         ),
         VocabWord(
-            kanji: "何に使いますか。",
+            kanji: nil,
             kana: "なににつかいますか。",
             romaji: "naninitsukaimasuka.",
             meaningVi: "Dùng (cái này) để làm gì? Từ vự ng tham khả o",
             topicId: "food",
             lessonNumber: 23,
-            exampleJp: "何に使いますか。が好きです。",
+            exampleJp: "なににつかいますか。が すきです。",
             exampleVi: "Tôi thích dùng."
         ),
         VocabWord(
-            kanji: "引きます",
+            kanji: nil,
             kana: "ひきます",
             romaji: "hikimasu",
-            meaningVi: "Kéo, lôi (Nhóm Ⅰ, 引きます、引く、引いて)",
+            meaningVi: "Kéo, lôi (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
@@ -13778,7 +13778,7 @@ public final class VocabRepository {
             meaningVi: "ひっこし",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "ひっこしがあります。",
+            exampleJp: "ひっこしが あります。",
             exampleVi: "Có ひっこし."
         ),
         VocabWord(
@@ -13788,7 +13788,7 @@ public final class VocabRepository {
             meaningVi: "【Ⅲ】 Chuyển đi, chuyển nhà",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "引越し（します、する、して）があります。",
+            exampleJp: "引越し（します、する、して）が あります。",
             exampleVi: "Có 【ⅲ】 chuyển đi, chuyển nhà."
         ),
         VocabWord(
@@ -13798,7 +13798,7 @@ public final class VocabRepository {
             meaningVi: "こしょう",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "こしょうがあります。",
+            exampleJp: "こしょうが あります。",
             exampleVi: "Có こしょう."
         ),
         VocabWord(
@@ -13808,7 +13808,7 @@ public final class VocabRepository {
             meaningVi: "【Ⅲ】 Hỏng hóc, trục trặc",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "故障（します、する、して）があります。",
+            exampleJp: "故障（します、する、して）が あります。",
             exampleVi: "Có 【ⅲ】 hỏng hóc, trục trặc."
         ),
         VocabWord(
@@ -13818,7 +13818,7 @@ public final class VocabRepository {
             meaningVi: "Cỡ, kích cỡ",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "サイズがあります。",
+            exampleJp: "サイズが あります。",
             exampleVi: "Có cỡ, kích cỡ."
         ),
         VocabWord(
@@ -13828,67 +13828,67 @@ public final class VocabRepository {
             meaningVi: "Quả đấm cửa",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "つまみがあります。",
+            exampleJp: "つまみが あります。",
             exampleVi: "Có quả đấm cửa."
         ),
         VocabWord(
-            kanji: "交差点",
+            kanji: nil,
             kana: "こうさてん",
             romaji: "kousaten",
             meaningVi: "Ngã tư",
             topicId: "greeting",
             lessonNumber: 23,
-            exampleJp: "交差点があります。",
+            exampleJp: "こうさてんが あります。",
             exampleVi: "Có ngã tư."
         ),
         VocabWord(
-            kanji: "角",
+            kanji: nil,
             kana: "かど",
             romaji: "kado",
             meaningVi: "Góc, góc đường",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "角があります。",
+            exampleJp: "かどが あります。",
             exampleVi: "Có góc, góc đường."
         ),
         VocabWord(
-            kanji: "駐車場",
+            kanji: nil,
             kana: "ちゅうしゃじょう",
             romaji: "chuushajou",
             meaningVi: "Điểm đỗ xe, bãi đỗ xe",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "駐車場があります。",
+            exampleJp: "ちゅうしゃじょうが あります。",
             exampleVi: "Có điểm đỗ xe, bãi đỗ xe."
         ),
         VocabWord(
-            kanji: "～目",
+            kanji: nil,
             kana: "～め",
             romaji: "～me",
             meaningVi: "Thứ ~ (thứ tự) 「お」しょうがつ 「お」正月 Năm mới, ngày đầu năm",
             topicId: "time",
             lessonNumber: 23,
-            exampleJp: "～目に勉強します。",
+            exampleJp: "～めに べんきょうします。",
             exampleVi: "Tôi học vào thứ ~."
         ),
         VocabWord(
-            kanji: "建物",
+            kanji: nil,
             kana: "たてもの",
             romaji: "tatemono",
             meaningVi: "Tòa nhà",
             topicId: "travel",
             lessonNumber: 23,
-            exampleJp: "建物があります。",
+            exampleJp: "たてものが あります。",
             exampleVi: "Có tòa nhà."
         ),
         VocabWord(
-            kanji: "外国人登録証",
+            kanji: nil,
             kana: "がいこくじんとうろくしょう",
             romaji: "gaikokujintourokushou",
             meaningVi: "Thẻ đăng ký người nước ngoài",
             topicId: "family",
             lessonNumber: 23,
-            exampleJp: "外国人登録証が好きです。",
+            exampleJp: "がいこくじんとうろくしょうが すきです。",
             exampleVi: "Tôi thích thẻ đăng ký người nước ngoài."
         )
     ]
@@ -13896,13 +13896,13 @@ public final class VocabRepository {
     // MARK: - Bài 24 (26 từ)
     public static let lesson24Words: [VocabWord] = [
         VocabWord(
-            kanji: "送ります",
+            kanji: nil,
             kana: "おくります",
             romaji: "okurimasu",
-            meaningVi: "Tiễn (Nhóm Ⅰ, 送ります、送る、送って)",
+            meaningVi: "Tiễn (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "毎日 送ります。",
+            exampleJp: "まいにち おくります。",
             exampleVi: "Hằng ngày tôi tiễn."
         ),
         VocabWord(
@@ -13912,27 +13912,27 @@ public final class VocabRepository {
             meaningVi: "Tiễn người",
             topicId: "family",
             lessonNumber: 24,
-            exampleJp: "「人を～」があります。",
+            exampleJp: "「人を～」が あります。",
             exampleVi: "Có tiễn người."
         ),
         VocabWord(
-            kanji: "調べます",
+            kanji: nil,
             kana: "しらべます",
             romaji: "shirabemasu",
-            meaningVi: "Xem xét, điều tra (Nhóm Ⅱ, 調べます、調べる、調べて)",
+            meaningVi: "Xem xét, điều tra (Nhóm Ⅱ)",
             topicId: "family",
             lessonNumber: 24,
-            exampleJp: "毎日 調べます。",
+            exampleJp: "まいにち しらべます。",
             exampleVi: "Hằng ngày tôi xem xét, điều tra."
         ),
         VocabWord(
-            kanji: "くれます",
+            kanji: nil,
             kana: "くれます",
             romaji: "kuremasu",
-            meaningVi: "Cho, biếu(cho mình) (Nhóm Ⅱ, くれます、くれる、くれて)",
+            meaningVi: "Cho, biếu(cho mình) (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "毎日 くれます。",
+            exampleJp: "まいにち くれます。",
             exampleVi: "Hằng ngày tôi cho, biếu."
         ),
         VocabWord(
@@ -13942,7 +13942,7 @@ public final class VocabRepository {
             meaningVi: "コピー《します、する、して》 Sao chụ p, photo",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "コピーします【III】があります。",
+            exampleJp: "コピーします【III】が あります。",
             exampleVi: "Có コピー《します、する、して》 sao chụ p, photo."
         ),
         VocabWord(
@@ -13952,7 +13952,7 @@ public final class VocabRepository {
             meaningVi: "《連れて行きます、連れて行く、 (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "学校へ行きます。",
+            exampleJp: "がっこうへ いきます。",
             exampleVi: "Tôi đi đến trường."
         ),
         VocabWord(
@@ -13962,7 +13962,7 @@ public final class VocabRepository {
             meaningVi: "Đưa (ai) đi, dẫn đi",
             topicId: "travel",
             lessonNumber: 24,
-            exampleJp: "連れて行って》があります。",
+            exampleJp: "連れて行って》が あります。",
             exampleVi: "Có đưa."
         ),
         VocabWord(
@@ -13972,7 +13972,7 @@ public final class VocabRepository {
             meaningVi: "《連れてきます、連れて来る、 (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
@@ -13982,127 +13982,127 @@ public final class VocabRepository {
             meaningVi: "Đưa (ai) đến, dẫn đến",
             topicId: "travel",
             lessonNumber: 24,
-            exampleJp: "連れてきて》があります。",
+            exampleJp: "連れてきて》が あります。",
             exampleVi: "Có đưa."
         ),
         VocabWord(
-            kanji: "説明《します、する、して》",
+            kanji: nil,
             kana: "せつめいします【III】",
             romaji: "setsumeishimasu【III】",
             meaningVi: "Thuyết minh, giải thích",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "説明《します、する、して》があります。",
+            exampleJp: "せつめいします【III】が あります。",
             exampleVi: "Có thuyết minh, giải thích."
         ),
         VocabWord(
-            kanji: "案内《します、する、して》",
+            kanji: nil,
             kana: "あんない",
             romaji: "annai",
             meaningVi: "Hướng dẫn, dẫn đường",
             topicId: "travel",
             lessonNumber: 24,
-            exampleJp: "日本の冬は案内《します、する、して》です。",
+            exampleJp: "にほんの ふゆは あんないです。",
             exampleVi: "Mùa đông ở Nhật hướng dẫn, dẫn đường."
         ),
         VocabWord(
-            kanji: "紹介《します、する、して》",
+            kanji: nil,
             kana: "しょうかい",
             romaji: "shoukai",
             meaningVi: "Giới thiệu",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "日本の冬は紹介《します、する、して》です。",
-            exampleVi: "Mùa đông ở Nhật giới thiệu."
+            exampleJp: "しょうかいが あります。",
+            exampleVi: "Có giới thiệu."
         ),
         VocabWord(
-            kanji: "人形",
+            kanji: nil,
             kana: "にんぎょう",
             romaji: "ningyou",
             meaningVi: "Búp bê",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "人形があります。",
+            exampleJp: "にんぎょうが あります。",
             exampleVi: "Có búp bê."
         ),
         VocabWord(
-            kanji: "名詞",
+            kanji: nil,
             kana: "めいし",
             romaji: "Danh",
             meaningVi: "thiếp",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "名詞があります。",
+            exampleJp: "めいしが あります。",
             exampleVi: "Có thiếp."
         ),
         VocabWord(
-            kanji: "東京タワー",
+            kanji: nil,
             kana: "とうきょうタワー",
             romaji: "toukyoutawaa",
             meaningVi: "Tháp Tokyo",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "東京タワーがあります。",
+            exampleJp: "とうきょうタワーが あります。",
             exampleVi: "Có tháp tokyo."
         ),
         VocabWord(
-            kanji: "大阪城",
+            kanji: nil,
             kana: "おおさかじょう",
             romaji: "oosakajou",
             meaningVi: "Thành Osaka",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "大阪城があります。",
+            exampleJp: "おおさかじょうが あります。",
             exampleVi: "Có thành osaka."
         ),
         VocabWord(
-            kanji: "自分で",
+            kanji: nil,
             kana: "じぶんで",
-            romaji: "jibunで",
+            romaji: "jibunde",
             meaningVi: "Tự mình",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "自分でがあります。",
+            exampleJp: "じぶんでが あります。",
             exampleVi: "Có tự mình."
         ),
         VocabWord(
-            kanji: "この間",
+            kanji: nil,
             kana: "このあいだ",
             romaji: "konoaida",
             meaningVi: "Mấy hôm trước, vừa qua",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "この間があります。",
+            exampleJp: "このあいだが あります。",
             exampleVi: "Có mấy hôm trước, vừa qua."
         ),
         VocabWord(
-            kanji: "本当ですか",
+            kanji: nil,
             kana: "ほんとうですか",
-            romaji: "hontouでsuka",
+            romaji: "hontoudesuka",
             meaningVi: "Thậ t sao?",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "本当ですかがあります。",
+            exampleJp: "ほんとうですかが あります。",
             exampleVi: "Có thậ t sao?."
         ),
         VocabWord(
-            kanji: "頑張ってください",
+            kanji: nil,
             kana: "がんばって下さい",
             romaji: "ganbatte下sai",
             meaningVi: "Cố gắng lên Từ vự ng tham khả o",
             topicId: "family",
             lessonNumber: 24,
-            exampleJp: "日本の冬は頑張ってくださいです。",
+            exampleJp: "にほんの ふゆは がんばって下さいです。",
             exampleVi: "Mùa đông ở Nhật cố gắng lên từ vự ng tham khả o."
         ),
         VocabWord(
-            kanji: "入れます",
+            kanji: nil,
             kana: "いれます",
             romaji: "iremasu",
-            meaningVi: "Pha chế, làm (Nhóm Ⅱ, 入れます、入れる、入れて)",
+            meaningVi: "Pha chế, làm (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "毎日 入れます。",
+            exampleJp: "まいにち いれます。",
             exampleVi: "Hằng ngày tôi pha chế, làm."
         ),
         VocabWord(
@@ -14112,47 +14112,47 @@ public final class VocabRepository {
             meaningVi: "cà phê / Pha trà",
             topicId: "food",
             lessonNumber: 24,
-            exampleJp: "「コーヒー／おちゃを～」が好きです。",
+            exampleJp: "「コーヒー／おちゃを～」が すきです。",
             exampleVi: "Tôi thích cà phê / pha trà."
         ),
         VocabWord(
-            kanji: "全部",
+            kanji: nil,
             kana: "ぜんぶ",
             romaji: "zenbu",
             meaningVi: "Tất cả, toàn bộ",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "全部があります。",
+            exampleJp: "ぜんぶが あります。",
             exampleVi: "Có tất cả, toàn bộ."
         ),
         VocabWord(
-            kanji: "準備",
+            kanji: nil,
             kana: "じゅんび",
             romaji: "junbi",
             meaningVi: "Sự chuẩn bị (danh từ)",
             topicId: "family",
             lessonNumber: 24,
-            exampleJp: "準備があります。",
+            exampleJp: "じゅんびが あります。",
             exampleVi: "Có sự chuẩn bị."
         ),
         VocabWord(
-            kanji: "他に",
+            kanji: nil,
             kana: "ほかに",
             romaji: "hokani",
             meaningVi: "Bên cạnh đó, ngoài ra 「お」べんとう 「お」弁当 Cơm hộp",
             topicId: "food",
             lessonNumber: 24,
-            exampleJp: "他にが好きです。",
+            exampleJp: "ほかにが すきです。",
             exampleVi: "Tôi thích bên cạnh đó, ngoài ra 「お」べんとう 「お」弁当 cơm hộp."
         ),
         VocabWord(
-            kanji: "母の日",
+            kanji: nil,
             kana: "ははのひ",
             romaji: "wahanohi",
             meaningVi: "Ngày của mẹ",
             topicId: "greeting",
             lessonNumber: 24,
-            exampleJp: "母の日に勉強します。",
+            exampleJp: "ははのひに べんきょうします。",
             exampleVi: "Tôi học vào ngày của mẹ."
         )
     ]
@@ -14160,33 +14160,33 @@ public final class VocabRepository {
     // MARK: - Bài 25 (34 từ)
     public static let lesson25Words: [VocabWord] = [
         VocabWord(
-            kanji: "考えます",
+            kanji: nil,
             kana: "かんがえます",
             romaji: "kangaemasu",
-            meaningVi: "Suy nghĩ (Nhóm Ⅱ, 考えます、考える、考えて)",
+            meaningVi: "Suy nghĩ (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "毎日 考えます。",
+            exampleJp: "まいにち かんがえます。",
             exampleVi: "Hằng ngày tôi suy nghĩ."
         ),
         VocabWord(
-            kanji: "続けます",
+            kanji: nil,
             kana: "つづけます",
             romaji: "tsuzukemasu",
-            meaningVi: "Tiếp, tiếp tục (Nhóm Ⅱ, 続けます、続ける、続けて)",
+            meaningVi: "Tiếp, tiếp tục (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "毎日 続けます。",
+            exampleJp: "まいにち つづけます。",
             exampleVi: "Hằng ngày tôi tiếp, tiếp tục."
         ),
         VocabWord(
-            kanji: "止めます",
+            kanji: nil,
             kana: "やめます",
             romaji: "yamemasu",
-            meaningVi: "Thôi, bỏ, từ bỏ (Nhóm Ⅱ, 止めます、止める、止めて)",
+            meaningVi: "Thôi, bỏ, từ bỏ (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "毎日 止めます。",
+            exampleJp: "まいにち やめます。",
             exampleVi: "Hằng ngày tôi thôi, bỏ, từ bỏ."
         ),
         VocabWord(
@@ -14196,17 +14196,17 @@ public final class VocabRepository {
             meaningVi: "Bỏ học, thôi học",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "「べんきょうを～」があります。",
+            exampleJp: "「べんきょうを～」が あります。",
             exampleVi: "Có bỏ học, thôi học."
         ),
         VocabWord(
-            kanji: "入れます",
+            kanji: nil,
             kana: "いれます",
             romaji: "iremasu",
-            meaningVi: "Bật, ấn (Nhóm Ⅱ, 入れます、入れる、入れて)",
+            meaningVi: "Bật, ấn (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "毎日 入れます。",
+            exampleJp: "まいにち いれます。",
             exampleVi: "Hằng ngày tôi bật, ấn."
         ),
         VocabWord(
@@ -14216,17 +14216,17 @@ public final class VocabRepository {
             meaningVi: "Bật công tắc",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "「スイッチを～」があります。",
+            exampleJp: "「スイッチを～」が あります。",
             exampleVi: "Có bật công tắc."
         ),
         VocabWord(
-            kanji: "切ります",
+            kanji: nil,
             kana: "きります",
             romaji: "kirimasu",
-            meaningVi: "Tắt, ngắt (Nhóm Ⅰ, 切ります、切る、切って)",
+            meaningVi: "Tắt, ngắt (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "音楽を聞きます。",
+            exampleJp: "おんがくを ききます。",
             exampleVi: "Tôi nghe nhạc."
         ),
         VocabWord(
@@ -14236,7 +14236,7 @@ public final class VocabRepository {
             meaningVi: "Tắt công tắc",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "「スイッチを～」があります。",
+            exampleJp: "「スイッチを～」が あります。",
             exampleVi: "Có tắt công tắc."
         ),
         VocabWord(
@@ -14246,7 +14246,7 @@ public final class VocabRepository {
             meaningVi: "《片付けます、片付ける、 (Nhóm Ⅱ)",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "毎日 かたづけます。",
+            exampleJp: "まいにち かたづけます。",
             exampleVi: "Hằng ngày tôi 《片付けます、片付ける、."
         ),
         VocabWord(
@@ -14256,77 +14256,77 @@ public final class VocabRepository {
             meaningVi: "Dọn dẹp, sắp xếp",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "片付けて》があります。",
+            exampleJp: "片付けて》が あります。",
             exampleVi: "Có dọn dẹp, sắp xếp."
         ),
         VocabWord(
-            kanji: "直します",
+            kanji: nil,
             kana: "なおします",
             romaji: "naoshimasu",
-            meaningVi: "Sửa, sửa chữa (Nhóm Ⅰ, 直します、直す、直して)",
+            meaningVi: "Sửa, sửa chữa (Nhóm Ⅰ)",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "毎日 直します。",
+            exampleJp: "まいにち なおします。",
             exampleVi: "Hằng ngày tôi sửa, sửa chữa."
         ),
         VocabWord(
-            kanji: "「間違いを～」",
+            kanji: nil,
             kana: "「まちがいを～」",
             romaji: "\"machigaio～\"",
             meaningVi: "Sửa sai, chữa lỗi",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "「間違いを～」があります。",
+            exampleJp: "「まちがいを～」が あります。",
             exampleVi: "Có sửa sai, chữa lỗi."
         ),
         VocabWord(
-            kanji: "間違い",
+            kanji: nil,
             kana: "まちがい",
             romaji: "machigai",
             meaningVi: "Nhầm, sai, sai lầm",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "日本の冬は間違いです。",
+            exampleJp: "にほんの ふゆは まちがいです。",
             exampleVi: "Mùa đông ở Nhật nhầm, sai, sai lầm."
         ),
         VocabWord(
-            kanji: "道具",
+            kanji: nil,
             kana: "どうぐ",
             romaji: "dougu",
             meaningVi: "Dụng cụ, công cụ",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "道具があります。",
+            exampleJp: "どうぐが あります。",
             exampleVi: "Có dụng cụ, công cụ."
         ),
         VocabWord(
-            kanji: "一般研修",
+            kanji: nil,
             kana: "いっぱんけんしゅう",
             romaji: "Tu",
             meaningVi: "nghiệp tổng quát",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "一般研修があります。",
+            exampleJp: "いっぱんけんしゅうが あります。",
             exampleVi: "Có nghiệp tổng quát."
         ),
         VocabWord(
-            kanji: "世界",
+            kanji: nil,
             kana: "せかい",
             romaji: "sekai",
             meaningVi: "Thế giới",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "日本の冬は世界です。",
-            exampleVi: "Mùa đông ở Nhật thế giới."
+            exampleJp: "せかいが あります。",
+            exampleVi: "Có thế giới."
         ),
         VocabWord(
-            kanji: "困ったこと",
+            kanji: nil,
             kana: "こまったこと",
             romaji: "komattakoto",
             meaningVi: "Chuyện phiền toái, sự phiền phức",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "困ったことがあります。",
+            exampleJp: "こまったことが あります。",
             exampleVi: "Có chuyện phiền toái, sự phiền phức."
         ),
         VocabWord(
@@ -14336,7 +14336,7 @@ public final class VocabRepository {
             meaningVi: "Picnic",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "ピクニックがあります。",
+            exampleJp: "ピクニックが あります。",
             exampleVi: "Có picnic."
         ),
         VocabWord(
@@ -14346,7 +14346,7 @@ public final class VocabRepository {
             meaningVi: "「～たら」 Nếu (~ thì)",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "もしがあります。",
+            exampleJp: "もしが あります。",
             exampleVi: "Có 「～たら」 nếu."
         ),
         VocabWord(
@@ -14356,107 +14356,107 @@ public final class VocabRepository {
             meaningVi: "「～ても」 Cho dù (~ đến mấy đi chăng nữa)",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "いくらがあります。",
+            exampleJp: "いくらが あります。",
             exampleVi: "Có 「～ても」 cho dù."
         ),
         VocabWord(
             kanji: nil,
             kana: "いつでも",
-            romaji: "itsuでmo",
+            romaji: "itsudemo",
             meaningVi: "Bất cứ lúc nào 「いろいろ」おせわに なりました。 Xin cảm ơn ông về tất cả những gì ông đã giúp tôi (lời tỏ lòng biết ơn đối với người đã giúp đỡ mình)",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "いつでもがあります。",
+            exampleJp: "いつでもが あります。",
             exampleVi: "Có bất cứ lúc nào 「いろいろ」おせわに なりました。 xin cảm ơn ông về tất cả những gì ông đã giúp tôi."
         ),
         VocabWord(
-            kanji: "お元気で。",
+            kanji: nil,
             kana: "どうぞ",
             romaji: "douzo",
             meaningVi: "Chúc (anh) lên đường mạnh khỏe (dùng khi chia tay và có thể không gặp trong một thời gian dài.)",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "お元気で。があります。",
+            exampleJp: "どうぞが あります。",
             exampleVi: "Có chúc."
         ),
         VocabWord(
-            kanji: "会いましょう。",
+            kanji: nil,
             kana: "また",
             romaji: "mata",
             meaningVi: "Hẹn gặp lại. Từ vự ng tham khả o",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "会いましょう。があります。",
+            exampleJp: "またが あります。",
             exampleVi: "Có hẹn gặp lại. từ vự ng tham khả o."
         ),
         VocabWord(
-            kanji: "着きます",
+            kanji: nil,
             kana: "つきます",
             romaji: "tsukimasu",
-            meaningVi: "Đến nơi (Nhóm Ⅰ, 着きます、着く、着いて)",
+            meaningVi: "Đến nơi (Nhóm Ⅰ)",
             topicId: "travel",
             lessonNumber: 25,
-            exampleJp: "友達が日本へ来ます。",
+            exampleJp: "ともだちが にほんへ きます。",
             exampleVi: "Bạn tôi đến Nhật Bản."
         ),
         VocabWord(
-            kanji: "「駅に～」",
+            kanji: nil,
             kana: "「えきに～」",
             romaji: "\"ekini～\"",
             meaningVi: "Đến ga",
             topicId: "travel",
             lessonNumber: 25,
-            exampleJp: "「駅に～」へ行きます。",
+            exampleJp: "「えきに～」へ いきます。",
             exampleVi: "Tôi đi đến đến ga."
         ),
         VocabWord(
-            kanji: "取ります",
+            kanji: nil,
             kana: "とります",
             romaji: "torimasu",
-            meaningVi: "Có tuổi (Nhóm Ⅰ, 取ります、取る、取って)",
+            meaningVi: "Có tuổi (Nhóm Ⅰ)",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "毎日 取ります。",
+            exampleJp: "まいにち とります。",
             exampleVi: "Hằng ngày tôi có tuổi."
         ),
         VocabWord(
-            kanji: "「年を～」",
+            kanji: nil,
             kana: "「としを～」",
             romaji: "\"toshio～\"",
             meaningVi: "Già, có tuổi",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "「年を～」があります。",
+            exampleJp: "「としを～」が あります。",
             exampleVi: "Có già, có tuổi."
         ),
         VocabWord(
-            kanji: "転勤（します、する、して）",
+            kanji: nil,
             kana: "てんきん",
             romaji: "tenkin",
             meaningVi: "Sự thuyên chuyển, chuyển công tác",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "転勤（します、する、して）があります。",
+            exampleJp: "てんきんが あります。",
             exampleVi: "Có sự thuyên chuyển, chuyển công tác."
         ),
         VocabWord(
-            kanji: "田舎",
+            kanji: nil,
             kana: "いなか",
             romaji: "inaka",
             meaningVi: "Quê, nông thôn",
             topicId: "family",
             lessonNumber: 25,
-            exampleJp: "田舎があります。",
+            exampleJp: "いなかが あります。",
             exampleVi: "Có quê, nông thôn."
         ),
         VocabWord(
-            kanji: "大使館",
+            kanji: nil,
             kana: "たいしかん",
             romaji: "taishikan",
             meaningVi: "Đại sứ quán",
             topicId: "food",
             lessonNumber: 25,
-            exampleJp: "大使館があります。",
+            exampleJp: "たいしかんが あります。",
             exampleVi: "Có đại sứ quán."
         ),
         VocabWord(
@@ -14466,7 +14466,7 @@ public final class VocabRepository {
             meaningVi: "Nhóm, tổ",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "グループがあります。",
+            exampleJp: "グループが あります。",
             exampleVi: "Có nhóm, tổ."
         ),
         VocabWord(
@@ -14476,17 +14476,17 @@ public final class VocabRepository {
             meaningVi: "Cơ hội",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "チャンスがあります。",
+            exampleJp: "チャンスが あります。",
             exampleVi: "Có cơ hội."
         ),
         VocabWord(
-            kanji: "億",
+            kanji: nil,
             kana: "おく",
             romaji: "oku",
             meaningVi: "Trăm triệu",
             topicId: "greeting",
             lessonNumber: 25,
-            exampleJp: "億があります。",
+            exampleJp: "おくが あります。",
             exampleVi: "Có trăm triệu."
         ),
         VocabWord(
@@ -14496,12 +14496,12 @@ public final class VocabRepository {
             meaningVi: "のみましょう。 Hãy cùng uống một chén nào.",
             topicId: "food",
             lessonNumber: 25,
-            exampleJp: "日本の冬はいっぱいです。",
+            exampleJp: "にほんの ふゆは いっぱいです。",
             exampleVi: "Mùa đông ở Nhật のみましょう。 hãy cùng uống một chén nào.."
         )
     ]
     
-    // MARK: - Danh sách toàn bộ từ vựng N5
+    // MARK: - Danh sách toàn bộ từ vựng N5 (100% Hiragana)
     public let vocabList: [VocabWord] = {
         var list: [VocabWord] = []
         list.reserveCapacity(1500)
@@ -14577,7 +14577,6 @@ public final class VocabRepository {
         let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         guard !trimmed.isEmpty else { return vocabList }
         return vocabList.filter {
-            ($0.kanji?.lowercased().contains(trimmed) ?? false) ||
             $0.kana.lowercased().contains(trimmed) ||
             $0.romaji.lowercased().contains(trimmed) ||
             $0.meaningVi.lowercased().contains(trimmed)
