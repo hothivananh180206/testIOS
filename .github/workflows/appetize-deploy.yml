@@ -1,4 +1,4 @@
-name: Build & Deploy to Appetize.io
+name: Build iOS Simulator ZIP
 
 on:
   push:
@@ -6,22 +6,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
-    name: Build iOS Simulator & Deploy
+  build:
+    name: Build .app and create ZIP
     runs-on: macos-15
 
     steps:
-      # 1. Checkout source code
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Select Xcode version
       - name: Select Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: 'latest-stable'
 
-      # 3. Build for iOS Simulator (no signing needed)
       - name: Build for Simulator
         run: |
           xcodebuild \
@@ -35,79 +32,14 @@ jobs:
             ONLY_ACTIVE_ARCH=NO \
             clean build
 
-      # 4. Zip the .app bundle
-      - name: Zip .app bundle
+      - name: Zip .app
         run: |
           cd DerivedData/Build/Products/Release-iphonesimulator
           zip -r AppHocTiengNhat.zip AppHocTiengNhat.app
-          echo "ZIP_PATH=$(pwd)/AppHocTiengNhat.zip" >> $GITHUB_ENV
 
-      # 5. Upload to Appetize.io
-      - name: Upload to Appetize.io
-        id: appetize_upload
-        run: |
-          # Check if updating existing app or creating new one
-          if [ -n "${{ secrets.APPETIZE_PUBLIC_KEY }}" ]; then
-            echo "Updating existing app on Appetize..."
-            RESPONSE=$(curl -s -w "\n%{http_code}" \
-              https://api.appetize.io/v1/apps/${{ secrets.APPETIZE_PUBLIC_KEY }} \
-              -X POST \
-              -F "file=@${{ env.ZIP_PATH }}" \
-              -F "platform=ios" \
-              -u "${{ secrets.APPETIZE_API_TOKEN }}:")
-          else
-            echo "Creating new app on Appetize..."
-            RESPONSE=$(curl -s -w "\n%{http_code}" \
-              https://api.appetize.io/v1/apps \
-              -X POST \
-              -F "file=@${{ env.ZIP_PATH }}" \
-              -F "platform=ios" \
-              -u "${{ secrets.APPETIZE_API_TOKEN }}:")
-          fi
-
-          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
-          BODY=$(echo "$RESPONSE" | head -n -1)
-
-          echo "HTTP Status: $HTTP_CODE"
-          echo "Response: $BODY"
-
-          if [ "$HTTP_CODE" != "200" ] && [ "$HTTP_CODE" != "201" ]; then
-            echo "Upload failed with HTTP $HTTP_CODE"
-            exit 1
-          fi
-
-          PUBLIC_KEY=$(echo "$BODY" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('publicKey',''))")
-          APP_URL=$(echo "$BODY" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('appURL',''))")
-
-          echo "public_key=$PUBLIC_KEY" >> $GITHUB_OUTPUT
-          echo "app_url=$APP_URL" >> $GITHUB_OUTPUT
-          echo ""
-          echo "✅ Uploaded successfully!"
-          echo "🔑 Public Key: $PUBLIC_KEY"
-          echo "🔗 App URL: $APP_URL"
-
-      # 6. Comment on PR (if triggered by PR)
-      - name: Post Appetize link to PR
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
+      - name: Upload ZIP as artifact
+        uses: actions/upload-artifact@v4
         with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `## 📱 Appetize.io Preview Ready\n\n🔗 **[Open App in Browser](https://appetize.io/app/${{ steps.appetize_upload.outputs.public_key }})**\n\nBuilt from commit: \`${{ github.sha }}\``
-            })
-
-      # 7. Summary
-      - name: Job Summary
-        run: |
-          echo "## 📱 Appetize.io Deploy Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Field | Value |" >> $GITHUB_STEP_SUMMARY
-          echo "|-------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| App | AppHocTiengNhat |" >> $GITHUB_STEP_SUMMARY
-          echo "| Platform | iOS Simulator |" >> $GITHUB_STEP_SUMMARY
-          echo "| Public Key | \`${{ steps.appetize_upload.outputs.public_key }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| 🔗 App URL | ${{ steps.appetize_upload.outputs.app_url }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Commit | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
+          name: AppHocTiengNhat-iOS-Simulator
+          path: DerivedData/Build/Products/Release-iphonesimulator/AppHocTiengNhat.zip
+          retention-days: 7
